@@ -1,0 +1,81 @@
+{
+ "arrivals": {
+  "file": "arrivals.csv",
+  "unit": "one origin market in one month",
+  "rows": 180,
+  "columns": {
+   "month": "year and month, 2023-01 to 2025-12",
+   "origin": "origin market, five values",
+   "arrivals": "the board's estimate of visitors who arrived"
+  }
+ },
+ "tickets": {
+  "file": "tickets.csv.gz",
+  "unit": "one ticket sale at one site",
+  "rows": 150000,
+  "columns": {
+   "sale_id": "sale number",
+   "sale_date": "date of the sale",
+   "site": "one of nine sites",
+   "origin": "origin market the buyer stated",
+   "tickets": "tickets in the sale, which is the number of visitors",
+   "amount_sar": "amount paid in riyals"
+  }
+ },
+ "stays": {
+  "file": "stays.csv.gz",
+  "unit": "one visiting party's stay in the region",
+  "rows": "about 40,000",
+  "columns": {
+   "stay_id": "pseudonymised key of the stay, never a name",
+   "arrival_date": "date the party arrived",
+   "origin": "origin market",
+   "purpose": "leisure, family visit, business or event",
+   "party_size": "people in the party",
+   "nights": "nights spent in the region; 0 is a day visit",
+   "accommodation": "hotel, apartment, with family, camp or none",
+   "spend_sar": "what the party said it spent in the region, riyals",
+   "booking_lead_days": "days between booking and arrival; 0 is no booking",
+   "age_band": "age band of the person who answered"
+  }
+ },
+ "occupancy": {
+  "file": "occupancy.csv.gz",
+  "unit": "one hotel on one day",
+  "rows": 43840,
+  "columns": {
+   "date": "the night",
+   "hotel_id": "pseudonymised hotel code",
+   "zone": "one of four zones",
+   "rooms": "rooms the hotel has",
+   "rooms_sold": "rooms sold that night"
+  }
+ },
+ "survey": {
+  "file": "survey.csv",
+  "unit": "one visitor's response after a site visit",
+  "rows": 6000,
+  "columns": {
+   "response_id": "response number",
+   "visit_date": "date of the visit",
+   "origin": "origin market",
+   "site": "site visited",
+   "language": "language of the response, ar or en",
+   "guided": "1 when the visit was a guided one",
+   "satisfaction": "overall satisfaction, 1 (low) to 5 (high)",
+   "comment": "a short free-text comment, often empty"
+  }
+ },
+ "complaints": {
+  "file": "complaints.csv",
+  "unit": "one complaint logged by the visitor experience team",
+  "rows": "about 2,400",
+  "columns": {
+   "complaint_id": "complaint number",
+   "complaint_date": "date logged",
+   "site": "site complained about",
+   "origin": "origin market of the visitor",
+   "category": "queue, cleanliness, price, signage, staff or access"
+  }
+ }
+}

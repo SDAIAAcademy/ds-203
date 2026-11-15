@@ -1,0 +1,4 @@
+/* Course additions to the engine's theme. A figure that shares a slide with text below it gets a
+   picture of limited height, so that its caption and the text under it never meet. */
+.deck .figure.fig-s > img { max-height: 300px; }
+.deck .figure.fig-m > img { max-height: 380px; }

@@ -1,0 +1,356 @@
+{
+ "centres": {
+  "booking_lead_days": [
+   16.168625,
+   6.0
+  ],
+  "nights": [
+   3.2982610887096775,
+   2.0
+  ],
+  "satisfaction": [
+   4.118166666666666,
+   4.0
+  ],
+  "spend_sar": [
+   2736.443203377602,
+   1498.0
+  ]
+ },
+ "choices": {
+  "booking_lead_days": [
+   "share of zeros and median of the rest",
+   "quartiles"
+  ],
+  "nights": [
+   "median",
+   "share at 1 to 3 and at 5 or more nights"
+  ],
+  "satisfaction": [
+   "share scoring 4 or 5",
+   "all five shares"
+  ],
+  "spend_sar": [
+   "median",
+   "quartiles"
+  ]
+ },
+ "gm": 1344.1898059693578,
+ "hist_log": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-1e5681a2338bc86bab6c798a9d7c8767"
+   },
+   "datasets": {
+    "data-1e5681a2338bc86bab6c798a9d7c8767": [
+     {
+      "from_sar": 12.589254117941675,
+      "lo": 1.1,
+      "stays": 6,
+      "to_sar": 15.848931924611142
+     },
+     {
+      "from_sar": 15.848931924611133,
+      "lo": 1.2,
+      "stays": 6,
+      "to_sar": 19.952623149688797
+     },
+     {
+      "from_sar": 19.952623149688797,
+      "lo": 1.3,
+      "stays": 10,
+      "to_sar": 25.11886431509581
+     },
+     {
+      "from_sar": 25.118864315095795,
+      "lo": 1.4,
+      "stays": 21,
+      "to_sar": 31.622776601683793
+     },
+     {
+      "from_sar": 31.622776601683793,
+      "lo": 1.5,
+      "stays": 40,
+      "to_sar": 39.810717055349734
+     },
+     {
+      "from_sar": 39.810717055349734,
+      "lo": 1.6,
+      "stays": 103,
+      "to_sar": 50.11872336272725
+     },
+     {
+      "from_sar": 50.11872336272722,
+      "lo": 1.7,
+      "stays": 148,
+      "to_sar": 63.09573444801933
+     },
+     {
+      "from_sar": 63.09573444801933,
+      "lo": 1.8,
+      "stays": 287,
+      "to_sar": 79.43282347242817
+     },
+     {
+      "from_sar": 79.43282347242814,
+      "lo": 1.9,
+      "stays": 403,
+      "to_sar": 100.0
+     },
+     {
+      "from_sar": 100.0,
+      "lo": 2.0,
+      "stays": 567,
+      "to_sar": 125.89254117941675
+     },
+     {
+      "from_sar": 125.89254117941675,
+      "lo": 2.1,
+      "stays": 756,
+      "to_sar": 158.48931924611142
+     },
+     {
+      "from_sar": 158.48931924611142,
+      "lo": 2.2,
+      "stays": 910,
+      "to_sar": 199.52623149688807
+     },
+     {
+      "from_sar": 199.52623149688787,
+      "lo": 2.3,
+      "stays": 1067,
+      "to_sar": 251.18864315095797
+     },
+     {
+      "from_sar": 251.18864315095797,
+      "lo": 2.4,
+      "stays": 1174,
+      "to_sar": 316.22776601683796
+     },
+     {
+      "from_sar": 316.22776601683796,
+      "lo": 2.5,
+      "stays": 1365,
+      "to_sar": 398.1071705534973
+     },
+     {
+      "from_sar": 398.1071705534973,
+      "lo": 2.6,
+      "stays": 1532,
+      "to_sar": 501.18723362727246
+     },
+     {
+      "from_sar": 501.18723362727246,
+      "lo": 2.7,
+      "stays": 1749,
+      "to_sar": 630.9573444801937
+     },
+     {
+      "from_sar": 630.957344480193,
+      "lo": 2.8,
+      "stays": 1973,
+      "to_sar": 794.3282347242813
+     },
+     {
+      "from_sar": 794.3282347242813,
+      "lo": 2.9,
+      "stays": 2127,
+      "to_sar": 1000.0
+     },
+     {
+      "from_sar": 1000.0,
+      "lo": 3.0,
+      "stays": 2500,
+      "to_sar": 1258.9254117941675
+     },
+     {
+      "from_sar": 1258.9254117941675,
+      "lo": 3.1,
+      "stays": 2616,
+      "to_sar": 1584.893192461114
+     },
+     {
+      "from_sar": 1584.893192461114,
+      "lo": 3.2,
+      "stays": 2750,
+      "to_sar": 1995.262314968881
+     },
+     {
+      "from_sar": 1995.2623149688789,
+      "lo": 3.3,
+      "stays": 2701,
+      "to_sar": 2511.88643150958
+     },
+     {
+      "from_sar": 2511.88643150958,
+      "lo": 3.4,
+      "stays": 2541,
+      "to_sar": 3162.2776601683795
+     },
+     {
+      "from_sar": 3162.2776601683795,
+      "lo": 3.5,
+      "stays": 2367,
+      "to_sar": 3981.0717055349733
+     },
+     {
+      "from_sar": 3981.0717055349733,
+      "lo": 3.6,
+      "stays": 1998,
+      "to_sar": 5011.872336272725
+     },
+     {
+      "from_sar": 5011.872336272725,
+      "lo": 3.7,
+      "stays": 1705,
+      "to_sar": 6309.573444801937
+     },
+     {
+      "from_sar": 6309.57344480193,
+      "lo": 3.8,
+      "stays": 1350,
+      "to_sar": 7943.282347242814
+     },
+     {
+      "from_sar": 7943.282347242814,
+      "lo": 3.9,
+      "stays": 1013,
+      "to_sar": 10000.0
+     },
+     {
+      "from_sar": 10000.0,
+      "lo": 4.0,
+      "stays": 666,
+      "to_sar": 12589.254117941662
+     },
+     {
+      "from_sar": 12589.254117941662,
+      "lo": 4.1,
+      "stays": 459,
+      "to_sar": 15848.931924611108
+     },
+     {
+      "from_sar": 15848.93192461114,
+      "lo": 4.2,
+      "stays": 230,
+      "to_sar": 19952.62314968879
+     },
+     {
+      "from_sar": 19952.62314968879,
+      "lo": 4.3,
+      "stays": 144,
+      "to_sar": 25118.86431509577
+     },
+     {
+      "from_sar": 25118.864315095823,
+      "lo": 4.4,
+      "stays": 77,
+      "to_sar": 31622.776601683792
+     },
+     {
+      "from_sar": 31622.776601683792,
+      "lo": 4.5,
+      "stays": 42,
+      "to_sar": 39810.71705534969
+     },
+     {
+      "from_sar": 39810.71705534969,
+      "lo": 4.6,
+      "stays": 10,
+      "to_sar": 50118.72336272715
+     },
+     {
+      "from_sar": 50118.72336272725,
+      "lo": 4.7,
+      "stays": 5,
+      "to_sar": 63095.7344480193
+     },
+     {
+      "from_sar": 63095.7344480193,
+      "lo": 4.8,
+      "stays": 5,
+      "to_sar": 79432.82347242805
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "field": "from_sar",
+     "scale": {
+      "type": "log"
+     },
+     "title": "Spend per party, riyals (log scale)",
+     "type": "quantitative"
+    },
+    "x2": {
+     "field": "to_sar"
+    },
+    "y": {
+     "field": "stays",
+     "title": "Stays",
+     "type": "quantitative"
+    },
+    "y2": {
+     "datum": 0
+    }
+   },
+   "mark": {
+    "type": "rect"
+   },
+   "title": "Spend is close to symmetric on a log scale"
+  }
+ },
+ "reading": "A typical party spends about 1,500 riyals (median; half of the parties fall between 570 and 3,390), not the mean of 2,740, which a few large bills pull up. 36% of parties did not book ahead and the others booked a median of 14 days before arrival, and 77% of survey responses score 4 or 5; these summaries leave out the 2,577 stays with no stated spend, most of them day visits.",
+ "shares": {
+  "__series__": {
+   "data": [
+    0.0038333333,
+    0.0408333333,
+    0.1806666667,
+    0.3826666667,
+    0.392
+   ],
+   "index": [
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "name": "proportion"
+  }
+ },
+ "spreads": {
+  "booking_lead_days": [
+   30.42736574572355,
+   0.0,
+   19.0
+  ],
+  "nights": [
+   3.167290900255918,
+   1.0,
+   6.0
+  ],
+  "satisfaction": [
+   0.8698636383635733,
+   4.0,
+   5.0
+  ],
+  "spend_sar": [
+   3787.788344813887,
+   571.0,
+   3392.5
+  ]
+ },
+ "trim": {
+  "mean": -0.085,
+  "median": -0.015,
+  "q3": -0.026,
+  "sd": -0.238
+ },
+ "zero": [
+  0.362725,
+  14.0
+ ]
+}

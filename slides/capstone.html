@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="deck" data-track="data-science">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capstone · Capstone: the exploratory report and its defence · Exploratory Analysis and Visualisation</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="capstone.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<div class="deck" data-course="Exploratory Analysis and Visualisation" data-track="data-science" data-day="Capstone">
+<section class="slide title" id="title" data-auto="title" data-label="Welcome" data-n="1">
+  <div class="kicker">SDAIA Academy · Exploratory Analysis and Visualisation</div>
+  <h1>Capstone: the exploratory report and its defence</h1>
+  <p class="lead mt">Capstone: Each participant defends an exploratory report on an unseen dataset in eight minutes, and redraws one chart on request</p>
+  <div class="meta"><span class="track">Data Science Track</span><span>4 teaching days + capstone day</span><span>8 min talk and demo</span><span>DS-203</span></div>
+  <aside class="notes"><p>Today is theirs: keep your own talking to the opening and the closing. Before the first defence, confirm the running order, that every repository is public and opens, and that each presenter can run their notebook on the shared screen. Decide in advance, for each participant, which chart you will ask to be redrawn and with which change of encoding.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-label="Agenda" data-n="2">
+  <div class="kicker">Capstone</div>
+  <h2>How the day runs</h2>
+  <div class="agenda">
+    <div class="item now"><div><b>Expectations and final prep</b><small>the rubric, the format of the defence, one last render from a clean run</small></div></div>
+    <div class="item"><div><b>Defences</b><small>eight minutes each: five to present, three for the redraw and questions</small></div></div>
+    <div class="item"><div><b>Review and closing</b><small>peer feedback, the trainer's review, the follow-up task</small></div></div>
+  </div>
+  <aside class="notes"><p>The supervised exit check, without an assistant, is scheduled by the Academy alongside this day; it is not in this deck or this repository. Say when and where it takes place.</p></aside>
+</section>
+
+<section class="slide" id="what-you-submit" data-lo="LO6" data-label="What you submit" data-n="3">
+  <div class="kicker">The submission</div>
+  <h2>A public repository that a stranger can rerun</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>The plan</h4><p class="small mb0">Three to five questions with unit, variables and comparison, committed before the data was opened.</p></div>
+    <div class="card c-cyan"><h4>The report</h4><p class="small mb0">One source that reads the raw file, with parameters and a fixed seed at the top, and the page rendered from a clean run.</p></div>
+    <div class="card c-coral"><h4>The README</h4><p class="small mb0">The named reader, the link to the report, and each finding with its status, its check and its limit.</p></div>
+  </div>
+  <div class="callout note mt"><b>Assistants are allowed today.</b> Charts and sentences written with one are marked in the notebook, and you defend them like the rest.</div>
+  <aside class="notes"><p>The commit history is part of the evidence: a plan committed after the charts is not a plan. Check two things in each repository before its defence: the first commit, and whether the report says that two renders agree. The full brief is labs/capstone/README.md.</p></aside>
+</section>
+
+<section class="slide" id="rubric" data-label="The rubric" data-n="4">
+  <div class="kicker">How the repository is scored</div>
+  <h2>The rubric</h2>
+  <div class="bars">
+    <div class="row"><span>Plan and questions</span><div class="bar c-teal" style="--w:50%"></div><span class="val">15%</span></div>
+    <div class="row"><span>Analysis and charts</span><div class="bar c-cyan" style="--w:100%"></div><span class="val">30%</span></div>
+    <div class="row"><span>Honesty and uncertainty</span><div class="bar c-coral" style="--w:67%"></div><span class="val">20%</span></div>
+    <div class="row"><span>Chance checks</span><div class="bar c-purple" style="--w:50%"></div><span class="val">15%</span></div>
+    <div class="row"><span>Reproducibility and writing</span><div class="bar c-amber" style="--w:67%"></div><span class="val">20%</span></div>
+  </div>
+  <div class="callout tip mt"><b>Full marks on honesty</b> go to the report that says what it does not know: intervals named, small groups handled, limits in the reader's words.</div>
+  <aside class="notes"><p>Full marks, criterion by criterion. Plan: questions with a unit and a comparison, committed first, exploratory and confirmatory told apart. Analysis: a summary and a chart that suit each variable, with relationships, time and mix examined. Honesty: uncertainty drawn, rates with denominators. Chance checks: the right resampling on the right unit, comparisons counted, a reasoned decision. Reproducibility: one command, two runs that agree, a findings table.</p></aside>
+</section>
+
+<section class="slide" id="format" data-label="Format" data-n="5">
+  <div class="kicker">Format</div>
+  <h2>8 minutes for each defence</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>1 · The reader and the questions</h4><p class="small mb0">Who the report is for and what it set out to answer. One minute.</p></div>
+    <div class="card c-cyan"><h4>2 · Findings, checks, limits</h4><p class="small mb0">Two or three findings with their charts, how each was checked, what stays open. Four minutes.</p></div>
+    <div class="card c-coral"><h4>3 · The redraw</h4><p class="small mb0">The assessor names one chart and one change of encoding. You redraw it live and say what a reader would now conclude. Three minutes, with questions.</p></div>
+  </div>
+  <div class="callout note mt"><b>Peer feedback.</b> After each defence, everyone writes one strength, one question and one suggestion.</div>
+  <aside class="notes"><p>Typical redraw requests: bars to points with intervals; colour to small multiples; a count to a rate; a shared scale to free scales, or the reverse; a cut axis to zero. Choose a request whose answer changes what a reader concludes. The redraw shows whether the participant can work with the grammar unaided, which matters most where an assistant wrote the first version.</p></aside>
+</section>
+
+<section class="slide order" id="running-order" data-label="Running order" data-n="6">
+  <div class="kicker">Running order</div>
+  <h2>Who presents when</h2>
+  <table class="t small">
+    <tr><th>#</th><th>Presenter</th><th>Dataset</th></tr>
+    <tr><td>1</td><td><input placeholder="name"></td><td><input placeholder="dataset"></td></tr>
+    <tr><td>2</td><td><input placeholder="name"></td><td><input placeholder="dataset"></td></tr>
+    <tr><td>3</td><td><input placeholder="name"></td><td><input placeholder="dataset"></td></tr>
+    <tr><td>4</td><td><input placeholder="name"></td><td><input placeholder="dataset"></td></tr>
+    <tr><td>5</td><td><input placeholder="name"></td><td><input placeholder="dataset"></td></tr>
+    <tr><td>6</td><td><input placeholder="name"></td><td><input placeholder="dataset"></td></tr>
+    <tr><td>7</td><td><input placeholder="name"></td><td><input placeholder="dataset"></td></tr>
+    <tr><td>8</td><td><input placeholder="name"></td><td><input placeholder="dataset"></td></tr>
+  </table>
+  <aside class="notes"><p>Type the names in at the start; the fields can be edited live and are not saved, so keep the list in your notes too. Alternate the three datasets where you can, so that the room does not hear the same findings three times in a row.</p></aside>
+</section>
+
+<section class="slide dark" id="final-prep" data-label="Before the first defence" data-n="7">
+  <div class="kicker">Before the first defence</div>
+  <h1>Final prep · 20 minutes</h1>
+  <div class="timer" data-minutes="20"></div>
+  <p class="lead">Render once more from a clean run, open the report on this screen, and have the notebook ready for the redraw.</p>
+  <aside class="notes"><p>Press T to start the timer. Breaks are not slides: press B when the room needs one. Use these minutes to open each repository and note the chart you will ask about.</p></aside>
+</section>
+
+<section class="slide dark presenting" id="now-presenting" data-label="Now presenting" data-n="8">
+  <div class="kicker center">Now presenting</div>
+  <div class="center"><input placeholder="Presenter · dataset"></div>
+  <div class="timers mt">
+    <div><h3>Report, redraw and questions</h3><div class="timer" data-minutes="8"></div></div>
+  </div>
+  <aside class="notes"><p>Type the presenter's name and press T to start the timer. Make the redraw request at minute five at the latest. Reuse this slide for every presenter.</p></aside>
+</section>
+
+<section class="slide" id="review" data-label="Trainer review" data-n="9">
+  <div class="kicker">Trainer review</div>
+  <h2>What the defences showed</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Strongest patterns</h4><p class="small mb0">What several reports got right: a plan that came first, a chart that drew its uncertainty, a limit stated plainly.</p></div>
+    <div class="card c-coral"><h4>Common gaps</h4><p class="small mb0">What most reports would fix next: comparisons not counted, a rate without its denominator, a number typed by hand.</p></div>
+    <div class="card c-purple"><h4>One surprise</h4><p class="small mb0">A redraw that changed what the room concluded.</p></div>
+  </div>
+  <aside class="notes"><p>Replace the three examples with what you saw, from your scoring notes, during the last break. Name reports for strengths; keep gaps anonymous. Each dataset has a season, one event month, a reversal by group and no weekday effect: say which participants found which, and that a weekday pattern, if anyone reported one, was chance.</p></aside>
+</section>
+
+<section class="slide" id="what-next" data-label="After the course" data-n="10">
+  <div class="kicker">After the course</div>
+  <h2>Keep going</h2>
+  <ul class="bullets">
+    <li><b>The follow-up task:</b> within two weeks, an exploratory note on a dataset of the national Open Data Platform that touches your own work. The brief is in <code>labs/followup/README.md</code>.</li>
+    <li><b>Your report stays yours:</b> keep it rerunning, and test one of its exploratory findings when new data arrives.</li>
+    <li><b>Next Academy courses:</b> DS-205 Designing and Reading Experiments, for testing what exploration suggests; DS-207 Responsible Data Practice and Conduct in Analytical Work, for releasing tables of small groups.</li>
+  </ul>
+  <aside class="notes"><p>The follow-up task is tracked: say how it is handed in and by when. The data there is real, so the dictionary will be incomplete and totals will not always add up; that is the point of it.</p></aside>
+</section>
+
+<section class="slide dark" id="thanks" data-label="Thank you" data-n="11">
+  <div class="kicker">SDAIA Academy</div>
+  <h1>Thank you</h1>
+  <p class="lead">Exploratory Analysis and Visualisation</p>
+  <aside class="notes"><p>Close with the first slide of Day 1: question, chart, reading, check. Thank the room.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-15T14:45:38Z","version":"2027.1.0","commit":"c59b820"},"course":{"id":"ds-203","code":"DS-203","title":"Exploratory Analysis and Visualisation","track":"data-science","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/ds-203/","repo":"SDAIAAcademy/ds-203","home":"../index.html"},"deck":{"id":"capstone","kind":"capstone","day":5,"label":"Capstone","title":"Capstone: the exploratory report and its defence","prev":"day4.html","next":null,"md":"capstone.md","alt":{}},"sessions":[],"slides":[{"id":"title","n":1,"title":"Capstone: the exploratory report and its defence","kind":"title","session":0,"hash":"f43566cf","md":"#### [capstone#title] Capstone: the exploratory report and its defence\n\n*SDAIA Academy · Exploratory Analysis and Visualisation*\n\nCapstone: Each participant defends an exploratory report on an unseen dataset in eight minutes, and redraws one chart on request\n\nData Science Track · 4 teaching days + capstone day · 8 min talk and demo · DS-203","notes":"Today is theirs: keep your own talking to the opening and the closing. Before the first defence, confirm the running order, that every repository is public and opens, and that each presenter can run their notebook on the shared screen. Decide in advance, for each participant, which chart you will ask to be redrawn and with which change of encoding.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"How the day runs","kind":"content","session":0,"hash":"fb8e121a","md":"#### [capstone#agenda] How the day runs\n\n*Capstone*\n\n- **Expectations and final prep**: the rubric, the format of the defence, one last render from a clean run\n- **Defences**: eight minutes each: five to present, three for the redraw and questions\n- **Review and closing**: peer feedback, the trainer's review, the follow-up task","notes":"The supervised exit check, without an assistant, is scheduled by the Academy alongside this day; it is not in this deck or this repository. Say when and where it takes place.","minutes":null,"lo":[]},{"id":"what-you-submit","n":3,"title":"A public repository that a stranger can rerun","kind":"content","session":0,"hash":"430abd83","md":"#### [capstone#what-you-submit] A public repository that a stranger can rerun\n\n*The submission*\n\n- **The plan.** Three to five questions with unit, variables and comparison, committed before the data was opened.\n- **The report.** One source that reads the raw file, with parameters and a fixed seed at the top, and the page rendered from a clean run.\n- **The README.** The named reader, the link to the report, and each finding with its status, its check and its limit.\n\n> **Assistants are allowed today.** Charts and sentences written with one are marked in the notebook, and you defend them like the rest.","notes":"The commit history is part of the evidence: a plan committed after the charts is not a plan. Check two things in each repository before its defence: the first commit, and whether the report says that two renders agree. The full brief is labs/capstone/README.md.","minutes":null,"lo":["LO6"]},{"id":"rubric","n":4,"title":"The rubric","kind":"content","session":0,"hash":"0b79567f","md":"#### [capstone#rubric] The rubric\n\n*How the repository is scored*\n\n| Item | Value |\n| --- | --- |\n| Plan and questions | 15% |\n| Analysis and charts | 30% |\n| Honesty and uncertainty | 20% |\n| Chance checks | 15% |\n| Reproducibility and writing | 20% |\n\n> **Full marks on honesty** go to the report that says what it does not know: intervals named, small groups handled, limits in the reader's words.","notes":"Full marks, criterion by criterion. Plan: questions with a unit and a comparison, committed first, exploratory and confirmatory told apart. Analysis: a summary and a chart that suit each variable, with relationships, time and mix examined. Honesty: uncertainty drawn, rates with denominators. Chance checks: the right resampling on the right unit, comparisons counted, a reasoned decision. Reproducibility: one command, two runs that agree, a findings table.","minutes":null,"lo":[]},{"id":"format","n":5,"title":"8 minutes for each defence","kind":"content","session":0,"hash":"1d9d0248","md":"#### [capstone#format] 8 minutes for each defence\n\n*Format*\n\n- **1 · The reader and the questions.** Who the report is for and what it set out to answer. One minute.\n- **2 · Findings, checks, limits.** Two or three findings with their charts, how each was checked, what stays open. Four minutes.\n- **3 · The redraw.** The assessor names one chart and one change of encoding. You redraw it live and say what a reader would now conclude. Three minutes, with questions.\n\n> **Peer feedback.** After each defence, everyone writes one strength, one question and one suggestion.","notes":"Typical redraw requests: bars to points with intervals; colour to small multiples; a count to a rate; a shared scale to free scales, or the reverse; a cut axis to zero. Choose a request whose answer changes what a reader concludes. The redraw shows whether the participant can work with the grammar unaided, which matters most where an assistant wrote the first version.","minutes":null,"lo":[]},{"id":"running-order","n":6,"title":"Who presents when","kind":"order","session":0,"hash":"24482f91","md":"#### [capstone#running-order] Who presents when\n\n*Running order*\n\n| # | Presenter | Dataset |\n| --- | --- | --- |\n| 1 |  |  |\n| 2 |  |  |\n| 3 |  |  |\n| 4 |  |  |\n| 5 |  |  |\n| 6 |  |  |\n| 7 |  |  |\n| 8 |  |  |","notes":"Type the names in at the start; the fields can be edited live and are not saved, so keep the list in your notes too. Alternate the three datasets where you can, so that the room does not hear the same findings three times in a row.","minutes":null,"lo":[]},{"id":"final-prep","n":7,"title":"Final prep · 20 minutes","kind":"content","session":0,"hash":"c9fe5d86","md":"#### [capstone#final-prep] Final prep · 20 minutes\n\n*Before the first defence*\n\nRender once more from a clean run, open the report on this screen, and have the notebook ready for the redraw.","notes":"Press T to start the timer. Breaks are not slides: press B when the room needs one. Use these minutes to open each repository and note the chart you will ask about.","minutes":null,"lo":[]},{"id":"now-presenting","n":8,"title":"Report, redraw and questions","kind":"presenting","session":0,"hash":"d206ffa5","md":"#### [capstone#now-presenting] Report, redraw and questions\n\n*Now presenting*","notes":"Type the presenter's name and press T to start the timer. Make the redraw request at minute five at the latest. Reuse this slide for every presenter.","minutes":null,"lo":[]},{"id":"review","n":9,"title":"What the defences showed","kind":"content","session":0,"hash":"e5f2ba5e","md":"#### [capstone#review] What the defences showed\n\n*Trainer review*\n\n- **Strongest patterns.** What several reports got right: a plan that came first, a chart that drew its uncertainty, a limit stated plainly.\n- **Common gaps.** What most reports would fix next: comparisons not counted, a rate without its denominator, a number typed by hand.\n- **One surprise.** A redraw that changed what the room concluded.","notes":"Replace the three examples with what you saw, from your scoring notes, during the last break. Name reports for strengths; keep gaps anonymous. Each dataset has a season, one event month, a reversal by group and no weekday effect: say which participants found which, and that a weekday pattern, if anyone reported one, was chance.","minutes":null,"lo":[]},{"id":"what-next","n":10,"title":"Keep going","kind":"content","session":0,"hash":"9b0738f5","md":"#### [capstone#what-next] Keep going\n\n*After the course*\n\n- **The follow-up task:** within two weeks, an exploratory note on a dataset of the national Open Data Platform that touches your own work. The brief is in `labs/followup/README.md`.\n- **Your report stays yours:** keep it rerunning, and test one of its exploratory findings when new data arrives.\n- **Next Academy courses:** DS-205 Designing and Reading Experiments, for testing what exploration suggests; DS-207 Responsible Data Practice and Conduct in Analytical Work, for releasing tables of small groups.","notes":"The follow-up task is tracked: say how it is handed in and by when. The data there is real, so the dictionary will be incomplete and totals will not always add up; that is the point of it.","minutes":null,"lo":[]},{"id":"thanks","n":11,"title":"Thank you","kind":"content","session":0,"hash":"962913a5","md":"#### [capstone#thanks] Thank you\n\n*SDAIA Academy*\n\nExploratory Analysis and Visualisation","notes":"Close with the first slide of Day 1: question, chart, reading, check. Thank the room.","minutes":null,"lo":[]}],"activities":[],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"capstone.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

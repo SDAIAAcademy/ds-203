@@ -1,0 +1,181 @@
+month,origin,arrivals
+2023-01,Tilal region,19538
+2023-02,Tilal region,19543
+2023-03,Tilal region,21210
+2023-04,Tilal region,22607
+2023-05,Tilal region,21119
+2023-06,Tilal region,25022
+2023-07,Tilal region,26322
+2023-08,Tilal region,25086
+2023-09,Tilal region,20802
+2023-10,Tilal region,20061
+2023-11,Tilal region,18710
+2023-12,Tilal region,18177
+2024-01,Tilal region,17848
+2024-02,Tilal region,19066
+2024-03,Tilal region,19179
+2024-04,Tilal region,21438
+2024-05,Tilal region,21637
+2024-06,Tilal region,22229
+2024-07,Tilal region,25312
+2024-08,Tilal region,23990
+2024-09,Tilal region,21202
+2024-10,Tilal region,25309
+2024-11,Tilal region,17223
+2024-12,Tilal region,17681
+2025-01,Tilal region,17734
+2025-02,Tilal region,21500
+2025-03,Tilal region,19378
+2025-04,Tilal region,18655
+2025-05,Tilal region,19474
+2025-06,Tilal region,22958
+2025-07,Tilal region,22940
+2025-08,Tilal region,22688
+2025-09,Tilal region,19213
+2025-10,Tilal region,22800
+2025-11,Tilal region,17447
+2025-12,Tilal region,17124
+2023-01,Other regions,23036
+2023-02,Other regions,24187
+2023-03,Other regions,28646
+2023-04,Other regions,28648
+2023-05,Other regions,29317
+2023-06,Other regions,36607
+2023-07,Other regions,47588
+2023-08,Other regions,45267
+2023-09,Other regions,29986
+2023-10,Other regions,27957
+2023-11,Other regions,25156
+2023-12,Other regions,26649
+2024-01,Other regions,23756
+2024-02,Other regions,25000
+2024-03,Other regions,28687
+2024-04,Other regions,30570
+2024-05,Other regions,31433
+2024-06,Other regions,40079
+2024-07,Other regions,48475
+2024-08,Other regions,46809
+2024-09,Other regions,31116
+2024-10,Other regions,41816
+2024-11,Other regions,26277
+2024-12,Other regions,27294
+2025-01,Other regions,25798
+2025-02,Other regions,33754
+2025-03,Other regions,30184
+2025-04,Other regions,33248
+2025-05,Other regions,32508
+2025-06,Other regions,43565
+2025-07,Other regions,50282
+2025-08,Other regions,50038
+2025-09,Other regions,35222
+2025-10,Other regions,45093
+2025-11,Other regions,28346
+2025-12,Other regions,29375
+2023-01,Gulf,4573
+2023-02,Gulf,5120
+2023-03,Gulf,6742
+2023-04,Gulf,7973
+2023-05,Gulf,8440
+2023-06,Gulf,15950
+2023-07,Gulf,18990
+2023-08,Gulf,18433
+2023-09,Gulf,8869
+2023-10,Gulf,7722
+2023-11,Gulf,6470
+2023-12,Gulf,6625
+2024-01,Gulf,5350
+2024-02,Gulf,5938
+2024-03,Gulf,7739
+2024-04,Gulf,9583
+2024-05,Gulf,10373
+2024-06,Gulf,18215
+2024-07,Gulf,22984
+2024-08,Gulf,22835
+2024-09,Gulf,11304
+2024-10,Gulf,10673
+2024-11,Gulf,7468
+2024-12,Gulf,7944
+2025-01,Gulf,6578
+2025-02,Gulf,8107
+2025-03,Gulf,9722
+2025-04,Gulf,10967
+2025-05,Gulf,12650
+2025-06,Gulf,20693
+2025-07,Gulf,26240
+2025-08,Gulf,25222
+2025-09,Gulf,12945
+2025-10,Gulf,13217
+2025-11,Gulf,9077
+2025-12,Gulf,9109
+2023-01,Asia,3706
+2023-02,Asia,3878
+2023-03,Asia,4351
+2023-04,Asia,4602
+2023-05,Asia,4388
+2023-06,Asia,4456
+2023-07,Asia,5115
+2023-08,Asia,5141
+2023-09,Asia,4881
+2023-10,Asia,4986
+2023-11,Asia,4857
+2023-12,Asia,4517
+2024-01,Asia,4810
+2024-02,Asia,5252
+2024-03,Asia,5295
+2024-04,Asia,5701
+2024-05,Asia,5659
+2024-06,Asia,5876
+2024-07,Asia,6506
+2024-08,Asia,6855
+2024-09,Asia,6007
+2024-10,Asia,6141
+2024-11,Asia,6045
+2024-12,Asia,6045
+2025-01,Asia,6502
+2025-02,Asia,6499
+2025-03,Asia,7200
+2025-04,Asia,7628
+2025-05,Asia,7343
+2025-06,Asia,7416
+2025-07,Asia,8550
+2025-08,Asia,8550
+2025-09,Asia,8062
+2025-10,Asia,8055
+2025-11,Asia,7908
+2025-12,Asia,7725
+2023-01,Europe,4159
+2023-02,Europe,4333
+2023-03,Europe,4068
+2023-04,Europe,3164
+2023-05,Europe,2312
+2023-06,Europe,1916
+2023-07,Europe,2077
+2023-08,Europe,1972
+2023-09,Europe,2867
+2023-10,Europe,4030
+2023-11,Europe,4505
+2023-12,Europe,4846
+2024-01,Europe,5365
+2024-02,Europe,5474
+2024-03,Europe,5094
+2024-04,Europe,4007
+2024-05,Europe,2895
+2024-06,Europe,2493
+2024-07,Europe,2516
+2024-08,Europe,2583
+2024-09,Europe,3502
+2024-10,Europe,5049
+2024-11,Europe,5322
+2024-12,Europe,5899
+2025-01,Europe,6690
+2025-02,Europe,7275
+2025-03,Europe,6190
+2025-04,Europe,4969
+2025-05,Europe,3589
+2025-06,Europe,3171
+2025-07,Europe,3063
+2025-08,Europe,3165
+2025-09,Europe,4360
+2025-10,Europe,6132
+2025-11,Europe,6870
+2025-12,Europe,7533

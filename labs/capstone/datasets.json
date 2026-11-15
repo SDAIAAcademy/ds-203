@@ -1,0 +1,50 @@
+{
+ "ruwaq_museums": {
+  "organisation": "Ruwaq Museums Network",
+  "audience": "the network's head of programmes, who is not an analyst",
+  "file": "data/ruwaq_museums.csv",
+  "unit": "one visit",
+  "columns": {
+   "visit_id": "pseudonymised key of one visit",
+   "visit_date": "date of the visit",
+   "museum": "one of eight museums",
+   "visitor_type": "school group, family, adult or tourist",
+   "party_size": "people in the party",
+   "minutes_inside": "minutes between entry and exit scans",
+   "rating": "exit rating, 1 to 5",
+   "member": "1 when the party holds a membership"
+  }
+ },
+ "awan_parks": {
+  "organisation": "Awan Parks Department",
+  "audience": "the head of park operations, who is not an analyst",
+  "file": "data/awan_parks.csv",
+  "unit": "one maintenance request",
+  "columns": {
+   "request_id": "pseudonymised key of one maintenance request",
+   "opened_date": "date the request was opened",
+   "park": "one of eight parks",
+   "category": "lighting, cleaning, play equipment or irrigation",
+   "visits_needed": "crew visits before the request was closed",
+   "days_to_close": "days from opening to closing",
+   "resident_rating": "rating by the resident who reported, 1 to 5",
+   "reopened": "1 when the request was opened again"
+  }
+ },
+ "miqdam_driving": {
+  "organisation": "Miqdam Driving Schools",
+  "audience": "the schools' director of training, who is not an analyst",
+  "file": "data/miqdam_driving.csv",
+  "unit": "one driving test",
+  "columns": {
+   "test_id": "pseudonymised key of one driving test",
+   "test_date": "date of the test",
+   "branch": "one of eight branches",
+   "age_band": "age band of the learner",
+   "attempt": "which attempt this test was",
+   "wait_days": "days waited for the test slot",
+   "course_rating": "learner's rating of the course, 1 to 5",
+   "failed": "1 when the test was failed"
+  }
+ }
+}

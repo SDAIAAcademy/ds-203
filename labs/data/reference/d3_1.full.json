@@ -1,0 +1,442 @@
+{
+ "bars": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-f88d45548ac8c253cb1126af9e2382a7"
+   },
+   "datasets": {
+    "data-f88d45548ac8c253cb1126af9e2382a7": [
+     {
+      "complaints": 599,
+      "per_thousand": 5.94116363492095,
+      "site": "Cable Car",
+      "visitors": 100822
+     },
+     {
+      "complaints": 154,
+      "per_thousand": 6.708485798919673,
+      "site": "Cloud Lookout",
+      "visitors": 22956
+     },
+     {
+      "complaints": 139,
+      "per_thousand": 4.9982020855807265,
+      "site": "Honey Museum",
+      "visitors": 27810
+     },
+     {
+      "complaints": 196,
+      "per_thousand": 4.209983675573503,
+      "site": "Juniper Park",
+      "visitors": 46556
+     },
+     {
+      "complaints": 394,
+      "per_thousand": 5.077385017848169,
+      "site": "Souq Walk",
+      "visitors": 77599
+     },
+     {
+      "complaints": 230,
+      "per_thousand": 6.288448393711551,
+      "site": "Stone Village",
+      "visitors": 36575
+     },
+     {
+      "complaints": 167,
+      "per_thousand": 13.821070926094514,
+      "site": "Terrace Farms",
+      "visitors": 12083
+     },
+     {
+      "complaints": 296,
+      "per_thousand": 5.526718697486836,
+      "site": "Tilal Fort",
+      "visitors": 53558
+     },
+     {
+      "complaints": 243,
+      "per_thousand": 11.350896860986547,
+      "site": "Wadi Trail",
+      "visitors": 21408
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "field": "per_thousand",
+     "title": "Complaints per thousand visitors, 2023 to 2025",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "site",
+     "sort": "-x",
+     "title": null,
+     "type": "nominal"
+    }
+   },
+   "mark": {
+    "type": "bar"
+   },
+   "title": "Complaints per thousand visitors by site"
+  }
+ },
+ "base": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-f88d45548ac8c253cb1126af9e2382a7"
+   },
+   "datasets": {
+    "data-f88d45548ac8c253cb1126af9e2382a7": [
+     {
+      "complaints": 599,
+      "per_thousand": 5.94116363492095,
+      "site": "Cable Car",
+      "visitors": 100822
+     },
+     {
+      "complaints": 154,
+      "per_thousand": 6.708485798919673,
+      "site": "Cloud Lookout",
+      "visitors": 22956
+     },
+     {
+      "complaints": 139,
+      "per_thousand": 4.9982020855807265,
+      "site": "Honey Museum",
+      "visitors": 27810
+     },
+     {
+      "complaints": 196,
+      "per_thousand": 4.209983675573503,
+      "site": "Juniper Park",
+      "visitors": 46556
+     },
+     {
+      "complaints": 394,
+      "per_thousand": 5.077385017848169,
+      "site": "Souq Walk",
+      "visitors": 77599
+     },
+     {
+      "complaints": 230,
+      "per_thousand": 6.288448393711551,
+      "site": "Stone Village",
+      "visitors": 36575
+     },
+     {
+      "complaints": 167,
+      "per_thousand": 13.821070926094514,
+      "site": "Terrace Farms",
+      "visitors": 12083
+     },
+     {
+      "complaints": 296,
+      "per_thousand": 5.526718697486836,
+      "site": "Tilal Fort",
+      "visitors": 53558
+     },
+     {
+      "complaints": 243,
+      "per_thousand": 11.350896860986547,
+      "site": "Wadi Trail",
+      "visitors": 21408
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "field": "per_thousand",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "site",
+     "type": "nominal"
+    }
+   },
+   "mark": {
+    "type": "circle"
+   }
+  }
+ },
+ "enc": {
+  "size": [
+   "visitors",
+   "quantitative"
+  ],
+  "text": [
+   "per_thousand",
+   "quantitative"
+  ],
+  "x": [
+   "per_thousand",
+   "quantitative"
+  ],
+  "y": [
+   "site",
+   "nominal"
+  ]
+ },
+ "full": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-f88d45548ac8c253cb1126af9e2382a7"
+   },
+   "datasets": {
+    "data-f88d45548ac8c253cb1126af9e2382a7": [
+     {
+      "complaints": 599,
+      "per_thousand": 5.94116363492095,
+      "site": "Cable Car",
+      "visitors": 100822
+     },
+     {
+      "complaints": 154,
+      "per_thousand": 6.708485798919673,
+      "site": "Cloud Lookout",
+      "visitors": 22956
+     },
+     {
+      "complaints": 139,
+      "per_thousand": 4.9982020855807265,
+      "site": "Honey Museum",
+      "visitors": 27810
+     },
+     {
+      "complaints": 196,
+      "per_thousand": 4.209983675573503,
+      "site": "Juniper Park",
+      "visitors": 46556
+     },
+     {
+      "complaints": 394,
+      "per_thousand": 5.077385017848169,
+      "site": "Souq Walk",
+      "visitors": 77599
+     },
+     {
+      "complaints": 230,
+      "per_thousand": 6.288448393711551,
+      "site": "Stone Village",
+      "visitors": 36575
+     },
+     {
+      "complaints": 167,
+      "per_thousand": 13.821070926094514,
+      "site": "Terrace Farms",
+      "visitors": 12083
+     },
+     {
+      "complaints": 296,
+      "per_thousand": 5.526718697486836,
+      "site": "Tilal Fort",
+      "visitors": 53558
+     },
+     {
+      "complaints": 243,
+      "per_thousand": 11.350896860986547,
+      "site": "Wadi Trail",
+      "visitors": 21408
+     }
+    ]
+   },
+   "layer": [
+    {
+     "encoding": {
+      "x": {
+       "field": "per_thousand",
+       "scale": {
+        "zero": true
+       },
+       "title": "Complaints per thousand visitors, 2023 to 2025",
+       "type": "quantitative"
+      },
+      "x2": {
+       "datum": 0
+      },
+      "y": {
+       "field": "site",
+       "sort": "-x",
+       "title": null,
+       "type": "nominal"
+      }
+     },
+     "mark": {
+      "color": "#999999",
+      "type": "rule"
+     }
+    },
+    {
+     "encoding": {
+      "size": {
+       "field": "visitors",
+       "scale": {
+        "range": [
+         60,
+         700
+        ]
+       },
+       "title": "Visitors",
+       "type": "quantitative"
+      },
+      "x": {
+       "field": "per_thousand",
+       "scale": {
+        "zero": true
+       },
+       "title": "Complaints per thousand visitors, 2023 to 2025",
+       "type": "quantitative"
+      },
+      "y": {
+       "field": "site",
+       "sort": "-x",
+       "title": null,
+       "type": "nominal"
+      }
+     },
+     "mark": {
+      "opacity": 1,
+      "type": "circle"
+     }
+    },
+    {
+     "encoding": {
+      "text": {
+       "field": "per_thousand",
+       "format": ".1f",
+       "type": "quantitative"
+      },
+      "x": {
+       "field": "per_thousand",
+       "scale": {
+        "zero": true
+       },
+       "title": "Complaints per thousand visitors, 2023 to 2025",
+       "type": "quantitative"
+      },
+      "y": {
+       "field": "site",
+       "sort": "-x",
+       "title": null,
+       "type": "nominal"
+      }
+     },
+     "mark": {
+      "align": "left",
+      "dx": 16,
+      "fontSize": 13,
+      "type": "text"
+     }
+    }
+   ],
+   "title": "Complaints per thousand visitors by site"
+  }
+ },
+ "lost": "size",
+ "polished": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-f88d45548ac8c253cb1126af9e2382a7"
+   },
+   "datasets": {
+    "data-f88d45548ac8c253cb1126af9e2382a7": [
+     {
+      "complaints": 599,
+      "per_thousand": 5.94116363492095,
+      "site": "Cable Car",
+      "visitors": 100822
+     },
+     {
+      "complaints": 154,
+      "per_thousand": 6.708485798919673,
+      "site": "Cloud Lookout",
+      "visitors": 22956
+     },
+     {
+      "complaints": 139,
+      "per_thousand": 4.9982020855807265,
+      "site": "Honey Museum",
+      "visitors": 27810
+     },
+     {
+      "complaints": 196,
+      "per_thousand": 4.209983675573503,
+      "site": "Juniper Park",
+      "visitors": 46556
+     },
+     {
+      "complaints": 394,
+      "per_thousand": 5.077385017848169,
+      "site": "Souq Walk",
+      "visitors": 77599
+     },
+     {
+      "complaints": 230,
+      "per_thousand": 6.288448393711551,
+      "site": "Stone Village",
+      "visitors": 36575
+     },
+     {
+      "complaints": 167,
+      "per_thousand": 13.821070926094514,
+      "site": "Terrace Farms",
+      "visitors": 12083
+     },
+     {
+      "complaints": 296,
+      "per_thousand": 5.526718697486836,
+      "site": "Tilal Fort",
+      "visitors": 53558
+     },
+     {
+      "complaints": 243,
+      "per_thousand": 11.350896860986547,
+      "site": "Wadi Trail",
+      "visitors": 21408
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "field": "per_thousand",
+     "scale": {
+      "zero": true
+     },
+     "title": "Complaints per thousand visitors, 2023 to 2025",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "site",
+     "sort": "-x",
+     "title": null,
+     "type": "nominal"
+    }
+   },
+   "mark": {
+    "type": "circle"
+   },
+   "title": "Complaints per thousand visitors by site"
+  }
+ },
+ "reading": "Sorted by rate, Terrace Farms (13.8 complaints per thousand visitors) and the Wadi Trail (11.4) stand far above the other seven sites, which lie between 4.2 and 6.7, and the circle sizes show that these two are among the smallest sites while the largest, the Cable Car, is fifth. The chart does not show what the complaints are about, nor how sure the rates of the small sites are.",
+ "spec13": {
+  "data": "one row per origin and number of nights: origin, nights, share",
+  "mark": "bar",
+  "row": [
+   "origin",
+   "nominal"
+  ],
+  "x": [
+   "nights",
+   "quantitative"
+  ],
+  "y": [
+   "share",
+   "quantitative"
+  ]
+ }
+}

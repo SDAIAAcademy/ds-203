@@ -1,0 +1,38 @@
+{
+ "sites": {
+  "Cable Car": "العربات المعلّقة",
+  "Souq Walk": "جولة السوق",
+  "Tilal Fort": "قلعة تِلال",
+  "Juniper Park": "منتزه العرعر",
+  "Stone Village": "القرية الحجرية",
+  "Honey Museum": "متحف العسل",
+  "Cloud Lookout": "مطلّ السحاب",
+  "Wadi Trail": "درب الوادي",
+  "Terrace Farms": "المدرّجات الزراعية"
+ },
+ "origins": {
+  "Tilal region": "منطقة تِلال",
+  "Other regions": "مناطق المملكة الأخرى",
+  "Gulf": "دول الخليج",
+  "Asia": "آسيا",
+  "Europe": "أوروبا"
+ },
+ "text": {
+  "en": {
+   "title": "Arrivals grew fastest from the smallest markets",
+   "subtitle": "Yearly arrivals by origin market, 2023 = 100",
+   "x": "Year",
+   "y": "Arrivals, 2023 = 100",
+   "legend": "Origin market",
+   "source": "Source: Tilal Regional Tourism Board, arrivals estimates (synthetic data)"
+  },
+  "ar": {
+   "title": "أسرع نموّ في أعداد القادمين جاء من أصغر الأسواق",
+   "subtitle": "أعداد القادمين سنويًا بحسب سوق المصدر، سنة 2023 = 100",
+   "x": "السنة",
+   "y": "القادمون، 2023 = 100",
+   "legend": "سوق المصدر",
+   "source": "المصدر: مجلس تِلال الإقليمي للسياحة، تقديرات أعداد القادمين (بيانات اصطناعية)"
+  }
+ }
+}

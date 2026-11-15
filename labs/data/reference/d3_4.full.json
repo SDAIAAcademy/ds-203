@@ -1,0 +1,556 @@
+{
+ "chart_ar": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-c9b2f2c1d6dbc382bb2d6514e461e82f"
+   },
+   "datasets": {
+    "data-c9b2f2c1d6dbc382bb2d6514e461e82f": [
+     {
+      "arrivals": 54878,
+      "index": 100.0,
+      "origin": "Asia",
+      "origin_label": "آسيا",
+      "year": 2023
+     },
+     {
+      "arrivals": 70192,
+      "index": 127.90553591603194,
+      "origin": "Asia",
+      "origin_label": "آسيا",
+      "year": 2024
+     },
+     {
+      "arrivals": 91438,
+      "index": 166.6205036626699,
+      "origin": "Asia",
+      "origin_label": "آسيا",
+      "year": 2025
+     },
+     {
+      "arrivals": 40249,
+      "index": 100.0,
+      "origin": "Europe",
+      "origin_label": "أوروبا",
+      "year": 2023
+     },
+     {
+      "arrivals": 50199,
+      "index": 124.72111108350519,
+      "origin": "Europe",
+      "origin_label": "أوروبا",
+      "year": 2024
+     },
+     {
+      "arrivals": 63007,
+      "index": 156.54301970235284,
+      "origin": "Europe",
+      "origin_label": "أوروبا",
+      "year": 2025
+     },
+     {
+      "arrivals": 115907,
+      "index": 100.0,
+      "origin": "Gulf",
+      "origin_label": "دول الخليج",
+      "year": 2023
+     },
+     {
+      "arrivals": 140406,
+      "index": 121.13677344767788,
+      "origin": "Gulf",
+      "origin_label": "دول الخليج",
+      "year": 2024
+     },
+     {
+      "arrivals": 164527,
+      "index": 141.94742336528424,
+      "origin": "Gulf",
+      "origin_label": "دول الخليج",
+      "year": 2025
+     },
+     {
+      "arrivals": 373044,
+      "index": 100.0,
+      "origin": "Other regions",
+      "origin_label": "مناطق المملكة الأخرى",
+      "year": 2023
+     },
+     {
+      "arrivals": 401312,
+      "index": 107.57765839954536,
+      "origin": "Other regions",
+      "origin_label": "مناطق المملكة الأخرى",
+      "year": 2024
+     },
+     {
+      "arrivals": 437413,
+      "index": 117.25506910712946,
+      "origin": "Other regions",
+      "origin_label": "مناطق المملكة الأخرى",
+      "year": 2025
+     },
+     {
+      "arrivals": 258197,
+      "index": 100.0,
+      "origin": "Tilal region",
+      "origin_label": "منطقة تِلال",
+      "year": 2023
+     },
+     {
+      "arrivals": 252114,
+      "index": 97.64404698737785,
+      "origin": "Tilal region",
+      "origin_label": "منطقة تِلال",
+      "year": 2024
+     },
+     {
+      "arrivals": 241911,
+      "index": 93.69241315739532,
+      "origin": "Tilal region",
+      "origin_label": "منطقة تِلال",
+      "year": 2025
+     }
+    ]
+   },
+   "encoding": {
+    "color": {
+     "field": "origin_label",
+     "legend": {
+      "orient": "left",
+      "symbolSize": 400,
+      "symbolStrokeWidth": 2.5
+     },
+     "scale": {
+      "domain": [
+       "منطقة تِلال",
+       "مناطق المملكة الأخرى",
+       "دول الخليج",
+       "آسيا",
+       "أوروبا"
+      ],
+      "range": [
+       "#0072B2",
+       "#E69F00",
+       "#009E73",
+       "#CC79A7",
+       "#D55E00"
+      ]
+     },
+     "title": "سوق المصدر",
+     "type": "nominal"
+    },
+    "strokeDash": {
+     "field": "origin_label",
+     "legend": {
+      "orient": "left",
+      "symbolSize": 400,
+      "symbolStrokeWidth": 2.5
+     },
+     "scale": {
+      "domain": [
+       "منطقة تِلال",
+       "مناطق المملكة الأخرى",
+       "دول الخليج",
+       "آسيا",
+       "أوروبا"
+      ]
+     },
+     "title": "سوق المصدر",
+     "type": "nominal"
+    },
+    "x": {
+     "axis": {
+      "labelAngle": 0
+     },
+     "field": "year",
+     "title": "السنة",
+     "type": "ordinal"
+    },
+    "y": {
+     "axis": {
+      "format": "d",
+      "orient": "right"
+     },
+     "field": "index",
+     "scale": {
+      "zero": false
+     },
+     "title": "القادمون، 2023 = 100",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "strokeWidth": 2.5,
+    "type": "line"
+   },
+   "title": {
+    "anchor": "end",
+    "subtitle": "أعداد القادمين سنويًا بحسب سوق المصدر، سنة 2023 = 100",
+    "text": "أسرع نموّ في أعداد القادمين جاء من أصغر الأسواق"
+   },
+   "width": 380
+  }
+ },
+ "chart_en": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-2357043494c6d9d9446c0f3c13d2b434"
+   },
+   "datasets": {
+    "data-2357043494c6d9d9446c0f3c13d2b434": [
+     {
+      "arrivals": 54878,
+      "index": 100.0,
+      "origin": "Asia",
+      "origin_label": "Asia",
+      "year": 2023
+     },
+     {
+      "arrivals": 70192,
+      "index": 127.90553591603194,
+      "origin": "Asia",
+      "origin_label": "Asia",
+      "year": 2024
+     },
+     {
+      "arrivals": 91438,
+      "index": 166.6205036626699,
+      "origin": "Asia",
+      "origin_label": "Asia",
+      "year": 2025
+     },
+     {
+      "arrivals": 40249,
+      "index": 100.0,
+      "origin": "Europe",
+      "origin_label": "Europe",
+      "year": 2023
+     },
+     {
+      "arrivals": 50199,
+      "index": 124.72111108350519,
+      "origin": "Europe",
+      "origin_label": "Europe",
+      "year": 2024
+     },
+     {
+      "arrivals": 63007,
+      "index": 156.54301970235284,
+      "origin": "Europe",
+      "origin_label": "Europe",
+      "year": 2025
+     },
+     {
+      "arrivals": 115907,
+      "index": 100.0,
+      "origin": "Gulf",
+      "origin_label": "Gulf",
+      "year": 2023
+     },
+     {
+      "arrivals": 140406,
+      "index": 121.13677344767788,
+      "origin": "Gulf",
+      "origin_label": "Gulf",
+      "year": 2024
+     },
+     {
+      "arrivals": 164527,
+      "index": 141.94742336528424,
+      "origin": "Gulf",
+      "origin_label": "Gulf",
+      "year": 2025
+     },
+     {
+      "arrivals": 373044,
+      "index": 100.0,
+      "origin": "Other regions",
+      "origin_label": "Other regions",
+      "year": 2023
+     },
+     {
+      "arrivals": 401312,
+      "index": 107.57765839954536,
+      "origin": "Other regions",
+      "origin_label": "Other regions",
+      "year": 2024
+     },
+     {
+      "arrivals": 437413,
+      "index": 117.25506910712946,
+      "origin": "Other regions",
+      "origin_label": "Other regions",
+      "year": 2025
+     },
+     {
+      "arrivals": 258197,
+      "index": 100.0,
+      "origin": "Tilal region",
+      "origin_label": "Tilal region",
+      "year": 2023
+     },
+     {
+      "arrivals": 252114,
+      "index": 97.64404698737785,
+      "origin": "Tilal region",
+      "origin_label": "Tilal region",
+      "year": 2024
+     },
+     {
+      "arrivals": 241911,
+      "index": 93.69241315739532,
+      "origin": "Tilal region",
+      "origin_label": "Tilal region",
+      "year": 2025
+     }
+    ]
+   },
+   "encoding": {
+    "color": {
+     "field": "origin_label",
+     "legend": {
+      "orient": "right",
+      "symbolSize": 400,
+      "symbolStrokeWidth": 2.5
+     },
+     "scale": {
+      "domain": [
+       "Tilal region",
+       "Other regions",
+       "Gulf",
+       "Asia",
+       "Europe"
+      ],
+      "range": [
+       "#0072B2",
+       "#E69F00",
+       "#009E73",
+       "#CC79A7",
+       "#D55E00"
+      ]
+     },
+     "title": "Origin market",
+     "type": "nominal"
+    },
+    "strokeDash": {
+     "field": "origin_label",
+     "legend": {
+      "orient": "right",
+      "symbolSize": 400,
+      "symbolStrokeWidth": 2.5
+     },
+     "scale": {
+      "domain": [
+       "Tilal region",
+       "Other regions",
+       "Gulf",
+       "Asia",
+       "Europe"
+      ]
+     },
+     "title": "Origin market",
+     "type": "nominal"
+    },
+    "x": {
+     "axis": {
+      "labelAngle": 0
+     },
+     "field": "year",
+     "title": "Year",
+     "type": "ordinal"
+    },
+    "y": {
+     "axis": {
+      "format": "d",
+      "orient": "left"
+     },
+     "field": "index",
+     "scale": {
+      "zero": false
+     },
+     "title": "Arrivals, 2023 = 100",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "strokeWidth": 2.5,
+    "type": "line"
+   },
+   "title": {
+    "anchor": "start",
+    "subtitle": "Yearly arrivals by origin market, 2023 = 100",
+    "text": "Arrivals grew fastest from the smallest markets"
+   },
+   "width": 380
+  }
+ },
+ "distances": [
+  4.84775091037497,
+  18.08533729640426
+ ],
+ "reading": "From 2023 to 2025 arrivals from Asia rose by 67%, from Europe by 57% and from the Gulf by 42%, against 17% from other regions of the Kingdom, while arrivals from the Tilal region fell by 6%. An index shows growth, not size: the chart does not show that the two markets inside the Kingdom still bring about two visitors in three.",
+ "safe": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-0ca1e98fb2be263b1c43aa73dac7f4d6"
+   },
+   "datasets": {
+    "data-0ca1e98fb2be263b1c43aa73dac7f4d6": [
+     {
+      "arrivals": 54878,
+      "index": 100.0,
+      "origin": "Asia",
+      "year": 2023
+     },
+     {
+      "arrivals": 70192,
+      "index": 127.90553591603194,
+      "origin": "Asia",
+      "year": 2024
+     },
+     {
+      "arrivals": 91438,
+      "index": 166.6205036626699,
+      "origin": "Asia",
+      "year": 2025
+     },
+     {
+      "arrivals": 40249,
+      "index": 100.0,
+      "origin": "Europe",
+      "year": 2023
+     },
+     {
+      "arrivals": 50199,
+      "index": 124.72111108350519,
+      "origin": "Europe",
+      "year": 2024
+     },
+     {
+      "arrivals": 63007,
+      "index": 156.54301970235284,
+      "origin": "Europe",
+      "year": 2025
+     },
+     {
+      "arrivals": 115907,
+      "index": 100.0,
+      "origin": "Gulf",
+      "year": 2023
+     },
+     {
+      "arrivals": 140406,
+      "index": 121.13677344767788,
+      "origin": "Gulf",
+      "year": 2024
+     },
+     {
+      "arrivals": 164527,
+      "index": 141.94742336528424,
+      "origin": "Gulf",
+      "year": 2025
+     },
+     {
+      "arrivals": 373044,
+      "index": 100.0,
+      "origin": "Other regions",
+      "year": 2023
+     },
+     {
+      "arrivals": 401312,
+      "index": 107.57765839954536,
+      "origin": "Other regions",
+      "year": 2024
+     },
+     {
+      "arrivals": 437413,
+      "index": 117.25506910712946,
+      "origin": "Other regions",
+      "year": 2025
+     },
+     {
+      "arrivals": 258197,
+      "index": 100.0,
+      "origin": "Tilal region",
+      "year": 2023
+     },
+     {
+      "arrivals": 252114,
+      "index": 97.64404698737785,
+      "origin": "Tilal region",
+      "year": 2024
+     },
+     {
+      "arrivals": 241911,
+      "index": 93.69241315739532,
+      "origin": "Tilal region",
+      "year": 2025
+     }
+    ]
+   },
+   "encoding": {
+    "color": {
+     "field": "origin",
+     "scale": {
+      "domain": [
+       "Tilal region",
+       "Other regions",
+       "Gulf",
+       "Asia",
+       "Europe"
+      ],
+      "range": [
+       "#0072B2",
+       "#E69F00",
+       "#009E73",
+       "#CC79A7",
+       "#D55E00"
+      ]
+     },
+     "title": "Origin market",
+     "type": "nominal"
+    },
+    "strokeDash": {
+     "field": "origin",
+     "scale": {
+      "domain": [
+       "Tilal region",
+       "Other regions",
+       "Gulf",
+       "Asia",
+       "Europe"
+      ]
+     },
+     "title": "Origin market",
+     "type": "nominal"
+    },
+    "x": {
+     "axis": {
+      "labelAngle": 0
+     },
+     "field": "year",
+     "title": "Year",
+     "type": "ordinal"
+    },
+    "y": {
+     "field": "index",
+     "scale": {
+      "zero": false
+     },
+     "title": "Arrivals, 2023 = 100",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "strokeWidth": 2.5,
+    "type": "line"
+   },
+   "title": "Arrivals by origin market",
+   "width": 380
+  }
+ }
+}

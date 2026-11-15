@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="deck" data-track="data-science">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 1 · Questions and first looks · Exploratory Analysis and Visualisation</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day1.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<div class="deck" data-course="Exploratory Analysis and Visualisation" data-track="data-science" data-day="Day 1">
+<section class="slide title" id="title" data-auto="title" data-label="Welcome" data-n="1">
+  <div class="kicker">SDAIA Academy · Exploratory Analysis and Visualisation</div>
+  <h1>Questions and first looks</h1>
+  <p class="lead mt">Day 1: Before any chart: what is asked, what one row is, what the values look like and which summary describes them</p>
+  <div class="meta"><span class="track">Data Science Track</span><span>4 teaching days + capstone day</span><span>4 sessions · 4 labs</span><span>DS-203</span></div>
+  <aside class="notes"><p>Welcome. Ask two things: who has made a chart this month, and who wrote down the question before making it. Expect many hands, then few. That gap is the course. The rhythm of every session: about 25 minutes of ideas, one checkpoint, then a 25-minute lab on the data of one fictional tourism board. Every lab ends with two written sentences about its chart.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="Agenda" data-n="2">
+  <div class="kicker">Today</div>
+  <h2>Questions and first looks</h2>
+  <div class="agenda"><div class="item"><div><b>Session 1 · Write the questions first</b><small>From a brief to questions that name a unit of observation, variables and a comparison, and what exploring can and cannot establish</small></div></div><div class="item"><div><b>Session 2 · Profiling a table</b><small>What to find out about a table before trusting a single number from it: grain, key, types, missing values, ranges and categories</small></div></div><div class="item"><div><b>Session 3 · Distributions</b><small>Histograms, density and box plots: what each shows of a distribution and what each hides</small></div></div><div class="item"><div><b>Session 4 · Summaries that fit the shape</b><small>Choosing a centre and a spread by the shape of the variable: long tails, counts, zero-heavy variables and scores</small></div></div></div>
+  <aside class="notes"><p>Today has few charts and that is deliberate. Session 1 opens no data at all. Session 2 reads a table before trusting it. Sessions 3 and 4 look at one variable at a time: its shape, then the numbers that describe the shape. Relationships wait for Day 2.</p></aside>
+</section>
+
+<section class="slide" id="the-board" data-label="The case" data-n="3">
+  <div class="kicker">The case study</div>
+  <h2>Tilal Regional Tourism Board: three years, six tables</h2>
+  <div class="cols cols-4">
+    <div class="stat"><div class="big">9</div><div class="lbl">visitor sites in a highland region</div></div>
+    <div class="stat"><div class="big">150,000</div><div class="lbl">ticket sales, 2023 to 2025</div></div>
+    <div class="stat"><div class="big">40,000</div><div class="lbl">visitor stays in the register</div></div>
+    <div class="stat"><div class="big">6,000</div><div class="lbl">survey responses, Arabic and English</div></div>
+  </div>
+  <p class="small mt">You work as <b>Leen Al-Suwayigh</b>, the board's analyst. <b>Nawal Al-Rashoud</b>, the director, wrote the brief. Aws Al-Hudaif runs sites and ticketing, Rashed Al-Shalan collects the hotels' occupancy returns, Atheer Al-Muhaya owns the survey and the complaints log, Nayef Al-Jumaah drew the charts of last year's report, Hanouf Al-Rumaihi is the data protection officer. The board, its people and every record are fictional and generated with a fixed seed.</p>
+  <aside class="notes"><p>Say it once: no real board, no real visitors, no real hotels. The data is synthetic so that what is in it is known: the season, two festivals, a reversal and several patterns that are only chance. You will be able to mark every reading right or wrong, which real data never allows. The other two tables are monthly arrivals by origin market and the complaints log.</p></aside>
+</section>
+
+<section class="slide" id="how-the-course-works" data-label="How the course works" data-n="4">
+  <div class="kicker">The method of this course</div>
+  <h2>Question, chart, reading: in that order, every time</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · Ask</b>a question with a unit and a comparison</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>2 · Look</b>with a chart and a summary that fit the variable</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>3 · Write</b>two sentences: what it shows, what it does not</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>4 · Check</b>could it be chance, and does it rerun</div>
+  </div>
+  <table class="t small mt">
+    <tr><th>Part of the course</th><th>Assistant</th></tr>
+    <tr><td>Supervised quizzes, and the first draft of every chart reading</td><td>Off</td></tr>
+    <tr><td>Plotting and dataframe syntax in the labs</td><td>A tutor that hints one step at a time and writes no chart for you</td></tr>
+    <tr><td>The capstone</td><td>Free; assisted charts and sentences are marked and defended live</td></tr>
+  </table>
+  <aside class="notes"><p>This slide is the contract. Steps 1 to 3 are Days 1 to 3, step 4 is Day 4. The tutor instruction is the file tutor_instruction.md in the labs folder (its name in this course is Bawsala); participants paste it into an assistant the Academy has approved. No lab calls a model. The reading is written without an assistant because reading a chart is the skill being assessed; syntax is not.</p></aside>
+</section>
+
+<section class="slide" id="setup-and-data-rules" data-label="Setup and data handling" data-n="5">
+  <div class="kicker">Before the first lab</div>
+  <h2>One notebook proves the setup; three rules govern the data</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Setup check</h4><p class="small">Open <code>00_setup_check.ipynb</code> in Colab or locally and run all cells. It imports the libraries, reads the six tables and draws one chart.</p><pre class="code s"><code class="language-text">uv sync
+uv run jupyter lab</code></pre></div>
+    <div class="card c-coral"><h4>Handled as personal data</h4><p class="small mb0">The data is synthetic and is still handled as the board would handle the real thing:</p><ul class="bullets tight small"><li>stays and hotels appear only under pseudonymised keys</li><li>no chart singles out one visitor or one hotel</li><li>small groups are not published, and a rate travels with its denominator</li></ul></div>
+  </div>
+  <aside class="notes"><p>Give five minutes for the setup check if the pre-work did not settle it. Nothing calls or downloads a model, so the usual failures are a missing uv or a blocked Colab. The three rules come from the course's responsible-use statement and apply the transparency principle of the SDAIA AI Ethics Principles to analytical output; Hanouf Al-Rumaihi is the persona who would ask about them. Lab 2.2 applies the small-group rule to a real table.</p></aside>
+</section>
+
+<!-- ======================= SESSION 1 ======================= -->
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="6">
+  <div class="kicker">Session 1</div>
+  <h1>Write the questions first</h1>
+  <ul class="bullets outcomes"><li>Rewrite a vague request as a question with a unit, variables and a comparison</li><li>Name the unit of observation of each table before joining or counting</li><li>Distinguish an exploratory question from a confirmatory one</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="the-brief" data-lo="LO2" data-label="The brief" data-n="7" data-session="1">
+  <div class="kicker">What the director sent</div>
+  <h2>Five asks, none of them answerable as written</h2>
+  <div class="chat">
+    <div class="msg user"><span class="who">Nawal Al-Rashoud</span>Who is actually coming, and do they stay? I keep hearing that our visitors "pop in and leave".</div>
+    <div class="msg user"><span class="who">Nawal Al-Rashoud</span>Atheer's team logged a lot of complaints about the Cable Car. Is that our problem site?</div>
+    <div class="msg user"><span class="who">Nawal Al-Rashoud</span>Satisfaction went down last year. Why, and whose fault is it?</div>
+  </div>
+  <div class="callout warn mt"><b>The trap.</b> Open the data now and you will chart whatever is easiest to chart, then call it the answer.</div>
+  <aside class="notes"><p>Three of the five asks; the full brief is data/brief.md and opens lab 1.1. Ask the room what "actually", "problem" and "whose fault" would be measured by. Nobody can say, and that is the point: these are a director's words and they are honest ones. The analyst's first job is translation, not plotting.</p></aside>
+</section>
+
+<section class="slide" id="anatomy-of-a-question" data-lo="LO2" data-label="Anatomy of a question" data-n="8" data-session="1">
+  <div class="kicker">The tool of this session</div>
+  <h2>An answerable question names four things</h2>
+  <table class="t">
+    <tr><th>Part</th><th>It says</th><th>Ask 3, rewritten</th></tr>
+    <tr><td><b>Unit of observation</b></td><td>what one row is</td><td>one complaint; one ticket sale</td></tr>
+    <tr><td><b>Variables</b></td><td>which columns are used</td><td>site; tickets in the sale</td></tr>
+    <tr><td><b>Comparison</b></td><td>what is set against what</td><td>complaints per thousand visitors, by site</td></tr>
+    <tr><td><b>Kind</b></td><td>exploring, or testing a claim fixed in advance</td><td>exploratory</td></tr>
+  </table>
+  <div class="callout tip mt"><b>The test.</b> Could a colleague answer it without phoning you? "How many complaints per thousand visitors does each site receive?" passes. "Is it our problem site?" does not.</div>
+  <aside class="notes"><p>Walk the table row by row with ask 3. The comparison row is where most plans are thin: "look at complaints" is not a comparison, "per thousand visitors, by site" is. Note that the rewritten question quietly added a second table, ticket sales, because a rate needs a denominator. Session 2.2 returns to this.</p></aside>
+</section>
+
+<section class="slide" id="unit-of-observation" data-lo="LO2" data-label="Unit of observation" data-n="9" data-session="1">
+  <div class="kicker">What one row is</div>
+  <h2>"Visitors" is a different thing in every table</h2>
+  <table class="t small">
+    <tr><th>Table</th><th>One row is</th><th class="num">Rows</th></tr>
+    <tr><td>arrivals</td><td>one origin market in one month</td><td class="num">180</td></tr>
+    <tr><td>tickets</td><td>one ticket sale at one site</td><td class="num">150,000</td></tr>
+    <tr><td>stays</td><td>one visiting party's stay in the region</td><td class="num">40,000</td></tr>
+    <tr><td>occupancy</td><td>one hotel on one day</td><td class="num">43,840</td></tr>
+    <tr><td>survey</td><td>one visitor's response after a site visit</td><td class="num">6,000</td></tr>
+    <tr><td>complaints</td><td>one complaint</td><td class="num">2,418</td></tr>
+  </table>
+  <ul class="bullets tight mt">
+    <li>Counting rows counts units: 40,000 stays are parties, not people.</li>
+    <li>Two tables meet only after both are brought to one unit, such as the week.</li>
+  </ul>
+  <aside class="notes"><p>This is the data dictionary, shortened. Ask: how many visitors came in 2024? The room will find three different honest answers (arrivals estimates, tickets sold, parties times party size) and they will not agree. A plan that names the unit says which one it means. Ask 2 of the brief, sites against hotels, joins a table of sales to a table of hotel-days: the plan says "per week".</p></aside>
+</section>
+
+<section class="slide" id="exploratory-or-confirmatory" data-lo="LO1" data-label="Exploratory or confirmatory" data-n="10" data-session="1">
+  <div class="kicker">Two kinds of work</div>
+  <h2>Exploring finds questions; confirming answers one fixed in advance</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Exploratory</h4><ul class="bullets tight small"><li>You look at the data to see what is there</li><li>Many cuts, many charts, the choice made after looking</li><li>Output: patterns worth a question</li><li>Honest wording: "we saw", "in this data"</li></ul></div>
+    <div class="card c-coral"><h4>Confirmatory</h4><ul class="bullets tight small"><li>The comparison was written down before the data was seen</li><li>One planned analysis on data not used to find the pattern</li><li>Output: evidence for or against a claim</li><li>Honest wording: "the test planned in advance showed"</li></ul></div>
+  </div>
+  <div class="callout note mt"><b>Why a found pattern needs a fresh test.</b> The data that suggested a pattern cannot also confirm it: you chose the pattern because it stood out there.</div>
+  <aside class="notes"><p>Outcome 1 of the course. An example from the board's past report: "Visitors who arrive on a Tuesday spend the most" came from tabulating every day, origin and purpose and keeping the largest cell. That is exploration reported as a finding. Day 4, session 3 counts such comparisons. For now the rule is only this: everything in this course's plan is exploratory, because the three years of data existed before the questions did.</p></aside>
+</section>
+
+<section class="slide" id="the-plan" data-lo="LO2" data-label="The plan" data-n="11" data-session="1">
+  <div class="kicker">One page before any chart</div>
+  <h2>The plan is a table, and it passes a checklist</h2>
+  <pre class="code s" data-file="one entry of the plan"><code class="language-python">{<span class="hljs-string">&quot;question&quot;</span>: <span class="hljs-string">&quot;How many complaints per thousand visitors does each site receive over the three years?&quot;</span>,
+ <span class="hljs-string">&quot;table&quot;</span>: <span class="hljs-string">&quot;complaints&quot;</span>, <span class="hljs-string">&quot;also&quot;</span>: [<span class="hljs-string">&quot;tickets&quot;</span>],
+ <span class="hljs-string">&quot;unit&quot;</span>: <span class="hljs-string">&quot;one complaint logged by the visitor experience team&quot;</span>,
+ <span class="hljs-string">&quot;variables&quot;</span>: [<span class="hljs-string">&quot;site&quot;</span>, <span class="hljs-string">&quot;tickets&quot;</span>],
+ <span class="hljs-string">&quot;comparison&quot;</span>: <span class="hljs-string">&quot;complaints per thousand visitors by site, with the count and the visitors beside it&quot;</span>,
+ <span class="hljs-string">&quot;kind&quot;</span>: <span class="hljs-string">&quot;exploratory&quot;</span>}</code></pre>
+  <ul class="bullets tight">
+    <li>The checklist rejects a question with a word nobody can measure, a unit that is not the table's, fewer than two variables, or no comparison.</li>
+    <li>It does not judge whether the question is interesting. That stays with you and the director.</li>
+  </ul>
+  <aside class="notes"><p>This is the form lab 1.1 uses and the function U.plan_check reads. Outcome 2's evidence is exactly this: a one-page plan checked against a checklist before any chart is drawn. Tell them the checklist is strict about the words why, problem, fault, good and bad on purpose.</p></aside>
+</section>
+
+<section class="slide" id="what-the-plan-cannot-do" data-lo="LO1 LO2" data-label="Limits of the plan" data-n="12" data-session="1">
+  <div class="kicker">A narrower promise</div>
+  <h2>The plan answers "what happened", not "why"</h2>
+  <div class="cols cols-2">
+    <div>
+      <p><b>Ask 5:</b> "Satisfaction went down last year. Why, and whose fault is it?"</p>
+      <p><b>Plan:</b> "Did mean satisfaction change from 2024 to 2025 inside each origin market, and did the mix of markets among respondents change?"</p>
+    </div>
+    <ul class="bullets">
+      <li>The data can show where the fall sits.</li>
+      <li>It cannot assign a cause: nothing was varied on purpose.</li>
+      <li>Say so in the plan, before the director expects more.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Lab 1.1, step 4 asks for two sentences on what the plan leaves out. A good answer: this plan describes 2023 to 2025; a cause needs a comparison planned in advance and checked on data not yet looked at, such as next season's survey. Randomised experiments are the subject of DS-205; this course stops at saying what a fresh test would be.</p></aside>
+</section>
+
+<section class="slide" id="check-question" data-lo="LO2" data-n="13" data-session="1">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which rewrite can be answered?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-question-q1">
+    <p class="lead">The director asks: "Did the festivals bring people, or would they have come anyway?" Which rewrite belongs in the plan?</p>
+    <div class="opts">
+      <div class="opt" data-why="Keeps a word nobody can measure: 'successful' has no unit and no comparison" data-k="A">Were the festivals successful for the region?</div>
+      <div class="opt" data-why="Names a variable and no comparison: a count of arrivals in October says nothing about what October would have been" data-k="B">How many arrivals were recorded in the festival months?</div>
+      <div class="opt" data-ok data-k="C">By how much did arrivals in each festival month exceed the baseline for that month of the year?</div>
+      <div class="opt" data-why="Promises a cause from data in which nothing was varied on purpose" data-k="D">Did the festivals cause visitors to choose Tilal over other regions?</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> It names the unit (a month), the variable (arrivals) and the comparison (the festival month against what season and trend lead us to expect).</div>
+  </div>
+  <aside class="notes"><p>Answer: the third. If the room picks the second, ask "compared with what?" and wait. If it picks the fourth, ask what data would show a visitor's choice between regions; the board has none. The baseline is built in lab 2.3.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-1" data-auto="lab" data-lab="1.1" data-label="Lab 1.1" data-n="14" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.1 · 25 min</div><h2>Five questions from the brief</h2><p class="lead small">Turn the director's brief into five questions, each with its table, unit of observation, variables and comparison, and pass the plan checklist before any chart is drawn.</p><a class="nb" href="../labs/D1_1_brief_questions.ipynb">D1_1_brief_questions.ipynb</a></div><ul class="checklist"><li>Read the brief; name the table and the unit behind each ask <span class="min">5 min</span></li><li>Write five questions with variables and comparison <span class="min">12 min</span></li><li>Run the plan checklist and fix what fails <span class="min">5 min</span></li><li>Write what the plan leaves out <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Add the question the brief did not ask and should have</li></ul></div>
+  <aside class="notes"><p>Assistant off for this lab: the plan is their own first draft. No data table is opened. Common failure: the unit copied from memory instead of from the dictionary, which the checklist rejects. Those who finish early take the stretch, the question the brief did not ask (who is missing from the data).</p></aside>
+</section>
+
+<!-- ======================= SESSION 2 ======================= -->
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="15">
+  <div class="kicker">Session 2</div>
+  <h1>Profiling a table</h1>
+  <ul class="bullets outcomes"><li>Test whether a table has the grain and the key its dictionary claims</li><li>Locate missing values and impossible values, and say whom they affect</li><li>Record each data issue with its evidence and a decision</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="profile-before-plot" data-lo="LO3" data-label="Profile first" data-n="16" data-session="2">
+  <div class="kicker">Before the first chart of a table</div>
+  <h2>A profile asks six things of a table</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>1 · Grain and key</h4><p class="small mb0">Is one row what the dictionary says? Is the key unique?</p></div>
+    <div class="card c-cyan"><h4>2 · Types</h4><p class="small mb0">Are dates dates and numbers numbers, or text that looks like them?</p></div>
+    <div class="card c-coral"><h4>3 · Missing values</h4><p class="small mb0">How many, and above all where?</p></div>
+    <div class="card c-purple"><h4>4 · Ranges</h4><p class="small mb0">Smallest and largest: can they be true?</p></div>
+    <div class="card c-amber"><h4>5 · Categories</h4><p class="small mb0">How many distinct values, and how spelled?</p></div>
+    <div class="card c-green"><h4>6 · Coverage</h4><p class="small mb0">Which period and which groups does the table hold?</p></div>
+  </div>
+  <aside class="notes"><p>These six are the session. Each has a planted example in the stay register, which lab 1.2 finds. Profiling is not cleaning: the output is a log of what was found and what was decided, not a silently repaired table. Assembling data from several sources, matching records and writing quality rules are the subject of DS-202; here it is one table.</p></aside>
+</section>
+
+<section class="slide" id="summarize-statement" data-lo="LO3" data-label="One statement" data-n="17" data-session="2">
+  <div class="kicker">Lab 1.2, opening cell</div>
+  <h2>One statement profiles every column</h2>
+  <pre class="code s"><code class="language-text">      column_name column_type        min         max  approx_unique  null_percentage
+          stay_id     VARCHAR  T0002344e   Tfffb8d8e          39407             0.00
+     arrival_date     VARCHAR 2023-01-01  2032-10-25           1137             0.00
+           origin     VARCHAR       Asia       gulf               7             0.00
+           nights      BIGINT          0         999             28             0.00
+        spend_sar      DOUBLE       14.0     76181.0           8565             6.45</code></pre>
+  <ul class="bullets tight">
+    <li>Four of the planted issues are visible in these five lines. Find them before the next slide.</li>
+    <li><code>SUMMARIZE</code> is DuckDB's; <code>df.describe(include="all")</code> gives a similar table in pandas.</li>
+  </ul>
+  <aside class="notes"><p>Real output of lab 1.2 (five of ten columns). Give the room one minute. The four: arrival dates in 2032; seven origin values where the dictionary says five, and the largest is a lower-case "gulf"; nights up to 999; spend missing in 6.45% of rows. The fifth issue, the rows entered twice, does not show here: 40,600 rows against about 40,000 distinct keys only hints at it, and approx_unique is an estimate.</p></aside>
+</section>
+
+<section class="slide" id="grain-and-key" data-lo="LO3" data-label="Grain and key" data-n="18" data-session="2">
+  <div class="kicker">Lab 1.2, step 1</div>
+  <h2>40,600 rows hold 40,000 stays</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">40,600</div><div class="lbl">rows in the export</div></div>
+    <div class="stat"><div class="big">40,000</div><div class="lbl">distinct stay keys</div></div>
+    <div class="stat"><div class="big">600</div><div class="lbl">rows that repeat an earlier row in every column</div></div>
+  </div>
+  <ul class="bullets mt">
+    <li>Every repeated key is an exact copy: a double entry, safe to drop.</li>
+    <li>Had the copies differed in any column, the repair would be the owner's decision, not yours.</li>
+    <li>Left in, the copies make every count 1.5% too high and nothing looks wrong.</li>
+  </ul>
+  <aside class="notes"><p>From the solution run of lab 1.2. The distinction on the second bullet matters in practice: a repeated key with different values is a conflict, and the analyst who silently keeps "the first" has invented a rule. Aws Al-Hudaif owns the register.</p></aside>
+</section>
+
+<section class="slide" id="where-missing-sits" data-lo="LO3" data-label="Where missing sits" data-n="19" data-session="2">
+  <div class="kicker">Lab 1.2, step 2</div>
+  <h2>The share of missing values matters less than where they sit</h2>
+  <div class="bars">
+    <div class="row"><span>Day visits</span><div class="bar c-coral" style="--w:100%"></div><span class="val">21.7% without spend</span></div>
+    <div class="row"><span>Overnight stays</span><div class="bar c-teal" style="--w:10%"></div><span class="val">2.1% without spend</span></div>
+  </div>
+  <ul class="bullets mt">
+    <li>Overall, spend is missing in 2,577 of 40,000 stays: 6.4%, which sounds harmless.</li>
+    <li>Day visitors spend least and answer least. An average over the rows that remain leans toward overnight visitors.</li>
+    <li>The decision: keep the rows, report the share missing by group, never fill in a typical value.</li>
+  </ul>
+  <aside class="notes"><p>Numbers from lab 1.2. Ask what happens to "average spend per party" if the missing rows are simply dropped: it is too high for the region as a whole, and the board would overstate what a visitor brings. Missing values that depend on the thing you are measuring are the dangerous kind.</p></aside>
+</section>
+
+<section class="slide" id="impossible-values" data-lo="LO3" data-label="Impossible values" data-n="20" data-session="2">
+  <div class="kicker">Lab 1.2, step 3</div>
+  <h2>A code that poses as a number moves every summary</h2>
+  <div class="cols cols-2">
+    <div>
+      <div class="stat"><div class="big">11.26</div><div class="lbl">mean nights with the 320 rows of 999 left in</div></div>
+      <div class="stat mt"><div class="big">3.30</div><div class="lbl">mean nights without them</div></div>
+    </div>
+    <ul class="bullets">
+      <li>999 means "not recorded". It is in 0.8% of the rows and more than triples the mean.</li>
+      <li>One market is stored as <code>Gulf</code>, <code>GCC</code> and <code>gulf </code> with a trailing space: 586 stays would fall out of any group-by.</li>
+      <li>14 stays arrive in 2032.</li>
+    </ul>
+  </div>
+  <div class="callout tip mt"><b>Look at the smallest and the largest value of every column</b>, and at every distinct value of a category with few of them.</div>
+  <aside class="notes"><p>Numbers from lab 1.2. The trailing space cannot be seen in any printed table, which is why the profile counts distinct values instead of reading them. Set 999 to missing, not to the median: nobody knows those stays' length, and a filled-in value hides 320 unknowns inside the commonest answer.</p></aside>
+</section>
+
+<section class="slide" id="issue-log" data-lo="LO3" data-label="The issue log" data-n="21" data-session="2">
+  <div class="kicker">The output of a profile</div>
+  <h2>An issue log holds evidence and a decision someone can dispute</h2>
+  <table class="t small">
+    <tr><th>Issue</th><th class="num">Rows</th><th>Decision</th></tr>
+    <tr><td>Rows that repeat an earlier row in every column</td><td class="num">600</td><td>drop the copies</td></tr>
+    <tr><td>Nights is 999 where the length was not recorded</td><td class="num">320</td><td>set to missing</td></tr>
+    <tr><td>The Gulf market under three spellings</td><td class="num">586</td><td>recode to one spelling</td></tr>
+    <tr><td>Spend missing, mostly for day visits</td><td class="num">2,577</td><td>keep and report the share</td></tr>
+    <tr><td>Arrival dates in 2032</td><td class="num">14</td><td>set to missing; ask the owner</td></tr>
+  </table>
+  <p class="small mt">The log travels with every chart made from the table. The supplied clean register, <code>U.stays()</code>, applies exactly these decisions, and every later lab starts from it.</p>
+  <aside class="notes"><p>This is the answer key of lab 1.2 and the reference state of labs 1.3 and 1.4. Stress the third column: each decision is a choice a reader could disagree with, so it is written down. "Cleaned the data" in a methods note is not a decision anyone can check.</p></aside>
+</section>
+
+<section class="slide" id="check-profile" data-lo="LO3" data-n="22" data-session="2">
+  <div class="kicker">Checkpoint</div>
+  <h2>What do you do with the 999s?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-profile-q1">
+    <p class="lead">320 stays have 999 in the column nights. The data dictionary does not mention the value. What goes into the issue log?</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="A">Set them to missing, record the 320 rows, and ask the register's owner what 999 stands for</div>
+      <div class="opt" data-why="Hides 320 unknown values inside the most common answer and shrinks the spread" data-k="B">Replace them with the median length of stay so that no row is lost</div>
+      <div class="opt" data-why="Treats a code as a measurement: the mean of nights would more than triple" data-k="C">Keep them: a few very long stays are plausible in a tourism region</div>
+      <div class="opt" data-why="Throws away the other nine columns of 320 stays, which are sound" data-k="D">Delete the 320 rows from the register before any analysis</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The length of those stays is unknown. Missing says so; any other value claims knowledge nobody has. The rows keep their other columns.</div>
+  </div>
+  <aside class="notes"><p>Answer: the first. The tempting one is the median. Ask what the histogram of nights would look like with 320 extra stays at the median: a spike that is not in the world.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-2" data-auto="lab" data-lab="1.2" data-label="Lab 1.2" data-n="23" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.2 · 25 min</div><h2>Profile the stay register</h2><p class="lead small">Profile the visitor table, find rows entered twice, a code that poses as a number, one market under three spellings and spend that is missing for day visitors, and log three issues with evidence and a decision.</p><a class="nb" href="../labs/D1_2_profile_stays.ipynb">D1_2_profile_stays.ipynb</a></div><ul class="checklist"><li>Shape, grain and key: is one row one stay? <span class="min">5 min</span></li><li>Types and missing values: where spend is missing <span class="min">6 min</span></li><li>Ranges and categories: values that cannot be true <span class="min">6 min</span></li><li>Log three issues with evidence and a decision <span class="min">6 min</span></li><li>Write the reading <span class="min">2 min</span></li><li class="stretch">✱ Stretch: Find the fifth issue, in the dates</li></ul></div>
+  <aside class="notes"><p>The tutor may hint at dataframe syntax; the log and the reading are written without an assistant. The lab starts from the raw export, U.stays_raw(), and needs nothing from lab 1.1. Common failure: counting repeated keys but not testing whether the copies are exact. The stretch finds the dates in 2032.</p></aside>
+</section>
+
+<!-- ======================= SESSION 3 ======================= -->
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="24">
+  <div class="kicker">Session 3</div>
+  <h1>Distributions</h1>
+  <ul class="bullets outcomes"><li>Draw a histogram with a bin width that suits the variable</li><li>Compare groups of unequal size by shares on a common scale</li><li>Recognise a distribution with two humps that a box plot hides</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide" id="what-a-distribution-is" data-lo="LO3" data-label="Distributions" data-n="25" data-session="3">
+  <div class="kicker">One variable at a time</div>
+  <h2>A distribution answers "which values, how often"</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d1_3_hist_all.svg" alt="Histogram of nights for 39,680 stays: the tallest bar at 0 nights, a second rise at 2 nights, a lower one near 7, and a thin tail to 31">
+      <figcaption>Lab 1.3, step 1: nights in the region, all parties, one bin per night.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Read four things: where the bulk is, how wide, how many humps, how long the tail.</li>
+      <li>Here: a spike at 0, a hump at 2, a low hump near 7, a tail to 31.</li>
+      <li>Three humps in one histogram usually mean three kinds of unit mixed together.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Recap from DS-201, Day 1: a histogram counts values in bins. New here is the reading order on the first bullet, and the habit of asking what a second hump is made of. Question 1 of the plan is on the table: do visitors "pop in and leave"? The spike at 0 says some do. The rest of the session finds out who.</p></aside>
+</section>
+
+<section class="slide" id="bin-width" data-lo="LO3" data-label="Bin width" data-n="26" data-session="3">
+  <div class="kicker">The one choice a histogram has</div>
+  <h2>The bin width decides what a histogram can show</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>Too wide</h4><p class="small mb0">Bins of 7 nights put 13,205 of the 17,367 stays from other regions into the first bar. Two humps become one.</p></div>
+    <div class="card c-teal"><h4>Fitted to the variable</h4><p class="small mb0">Nights is a count: one bin per night. Spend spans three orders of magnitude: equal steps on a log scale.</p></div>
+    <div class="card c-amber"><h4>Too narrow</h4><p class="small mb0">Bins of 10 riyals of spend leave a handful of stays in each bar: the shape drowns in noise.</p></div>
+  </div>
+  <div class="callout tip mt"><b>Try two or three widths</b> and keep the one where the shape stops changing. Say the width in the axis title or the caption.</div>
+  <aside class="notes"><p>The first card is the stretch of lab 1.3 (13,205 stays of 0 to 6 nights, 4,159 of 7 to 13, 3 beyond). There is no correct bin width; there are widths that hide the feature you are looking for. For a count with few distinct values the natural width is one.</p></aside>
+</section>
+
+<section class="slide" id="shares-not-counts" data-lo="LO3" data-label="Shares by group" data-n="27" data-session="3">
+  <div class="kicker">Lab 1.3, step 2</div>
+  <h2>To compare groups of unequal size, compare shares</h2>
+  <div class="cols cols-2">
+    <figure class="figure">
+      <img src="../assets/figs/d1_3_hist_by_origin.svg" alt="Five histograms of nights, one per origin market, as shares on a common scale: Tilal region 80% at zero nights; Other regions with a hump at 2 nights and another at 6 to 7; Gulf and Asia with one hump at 3 to 4; Europe spread from 2 to more than 20 nights">
+    </figure>
+    <ul class="bullets">
+      <li>Counts would show the size of each market, not its shape.</li>
+      <li>80% of parties from the Tilal region are day visits; none from Europe.</li>
+      <li>"Other regions" has two humps with nothing at 4 nights.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The answer to question 1 is on this slide: visitors do not all pop in and leave; it depends on where they come from. Panels on shared scales are small multiples, which Day 3 treats properly. Point at the valley in "Other regions" and ask what two kinds of trip it suggests: a weekend and a week.</p></aside>
+</section>
+
+<section class="slide" id="box-plot" data-lo="LO3" data-label="Box plots" data-n="28" data-session="3">
+  <div class="kicker">Lab 1.3, step 3</div>
+  <h2>A box plot draws five numbers and takes one line per group</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d1_3_box.svg" alt="Box plots of nights for five origin markets: Tilal region collapsed at zero, Other regions with a box from 2 to 6 and median 3, Gulf 3 to 7 with median 4, Asia 2 to 5 with median 4, Europe 5 to 9 with median 7 and points out to 31">
+      <figcaption>The same stays as the five histograms.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Box: first quartile, median, third quartile. Whiskers: the rest, short of far points.</li>
+      <li>Good for many groups and for comparing middles and spreads.</li>
+      <li>"Other regions" and "Asia" look alike here: medians 3 and 4, boxes 2 to 6 and 2 to 5.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Recap of the five-number summary from DS-201 in one line; the new content is the comparison with the previous slide. Leave the third bullet hanging: the room has just seen that those two markets are not alike at all.</p></aside>
+</section>
+
+<section class="slide" id="what-the-box-hides" data-lo="LO3" data-label="What the box hides" data-n="29" data-session="3">
+  <div class="kicker">Lab 1.3, step 4</div>
+  <h2>The box cannot show two humps</h2>
+  <table class="t">
+    <tr><th>Nights, "Other regions"</th><th class="num">1</th><th class="num">2</th><th class="num">3</th><th class="num">4</th><th class="num">5</th><th class="num">6</th><th class="num">7</th><th class="num">8</th><th class="num">9</th></tr>
+    <tr><td>Share of stays</td><td class="num">15%</td><td class="num">31%</td><td class="num">16%</td><td class="num">0%</td><td class="num">4%</td><td class="num">10%</td><td class="num">10%</td><td class="num">7%</td><td class="num">4%</td></tr>
+  </table>
+  <ul class="bullets mt">
+    <li>63% of these stays last 1 to 3 nights and 37% last 5 or more. None lasts 4.</li>
+    <li>The median, 3 nights, belongs to the short trips only. The box, 2 to 6, runs straight across the valley.</li>
+    <li>The box plot is not wrong. It was asked "what kinds of trip are there" and answers "where is the middle half".</li>
+  </ul>
+  <aside class="notes"><p>Numbers from lab 1.3. This is the planted two-hump distribution. The practical rule: draw the histogram at least once for every variable you intend to summarise with a box, and again for any group whose box looks unremarkable.</p></aside>
+</section>
+
+<section class="slide" id="density-and-small-groups" data-lo="LO3" data-label="Density and small groups" data-n="30" data-session="3">
+  <div class="kicker">Two cautions</div>
+  <h2>Smooth curves and small groups both invent detail</h2>
+  <div class="cols cols-2">
+    <div class="card c-purple"><h4>Density curves</h4><p class="small mb0">A density plot is a smoothed histogram with a bandwidth in place of a bin width. It overlays well, and it draws mass where no value can be: below zero nights, between whole nights. For counts and scores, prefer bars.</p></div>
+    <div class="card c-coral"><h4>Small groups</h4><p class="small mb0">A histogram of 40 values has bumps that mean nothing. Read a group's size before its shape: Europe has 2,166 stays here, one site in one month may have a dozen.</p></div>
+  </div>
+  <div class="callout note mt"><b>Responsible use.</b> A point drawn for one extreme party can single out an identifiable visitor. Show far points only where a group is large, or summarise them.</div>
+  <aside class="notes"><p>The entry's topic list names density plots, so they are taught, with their main trap. The responsible-use note connects to the box plot two slides back: its far points are individual stays. With pseudonymised keys and thousands of stays that is acceptable; a box plot of spend for one small hotel would not be.</p></aside>
+</section>
+
+<section class="slide" id="check-distribution" data-lo="LO3" data-n="31" data-session="3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which chart for which question?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-distribution-q1">
+    <p class="lead">Aws Al-Hudaif asks whether visitors from other regions come for one kind of trip or several. You have their 17,367 stays with the nights of each. What do you draw first?</p>
+    <div class="opts">
+      <div class="opt" data-why="Draws five numbers: two humps and one hump with the same quartiles give the same box" data-k="A">A box plot of nights for that market</div>
+      <div class="opt" data-why="One number for a variable whose shape is the question" data-k="B">A bar with the mean number of nights and an error bar</div>
+      <div class="opt" data-why="Bins of a week merge a weekend trip and a five-night stay into one bar" data-k="C">A histogram of nights with bins seven nights wide</div>
+      <div class="opt" data-ok data-k="D">A histogram of nights with one bin for each night</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> "One kind or several" is a question about humps. Only a histogram with bins fine enough to separate them can show two.</div>
+  </div>
+  <aside class="notes"><p>Answer: the last. If the room chooses the box plot, return to the table of shares: the box runs from 2 to 6 across a length nobody stays.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-3" data-auto="lab" data-lab="1.3" data-label="Lab 1.3" data-n="32" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.3 · 25 min</div><h2>Length of stay by origin</h2><p class="lead small">Compare length of stay by visitor origin with histograms and box plots, and find the market whose box plot hides two kinds of trip.</p><a class="nb" href="../labs/D1_3_length_of_stay.ipynb">D1_3_length_of_stay.ipynb</a></div><ul class="checklist"><li>One histogram of nights for all parties <span class="min">5 min</span></li><li>Shares by origin, one panel each <span class="min">7 min</span></li><li>Box plots by origin <span class="min">5 min</span></li><li>Find the market with two kinds of trip <span class="min">5 min</span></li><li>Write the reading <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Change the bin width to 7 nights and say what disappears</li></ul></div>
+  <aside class="notes"><p>The tutor may hint at Altair syntax (the bin and the row facet are the usual sticking points). The reading is written without an assistant. The lab starts from U.stays(), the register after the issue log, so it does not depend on lab 1.2. Each chart exercise is checked by reading the chart's specification: mark, fields, scale.</p></aside>
+</section>
+
+<!-- ======================= SESSION 4 ======================= -->
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="33">
+  <div class="kicker">Session 4</div>
+  <h1>Summaries that fit the shape</h1>
+  <ul class="bullets outcomes"><li>Predict from mean and median which way a variable is skewed</li><li>Choose a centre and a spread that the tail does not move</li><li>Summarise a zero-heavy variable and a score without a single mean</li></ul>
+  <div class="sess-no">04</div>
+</section>
+
+<section class="slide" id="mean-follows-tail" data-lo="LO3" data-label="Mean and median" data-n="34" data-session="4">
+  <div class="kicker">Lab 1.4, step 1</div>
+  <h2>The gap between mean and median is a first reading of the shape</h2>
+  <table class="t">
+    <tr><th>Variable</th><th class="num">Mean</th><th class="num">Median</th><th class="num">Mean / median</th></tr>
+    <tr><td>Spend per party, riyals</td><td class="num">2,736</td><td class="num">1,498</td><td class="num">1.83</td></tr>
+    <tr><td>Nights</td><td class="num">3.30</td><td class="num">2</td><td class="num">1.65</td></tr>
+    <tr><td>Booking lead, days</td><td class="num">16.2</td><td class="num">6</td><td class="num">2.70</td></tr>
+    <tr><td>Satisfaction, 1 to 5</td><td class="num">4.12</td><td class="num">4</td><td class="num">1.03</td></tr>
+  </table>
+  <ul class="bullets tight mt">
+    <li>A mean far above the median says "long right tail" before any chart is drawn.</li>
+    <li>Mean and median that agree do not prove symmetry: satisfaction is piled against the top of its scale.</li>
+  </ul>
+  <aside class="notes"><p>Numbers from lab 1.4. Recap from DS-201, Day 1: the mean follows the tail, the median does not. New here: four different shapes and the point that one rule does not serve them all. About seven parties in ten spend less than the "average" spend.</p></aside>
+</section>
+
+<section class="slide" id="spread-that-describes" data-lo="LO3" data-label="Spread" data-n="35" data-session="4">
+  <div class="kicker">Lab 1.4, step 2</div>
+  <h2>"Mean plus or minus one standard deviation" can describe nobody</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Spend, as often reported</h4><p class="mb0">2,736 ± 3,788 riyals.</p><p class="small mb0">The lower end is 1,051 riyals below zero. No party spent that.</p></div>
+    <div class="card c-teal"><h4>Spend, by quartiles</h4><p class="mb0">Median 1,498; half of the parties between 571 and 3,392.</p><p class="small mb0">Three amounts that real parties spent.</p></div>
+  </div>
+  <ul class="bullets mt">
+    <li>The standard deviation squares distances, so a few large bills dominate it.</li>
+    <li>Removing the top 1% of spend cuts the standard deviation by 24% and the median by 1.5%.</li>
+  </ul>
+  <aside class="notes"><p>Numbers from lab 1.4 and its stretch. The standard deviation is a fine measure for a symmetric variable and a necessary one for standard errors; it is a poor description of a skewed one. The quartiles answer the question a reader has: what do typical parties spend?</p></aside>
+</section>
+
+<section class="slide" id="log-scale" data-lo="LO3" data-label="Log scale" data-n="36" data-session="4">
+  <div class="kicker">Lab 1.4, step 3</div>
+  <h2>Variables that multiply are symmetric on a log scale</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d1_4_hist_log.svg" alt="Histogram of spend per party on a logarithmic axis from 10 to 100,000 riyals: one symmetric hump centred near 1,500 riyals">
+      <figcaption>Spend per party, equal steps on a log scale.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Spend is nights times party size times a daily rate.</li>
+      <li>On a log scale, equal distances are equal ratios.</li>
+      <li>Geometric mean 1,344 riyals: near the median 1,498, half the mean 2,736.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From lab 1.4. The geometric mean is the mean of the logs turned back into riyals. It is a fair centre for a multiplicative variable and useful when a later method needs a mean. For a report to a board the median is simpler to explain. A log axis has no zero: say "log scale" in the axis title, as the chart does.</p></aside>
+</section>
+
+<section class="slide" id="zero-heavy" data-lo="LO3" data-label="Zero-heavy variables" data-n="37" data-session="4">
+  <div class="kicker">Lab 1.4, step 4</div>
+  <h2>A zero-heavy variable needs two numbers</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">36%</div><div class="lbl">of parties did not book at all: lead time 0</div></div>
+    <div class="stat"><div class="big">14 days</div><div class="lbl">median lead of those who booked</div></div>
+    <div class="stat"><div class="big">6 days</div><div class="lbl">median of everyone, which describes neither group</div></div>
+  </div>
+  <ul class="bullets mt">
+    <li>Two populations share one column: walk-ins and bookers.</li>
+    <li>First the share at zero, then a summary of the rest.</li>
+    <li>The same shape: spend on tickets among all residents, complaints per visitor, days absent.</li>
+  </ul>
+  <aside class="notes"><p>Numbers from lab 1.4. The mean of all, 16.2 days, is worse still. The question behind the variable is usually two questions (do they book, and how far ahead), so the summary should be two answers.</p></aside>
+</section>
+
+<section class="slide" id="scores-need-shares" data-lo="LO3" data-label="Scores" data-n="38" data-session="4">
+  <div class="kicker">Lab 1.4, step 5</div>
+  <h2>A score from 1 to 5 is summarised by shares</h2>
+  <div class="bars">
+    <div class="row"><span>5</span><div class="bar c-teal" style="--w:100%"></div><span class="val">39.2%</span></div>
+    <div class="row"><span>4</span><div class="bar c-teal" style="--w:98%"></div><span class="val">38.3%</span></div>
+    <div class="row"><span>3</span><div class="bar c-amber" style="--w:46%"></div><span class="val">18.1%</span></div>
+    <div class="row"><span>2</span><div class="bar c-coral" style="--w:10%"></div><span class="val">4.1%</span></div>
+    <div class="row"><span>1</span><div class="bar c-coral" style="--w:1%"></div><span class="val">0.4%</span></div>
+  </div>
+  <ul class="bullets tight mt">
+    <li>"77% score 4 or 5" is a sentence a board can repeat. "Mean 4.12" hides whether the rest are at 3 or at 1.</li>
+    <li>A mean of scores assumes the step from 4 to 5 equals the step from 1 to 2. It is still used to compare groups, as Day 2 will; show the shares beside it.</li>
+  </ul>
+  <aside class="notes"><p>Shares from lab 1.4, all 6,000 responses. Be honest about practice: the board's reports use mean satisfaction, the survey literature does too, and labs 2.4, 4.1 and 4.2 work with it. The rule is not "never a mean of scores" but "never a mean alone".</p></aside>
+</section>
+
+<section class="slide" id="summary-carries-n" data-lo="LO3" data-label="What a summary carries" data-n="39" data-session="4">
+  <div class="kicker">The evidence for outcome 3</div>
+  <h2>Every question gets a chart, a summary and two sentences</h2>
+  <table class="t small">
+    <tr><th>Shape</th><th>Centre</th><th>Spread</th><th>Chart</th></tr>
+    <tr><td>Long right tail (spend)</td><td>median, or geometric mean</td><td>quartiles</td><td>histogram on a log scale</td></tr>
+    <tr><td>Count with humps (nights)</td><td>median, with the share in each hump</td><td>shares by range</td><td>bars, one per value</td></tr>
+    <tr><td>Zero-heavy (booking lead)</td><td>share of zeros, median of the rest</td><td>quartiles of the rest</td><td>two parts</td></tr>
+    <tr><td>Score (satisfaction)</td><td>share scoring 4 or 5</td><td>all five shares</td><td>bars of shares</td></tr>
+  </table>
+  <div class="callout tip mt"><b>A summary always carries</b> the number of values it rests on and what was left out: here the 2,577 stays with no stated spend, most of them day visits.</div>
+  <aside class="notes"><p>This table is the solution of lab 1.4, step 6, and the day's summary. The two sentences of a reading: what the chart shows, with numbers; and what it does not show or leaves out. Example from the lab: "A typical party spends about 1,500 riyals (median; half between 570 and 3,390), not the mean of 2,740. These summaries leave out the 2,577 stays with no stated spend, most of them day visits."</p></aside>
+</section>
+
+<section class="slide" id="check-summary" data-lo="LO3" data-n="40" data-session="4">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which sentence goes into the report?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3" data-id="check-summary-q1">
+    <p class="lead">A museum records minutes spent inside by each visitor. 45% of the records show 0 minutes because those visitors used only the cafe. The others stay a median of 70 minutes. Which summary is honest?</p>
+    <div class="opts">
+      <div class="opt" data-why="Averages cafe users with museum visitors: nobody stays the average time" data-k="A">Visitors spend a mean of 41 minutes in the museum</div>
+      <div class="opt" data-ok data-k="B">45% of visitors use only the cafe; the others stay a median of 70 minutes</div>
+      <div class="opt" data-why="The median of all records lands between two groups and describes neither of them" data-k="C">The median visitor spends 25 minutes in the museum</div>
+      <div class="opt" data-why="Drops nearly half of the visitors without saying so, which a reader cannot see" data-k="D">Museum visitors stay a median of 70 minutes inside</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A zero-heavy variable holds two groups. Give the share at zero, then a summary of the rest, and the reader can see both.</div>
+  </div>
+  <aside class="notes"><p>Answer: the second. The last option is the instructive one: its number is right and it is still misleading, because it leaves out 45% of the records silently. A summary carries what was left out.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-4" data-auto="lab" data-lab="1.4" data-label="Lab 1.4" data-n="41" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 1.4 · 25 min</div><h2>Centre and spread for four variables</h2><p class="lead small">Choose centre and spread measures for four skewed variables (spend, nights, booking lead time, satisfaction) and say what each summary leaves out.</p><a class="nb" href="../labs/D1_4_centre_spread.ipynb">D1_4_centre_spread.ipynb</a></div><ul class="checklist"><li>Mean and median of the four variables, and the gap between them <span class="min">5 min</span></li><li>Spread: standard deviation against quartiles <span class="min">5 min</span></li><li>Spend on a log scale: the geometric mean <span class="min">5 min</span></li><li>A zero-heavy variable needs two numbers <span class="min">4 min</span></li><li>A score from 1 to 5 needs shares <span class="min">3 min</span></li><li>Choose and write the reading <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Remove the top 1% of spend and see which summaries move</li></ul></div>
+  <aside class="notes"><p>The tutor may hint at syntax; the choices and the reading are their own. The lab starts from U.stays() and U.survey(). Six short steps: keep the pace, about four minutes each. Common failure: computing the geometric mean of a column that still holds missing values.</p></aside>
+</section>
+
+<section class="slide" id="wrap-up" data-label="Wrap-up" data-n="42" data-session="4">
+  <div class="kicker">Day 1</div>
+  <h2>Three things to keep</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>The question comes first</h4><p class="small mb0">Unit of observation, variables, comparison, and whether you are exploring or confirming. A plan that passes a checklist before any chart.</p></div>
+    <div class="card c-cyan"><h4>Profile, then log</h4><p class="small mb0">Grain, types, missing values, ranges, categories, coverage. Each issue with its rows and a decision someone can dispute.</p></div>
+    <div class="card c-coral"><h4>Shape before summary</h4><p class="small mb0">Look at the distribution, then choose the centre and the spread that describe it. Always with the number of values and what was left out.</p></div>
+  </div>
+  <aside class="notes"><p>Ask each table for the one number from today they would tell the director. Good candidates: 80% of local parties are day visits; visitors from other regions come for a weekend or a week; spend is missing for one day visit in five.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="Next" data-n="43" data-session="4">
+  <div class="kicker">Day 2</div>
+  <h1>Relationships and time</h1>
+  <p class="lead">Two variables at once, counts against rates, three years of monthly arrivals, and a total that says the opposite of its parts.</p>
+  <ul class="bullets">
+    <li>Keep your plan from lab 1.1 at hand: Day 2 answers questions 2 to 5.</li>
+    <li>Every lab starts from the supplied tables. Nothing from today's notebooks is needed.</li>
+  </ul>
+  <aside class="notes"><p>If the setup check failed for anyone today, settle it before tomorrow: lab 2.1 draws 43,840 points.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-15T14:45:38Z","version":"2027.1.0","commit":"c59b820"},"course":{"id":"ds-203","code":"DS-203","title":"Exploratory Analysis and Visualisation","track":"data-science","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/ds-203/","repo":"SDAIAAcademy/ds-203","home":"../index.html"},"deck":{"id":"day1","kind":"day","day":1,"label":"Day 1","title":"Questions and first looks","prev":null,"next":"day2.html","md":"day1.md","alt":{}},"sessions":[{"n":1,"label":"Session 1","title":"Write the questions first","slide":"s1","outcomes":["Rewrite a vague request as a question with a unit, variables and a comparison","Name the unit of observation of each table before joining or counting","Distinguish an exploratory question from a confirmatory one"],"minutes":50,"lab":{"id":"1.1","title":"Five questions from the brief","minutes":25,"href":"../labs/D1_1_brief_questions.ipynb"}},{"n":2,"label":"Session 2","title":"Profiling a table","slide":"s2","outcomes":["Test whether a table has the grain and the key its dictionary claims","Locate missing values and impossible values, and say whom they affect","Record each data issue with its evidence and a decision"],"minutes":50,"lab":{"id":"1.2","title":"Profile the stay register","minutes":25,"href":"../labs/D1_2_profile_stays.ipynb"}},{"n":3,"label":"Session 3","title":"Distributions","slide":"s3","outcomes":["Draw a histogram with a bin width that suits the variable","Compare groups of unequal size by shares on a common scale","Recognise a distribution with two humps that a box plot hides"],"minutes":50,"lab":{"id":"1.3","title":"Length of stay by origin","minutes":25,"href":"../labs/D1_3_length_of_stay.ipynb"}},{"n":4,"label":"Session 4","title":"Summaries that fit the shape","slide":"s4","outcomes":["Predict from mean and median which way a variable is skewed","Choose a centre and a spread that the tail does not move","Summarise a zero-heavy variable and a score without a single mean"],"minutes":50,"lab":{"id":"1.4","title":"Centre and spread for four variables","minutes":25,"href":"../labs/D1_4_centre_spread.ipynb"}}],"slides":[{"id":"title","n":1,"title":"Questions and first looks","kind":"title","session":0,"hash":"ce7fda42","md":"#### [day1#title] Questions and first looks\n\n*SDAIA Academy · Exploratory Analysis and Visualisation*\n\nDay 1: Before any chart: what is asked, what one row is, what the values look like and which summary describes them\n\nData Science Track · 4 teaching days + capstone day · 4 sessions · 4 labs · DS-203","notes":"Welcome. Ask two things: who has made a chart this month, and who wrote down the question before making it. Expect many hands, then few. That gap is the course. The rhythm of every session: about 25 minutes of ideas, one checkpoint, then a 25-minute lab on the data of one fictional tourism board. Every lab ends with two written sentences about its chart.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"Questions and first looks","kind":"content","session":0,"hash":"55ef6a3d","md":"#### [day1#agenda] Questions and first looks\n\n*Today*\n\n- **Session 1 · Write the questions first**: From a brief to questions that name a unit of observation, variables and a comparison, and what exploring can and cannot establish\n- **Session 2 · Profiling a table**: What to find out about a table before trusting a single number from it: grain, key, types, missing values, ranges and categories\n- **Session 3 · Distributions**: Histograms, density and box plots: what each shows of a distribution and what each hides\n- **Session 4 · Summaries that fit the shape**: Choosing a centre and a spread by the shape of the variable: long tails, counts, zero-heavy variables and scores","notes":"Today has few charts and that is deliberate. Session 1 opens no data at all. Session 2 reads a table before trusting it. Sessions 3 and 4 look at one variable at a time: its shape, then the numbers that describe the shape. Relationships wait for Day 2.","minutes":null,"lo":[]},{"id":"the-board","n":3,"title":"Tilal Regional Tourism Board: three years, six tables","kind":"content","session":0,"hash":"e5db8f9d","md":"#### [day1#the-board] Tilal Regional Tourism Board: three years, six tables\n\n*The case study*\n\n- **9** visitor sites in a highland region\n- **150,000** ticket sales, 2023 to 2025\n- **40,000** visitor stays in the register\n- **6,000** survey responses, Arabic and English\n\nYou work as **Leen Al-Suwayigh**, the board's analyst. **Nawal Al-Rashoud**, the director, wrote the brief. Aws Al-Hudaif runs sites and ticketing, Rashed Al-Shalan collects the hotels' occupancy returns, Atheer Al-Muhaya owns the survey and the complaints log, Nayef Al-Jumaah drew the charts of last year's report, Hanouf Al-Rumaihi is the data protection officer. The board, its people and every record are fictional and generated with a fixed seed.","notes":"Say it once: no real board, no real visitors, no real hotels. The data is synthetic so that what is in it is known: the season, two festivals, a reversal and several patterns that are only chance. You will be able to mark every reading right or wrong, which real data never allows. The other two tables are monthly arrivals by origin market and the complaints log.","minutes":null,"lo":[]},{"id":"how-the-course-works","n":4,"title":"Question, chart, reading: in that order, every time","kind":"content","session":0,"hash":"bc99742c","md":"#### [day1#how-the-course-works] Question, chart, reading: in that order, every time\n\n*The method of this course*\n\n1. **1 · Ask** a question with a unit and a comparison\n2. **2 · Look** with a chart and a summary that fit the variable\n3. **3 · Write** two sentences: what it shows, what it does not\n4. **4 · Check** could it be chance, and does it rerun\n\n| Part of the course | Assistant |\n| --- | --- |\n| Supervised quizzes, and the first draft of every chart reading | Off |\n| Plotting and dataframe syntax in the labs | A tutor that hints one step at a time and writes no chart for you |\n| The capstone | Free; assisted charts and sentences are marked and defended live |","notes":"This slide is the contract. Steps 1 to 3 are Days 1 to 3, step 4 is Day 4. The tutor instruction is the file tutor_instruction.md in the labs folder (its name in this course is Bawsala); participants paste it into an assistant the Academy has approved. No lab calls a model. The reading is written without an assistant because reading a chart is the skill being assessed; syntax is not.","minutes":null,"lo":[]},{"id":"setup-and-data-rules","n":5,"title":"One notebook proves the setup; three rules govern the data","kind":"content","session":0,"hash":"39361cff","md":"#### [day1#setup-and-data-rules] One notebook proves the setup; three rules govern the data\n\n*Before the first lab*\n\n- **Setup check.** Open `00_setup_check.ipynb` in Colab or locally and run all cells. It imports the libraries, reads the six tables and draws one chart.\n  ```text\n  uv sync\n  uv run jupyter lab\n  ```\n- **Handled as personal data.** The data is synthetic and is still handled as the board would handle the real thing:\n  - stays and hotels appear only under pseudonymised keys\n  - no chart singles out one visitor or one hotel\n  - small groups are not published, and a rate travels with its denominator","notes":"Give five minutes for the setup check if the pre-work did not settle it. Nothing calls or downloads a model, so the usual failures are a missing uv or a blocked Colab. The three rules come from the course's responsible-use statement and apply the transparency principle of the SDAIA AI Ethics Principles to analytical output; Hanouf Al-Rumaihi is the persona who would ask about them. Lab 2.2 applies the small-group rule to a real table.","minutes":null,"lo":[]},{"id":"s1","n":6,"title":"Write the questions first","kind":"section","session":1,"hash":"0295a007","md":"#### [day1#s1] Write the questions first\n\n*Session 1*\n\n- Rewrite a vague request as a question with a unit, variables and a comparison\n- Name the unit of observation of each table before joining or counting\n- Distinguish an exploratory question from a confirmatory one","notes":"","minutes":null,"lo":["LO1","LO2"]},{"id":"the-brief","n":7,"title":"Five asks, none of them answerable as written","kind":"content","session":1,"hash":"fd6f9cf0","md":"#### [day1#the-brief] Five asks, none of them answerable as written\n\n*What the director sent*\n\n**Nawal Al-Rashoud:** Who is actually coming, and do they stay? I keep hearing that our visitors \"pop in and leave\".\n\n**Nawal Al-Rashoud:** Atheer's team logged a lot of complaints about the Cable Car. Is that our problem site?\n\n**Nawal Al-Rashoud:** Satisfaction went down last year. Why, and whose fault is it?\n\n> **The trap.** Open the data now and you will chart whatever is easiest to chart, then call it the answer.","notes":"Three of the five asks; the full brief is data/brief.md and opens lab 1.1. Ask the room what \"actually\", \"problem\" and \"whose fault\" would be measured by. Nobody can say, and that is the point: these are a director's words and they are honest ones. The analyst's first job is translation, not plotting.","minutes":null,"lo":["LO2"]},{"id":"anatomy-of-a-question","n":8,"title":"An answerable question names four things","kind":"content","session":1,"hash":"c1e0b174","md":"#### [day1#anatomy-of-a-question] An answerable question names four things\n\n*The tool of this session*\n\n| Part | It says | Ask 3, rewritten |\n| --- | --- | --- |\n| **Unit of observation** | what one row is | one complaint; one ticket sale |\n| **Variables** | which columns are used | site; tickets in the sale |\n| **Comparison** | what is set against what | complaints per thousand visitors, by site |\n| **Kind** | exploring, or testing a claim fixed in advance | exploratory |\n\n> **The test.** Could a colleague answer it without phoning you? \"How many complaints per thousand visitors does each site receive?\" passes. \"Is it our problem site?\" does not.","notes":"Walk the table row by row with ask 3. The comparison row is where most plans are thin: \"look at complaints\" is not a comparison, \"per thousand visitors, by site\" is. Note that the rewritten question quietly added a second table, ticket sales, because a rate needs a denominator. Session 2.2 returns to this.","minutes":null,"lo":["LO2"]},{"id":"unit-of-observation","n":9,"title":"\"Visitors\" is a different thing in every table","kind":"content","session":1,"hash":"90f94cd2","md":"#### [day1#unit-of-observation] \"Visitors\" is a different thing in every table\n\n*What one row is*\n\n| Table | One row is | Rows |\n| --- | --- | --- |\n| arrivals | one origin market in one month | 180 |\n| tickets | one ticket sale at one site | 150,000 |\n| stays | one visiting party's stay in the region | 40,000 |\n| occupancy | one hotel on one day | 43,840 |\n| survey | one visitor's response after a site visit | 6,000 |\n| complaints | one complaint | 2,418 |\n\n- Counting rows counts units: 40,000 stays are parties, not people.\n- Two tables meet only after both are brought to one unit, such as the week.","notes":"This is the data dictionary, shortened. Ask: how many visitors came in 2024? The room will find three different honest answers (arrivals estimates, tickets sold, parties times party size) and they will not agree. A plan that names the unit says which one it means. Ask 2 of the brief, sites against hotels, joins a table of sales to a table of hotel-days: the plan says \"per week\".","minutes":null,"lo":["LO2"]},{"id":"exploratory-or-confirmatory","n":10,"title":"Exploring finds questions; confirming answers one fixed in advance","kind":"content","session":1,"hash":"28df79f1","md":"#### [day1#exploratory-or-confirmatory] Exploring finds questions; confirming answers one fixed in advance\n\n*Two kinds of work*\n\n- **Exploratory.**\n  - You look at the data to see what is there\n  - Many cuts, many charts, the choice made after looking\n  - Output: patterns worth a question\n  - Honest wording: \"we saw\", \"in this data\"\n- **Confirmatory.**\n  - The comparison was written down before the data was seen\n  - One planned analysis on data not used to find the pattern\n  - Output: evidence for or against a claim\n  - Honest wording: \"the test planned in advance showed\"\n\n> **Why a found pattern needs a fresh test.** The data that suggested a pattern cannot also confirm it: you chose the pattern because it stood out there.","notes":"Outcome 1 of the course. An example from the board's past report: \"Visitors who arrive on a Tuesday spend the most\" came from tabulating every day, origin and purpose and keeping the largest cell. That is exploration reported as a finding. Day 4, session 3 counts such comparisons. For now the rule is only this: everything in this course's plan is exploratory, because the three years of data existed before the questions did.","minutes":null,"lo":["LO1"]},{"id":"the-plan","n":11,"title":"The plan is a table, and it passes a checklist","kind":"content","session":1,"hash":"c2ad571a","md":"#### [day1#the-plan] The plan is a table, and it passes a checklist\n\n*One page before any chart*\n\n```python\n# file: one entry of the plan\n{\"question\": \"How many complaints per thousand visitors does each site receive over the three years?\",\n \"table\": \"complaints\", \"also\": [\"tickets\"],\n \"unit\": \"one complaint logged by the visitor experience team\",\n \"variables\": [\"site\", \"tickets\"],\n \"comparison\": \"complaints per thousand visitors by site, with the count and the visitors beside it\",\n \"kind\": \"exploratory\"}\n```\n\n- The checklist rejects a question with a word nobody can measure, a unit that is not the table's, fewer than two variables, or no comparison.\n- It does not judge whether the question is interesting. That stays with you and the director.","notes":"This is the form lab 1.1 uses and the function U.plan_check reads. Outcome 2's evidence is exactly this: a one-page plan checked against a checklist before any chart is drawn. Tell them the checklist is strict about the words why, problem, fault, good and bad on purpose.","minutes":null,"lo":["LO2"]},{"id":"what-the-plan-cannot-do","n":12,"title":"The plan answers \"what happened\", not \"why\"","kind":"content","session":1,"hash":"50aa4089","md":"#### [day1#what-the-plan-cannot-do] The plan answers \"what happened\", not \"why\"\n\n*A narrower promise*\n\n**Ask 5:** \"Satisfaction went down last year. Why, and whose fault is it?\"\n\n**Plan:** \"Did mean satisfaction change from 2024 to 2025 inside each origin market, and did the mix of markets among respondents change?\"\n\n- The data can show where the fall sits.\n- It cannot assign a cause: nothing was varied on purpose.\n- Say so in the plan, before the director expects more.","notes":"Lab 1.1, step 4 asks for two sentences on what the plan leaves out. A good answer: this plan describes 2023 to 2025; a cause needs a comparison planned in advance and checked on data not yet looked at, such as next season's survey. Randomised experiments are the subject of DS-205; this course stops at saying what a fresh test would be.","minutes":null,"lo":["LO1","LO2"]},{"id":"check-question","n":13,"title":"Which rewrite can be answered?","kind":"quiz","session":1,"hash":"f66226b6","md":"#### [day1#check-question] Which rewrite can be answered?\n\n*Checkpoint*\n\n**Question:** The director asks: \"Did the festivals bring people, or would they have come anyway?\" Which rewrite belongs in the plan?\n\n- A. Were the festivals successful for the region?\n- B. How many arrivals were recorded in the festival months?\n- C. By how much did arrivals in each festival month exceed the baseline for that month of the year?\n- D. Did the festivals cause visitors to choose Tilal over other regions?","notes":"Answer: the third. If the room picks the second, ask \"compared with what?\" and wait. If it picks the fourth, ask what data would show a visitor's choice between regions; the board has none. The baseline is built in lab 2.3.","minutes":null,"lo":["LO2"]},{"id":"lab-1-1","n":14,"title":"Five questions from the brief","kind":"lab","session":1,"hash":"6e84b32f","md":"#### [day1#lab-1-1] Five questions from the brief\n\nLab 1.1 · 25 min\n\nTurn the director's brief into five questions, each with its table, unit of observation, variables and comparison, and pass the plan checklist before any chart is drawn.\n\n[D1_1_brief_questions.ipynb](https://sdaiaacademy.github.io/ds-203/labs/D1_1_brief_questions.ipynb)\n\n- [ ] Read the brief; name the table and the unit behind each ask (5 min)\n- [ ] Write five questions with variables and comparison (12 min)\n- [ ] Run the plan checklist and fix what fails (5 min)\n- [ ] Write what the plan leaves out (3 min)\n- [ ] ✱ Stretch: Add the question the brief did not ask and should have","notes":"Assistant off for this lab: the plan is their own first draft. No data table is opened. Common failure: the unit copied from memory instead of from the dictionary, which the checklist rejects. Those who finish early take the stretch, the question the brief did not ask (who is missing from the data).","minutes":null,"lo":[]},{"id":"s2","n":15,"title":"Profiling a table","kind":"section","session":2,"hash":"ed4dd37a","md":"#### [day1#s2] Profiling a table\n\n*Session 2*\n\n- Test whether a table has the grain and the key its dictionary claims\n- Locate missing values and impossible values, and say whom they affect\n- Record each data issue with its evidence and a decision","notes":"","minutes":null,"lo":["LO3"]},{"id":"profile-before-plot","n":16,"title":"A profile asks six things of a table","kind":"content","session":2,"hash":"c0f90e8b","md":"#### [day1#profile-before-plot] A profile asks six things of a table\n\n*Before the first chart of a table*\n\n- **1 · Grain and key.** Is one row what the dictionary says? Is the key unique?\n- **2 · Types.** Are dates dates and numbers numbers, or text that looks like them?\n- **3 · Missing values.** How many, and above all where?\n- **4 · Ranges.** Smallest and largest: can they be true?\n- **5 · Categories.** How many distinct values, and how spelled?\n- **6 · Coverage.** Which period and which groups does the table hold?","notes":"These six are the session. Each has a planted example in the stay register, which lab 1.2 finds. Profiling is not cleaning: the output is a log of what was found and what was decided, not a silently repaired table. Assembling data from several sources, matching records and writing quality rules are the subject of DS-202; here it is one table.","minutes":null,"lo":["LO3"]},{"id":"summarize-statement","n":17,"title":"One statement profiles every column","kind":"content","session":2,"hash":"57f28262","md":"#### [day1#summarize-statement] One statement profiles every column\n\n*Lab 1.2, opening cell*\n\n```text\n      column_name column_type        min         max  approx_unique  null_percentage\n          stay_id     VARCHAR  T0002344e   Tfffb8d8e          39407             0.00\n     arrival_date     VARCHAR 2023-01-01  2032-10-25           1137             0.00\n           origin     VARCHAR       Asia       gulf               7             0.00\n           nights      BIGINT          0         999             28             0.00\n        spend_sar      DOUBLE       14.0     76181.0           8565             6.45\n```\n\n- Four of the planted issues are visible in these five lines. Find them before the next slide.\n- `SUMMARIZE` is DuckDB's; `df.describe(include=\"all\")` gives a similar table in pandas.","notes":"Real output of lab 1.2 (five of ten columns). Give the room one minute. The four: arrival dates in 2032; seven origin values where the dictionary says five, and the largest is a lower-case \"gulf\"; nights up to 999; spend missing in 6.45% of rows. The fifth issue, the rows entered twice, does not show here: 40,600 rows against about 40,000 distinct keys only hints at it, and approx_unique is an estimate.","minutes":null,"lo":["LO3"]},{"id":"grain-and-key","n":18,"title":"40,600 rows hold 40,000 stays","kind":"content","session":2,"hash":"06ecb172","md":"#### [day1#grain-and-key] 40,600 rows hold 40,000 stays\n\n*Lab 1.2, step 1*\n\n- **40,600** rows in the export\n- **40,000** distinct stay keys\n- **600** rows that repeat an earlier row in every column\n\n- Every repeated key is an exact copy: a double entry, safe to drop.\n- Had the copies differed in any column, the repair would be the owner's decision, not yours.\n- Left in, the copies make every count 1.5% too high and nothing looks wrong.","notes":"From the solution run of lab 1.2. The distinction on the second bullet matters in practice: a repeated key with different values is a conflict, and the analyst who silently keeps \"the first\" has invented a rule. Aws Al-Hudaif owns the register.","minutes":null,"lo":["LO3"]},{"id":"where-missing-sits","n":19,"title":"The share of missing values matters less than where they sit","kind":"content","session":2,"hash":"088b3499","md":"#### [day1#where-missing-sits] The share of missing values matters less than where they sit\n\n*Lab 1.2, step 2*\n\n| Item | Value |\n| --- | --- |\n| Day visits | 21.7% without spend |\n| Overnight stays | 2.1% without spend |\n\n- Overall, spend is missing in 2,577 of 40,000 stays: 6.4%, which sounds harmless.\n- Day visitors spend least and answer least. An average over the rows that remain leans toward overnight visitors.\n- The decision: keep the rows, report the share missing by group, never fill in a typical value.","notes":"Numbers from lab 1.2. Ask what happens to \"average spend per party\" if the missing rows are simply dropped: it is too high for the region as a whole, and the board would overstate what a visitor brings. Missing values that depend on the thing you are measuring are the dangerous kind.","minutes":null,"lo":["LO3"]},{"id":"impossible-values","n":20,"title":"A code that poses as a number moves every summary","kind":"content","session":2,"hash":"be03619a","md":"#### [day1#impossible-values] A code that poses as a number moves every summary\n\n*Lab 1.2, step 3*\n\n- **11.26** mean nights with the 320 rows of 999 left in\n- **3.30** mean nights without them\n\n- 999 means \"not recorded\". It is in 0.8% of the rows and more than triples the mean.\n- One market is stored as `Gulf`, `GCC` and `gulf ` with a trailing space: 586 stays would fall out of any group-by.\n- 14 stays arrive in 2032.\n\n> **Look at the smallest and the largest value of every column**, and at every distinct value of a category with few of them.","notes":"Numbers from lab 1.2. The trailing space cannot be seen in any printed table, which is why the profile counts distinct values instead of reading them. Set 999 to missing, not to the median: nobody knows those stays' length, and a filled-in value hides 320 unknowns inside the commonest answer.","minutes":null,"lo":["LO3"]},{"id":"issue-log","n":21,"title":"An issue log holds evidence and a decision someone can dispute","kind":"content","session":2,"hash":"9631ed8d","md":"#### [day1#issue-log] An issue log holds evidence and a decision someone can dispute\n\n*The output of a profile*\n\n| Issue | Rows | Decision |\n| --- | --- | --- |\n| Rows that repeat an earlier row in every column | 600 | drop the copies |\n| Nights is 999 where the length was not recorded | 320 | set to missing |\n| The Gulf market under three spellings | 586 | recode to one spelling |\n| Spend missing, mostly for day visits | 2,577 | keep and report the share |\n| Arrival dates in 2032 | 14 | set to missing; ask the owner |\n\nThe log travels with every chart made from the table. The supplied clean register, `U.stays()`, applies exactly these decisions, and every later lab starts from it.","notes":"This is the answer key of lab 1.2 and the reference state of labs 1.3 and 1.4. Stress the third column: each decision is a choice a reader could disagree with, so it is written down. \"Cleaned the data\" in a methods note is not a decision anyone can check.","minutes":null,"lo":["LO3"]},{"id":"check-profile","n":22,"title":"What do you do with the 999s?","kind":"quiz","session":2,"hash":"4e5f2d0d","md":"#### [day1#check-profile] What do you do with the 999s?\n\n*Checkpoint*\n\n**Question:** 320 stays have 999 in the column nights. The data dictionary does not mention the value. What goes into the issue log?\n\n- A. Set them to missing, record the 320 rows, and ask the register's owner what 999 stands for\n- B. Replace them with the median length of stay so that no row is lost\n- C. Keep them: a few very long stays are plausible in a tourism region\n- D. Delete the 320 rows from the register before any analysis","notes":"Answer: the first. The tempting one is the median. Ask what the histogram of nights would look like with 320 extra stays at the median: a spike that is not in the world.","minutes":null,"lo":["LO3"]},{"id":"lab-1-2","n":23,"title":"Profile the stay register","kind":"lab","session":2,"hash":"27ae1bd1","md":"#### [day1#lab-1-2] Profile the stay register\n\nLab 1.2 · 25 min\n\nProfile the visitor table, find rows entered twice, a code that poses as a number, one market under three spellings and spend that is missing for day visitors, and log three issues with evidence and a decision.\n\n[D1_2_profile_stays.ipynb](https://sdaiaacademy.github.io/ds-203/labs/D1_2_profile_stays.ipynb)\n\n- [ ] Shape, grain and key: is one row one stay? (5 min)\n- [ ] Types and missing values: where spend is missing (6 min)\n- [ ] Ranges and categories: values that cannot be true (6 min)\n- [ ] Log three issues with evidence and a decision (6 min)\n- [ ] Write the reading (2 min)\n- [ ] ✱ Stretch: Find the fifth issue, in the dates","notes":"The tutor may hint at dataframe syntax; the log and the reading are written without an assistant. The lab starts from the raw export, U.stays_raw(), and needs nothing from lab 1.1. Common failure: counting repeated keys but not testing whether the copies are exact. The stretch finds the dates in 2032.","minutes":null,"lo":[]},{"id":"s3","n":24,"title":"Distributions","kind":"section","session":3,"hash":"a1c349ab","md":"#### [day1#s3] Distributions\n\n*Session 3*\n\n- Draw a histogram with a bin width that suits the variable\n- Compare groups of unequal size by shares on a common scale\n- Recognise a distribution with two humps that a box plot hides","notes":"","minutes":null,"lo":["LO3"]},{"id":"what-a-distribution-is","n":25,"title":"A distribution answers \"which values, how often\"","kind":"content","session":3,"hash":"a51781c7","md":"#### [day1#what-a-distribution-is] A distribution answers \"which values, how often\"\n\n*One variable at a time*\n\nFigure: Lab 1.3, step 1: nights in the region, all parties, one bin per night.\n\n- Read four things: where the bulk is, how wide, how many humps, how long the tail.\n- Here: a spike at 0, a hump at 2, a low hump near 7, a tail to 31.\n- Three humps in one histogram usually mean three kinds of unit mixed together.","notes":"Recap from DS-201, Day 1: a histogram counts values in bins. New here is the reading order on the first bullet, and the habit of asking what a second hump is made of. Question 1 of the plan is on the table: do visitors \"pop in and leave\"? The spike at 0 says some do. The rest of the session finds out who.","minutes":null,"lo":["LO3"]},{"id":"bin-width","n":26,"title":"The bin width decides what a histogram can show","kind":"content","session":3,"hash":"29cbff4d","md":"#### [day1#bin-width] The bin width decides what a histogram can show\n\n*The one choice a histogram has*\n\n- **Too wide.** Bins of 7 nights put 13,205 of the 17,367 stays from other regions into the first bar. Two humps become one.\n- **Fitted to the variable.** Nights is a count: one bin per night. Spend spans three orders of magnitude: equal steps on a log scale.\n- **Too narrow.** Bins of 10 riyals of spend leave a handful of stays in each bar: the shape drowns in noise.\n\n> **Try two or three widths** and keep the one where the shape stops changing. Say the width in the axis title or the caption.","notes":"The first card is the stretch of lab 1.3 (13,205 stays of 0 to 6 nights, 4,159 of 7 to 13, 3 beyond). There is no correct bin width; there are widths that hide the feature you are looking for. For a count with few distinct values the natural width is one.","minutes":null,"lo":["LO3"]},{"id":"shares-not-counts","n":27,"title":"To compare groups of unequal size, compare shares","kind":"content","session":3,"hash":"39e7e13d","md":"#### [day1#shares-not-counts] To compare groups of unequal size, compare shares\n\n*Lab 1.3, step 2*\n\nFigure: Five histograms of nights, one per origin market, as shares on a common scale: Tilal region 80% at zero nights; Other regions with a hump at 2 nights and another at 6 to 7; Gulf and Asia with one hump at 3 to 4; Europe spread from 2 to more than 20 nights\n\n- Counts would show the size of each market, not its shape.\n- 80% of parties from the Tilal region are day visits; none from Europe.\n- \"Other regions\" has two humps with nothing at 4 nights.","notes":"The answer to question 1 is on this slide: visitors do not all pop in and leave; it depends on where they come from. Panels on shared scales are small multiples, which Day 3 treats properly. Point at the valley in \"Other regions\" and ask what two kinds of trip it suggests: a weekend and a week.","minutes":null,"lo":["LO3"]},{"id":"box-plot","n":28,"title":"A box plot draws five numbers and takes one line per group","kind":"content","session":3,"hash":"fe75847e","md":"#### [day1#box-plot] A box plot draws five numbers and takes one line per group\n\n*Lab 1.3, step 3*\n\nFigure: The same stays as the five histograms.\n\n- Box: first quartile, median, third quartile. Whiskers: the rest, short of far points.\n- Good for many groups and for comparing middles and spreads.\n- \"Other regions\" and \"Asia\" look alike here: medians 3 and 4, boxes 2 to 6 and 2 to 5.","notes":"Recap of the five-number summary from DS-201 in one line; the new content is the comparison with the previous slide. Leave the third bullet hanging: the room has just seen that those two markets are not alike at all.","minutes":null,"lo":["LO3"]},{"id":"what-the-box-hides","n":29,"title":"The box cannot show two humps","kind":"content","session":3,"hash":"5035212a","md":"#### [day1#what-the-box-hides] The box cannot show two humps\n\n*Lab 1.3, step 4*\n\n| Nights, \"Other regions\" | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| Share of stays | 15% | 31% | 16% | 0% | 4% | 10% | 10% | 7% | 4% |\n\n- 63% of these stays last 1 to 3 nights and 37% last 5 or more. None lasts 4.\n- The median, 3 nights, belongs to the short trips only. The box, 2 to 6, runs straight across the valley.\n- The box plot is not wrong. It was asked \"what kinds of trip are there\" and answers \"where is the middle half\".","notes":"Numbers from lab 1.3. This is the planted two-hump distribution. The practical rule: draw the histogram at least once for every variable you intend to summarise with a box, and again for any group whose box looks unremarkable.","minutes":null,"lo":["LO3"]},{"id":"density-and-small-groups","n":30,"title":"Smooth curves and small groups both invent detail","kind":"content","session":3,"hash":"e85fdb25","md":"#### [day1#density-and-small-groups] Smooth curves and small groups both invent detail\n\n*Two cautions*\n\n- **Density curves.** A density plot is a smoothed histogram with a bandwidth in place of a bin width. It overlays well, and it draws mass where no value can be: below zero nights, between whole nights. For counts and scores, prefer bars.\n- **Small groups.** A histogram of 40 values has bumps that mean nothing. Read a group's size before its shape: Europe has 2,166 stays here, one site in one month may have a dozen.\n\n> **Responsible use.** A point drawn for one extreme party can single out an identifiable visitor. Show far points only where a group is large, or summarise them.","notes":"The entry's topic list names density plots, so they are taught, with their main trap. The responsible-use note connects to the box plot two slides back: its far points are individual stays. With pseudonymised keys and thousands of stays that is acceptable; a box plot of spend for one small hotel would not be.","minutes":null,"lo":["LO3"]},{"id":"check-distribution","n":31,"title":"Which chart for which question?","kind":"quiz","session":3,"hash":"48cde447","md":"#### [day1#check-distribution] Which chart for which question?\n\n*Checkpoint*\n\n**Question:** Aws Al-Hudaif asks whether visitors from other regions come for one kind of trip or several. You have their 17,367 stays with the nights of each. What do you draw first?\n\n- A. A box plot of nights for that market\n- B. A bar with the mean number of nights and an error bar\n- C. A histogram of nights with bins seven nights wide\n- D. A histogram of nights with one bin for each night","notes":"Answer: the last. If the room chooses the box plot, return to the table of shares: the box runs from 2 to 6 across a length nobody stays.","minutes":null,"lo":["LO3"]},{"id":"lab-1-3","n":32,"title":"Length of stay by origin","kind":"lab","session":3,"hash":"8e9b9256","md":"#### [day1#lab-1-3] Length of stay by origin\n\nLab 1.3 · 25 min\n\nCompare length of stay by visitor origin with histograms and box plots, and find the market whose box plot hides two kinds of trip.\n\n[D1_3_length_of_stay.ipynb](https://sdaiaacademy.github.io/ds-203/labs/D1_3_length_of_stay.ipynb)\n\n- [ ] One histogram of nights for all parties (5 min)\n- [ ] Shares by origin, one panel each (7 min)\n- [ ] Box plots by origin (5 min)\n- [ ] Find the market with two kinds of trip (5 min)\n- [ ] Write the reading (3 min)\n- [ ] ✱ Stretch: Change the bin width to 7 nights and say what disappears","notes":"The tutor may hint at Altair syntax (the bin and the row facet are the usual sticking points). The reading is written without an assistant. The lab starts from U.stays(), the register after the issue log, so it does not depend on lab 1.2. Each chart exercise is checked by reading the chart's specification: mark, fields, scale.","minutes":null,"lo":[]},{"id":"s4","n":33,"title":"Summaries that fit the shape","kind":"section","session":4,"hash":"9385ca4c","md":"#### [day1#s4] Summaries that fit the shape\n\n*Session 4*\n\n- Predict from mean and median which way a variable is skewed\n- Choose a centre and a spread that the tail does not move\n- Summarise a zero-heavy variable and a score without a single mean","notes":"","minutes":null,"lo":["LO3"]},{"id":"mean-follows-tail","n":34,"title":"The gap between mean and median is a first reading of the shape","kind":"content","session":4,"hash":"c3981d67","md":"#### [day1#mean-follows-tail] The gap between mean and median is a first reading of the shape\n\n*Lab 1.4, step 1*\n\n| Variable | Mean | Median | Mean / median |\n| --- | --- | --- | --- |\n| Spend per party, riyals | 2,736 | 1,498 | 1.83 |\n| Nights | 3.30 | 2 | 1.65 |\n| Booking lead, days | 16.2 | 6 | 2.70 |\n| Satisfaction, 1 to 5 | 4.12 | 4 | 1.03 |\n\n- A mean far above the median says \"long right tail\" before any chart is drawn.\n- Mean and median that agree do not prove symmetry: satisfaction is piled against the top of its scale.","notes":"Numbers from lab 1.4. Recap from DS-201, Day 1: the mean follows the tail, the median does not. New here: four different shapes and the point that one rule does not serve them all. About seven parties in ten spend less than the \"average\" spend.","minutes":null,"lo":["LO3"]},{"id":"spread-that-describes","n":35,"title":"\"Mean plus or minus one standard deviation\" can describe nobody","kind":"content","session":4,"hash":"e5e8a797","md":"#### [day1#spread-that-describes] \"Mean plus or minus one standard deviation\" can describe nobody\n\n*Lab 1.4, step 2*\n\n- **Spend, as often reported.** 2,736 ± 3,788 riyals. The lower end is 1,051 riyals below zero. No party spent that.\n- **Spend, by quartiles.** Median 1,498; half of the parties between 571 and 3,392. Three amounts that real parties spent.\n\n- The standard deviation squares distances, so a few large bills dominate it.\n- Removing the top 1% of spend cuts the standard deviation by 24% and the median by 1.5%.","notes":"Numbers from lab 1.4 and its stretch. The standard deviation is a fine measure for a symmetric variable and a necessary one for standard errors; it is a poor description of a skewed one. The quartiles answer the question a reader has: what do typical parties spend?","minutes":null,"lo":["LO3"]},{"id":"log-scale","n":36,"title":"Variables that multiply are symmetric on a log scale","kind":"content","session":4,"hash":"38d875e3","md":"#### [day1#log-scale] Variables that multiply are symmetric on a log scale\n\n*Lab 1.4, step 3*\n\nFigure: Spend per party, equal steps on a log scale.\n\n- Spend is nights times party size times a daily rate.\n- On a log scale, equal distances are equal ratios.\n- Geometric mean 1,344 riyals: near the median 1,498, half the mean 2,736.","notes":"From lab 1.4. The geometric mean is the mean of the logs turned back into riyals. It is a fair centre for a multiplicative variable and useful when a later method needs a mean. For a report to a board the median is simpler to explain. A log axis has no zero: say \"log scale\" in the axis title, as the chart does.","minutes":null,"lo":["LO3"]},{"id":"zero-heavy","n":37,"title":"A zero-heavy variable needs two numbers","kind":"content","session":4,"hash":"d2b1ed0d","md":"#### [day1#zero-heavy] A zero-heavy variable needs two numbers\n\n*Lab 1.4, step 4*\n\n- **36%** of parties did not book at all: lead time 0\n- **14 days** median lead of those who booked\n- **6 days** median of everyone, which describes neither group\n\n- Two populations share one column: walk-ins and bookers.\n- First the share at zero, then a summary of the rest.\n- The same shape: spend on tickets among all residents, complaints per visitor, days absent.","notes":"Numbers from lab 1.4. The mean of all, 16.2 days, is worse still. The question behind the variable is usually two questions (do they book, and how far ahead), so the summary should be two answers.","minutes":null,"lo":["LO3"]},{"id":"scores-need-shares","n":38,"title":"A score from 1 to 5 is summarised by shares","kind":"content","session":4,"hash":"1a46ef31","md":"#### [day1#scores-need-shares] A score from 1 to 5 is summarised by shares\n\n*Lab 1.4, step 5*\n\n| Item | Value |\n| --- | --- |\n| 5 | 39.2% |\n| 4 | 38.3% |\n| 3 | 18.1% |\n| 2 | 4.1% |\n| 1 | 0.4% |\n\n- \"77% score 4 or 5\" is a sentence a board can repeat. \"Mean 4.12\" hides whether the rest are at 3 or at 1.\n- A mean of scores assumes the step from 4 to 5 equals the step from 1 to 2. It is still used to compare groups, as Day 2 will; show the shares beside it.","notes":"Shares from lab 1.4, all 6,000 responses. Be honest about practice: the board's reports use mean satisfaction, the survey literature does too, and labs 2.4, 4.1 and 4.2 work with it. The rule is not \"never a mean of scores\" but \"never a mean alone\".","minutes":null,"lo":["LO3"]},{"id":"summary-carries-n","n":39,"title":"Every question gets a chart, a summary and two sentences","kind":"content","session":4,"hash":"1424203d","md":"#### [day1#summary-carries-n] Every question gets a chart, a summary and two sentences\n\n*The evidence for outcome 3*\n\n| Shape | Centre | Spread | Chart |\n| --- | --- | --- | --- |\n| Long right tail (spend) | median, or geometric mean | quartiles | histogram on a log scale |\n| Count with humps (nights) | median, with the share in each hump | shares by range | bars, one per value |\n| Zero-heavy (booking lead) | share of zeros, median of the rest | quartiles of the rest | two parts |\n| Score (satisfaction) | share scoring 4 or 5 | all five shares | bars of shares |\n\n> **A summary always carries** the number of values it rests on and what was left out: here the 2,577 stays with no stated spend, most of them day visits.","notes":"This table is the solution of lab 1.4, step 6, and the day's summary. The two sentences of a reading: what the chart shows, with numbers; and what it does not show or leaves out. Example from the lab: \"A typical party spends about 1,500 riyals (median; half between 570 and 3,390), not the mean of 2,740. These summaries leave out the 2,577 stays with no stated spend, most of them day visits.\"","minutes":null,"lo":["LO3"]},{"id":"check-summary","n":40,"title":"Which sentence goes into the report?","kind":"quiz","session":4,"hash":"c7222d0f","md":"#### [day1#check-summary] Which sentence goes into the report?\n\n*Checkpoint*\n\n**Question:** A museum records minutes spent inside by each visitor. 45% of the records show 0 minutes because those visitors used only the cafe. The others stay a median of 70 minutes. Which summary is honest?\n\n- A. Visitors spend a mean of 41 minutes in the museum\n- B. 45% of visitors use only the cafe; the others stay a median of 70 minutes\n- C. The median visitor spends 25 minutes in the museum\n- D. Museum visitors stay a median of 70 minutes inside","notes":"Answer: the second. The last option is the instructive one: its number is right and it is still misleading, because it leaves out 45% of the records silently. A summary carries what was left out.","minutes":null,"lo":["LO3"]},{"id":"lab-1-4","n":41,"title":"Centre and spread for four variables","kind":"lab","session":4,"hash":"cbf5cbba","md":"#### [day1#lab-1-4] Centre and spread for four variables\n\nLab 1.4 · 25 min\n\nChoose centre and spread measures for four skewed variables (spend, nights, booking lead time, satisfaction) and say what each summary leaves out.\n\n[D1_4_centre_spread.ipynb](https://sdaiaacademy.github.io/ds-203/labs/D1_4_centre_spread.ipynb)\n\n- [ ] Mean and median of the four variables, and the gap between them (5 min)\n- [ ] Spread: standard deviation against quartiles (5 min)\n- [ ] Spend on a log scale: the geometric mean (5 min)\n- [ ] A zero-heavy variable needs two numbers (4 min)\n- [ ] A score from 1 to 5 needs shares (3 min)\n- [ ] Choose and write the reading (3 min)\n- [ ] ✱ Stretch: Remove the top 1% of spend and see which summaries move","notes":"The tutor may hint at syntax; the choices and the reading are their own. The lab starts from U.stays() and U.survey(). Six short steps: keep the pace, about four minutes each. Common failure: computing the geometric mean of a column that still holds missing values.","minutes":null,"lo":[]},{"id":"wrap-up","n":42,"title":"Three things to keep","kind":"content","session":4,"hash":"d8c9a1a1","md":"#### [day1#wrap-up] Three things to keep\n\n*Day 1*\n\n- **The question comes first.** Unit of observation, variables, comparison, and whether you are exploring or confirming. A plan that passes a checklist before any chart.\n- **Profile, then log.** Grain, types, missing values, ranges, categories, coverage. Each issue with its rows and a decision someone can dispute.\n- **Shape before summary.** Look at the distribution, then choose the centre and the spread that describe it. Always with the number of values and what was left out.","notes":"Ask each table for the one number from today they would tell the director. Good candidates: 80% of local parties are day visits; visitors from other regions come for a weekend or a week; spend is missing for one day visit in five.","minutes":null,"lo":[]},{"id":"next","n":43,"title":"Relationships and time","kind":"content","session":4,"hash":"f2368cc5","md":"#### [day1#next] Relationships and time\n\n*Day 2*\n\nTwo variables at once, counts against rates, three years of monthly arrivals, and a total that says the opposite of its parts.\n\n- Keep your plan from lab 1.1 at hand: Day 2 answers questions 2 to 5.\n- Every lab starts from the supplied tables. Nothing from today's notebooks is needed.","notes":"If the setup check failed for anyone today, settle it before tomorrow: lab 2.1 draws 43,840 points.","minutes":null,"lo":[]}],"activities":[{"id":"check-question-q1","slide":"check-question","type":"single","prompt":"The director asks: \"Did the festivals bring people, or would they have come anyway?\" Which rewrite belongs in the plan?","options":[{"key":"A","text":"Were the festivals successful for the region?"},{"key":"B","text":"How many arrivals were recorded in the festival months?"},{"key":"C","text":"By how much did arrivals in each festival month exceed the baseline for that month of the year?"},{"key":"D","text":"Did the festivals cause visitors to choose Tilal over other regions?"}],"correct":[2],"explanation":"It names the unit (a month), the variable (arrivals) and the comparison (the festival month against what season and trend lead us to expect).","misconceptions":["Keeps a word nobody can measure: 'successful' has no unit and no comparison","Names a variable and no comparison: a count of arrivals in October says nothing about what October would have been","","Promises a cause from data in which nothing was varied on purpose"],"lo":["LO2"]},{"id":"check-profile-q1","slide":"check-profile","type":"single","prompt":"320 stays have 999 in the column nights. The data dictionary does not mention the value. What goes into the issue log?","options":[{"key":"A","text":"Set them to missing, record the 320 rows, and ask the register's owner what 999 stands for"},{"key":"B","text":"Replace them with the median length of stay so that no row is lost"},{"key":"C","text":"Keep them: a few very long stays are plausible in a tourism region"},{"key":"D","text":"Delete the 320 rows from the register before any analysis"}],"correct":[0],"explanation":"The length of those stays is unknown. Missing says so; any other value claims knowledge nobody has. The rows keep their other columns.","misconceptions":["","Hides 320 unknown values inside the most common answer and shrinks the spread","Treats a code as a measurement: the mean of nights would more than triple","Throws away the other nine columns of 320 stays, which are sound"],"lo":["LO3"]},{"id":"check-distribution-q1","slide":"check-distribution","type":"single","prompt":"Aws Al-Hudaif asks whether visitors from other regions come for one kind of trip or several. You have their 17,367 stays with the nights of each. What do you draw first?","options":[{"key":"A","text":"A box plot of nights for that market"},{"key":"B","text":"A bar with the mean number of nights and an error bar"},{"key":"C","text":"A histogram of nights with bins seven nights wide"},{"key":"D","text":"A histogram of nights with one bin for each night"}],"correct":[3],"explanation":"\"One kind or several\" is a question about humps. Only a histogram with bins fine enough to separate them can show two.","misconceptions":["Draws five numbers: two humps and one hump with the same quartiles give the same box","One number for a variable whose shape is the question","Bins of a week merge a weekend trip and a five-night stay into one bar",""],"lo":["LO3"]},{"id":"check-summary-q1","slide":"check-summary","type":"single","prompt":"A museum records minutes spent inside by each visitor. 45% of the records show 0 minutes because those visitors used only the cafe. The others stay a median of 70 minutes. Which summary is honest?","options":[{"key":"A","text":"Visitors spend a mean of 41 minutes in the museum"},{"key":"B","text":"45% of visitors use only the cafe; the others stay a median of 70 minutes"},{"key":"C","text":"The median visitor spends 25 minutes in the museum"},{"key":"D","text":"Museum visitors stay a median of 70 minutes inside"}],"correct":[1],"explanation":"A zero-heavy variable holds two groups. Give the share at zero, then a summary of the rest, and the reader can see both.","misconceptions":["Averages cafe users with museum visitors: nobody stays the average time","","The median of all records lands between two groups and describes neither of them","Drops nearly half of the visitors without saying so, which a reader cannot see"],"lo":["LO3"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day1.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

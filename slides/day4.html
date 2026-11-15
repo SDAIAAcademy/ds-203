@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-ax="deck" data-track="data-science">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day 4 · Check and report · Exploratory Analysis and Visualisation</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day4.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+<link rel="stylesheet" href="../assets/course.css">
+</head>
+<body>
+<div class="deck" data-course="Exploratory Analysis and Visualisation" data-track="data-science" data-day="Day 4">
+<section class="slide title" id="title" data-auto="title" data-label="Welcome" data-n="1">
+  <div class="kicker">SDAIA Academy · Exploratory Analysis and Visualisation</div>
+  <h1>Check and report</h1>
+  <p class="lead mt">Day 4: Which patterns survive a chance check, how to draw what is not known, and a report that anyone can run again</p>
+  <div class="meta"><span class="track">Data Science Track</span><span>4 teaching days + capstone day</span><span>4 sessions · 4 labs</span><span>DS-203</span></div>
+  <aside class="notes"><p>Three days produced a pile of patterns. Today decides which of them may be printed, how to draw how sure we are, and how to hand over a report that someone else can run. Ask: who has had a finding from one quarter vanish in the next? Most analysts have. Today is about knowing in advance which ones will.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="Agenda" data-n="2">
+  <div class="kicker">Today</div>
+  <h2>Check and report</h2>
+  <div class="agenda"><div class="item"><div><b>Session 1 · Could it be chance</b><small>Applying the resampling of DS-201 to patterns found by exploring: which rule for which pattern, and what to do with the result</small></div></div><div class="item"><div><b>Session 2 · Showing uncertainty</b><small>Drawing uncertainty: interval marks, what a bar hides, and captions that say what the interval is</small></div></div><div class="item"><div><b>Session 3 · The traps of exploring</b><small>Why the best of many comparisons looks real, how to count the comparisons made, and what turns an exploratory finding into a confirmed one</small></div></div><div class="item"><div><b>Session 4 · A report that reruns</b><small>What makes a report rerun: raw data read-only, one path from raw data to the page, fixed seeds, and findings written with their limits</small></div></div></div>
+  <aside class="notes"><p>Sessions 1 and 2 apply the resampling of DS-201; they do not teach it again. Session 3 is the centre of the course's first outcome: why a pattern found by exploring needs a fresh test. Session 4 ends with each participant choosing a capstone dataset, so protect its last ten minutes.</p></aside>
+</section>
+
+<section class="slide" id="review-day-3" data-lo="LO4" data-label="Review of Day 3" data-n="3">
+  <div class="kicker">Review · Day 3</div>
+  <h2>Where may this axis start?</h2>
+  <div class="quiz" data-type="single" data-lo="LO4" data-id="review-day-3-q1">
+    <p class="lead">A service desk's monthly response time moved between 41 and 46 minutes over two years. The changes must be visible. Which chart is honest?</p>
+    <div class="opts">
+      <div class="opt" data-why="A bar is read by its length, so an axis from 40 makes 46 look six times 41" data-k="A">Bars, with the y axis from 40 to 47 minutes</div>
+      <div class="opt" data-why="Honest and unreadable: the changes of interest are flattened into a level band" data-k="B">Bars, with the y axis from 0 to 50 minutes</div>
+      <div class="opt" data-ok data-k="C">A line with points, y axis from 40 to 47, range stated in the title</div>
+      <div class="opt" data-why="An area is read from its base like a bar, so it needs zero as much as a bar does" data-k="D">A filled area, with the y axis from 40 to 47 minutes</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A point or a line is read by its position, so its axis may start where the data starts if the chart says so. Bars and areas are read from their base.</div>
+  </div>
+  <aside class="notes"><p>Answer: the third. Three minutes. This rule is used again in session 2 today, where means with intervals are drawn as points on an axis from 3.6 to 4.6.</p></aside>
+</section>
+
+<!-- ======================= SESSION 1 ======================= -->
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="4">
+  <div class="kicker">Session 1</div>
+  <h1>Could it be chance</h1>
+  <ul class="bullets outcomes"><li>Choose shuffling for a gap between groups and resampling for an interval</li><li>Resample the unit that was sampled, here the week</li><li>Decide to report, qualify or drop a pattern and give the reason</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="three-patterns" data-lo="LO5" data-label="Three patterns, three decisions" data-n="5" data-session="1">
+  <div class="kicker">What the board wants to announce</div>
+  <h2>Three patterns, and three decisions open for each</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>The weekend</h4><p class="small mb0">"Weekend visitors are more satisfied than weekday visitors."</p></div>
+    <div class="card c-cyan"><h4>Sites and hotels</h4><p class="small mb0">"When the sites are busy, the hotels fill."</p></div>
+    <div class="card c-coral"><h4>The Honey Museum</h4><p class="small mb0">"At the Honey Museum, weekend visitors were far more satisfied in 2025."</p></div>
+  </div>
+  <table class="t small mt">
+    <tr><th>Decision</th><th>Meaning</th></tr>
+    <tr><td><b>Report</b></td><td>the pattern stands and matters</td></tr>
+    <tr><td><b>Qualify</b></td><td>it stands, with a stated limit</td></tr>
+    <tr><td><b>Drop</b></td><td>the data does not support announcing it</td></tr>
+  </table>
+  <aside class="notes"><p>These are the "three patterns the board wants to announce" of the course's fifth outcome. The first two are lab 4.1, the third is lab 4.3. Ask for a show of hands on each before any computing, and keep the tally on the board: the room is usually confident about the wrong one.</p></aside>
+</section>
+
+<section class="slide" id="which-rule" data-lo="LO5" data-label="Which rule for which pattern" data-n="6" data-session="1">
+  <div class="kicker">From DS-201, in one slide</div>
+  <h2>Shuffle to test a difference; resample to put an interval on an estimate</h2>
+  <table class="t">
+    <tr><th></th><th>Permutation test</th><th>Bootstrap</th></tr>
+    <tr><td><b>Question</b></td><td>could this gap arise if the label meant nothing?</td><td>how far could this estimate move with another sample?</td></tr>
+    <tr><td><b>Procedure</b></td><td>shuffle the labels, recompute the gap</td><td>draw the units again with replacement, recompute</td></tr>
+    <tr><td><b>Result</b></td><td>a p-value</td><td>an interval</td></tr>
+    <tr><td><b>Here</b></td><td>the weekend gap</td><td>the weekly correlation</td></tr>
+  </table>
+  <div class="callout note mt"><b>New today.</b> Not the procedures: choosing between them, choosing the unit to resample, and deciding what to do with the result.</div>
+  <aside class="notes"><p>A recap, two minutes. DS-201 taught both procedures, p-values and their misreadings, and corrections for several planned tests. If the room is unsure, run the first cells of lab 4.1 live. What DS-201 could not teach is what happens when the pattern was found by looking, which is this course's situation all the time.</p></aside>
+</section>
+
+<section class="slide" id="weekend-gap" data-lo="LO5" data-label="The weekend gap" data-n="7" data-session="1">
+  <div class="kicker">Lab 4.1, steps 1 to 3</div>
+  <h2>Shuffled labels give this gap one time in three</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d4_1_null.svg" alt="Histogram of 5,000 gaps between weekend and weekday satisfaction under shuffled labels, centred on zero and running from about minus 0.08 to plus 0.08, with two vertical lines at minus 0.021 and plus 0.021 well inside the bulk of the distribution">
+      <figcaption>Gaps under shuffled labels; the lines mark the observed gap.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Weekend 4.13, weekday 4.11: a gap of <b>+0.02</b>.</li>
+      <li>p-value about <b>0.35</b>.</li>
+      <li>Decision: <b>drop</b> the claim.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>2,478 weekend responses and 3,522 weekday ones. The picture is the argument: the observed gap sits in the middle of what meaningless labels produce. Note also the size: even if it were real, two hundredths of a point on a five-point scale would change no decision. A chance check and a "does it matter" check are separate, and a finding needs both.</p></aside>
+</section>
+
+<section class="slide" id="drop-is-not-no-effect" data-lo="LO5" data-label="What a large p-value says" data-n="8" data-session="1">
+  <div class="kicker">The sentence that goes in the report</div>
+  <h2>"Drop" means "this data cannot tell", not "there is no difference"</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Not supported</h4><p class="small mb0">"The day of the week makes no difference to satisfaction."</p></div>
+    <div class="card c-teal"><h4>Supported</h4><p class="small mb0">"The survey shows no clear difference between weekend and weekday visitors (gap 0.02 point, p about 0.35)."</p></div>
+  </div>
+  <ul class="bullets tight mt">
+    <li>A p-value of 0.35 is the absence of evidence for a difference. It is not evidence of absence.</li>
+    <li>To claim "no difference worth acting on", give the interval of the gap and say what size would matter.</li>
+  </ul>
+  <aside class="notes"><p>The commonest misuse of a non-significant result is to announce equality. The honest form names the data and the size. With 6,000 responses the interval for the gap is narrow, roughly minus 0.02 to plus 0.07, so here one can add that any weekend effect is small; with 200 responses one could not. That is the interval's job, and session 2's.</p></aside>
+</section>
+
+<section class="slide" id="resample-the-unit" data-lo="LO5" data-label="Resample the unit that was sampled" data-n="9" data-session="1">
+  <div class="kicker">Lab 4.1, steps 4 and 5</div>
+  <h2>Resample the unit that was sampled: here, the week</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>43,840 hotel-days</h4><p class="small mb0">Forty hotels share one day's weather and one day's ticket total. Days in a week resemble each other. Resampling them as if independent gives an interval far too narrow.</p></div>
+    <div class="card c-teal"><h4>156 weeks</h4><p class="small mb0">One row per week for the whole region. Draw 156 weeks with replacement, recompute the correlation, repeat 5,000 times.</p></div>
+  </div>
+  <pre class="code s"><code class="language-python">k = gen.integers(<span class="hljs-number">0</span>, <span class="hljs-built_in">len</span>(x), <span class="hljs-built_in">len</span>(x))        <span class="hljs-comment"># 156 weeks, drawn with replacement</span>
+r[i] = np.corrcoef(x[k], y[k])[<span class="hljs-number">0</span>, <span class="hljs-number">1</span>]</code></pre>
+  <div class="callout warn"><b>What goes wrong.</b> Counting rows as evidence. The number that matters is how many independent units there are.</div>
+  <aside class="notes"><p>This is the one new technical idea of the session. The bootstrap imitates the way the data came about; if the data came in clusters, resample clusters. Neighbouring weeks are still somewhat alike, so even this interval is a little optimistic; a block bootstrap would address it and is beyond this course. Say so: a stated limit beats silent precision.</p></aside>
+</section>
+
+<section class="slide" id="correlation-interval" data-lo="LO5" data-label="The correlation's interval" data-n="10" data-session="1">
+  <div class="kicker">Lab 4.1, steps 5 and 6</div>
+  <h2>The correlation is not chance, and still needs a qualifier</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">0.70</div><div class="lbl">weekly tickets and hotel occupancy</div></div>
+    <div class="stat"><div class="big">0.60 to 0.78</div><div class="lbl">95% bootstrap interval, 156 weeks</div></div>
+    <div class="stat"><div class="big">0.44</div><div class="lbl">with each calendar month's mean removed</div></div>
+  </div>
+  <ul class="bullets tight mt">
+    <li>The interval stays far from zero: weeks with busy sites do have fuller hotels.</li>
+    <li>Part of the 0.70 is the shared season. What remains is smaller and still positive.</li>
+    <li>Decision: <b>qualify</b>. The check answers "is it chance", never "is it cause".</li>
+  </ul>
+  <aside class="notes"><p>The third number is the lab's stretch: interval 0.31 to 0.56 after subtracting the month-of-year means. Day 2 said season moves both series; today puts a number on how much of the relation that explains. The sentence for the board: weeks with more ticket sales have fuller hotels, partly because both follow the season; the data does not show that visits to the sites fill the hotels.</p></aside>
+</section>
+
+<section class="slide" id="what-a-chance-check-settles" data-lo="LO5" data-label="What a chance check settles" data-n="11" data-session="1">
+  <div class="kicker">Before deciding</div>
+  <h2>A chance check answers one question out of four</h2>
+  <table class="t small">
+    <tr><th>Question</th><th>Answered by</th><th>Session</th></tr>
+    <tr><td>Could it be chance?</td><td>a permutation test or a bootstrap interval</td><td>this one</td></tr>
+    <tr><td>Is it large enough to matter?</td><td>the size of the effect, in the units of the decision</td><td>this one</td></tr>
+    <tr><td>Was it found by searching?</td><td>counting the comparisons that were made</td><td>4.3</td></tr>
+    <tr><td>Is it the mix, the season or the measure?</td><td>the checks of Day 2</td><td>2.2 to 2.4</td></tr>
+  </table>
+  <div class="callout tip mt"><b>The decision carries its reason.</b> "Drop: p about 0.35 and a gap of 0.02." "Qualify: interval 0.60 to 0.78; season raises both."</div>
+  <aside class="notes"><p>Passing a chance check is necessary and far from sufficient. The checks of Day 2 come first, because a pattern produced by a change of mix can be highly "significant". The third row is the trap this afternoon is built around: the Honey Museum headline passes the first two rows.</p></aside>
+</section>
+
+<section class="slide" id="check-chance" data-lo="LO5" data-n="12" data-session="1">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which procedure, on which unit?</h2>
+  <div class="quiz" data-type="single" data-lo="LO5" data-id="check-chance-q1">
+    <p class="lead">A school network has test scores of 4,000 pupils in 40 schools. Twenty schools used a new timetable. The analyst wants an interval for the difference in mean score between the two groups of schools. What should be resampled?</p>
+    <div class="opts">
+      <div class="opt" data-why="Pupils in one school share teachers and intake, so treating them as independent makes the interval too narrow" data-k="A">The 4,000 pupils, drawn again with replacement</div>
+      <div class="opt" data-why="Shuffling labels tests whether a difference exists; it does not give an interval for its size" data-k="B">The timetable labels of the pupils, shuffled</div>
+      <div class="opt" data-why="Resampling scores without their pupils or schools destroys the structure being studied" data-k="C">The 4,000 scores, drawn within each school</div>
+      <div class="opt" data-ok data-k="D">The 40 schools, drawn again with replacement</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The timetable was applied to schools, so the school is the unit: 40 independent units, not 4,000.</div>
+  </div>
+  <aside class="notes"><p>Answer: the fourth. The follow-up worth asking: how wide will the interval be with 20 schools on each side? Wide, and that is the honest answer about what this data can show. Designing such a comparison properly belongs to DS-205.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-4-1" data-auto="lab" data-lab="4.1" data-label="Lab 4.1" data-n="13" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 4.1 · 25 min</div><h2>Chance checks on two patterns</h2><p class="lead small">Permutation-test the claimed weekend effect on satisfaction and bootstrap the correlation between weekly ticket sales and hotel occupancy; decide for each whether to report, qualify or drop it.</p><a class="nb" href="../labs/D4_1_chance_checks.ipynb">D4_1_chance_checks.ipynb</a></div><ul class="checklist"><li>The weekend gap in satisfaction, as claimed <span class="min">3 min</span></li><li>Shuffle the weekend labels: the p-value <span class="min">7 min</span></li><li>Decide: report, qualify or drop <span class="min">2 min</span></li><li>The correlation of weekly tickets and occupancy <span class="min">3 min</span></li><li>Bootstrap the weeks: an interval <span class="min">7 min</span></li><li>Decide, and write the reading <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Remove the season from both series and bootstrap again</li></ul></div>
+  <aside class="notes"><p>Starts from U.survey() and U.weekly(). Assistant off for steps 1 to 3 and for the reading. The shuffles take a few seconds. Common failure: a one-sided p-value, counting only shuffles above the observed gap; the lab asks for the two-sided one. The decision for the correlation accepts "qualify" or "report", and the reading must carry the qualifier either way.</p></aside>
+</section>
+
+<!-- ======================= SESSION 2 ======================= -->
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="14">
+  <div class="kicker">Session 2</div>
+  <h1>Showing uncertainty</h1>
+  <ul class="bullets outcomes"><li>Add an interval to every estimate on a chart</li><li>Read overlapping and separate intervals without overclaiming</li><li>Write a caption that names the interval, the sample size and the limit</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="what-a-bar-hides" data-lo="LO5" data-label="What a bar hides" data-n="15" data-session="2">
+  <div class="kicker">The earlier report</div>
+  <h2>"Terrace Farms is our best-rated site"</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d4_2_published.svg" alt="Bar chart of mean satisfaction in 2025 for nine sites, sorted, on an axis from 3.8 to 4.3: Terrace Farms the longest bar, then Souq Walk, down to Wadi Trail, with nothing to show how many responses each bar rests on">
+      <figcaption>As published: mean satisfaction in 2025.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Each bar is one number drawn as if it were exact.</li>
+      <li>The bars rest on <b>59 to 510</b> responses. The chart does not say which.</li>
+      <li>And yesterday's fault 1: bars on an axis from 3.8.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Ask the room to rank how sure they are of each bar. They cannot; the chart gives nothing to go on. Terrace Farms, at the top, has 59 responses in 2025, the Cable Car 510. A ranking of means without sample sizes is the most common chart in customer-satisfaction reporting.</p></aside>
+</section>
+
+<section class="slide" id="interval-per-site" data-lo="LO5" data-label="An interval for each estimate" data-n="16" data-session="2">
+  <div class="kicker">Lab 4.2, steps 1 and 2</div>
+  <h2>Every estimate on a chart gets an interval</h2>
+  <table class="t small">
+    <tr><th>Site</th><th class="num">Responses</th><th class="num">Mean</th><th class="num">95% interval</th></tr>
+    <tr><td>Terrace Farms</td><td class="num">59</td><td class="num">4.24</td><td class="num">4.02 to 4.44</td></tr>
+    <tr><td>Souq Walk</td><td class="num">442</td><td class="num">4.22</td><td class="num">4.13 to 4.30</td></tr>
+    <tr><td>Honey Museum</td><td class="num">167</td><td class="num">4.10</td><td class="num">3.97 to 4.24</td></tr>
+    <tr><td>Cable Car</td><td class="num">510</td><td class="num">3.93</td><td class="num">3.84 to 4.00</td></tr>
+    <tr><td>Wadi Trail</td><td class="num">132</td><td class="num">3.91</td><td class="num">3.76 to 4.05</td></tr>
+  </table>
+  <ul class="bullets tight mt">
+    <li>The fewer the responses, the wider the interval: roughly with one over the square root of n.</li>
+    <li>The site at the top has the widest interval of all.</li>
+  </ul>
+  <aside class="notes"><p>Five of the nine sites; bootstrap intervals with 4,000 resamples of each site's responses. The top of a ranking is where small groups collect, because their means move most; the same is true of the bottom. Schools, hospitals and branches topping a league table are small more often than they are good. Ask who has seen that at work.</p></aside>
+</section>
+
+<section class="slide" id="points-with-intervals" data-lo="LO5" data-label="Points with intervals" data-n="17" data-session="2">
+  <div class="kicker">Lab 4.2, step 3</div>
+  <h2>A point, a line for the interval, and n beside the name</h2>
+  <figure class="figure">
+    <img src="../assets/figs/d4_2_intervals.svg" alt="Nine sites sorted by mean satisfaction in 2025, each a point with a horizontal line for its 95% interval and its number of responses in the label, on an axis from 3.6 to 4.6. Terrace Farms, n 59, has the highest point and by far the longest line; most lines overlap; only Cable Car and Wadi Trail lie clearly below Souq Walk. Title: Most sites cannot be told apart">
+    <figcaption>Mean satisfaction in 2025 with 95% bootstrap intervals.</figcaption>
+  </figure>
+  <ul class="bullets tight">
+    <li>A point is read by position, so the axis may run from 3.6 to 4.6.</li>
+    <li>Seven of the other eight intervals overlap that of Terrace Farms.</li>
+  </ul>
+  <aside class="notes"><p>Three decisions of yesterday's grammar: the mark changed from bar to point and rule, the scale became honest for that mark, and the sample size joined the label. In Altair it is two layers: mark_rule with x and x2, and mark_circle. What can be said: the Souq Walk rates above the Cable Car and the Wadi Trail. What cannot: which site is best.</p></aside>
+</section>
+
+<section class="slide" id="reading-intervals" data-lo="LO5" data-label="Reading intervals" data-n="18" data-session="2">
+  <div class="kicker">Lab 4.2, step 4</div>
+  <h2>Overlap does not prove equality: compute the interval of the difference</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Two intervals that do not overlap: the groups differ.</li>
+      <li>Two intervals that overlap: this sample cannot order them. They may still differ.</li>
+      <li>For a claim about two groups, resample both and take the difference each time.</li>
+    </ul>
+    <div class="card c-teal"><h4>Guided against unguided visits, 2025</h4><p class="small mb0">Difference in mean satisfaction: <b>+0.39</b> point, interval <b>+0.31 to +0.47</b>, from 680 guided and 1,520 unguided responses. The whole interval is far above zero: <b>report</b>.</p></div>
+  </div>
+  <div class="callout warn mt"><b>What goes wrong.</b> Reading "overlapping" as "the same" and announcing that all sites perform equally.</div>
+  <aside class="notes"><p>This pattern is not one of the three the board wanted to announce, and it is the one with a clean outcome: guided visits being rated higher stands, and session 3 shows it was also planned in advance. The limit still goes in the sentence: visitors choose a guided visit, so the data does not show that guiding causes the higher rating.</p></aside>
+</section>
+
+<section class="slide" id="marks-for-uncertainty" data-lo="LO5" data-label="Marks for uncertainty" data-n="19" data-session="2">
+  <div class="kicker">Which mark for which chart</div>
+  <h2>Uncertainty has its own marks</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Point and interval</h4><p class="small mb0">For a few estimates by group. The default of this course.</p></div>
+    <div class="card c-cyan"><h4>Band around a line</h4><p class="small mb0">For an estimate over time: a shaded band from the lower to the upper end at each date.</p></div>
+    <div class="card c-coral"><h4>The data itself</h4><p class="small mb0">With small groups, draw every value as a faint point behind the estimate. Twelve points say "twelve" better than any interval.</p></div>
+  </div>
+  <div class="callout warn mt"><b>Avoid</b> a bar with a whisker on top: the bar still says "this much from zero", and readers judge by the bar. And never draw an interval without saying what it is.</div>
+  <aside class="notes"><p>A whisker can mean a standard deviation, a standard error, a 95% interval or a range, which differ by a factor of ten on the same data; an unlabelled error bar carries no information. The third card is a reminder from Day 1: showing the values is often the most honest display, as long as no individual can be singled out.</p></aside>
+</section>
+
+<section class="slide" id="caption-for-uncertainty" data-lo="LO5" data-label="The caption" data-n="20" data-session="2">
+  <div class="kicker">Lab 4.2, step 5</div>
+  <h2>The caption names the interval, the sample and the limit</h2>
+  <div class="chat">
+    <div class="msg user"><span class="who">As published</span>Terrace Farms is our best-rated site.</div>
+    <div class="msg bot"><span class="who">Rewritten</span>Mean satisfaction in 2025 by site with 95% bootstrap intervals. The Souq Walk (4.22, n = 442) rates above the Cable Car (3.93, n = 510); Terrace Farms' 4.24 rests on 59 responses and cannot be ranked first. The intervals show how far each mean could move with another sample of respondents; they do not correct for who chose to answer or for the mix of visitors at each site.</div>
+  </div>
+  <ul class="bullets tight mt">
+    <li>An interval covers sampling variation only.</li>
+    <li>Who answers a survey, how the question is put and the mix of visitors are outside it.</li>
+  </ul>
+  <aside class="notes"><p>A caption has three duties: what the marks are, what can be concluded, what the interval leaves out. The last sentence is the one analysts omit. A narrow interval around a biased number is a precise wrong answer; Day 2's reversal would pass any interval test. Participants write their own caption without the assistant.</p></aside>
+</section>
+
+<section class="slide" id="check-uncertainty" data-lo="LO5" data-n="21" data-session="2">
+  <div class="kicker">Checkpoint</div>
+  <h2>What may the report say?</h2>
+  <div class="quiz" data-type="single" data-lo="LO5" data-id="check-uncertainty-q1">
+    <p class="lead">Two call centres have mean satisfaction 4.3 (interval 4.1 to 4.5, n = 80) and 4.1 (interval 4.0 to 4.2, n = 600). The intervals overlap. Which statement is supported?</p>
+    <div class="opts">
+      <div class="opt" data-why="Overlap shows the sample cannot order the two centres; it does not show that they are equal" data-k="A">The two centres deliver the same level of satisfaction</div>
+      <div class="opt" data-ok data-k="B">This sample cannot rank them; the difference needs its own interval</div>
+      <div class="opt" data-why="The higher mean rests on 80 responses and its interval reaches down to 4.1" data-k="C">The first centre is better, since its mean is higher</div>
+      <div class="opt" data-why="A narrower interval reflects a larger sample, not a better or more reliable service" data-k="D">The second centre is better, since its interval is narrower</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Overlapping intervals leave the order open. A claim about two groups rests on the interval of their difference.</div>
+  </div>
+  <aside class="notes"><p>Answer: the second. The fourth option confuses precision of the estimate with quality of the thing estimated, which is a common reading of narrow intervals by non-specialists; the caption has to prevent it.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-4-2" data-auto="lab" data-lab="4.2" data-label="Lab 4.2" data-n="22" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 4.2 · 25 min</div><h2>Intervals on the satisfaction chart</h2><p class="lead small">Add intervals to the satisfaction bar chart of the earlier report, find which sites can be told apart and rewrite its caption.</p><a class="nb" href="../labs/D4_2_intervals_caption.ipynb">D4_2_intervals_caption.ipynb</a></div><ul class="checklist"><li>The chart as published, and the responses behind each bar <span class="min">3 min</span></li><li>A bootstrap interval for each site <span class="min">7 min</span></li><li>Points with intervals, sorted, with the sample size <span class="min">7 min</span></li><li>The interval of a difference: guided against unguided visits <span class="min">4 min</span></li><li>Rewrite the caption <span class="min">4 min</span></li><li class="stretch">✱ Stretch: Draw the 2025 intervals by origin market inside one site</li></ul></div>
+  <aside class="notes"><p>Starts from U.survey(), the 2,200 responses of 2025. The tutor may hint at plotting syntax; the caption is written without it. Common failures: an interval of the values (percentiles of the responses) in place of an interval of the mean; and a rule drawn with x only, which gives a tick. The check on the chart looks for a rule from lo to hi, a point, no bars and n in every label.</p></aside>
+</section>
+
+<!-- ======================= SESSION 3 ======================= -->
+<section class="slide section" id="s3" data-auto="section" data-session="3" data-n="23">
+  <div class="kicker">Session 3</div>
+  <h1>The traps of exploring</h1>
+  <ul class="bullets outcomes"><li>Count the comparisons behind a reported pattern</li><li>Simulate the most striking gap that chance alone produces among that many comparisons</li><li>Mark a finding exploratory or confirmed and name the check it needs</li></ul>
+  <div class="sess-no">03</div>
+</section>
+
+<section class="slide" id="the-headline" data-lo="LO1" data-label="The headline" data-n="24" data-session="3">
+  <div class="kicker">A week after the weekend claim was dropped</div>
+  <h2>"At the Honey Museum, weekend visitors were far more satisfied in 2025"</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">+0.30</div><div class="lbl">weekend minus weekday, on a 1 to 5 scale</div></div>
+    <div class="stat"><div class="big">0.03</div><div class="lbl">p-value by permutation, taken alone</div></div>
+    <div class="stat"><div class="big">167</div><div class="lbl">responses: 68 weekend, 99 weekday</div></div>
+  </div>
+  <ul class="bullets tight mt">
+    <li>Fourteen times the gap that was dropped this morning.</li>
+    <li>It passes a chance check. It is large enough to matter.</li>
+    <li>One question is left: <b>how was it found?</b></li>
+  </ul>
+  <aside class="notes"><p>Present this as Nayef Al-Jumaah would: with enthusiasm, and with a programme idea attached, weekend events at the museum. Ask the room to vote: report, qualify or drop. By this morning's two tests it is a "report". Hold the vote; you will return to it in ten minutes.</p></aside>
+</section>
+
+<section class="slide" id="count-the-comparisons" data-lo="LO1" data-label="Count the comparisons" data-n="25" data-session="3">
+  <div class="kicker">Lab 4.3, step 2</div>
+  <h2>It was the most striking of 27 comparisons</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d4_3_all_gaps.svg" alt="Twenty-seven points, one per site and year, showing the weekend minus weekday gap in satisfaction in standard errors, sorted: they scatter from about minus 1.5 to plus 2.2 around zero, with the Honey Museum 2025 highlighted at the top as the only one beyond 2">
+    </figure>
+    <ul class="bullets">
+      <li>Nine sites, three years: 27 gaps were looked at. One was kept.</li>
+      <li>16 are above zero, 11 below.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The file claims.json records how the headline was found: every site in every year was compared and the gap with the smallest p-value was kept. The gaps are drawn in standard errors so that a cell of 60 responses and a cell of 500 can be compared. Seen among its 26 siblings the headline looks like the end of a scatter, which is what it is.</p></aside>
+</section>
+
+<section class="slide" id="at-least-one" data-lo="LO1" data-label="At least one by chance" data-n="26" data-session="3">
+  <div class="kicker">Lab 4.3, step 3</div>
+  <h2>With 27 comparisons of nothing, a "finding" is the likely outcome</h2>
+  <pre class="code s" data-file="the chance of at least one p-value below 0.05"><code class="language-text"> 1 comparison      1 - 0.95^1    =   5%
+ 5 comparisons     1 - 0.95^5    =  23%
+27 comparisons     1 - 0.95^27   =  75%
+135 comparisons    1 - 0.95^135  =  99.9%</code></pre>
+  <ul class="bullets tight">
+    <li>A p-value of 0.05 means: one time in twenty, nothing looks like something.</li>
+    <li>Look twenty-seven times and it is three chances in four.</li>
+    <li>135 is what the search becomes if it also splits by origin market.</li>
+  </ul>
+  <aside class="notes"><p>DS-201 showed this arithmetic for tests planned in advance and gave corrections for it. The exploratory situation is worse in one respect: nobody wrote down that there were 27 tests. The analyst remembers one interesting result. The arithmetic assumes independent comparisons, which is close enough here.</p></aside>
+</section>
+
+<section class="slide" id="simulate-the-search" data-lo="LO1" data-label="Simulate the search" data-n="27" data-session="3">
+  <div class="kicker">Lab 4.3, step 4</div>
+  <h2>Check the method that was used, search included</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d4_3_largest.svg" alt="Histogram of the most striking of 27 gaps in standard errors over 1,000 shuffles of the weekend labels, mostly between 1.5 and 3.5 with a median near 2.3, and a vertical line at 2.23 for the headline, in the middle of the distribution">
+      <figcaption>The most striking of 27 gaps when the labels mean nothing.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Shuffle the weekend labels inside every site and year; keep the most striking of the 27 gaps; repeat.</li>
+      <li>Its median is 2.3 standard errors. The headline's is 2.2.</li>
+      <li>A gap as striking as the headline turns up in <b>about half</b> of the shuffles.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The p-value of 0.03 was computed correctly and answers a question nobody asked: how unusual is this gap at a site chosen in advance. The site was chosen afterwards. The simulation repeats the whole procedure, the search included, and gives 0.55. Return to the vote now. The same resampling tool, applied to the method as it was really used.</p></aside>
+</section>
+
+<section class="slide" id="forking-paths" data-lo="LO1" data-label="The comparisons nobody counts" data-n="28" data-session="3">
+  <div class="kicker">Beyond 27</div>
+  <h2>Every choice made after looking is a comparison</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Which groups: weekend, or Friday alone, or school holidays?</li>
+      <li>Which measure: the mean, or the share of 5s?</li>
+      <li>Which rows: all responses, or "excluding" a bad month?</li>
+      <li>Which period: 2025, or the last six months?</li>
+    </ul>
+    <div class="card c-coral"><h4>In the board's past report</h4><p class="small mb0">"Visitors who arrive on a Tuesday spend the most": spend tabulated by every day of the week, every origin and every purpose, and the largest cell reported.</p></div>
+  </div>
+  <div class="callout note mt"><b>No bad faith is needed.</b> An honest analyst who looks until something stands out has run many tests and remembers one.</div>
+  <aside class="notes"><p>This is why the count is usually unknown and larger than anyone thinks. Each choice is reasonable on its own; the problem is that they were made while watching the result. Everything this course taught on Days 1 to 3 is such a choice: bin widths, denominators, baselines, facets. Exploring is not the fault. Reporting it as a test is.</p></aside>
+</section>
+
+<section class="slide" id="exploratory-or-confirmed" data-lo="LO1" data-label="Exploratory or confirmed" data-n="29" data-session="3">
+  <div class="kicker">Lab 4.3, step 5</div>
+  <h2>What makes a finding confirmed is the order of events</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Confirmed</h4><p class="small mb0">The question was written down <b>before</b> the data that answers it was looked at.</p><p class="small mb0">"Guided visits are rated higher": noticed in the 2023 survey, written down, then tested once on the 2024 survey.</p></div>
+    <div class="card c-amber"><h4>Exploratory</h4><p class="small mb0">The data suggested the question.</p><p class="small mb0">"Hotels in the Ridge zone fill up before the Honey Festival": seen in a chart of 2024 while looking for something else.</p></div>
+  </div>
+  <ul class="bullets tight mt">
+    <li>Exploratory is a label, not an insult: it is where questions come from.</li>
+    <li>The same data cannot both suggest a pattern and confirm it.</li>
+  </ul>
+  <aside class="notes"><p>Outcome 1 of the course, introduced in the first session of Day 1 and assessed here. Two of the five past findings are shown; the lab has the participant mark all five from how each was reached. The Ridge zone finding may well be true. The label says what has been done so far, and the reader is owed that.</p></aside>
+</section>
+
+<section class="slide" id="from-exploratory-to-confirmed" data-lo="LO1" data-label="From exploratory to confirmed" data-n="30" data-session="3">
+  <div class="kicker">Lab 4.3, step 6</div>
+  <h2>An exploratory finding is reported with its count and its next test</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · Label</b>"Exploratory", in the sentence itself</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>2 · Count</b>how many comparisons it was chosen from</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>3 · Write down</b>the question, before new data exists</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>4 · Test once</b>on data that did not suggest it</div>
+  </div>
+  <div class="callout tip mt"><b>In the report.</b> "Exploratory: among 27 comparisons, the most striking gap was 0.30 point at the Honey Museum in 2025; shuffled labels produce one as striking about half the time. The question will be tested once on the 2026 survey."</div>
+  <aside class="notes"><p>The headline is neither printed as a finding nor thrown away: it becomes a written question with a date. If no new data will ever come, a portion of the data can be set aside before exploring and opened once; that has to be decided at the start, which is what the plan of Day 1 is for. Planned experiments are DS-205.</p></aside>
+</section>
+
+<section class="slide" id="check-exploring" data-lo="LO1" data-n="31" data-session="3">
+  <div class="kicker">Checkpoint</div>
+  <h2>What is this finding worth?</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-exploring-q1">
+    <p class="lead">An analyst compares churn between customers who did and did not use each of 40 app features. One feature shows a difference with p = 0.02. The team wants to announce "Feature X reduces churn". What should the analyst say?</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="A">It is exploratory: expected among 40 looks; test it once on new customers</div>
+      <div class="opt" data-why="A p-value below 0.05 for one comparison out of forty is what chance alone usually delivers" data-k="B">It is confirmed, because the p-value is well below 0.05</div>
+      <div class="opt" data-why="A larger resample makes the same p-value more exact; it does not undo the search across 40 features" data-k="C">It will be confirmed once the test is rerun with more shuffles</div>
+      <div class="opt" data-why="A pattern found by searching can be real; the label and a fresh test are the fair response, not silence" data-k="D">It should be discarded and left out of the report entirely</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> With 40 comparisons, at least one p-value below 0.05 has an 87% chance when nothing is there. The data that suggested the pattern cannot confirm it.</div>
+  </div>
+  <aside class="notes"><p>Answer: the first. One minus 0.95 to the power 40 is 0.87. Also note "reduces": even a confirmed difference between users and non-users of a feature would not show that the feature causes it.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-4-3" data-auto="lab" data-lab="4.3" data-label="Lab 4.3" data-n="32" data-session="3">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 4.3 · 25 min</div><h2>Count the comparisons</h2><p class="lead small">Count the comparisons behind a headline pattern, simulate the most striking of 27 chance gaps, mark five past findings exploratory or confirmed and rewrite the finding.</p><a class="nb" href="../labs/D4_3_count_comparisons.ipynb">D4_3_count_comparisons.ipynb</a></div><ul class="checklist"><li>The headline gap and its p-value, taken alone <span class="min">4 min</span></li><li>All 27 site-year gaps <span class="min">5 min</span></li><li>The chance of at least one small p-value among 27 <span class="min">2 min</span></li><li>Simulate the most striking of 27 gaps under no effect <span class="min">6 min</span></li><li>Mark five past findings exploratory or confirmed <span class="min">5 min</span></li><li>Rewrite the finding <span class="min">3 min</span></li><li class="stretch">✱ Stretch: Count again with origin added to site and year</li></ul></div>
+  <aside class="notes"><p>Starts from U.survey() and two supplied files, claims.json and past_findings.json. The simulation of step 4 takes about ten seconds. Marking the five findings and rewriting the headline are done without the assistant; this is the evidence of outcome 1. Common failure: marking by whether the finding sounds plausible. The only thing that counts is how it was reached.</p></aside>
+</section>
+
+<!-- ======================= SESSION 4 ======================= -->
+<section class="slide section" id="s4" data-auto="section" data-session="4" data-n="33">
+  <div class="kicker">Session 4</div>
+  <h1>A report that reruns</h1>
+  <ul class="bullets outcomes"><li>Render a report from raw data with one command and prove that two runs agree</li><li>Find what makes a report change between runs</li><li>Write findings with their check, their limit and an open question</li></ul>
+  <div class="sess-no">04</div>
+</section>
+
+<section class="slide" id="what-reruns-means" data-lo="LO6" data-label="A report that reruns" data-n="34" data-session="4">
+  <div class="kicker">The promise</div>
+  <h2>A report that reruns has one path from the raw data to the page</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>Raw data</b>read-only, never edited by hand</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>One source</b>text and code together, parameters at the top</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>One command</b>runs everything in a fresh process</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>The page</b>every number computed by that run</div>
+  </div>
+  <ul class="bullets tight mt">
+    <li>No number is typed; no chart is pasted.</li>
+    <li>A correction to the data reaches every figure at the next render.</li>
+    <li>Somebody else can run it and get the same page.</li>
+  </ul>
+  <aside class="notes"><p>The capstone asks for exactly this: a notebook that reruns from the raw data with a fixed seed, and the report rendered from a clean run. Here the source is report/board_note.py and the command is U.render_report, which executes it top to bottom in a new process and writes an HTML page. Quarto, a parameterised notebook or a script all serve; the tool matters less than the single path.</p></aside>
+</section>
+
+<section class="slide" id="two-renders-differ" data-lo="LO6" data-label="Two renders differ" data-n="35" data-session="4">
+  <div class="kicker">Lab 4.4, steps 1 and 2</div>
+  <h2>Render twice and compare: the first test of any report</h2>
+  <pre class="code s"><code class="language-text">first render : out/draft_a.html, digest 27942ef6cebc
+second render: out/draft_b.html, digest 319a4f665407
+  correlation_high: 0.783 then 0.78
+  correlation_low:  0.602 then 0.6</code></pre>
+  <ul class="bullets tight">
+    <li>Nothing was changed between the two runs. The bootstrap drew different resamples.</li>
+    <li>A fixed seed, passed as a parameter, makes two runs agree.</li>
+    <li>A third decimal is enough for two people to hold two versions of "the" report.</li>
+  </ul>
+  <aside class="notes"><p>Real output of the lab. The digest is a short fingerprint of all the numbers the report printed: equal digests, equal numbers. Other things that make runs differ: today's date used as a filter, a query without an ORDER BY, rows read from a live system, library versions. The lock file of the labs pins the versions; the seed pins the draws.</p></aside>
+</section>
+
+<section class="slide" id="stale-cache" data-lo="LO6" data-label="The stale cache" data-n="36" data-session="4">
+  <div class="kicker">Lab 4.4, step 3</div>
+  <h2>A cached number is a number with no code behind it</h2>
+  <table class="t">
+    <tr><th>In the report</th><th class="num">From the cache</th><th class="num">From the raw data</th></tr>
+    <tr><td>Stays</td><td class="num">40,600</td><td class="num">40,000</td></tr>
+    <tr><td>Stays from the Gulf</td><td class="num">5,553</td><td class="num">6,063</td></tr>
+    <tr><td>Mean length of stay, nights</td><td class="num">11.27</td><td class="num">3.30</td></tr>
+  </table>
+  <ul class="bullets tight mt">
+    <li>The summary was saved once, before lab 1.2 found the duplicate rows, the 999 nights and the three spellings of "Gulf".</li>
+    <li>It was right on the day it was saved. Later decisions about the data never reached it.</li>
+  </ul>
+  <aside class="notes"><p>The numbers of Day 1 return: 600 rows entered twice, 320 stays coded 999, 586 odd spellings. A report that reads a saved summary is two reports glued together, one of them frozen. The rule: every number is computed from the raw files by the render that prints it, or it is marked as taken from elsewhere, with its date and its source.</p></aside>
+</section>
+
+<section class="slide" id="findings-table" data-lo="LO6" data-label="The findings table" data-n="37" data-session="4">
+  <div class="kicker">Lab 4.4, step 4</div>
+  <h2>Every finding carries its status, its check and its limit</h2>
+  <table class="t small">
+    <tr><th>Finding</th><th>Status</th><th>Check</th><th>Limit</th></tr>
+    <tr><td>Weeks with more ticket sales are weeks with fuller hotels (0.70)</td><td>exploratory</td><td>bootstrap of 156 weeks: 0.60 to 0.78</td><td>season raises both; no causal claim</td></tr>
+    <tr><td>Guided visits were rated 0.4 point higher in 2025</td><td>confirmed</td><td>question written before the 2024 survey was opened</td><td>visitors choose a guided visit</td></tr>
+    <tr><td>Weekend gap at the Honey Museum (0.30)</td><td>exploratory</td><td>most striking of 27; as striking in half of shuffles</td><td>to be tested on the 2026 survey</td></tr>
+  </table>
+  <div class="callout tip mt"><b>The table is the report's spine.</b> A reader with two minutes reads it and nothing else, so no finding may sit in it without a limit.</div>
+  <aside class="notes"><p>Three of the five rows of the board note. The draft the participants receive has two planted flaws: one row with an empty limit, and the Honey Museum row marked "confirmed". The lab has them write a small function that finds both, then repair the table and render the final report. The capstone README needs this same table.</p></aside>
+</section>
+
+<section class="slide" id="writing-for-the-director" data-lo="LO6" data-label="Writing for a non-specialist" data-n="38" data-session="4">
+  <div class="kicker">The reader is not an analyst</div>
+  <h2>An exploratory report says what was seen, how sure, and what is still open</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>Findings first</b>, each one sentence with its number, in the reader's words.</li>
+      <li><b>One chart per finding</b>, titled with the finding, drawn with its uncertainty.</li>
+      <li><b>Open questions</b>: what the data suggested and has not tested.</li>
+      <li><b>Limits</b>: what the data cannot show, and who is missing from it.</li>
+    </ul>
+    <div class="card c-coral"><h4>Words to keep out</h4><p class="small mb0">"Proves", "causes", "significant" with no number, "the data says". An exploratory report writes "we saw", "in this data", "to be tested".</p></div>
+  </div>
+  <aside class="notes"><p>Nawal Al-Rashoud asked five questions on Day 1; the note answers them in her order and in her terms, with methods in the table at the end. "Significant" means "important" to a director and "unlikely under a null hypothesis" to an analyst; give the number and avoid the word. Open questions are a deliverable, not an admission: they are the next plan.</p></aside>
+</section>
+
+<section class="slide" id="capstone-briefing" data-lo="LO6" data-label="The capstone" data-n="39" data-session="4">
+  <div class="kicker">Capstone day</div>
+  <h2>An exploratory report on a dataset you have not seen</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Ruwaq Museums Network</h4><p class="small mb0">One row per visit: museum, visitor type, minutes inside, exit rating. For the head of programmes.</p></div>
+    <div class="card c-cyan"><h4>Awan Parks Department</h4><p class="small mb0">One row per maintenance request: park, category, days to close, resident rating. For the head of operations.</p></div>
+    <div class="card c-coral"><h4>Miqdam Driving Schools</h4><p class="small mb0">One row per driving test: branch, attempt, waiting days, result. For the director of training.</p></div>
+  </div>
+  <ul class="bullets tight mt">
+    <li>Submit a public repository: a notebook that reruns with a fixed seed, the rendered report, a README with the findings table.</li>
+    <li>Defend it live in <b>8 minutes</b>, and redraw one chart with a different encoding when asked.</li>
+  </ul>
+  <aside class="notes"><p>All three datasets are synthetic, in labs/capstone/data, with their dictionaries in datasets.json; an approved public dataset is also accepted with the trainer's agreement. Each has planted features of the kinds met this week, and no participant has seen them. Use of an assistant is free in the capstone and must be marked in the notebook; the live redraw is where the participant shows the work is their own.</p></aside>
+</section>
+
+<section class="slide" id="check-report" data-lo="LO6" data-n="40" data-session="4">
+  <div class="kicker">Checkpoint</div>
+  <h2>Will this report rerun?</h2>
+  <div class="quiz" data-type="single" data-lo="LO6" data-id="check-report-q1">
+    <p class="lead">A colleague sends a notebook and a PDF report. In the notebook, one cell loads <code>cleaned_final_v3.csv</code> from their desktop, and the bootstrap has no seed. Which request comes first?</p>
+    <div class="opts">
+      <div class="opt" data-why="A seed makes the draws repeatable, but the numbers would still rest on a file nobody else can rebuild" data-k="A">Set a seed, so that the intervals stop changing</div>
+      <div class="opt" data-why="A copy of the cleaned file lets the notebook run and still hides every decision made in cleaning it" data-k="B">Send the cleaned file along with the notebook</div>
+      <div class="opt" data-why="Pinned versions help once the path from the raw data exists; they cannot replace it" data-k="C">List the library versions that were used</div>
+      <div class="opt" data-ok data-k="D">Start from the raw data, with the cleaning steps as code</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> One path from raw data to page comes first: a hand-made intermediate file is a cache with no code behind it. Then the seed, then the versions.</div>
+  </div>
+  <aside class="notes"><p>Answer: the fourth. All four requests are right and will all be made; the question is the order. Without the path from raw data nothing else can be checked.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-4-4" data-auto="lab" data-lab="4.4" data-label="Lab 4.4" data-n="41" data-session="4">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">Lab 4.4 · 25 min</div><h2>A report that reruns</h2><p class="lead small">Render a notebook to a report from raw data, find why two runs disagree and why the cached numbers are stale, then choose the capstone dataset.</p><a class="nb" href="../labs/D4_4_report_reruns.ipynb">D4_4_report_reruns.ipynb</a></div><ul class="checklist"><li>Render the draft twice and compare <span class="min">5 min</span></li><li>Fix the seed <span class="min">4 min</span></li><li>Read raw data, not the cache <span class="min">5 min</span></li><li>Check the findings table: status, check and limit <span class="min">4 min</span></li><li>Choose the capstone dataset and write two questions <span class="min">7 min</span></li><li class="stretch">✱ Stretch: Write the one line of a change log that says which numbers differ between two renders</li></ul></div>
+  <aside class="notes"><p>Starts from the three supplied files in labs/report. Each render takes about half a minute on a laptop and there are six, so participants read the next step while one runs. Have them open out/draft_a.html in a browser. Protect the last seven minutes: everyone leaves with a capstone dataset chosen and two questions written, without the assistant.</p></aside>
+</section>
+
+<section class="slide" id="wrap-up" data-label="Wrap-up" data-n="42" data-session="4">
+  <div class="kicker">Day 4, and the course</div>
+  <h2>Four habits to take home</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>Ask first</h4><p class="small mb0">A question with a unit and a comparison, written before the chart.</p></div>
+    <div class="card c-cyan"><h4>Set it against something</h4><p class="small mb0">A unit, a denominator, a baseline, a mix.</p></div>
+    <div class="card c-coral"><h4>Draw it honestly</h4><p class="small mb0">Position for what matters, scales that fit the mark, uncertainty on the chart.</p></div>
+    <div class="card c-purple"><h4>Say how you know</h4><p class="small mb0">Chance checked, comparisons counted, status and limit stated, and it reruns.</p></div>
+  </div>
+  <aside class="notes"><p>Return to the first slide of Day 1: question, chart, reading, check. Ask each participant for the one habit they will use next week. Then the board's three announcements: one dropped, one qualified, one relabelled as a question for 2026, and one they had not asked about, guided visits, confirmed.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="Next" data-n="43" data-session="4">
+  <div class="kicker">Capstone</div>
+  <h1>Your report, your defence</h1>
+  <p class="lead">Tonight: read the data dictionary of your dataset and turn your two questions into a one-page plan.</p>
+  <ul class="bullets">
+    <li>Do not open the data before the plan is written.</li>
+    <li>Bring the repository with a first render that reruns, however short.</li>
+  </ul>
+  <aside class="notes"><p>The plan before the data is the course in one instruction. A short report that reruns beats a long one that does not; say it plainly, because the instinct tonight will be to add charts.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-15T14:45:38Z","version":"2027.1.0","commit":"c59b820"},"course":{"id":"ds-203","code":"DS-203","title":"Exploratory Analysis and Visualisation","track":"data-science","lang":"en","dir":"ltr","url":"https://sdaiaacademy.github.io/ds-203/","repo":"SDAIAAcademy/ds-203","home":"../index.html"},"deck":{"id":"day4","kind":"day","day":4,"label":"Day 4","title":"Check and report","prev":"day3.html","next":"capstone.html","md":"day4.md","alt":{}},"sessions":[{"n":1,"label":"Session 1","title":"Could it be chance","slide":"s1","outcomes":["Choose shuffling for a gap between groups and resampling for an interval","Resample the unit that was sampled, here the week","Decide to report, qualify or drop a pattern and give the reason"],"minutes":50,"lab":{"id":"4.1","title":"Chance checks on two patterns","minutes":25,"href":"../labs/D4_1_chance_checks.ipynb"}},{"n":2,"label":"Session 2","title":"Showing uncertainty","slide":"s2","outcomes":["Add an interval to every estimate on a chart","Read overlapping and separate intervals without overclaiming","Write a caption that names the interval, the sample size and the limit"],"minutes":50,"lab":{"id":"4.2","title":"Intervals on the satisfaction chart","minutes":25,"href":"../labs/D4_2_intervals_caption.ipynb"}},{"n":3,"label":"Session 3","title":"The traps of exploring","slide":"s3","outcomes":["Count the comparisons behind a reported pattern","Simulate the most striking gap that chance alone produces among that many comparisons","Mark a finding exploratory or confirmed and name the check it needs"],"minutes":50,"lab":{"id":"4.3","title":"Count the comparisons","minutes":25,"href":"../labs/D4_3_count_comparisons.ipynb"}},{"n":4,"label":"Session 4","title":"A report that reruns","slide":"s4","outcomes":["Render a report from raw data with one command and prove that two runs agree","Find what makes a report change between runs","Write findings with their check, their limit and an open question"],"minutes":50,"lab":{"id":"4.4","title":"A report that reruns","minutes":25,"href":"../labs/D4_4_report_reruns.ipynb"}}],"slides":[{"id":"title","n":1,"title":"Check and report","kind":"title","session":0,"hash":"32d48412","md":"#### [day4#title] Check and report\n\n*SDAIA Academy · Exploratory Analysis and Visualisation*\n\nDay 4: Which patterns survive a chance check, how to draw what is not known, and a report that anyone can run again\n\nData Science Track · 4 teaching days + capstone day · 4 sessions · 4 labs · DS-203","notes":"Three days produced a pile of patterns. Today decides which of them may be printed, how to draw how sure we are, and how to hand over a report that someone else can run. Ask: who has had a finding from one quarter vanish in the next? Most analysts have. Today is about knowing in advance which ones will.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"Check and report","kind":"content","session":0,"hash":"86884cf4","md":"#### [day4#agenda] Check and report\n\n*Today*\n\n- **Session 1 · Could it be chance**: Applying the resampling of DS-201 to patterns found by exploring: which rule for which pattern, and what to do with the result\n- **Session 2 · Showing uncertainty**: Drawing uncertainty: interval marks, what a bar hides, and captions that say what the interval is\n- **Session 3 · The traps of exploring**: Why the best of many comparisons looks real, how to count the comparisons made, and what turns an exploratory finding into a confirmed one\n- **Session 4 · A report that reruns**: What makes a report rerun: raw data read-only, one path from raw data to the page, fixed seeds, and findings written with their limits","notes":"Sessions 1 and 2 apply the resampling of DS-201; they do not teach it again. Session 3 is the centre of the course's first outcome: why a pattern found by exploring needs a fresh test. Session 4 ends with each participant choosing a capstone dataset, so protect its last ten minutes.","minutes":null,"lo":[]},{"id":"review-day-3","n":3,"title":"Where may this axis start?","kind":"quiz","session":0,"hash":"d929b338","md":"#### [day4#review-day-3] Where may this axis start?\n\n*Review · Day 3*\n\n**Question:** A service desk's monthly response time moved between 41 and 46 minutes over two years. The changes must be visible. Which chart is honest?\n\n- A. Bars, with the y axis from 40 to 47 minutes\n- B. Bars, with the y axis from 0 to 50 minutes\n- C. A line with points, y axis from 40 to 47, range stated in the title\n- D. A filled area, with the y axis from 40 to 47 minutes","notes":"Answer: the third. Three minutes. This rule is used again in session 2 today, where means with intervals are drawn as points on an axis from 3.6 to 4.6.","minutes":null,"lo":["LO4"]},{"id":"s1","n":4,"title":"Could it be chance","kind":"section","session":1,"hash":"e1cfc476","md":"#### [day4#s1] Could it be chance\n\n*Session 1*\n\n- Choose shuffling for a gap between groups and resampling for an interval\n- Resample the unit that was sampled, here the week\n- Decide to report, qualify or drop a pattern and give the reason","notes":"","minutes":null,"lo":["LO5"]},{"id":"three-patterns","n":5,"title":"Three patterns, and three decisions open for each","kind":"content","session":1,"hash":"1aa5fae4","md":"#### [day4#three-patterns] Three patterns, and three decisions open for each\n\n*What the board wants to announce*\n\n- **The weekend.** \"Weekend visitors are more satisfied than weekday visitors.\"\n- **Sites and hotels.** \"When the sites are busy, the hotels fill.\"\n- **The Honey Museum.** \"At the Honey Museum, weekend visitors were far more satisfied in 2025.\"\n\n| Decision | Meaning |\n| --- | --- |\n| **Report** | the pattern stands and matters |\n| **Qualify** | it stands, with a stated limit |\n| **Drop** | the data does not support announcing it |","notes":"These are the \"three patterns the board wants to announce\" of the course's fifth outcome. The first two are lab 4.1, the third is lab 4.3. Ask for a show of hands on each before any computing, and keep the tally on the board: the room is usually confident about the wrong one.","minutes":null,"lo":["LO5"]},{"id":"which-rule","n":6,"title":"Shuffle to test a difference; resample to put an interval on an estimate","kind":"content","session":1,"hash":"6093411c","md":"#### [day4#which-rule] Shuffle to test a difference; resample to put an interval on an estimate\n\n*From DS-201, in one slide*\n\n|  | Permutation test | Bootstrap |\n| --- | --- | --- |\n| **Question** | could this gap arise if the label meant nothing? | how far could this estimate move with another sample? |\n| **Procedure** | shuffle the labels, recompute the gap | draw the units again with replacement, recompute |\n| **Result** | a p-value | an interval |\n| **Here** | the weekend gap | the weekly correlation |\n\n> **New today.** Not the procedures: choosing between them, choosing the unit to resample, and deciding what to do with the result.","notes":"A recap, two minutes. DS-201 taught both procedures, p-values and their misreadings, and corrections for several planned tests. If the room is unsure, run the first cells of lab 4.1 live. What DS-201 could not teach is what happens when the pattern was found by looking, which is this course's situation all the time.","minutes":null,"lo":["LO5"]},{"id":"weekend-gap","n":7,"title":"Shuffled labels give this gap one time in three","kind":"content","session":1,"hash":"bfdd9609","md":"#### [day4#weekend-gap] Shuffled labels give this gap one time in three\n\n*Lab 4.1, steps 1 to 3*\n\nFigure: Gaps under shuffled labels; the lines mark the observed gap.\n\n- Weekend 4.13, weekday 4.11: a gap of **+0.02**.\n- p-value about **0.35**.\n- Decision: **drop** the claim.","notes":"2,478 weekend responses and 3,522 weekday ones. The picture is the argument: the observed gap sits in the middle of what meaningless labels produce. Note also the size: even if it were real, two hundredths of a point on a five-point scale would change no decision. A chance check and a \"does it matter\" check are separate, and a finding needs both.","minutes":null,"lo":["LO5"]},{"id":"drop-is-not-no-effect","n":8,"title":"\"Drop\" means \"this data cannot tell\", not \"there is no difference\"","kind":"content","session":1,"hash":"edce53d3","md":"#### [day4#drop-is-not-no-effect] \"Drop\" means \"this data cannot tell\", not \"there is no difference\"\n\n*The sentence that goes in the report*\n\n- **Not supported.** \"The day of the week makes no difference to satisfaction.\"\n- **Supported.** \"The survey shows no clear difference between weekend and weekday visitors (gap 0.02 point, p about 0.35).\"\n\n- A p-value of 0.35 is the absence of evidence for a difference. It is not evidence of absence.\n- To claim \"no difference worth acting on\", give the interval of the gap and say what size would matter.","notes":"The commonest misuse of a non-significant result is to announce equality. The honest form names the data and the size. With 6,000 responses the interval for the gap is narrow, roughly minus 0.02 to plus 0.07, so here one can add that any weekend effect is small; with 200 responses one could not. That is the interval's job, and session 2's.","minutes":null,"lo":["LO5"]},{"id":"resample-the-unit","n":9,"title":"Resample the unit that was sampled: here, the week","kind":"content","session":1,"hash":"d409f4f5","md":"#### [day4#resample-the-unit] Resample the unit that was sampled: here, the week\n\n*Lab 4.1, steps 4 and 5*\n\n- **43,840 hotel-days.** Forty hotels share one day's weather and one day's ticket total. Days in a week resemble each other. Resampling them as if independent gives an interval far too narrow.\n- **156 weeks.** One row per week for the whole region. Draw 156 weeks with replacement, recompute the correlation, repeat 5,000 times.\n\n```python\nk = gen.integers(0, len(x), len(x))        # 156 weeks, drawn with replacement\nr[i] = np.corrcoef(x[k], y[k])[0, 1]\n```\n\n> **What goes wrong.** Counting rows as evidence. The number that matters is how many independent units there are.","notes":"This is the one new technical idea of the session. The bootstrap imitates the way the data came about; if the data came in clusters, resample clusters. Neighbouring weeks are still somewhat alike, so even this interval is a little optimistic; a block bootstrap would address it and is beyond this course. Say so: a stated limit beats silent precision.","minutes":null,"lo":["LO5"]},{"id":"correlation-interval","n":10,"title":"The correlation is not chance, and still needs a qualifier","kind":"content","session":1,"hash":"45fccf4c","md":"#### [day4#correlation-interval] The correlation is not chance, and still needs a qualifier\n\n*Lab 4.1, steps 5 and 6*\n\n- **0.70** weekly tickets and hotel occupancy\n- **0.60 to 0.78** 95% bootstrap interval, 156 weeks\n- **0.44** with each calendar month's mean removed\n\n- The interval stays far from zero: weeks with busy sites do have fuller hotels.\n- Part of the 0.70 is the shared season. What remains is smaller and still positive.\n- Decision: **qualify**. The check answers \"is it chance\", never \"is it cause\".","notes":"The third number is the lab's stretch: interval 0.31 to 0.56 after subtracting the month-of-year means. Day 2 said season moves both series; today puts a number on how much of the relation that explains. The sentence for the board: weeks with more ticket sales have fuller hotels, partly because both follow the season; the data does not show that visits to the sites fill the hotels.","minutes":null,"lo":["LO5"]},{"id":"what-a-chance-check-settles","n":11,"title":"A chance check answers one question out of four","kind":"content","session":1,"hash":"7f99a041","md":"#### [day4#what-a-chance-check-settles] A chance check answers one question out of four\n\n*Before deciding*\n\n| Question | Answered by | Session |\n| --- | --- | --- |\n| Could it be chance? | a permutation test or a bootstrap interval | this one |\n| Is it large enough to matter? | the size of the effect, in the units of the decision | this one |\n| Was it found by searching? | counting the comparisons that were made | 4.3 |\n| Is it the mix, the season or the measure? | the checks of Day 2 | 2.2 to 2.4 |\n\n> **The decision carries its reason.** \"Drop: p about 0.35 and a gap of 0.02.\" \"Qualify: interval 0.60 to 0.78; season raises both.\"","notes":"Passing a chance check is necessary and far from sufficient. The checks of Day 2 come first, because a pattern produced by a change of mix can be highly \"significant\". The third row is the trap this afternoon is built around: the Honey Museum headline passes the first two rows.","minutes":null,"lo":["LO5"]},{"id":"check-chance","n":12,"title":"Which procedure, on which unit?","kind":"quiz","session":1,"hash":"6cd74004","md":"#### [day4#check-chance] Which procedure, on which unit?\n\n*Checkpoint*\n\n**Question:** A school network has test scores of 4,000 pupils in 40 schools. Twenty schools used a new timetable. The analyst wants an interval for the difference in mean score between the two groups of schools. What should be resampled?\n\n- A. The 4,000 pupils, drawn again with replacement\n- B. The timetable labels of the pupils, shuffled\n- C. The 4,000 scores, drawn within each school\n- D. The 40 schools, drawn again with replacement","notes":"Answer: the fourth. The follow-up worth asking: how wide will the interval be with 20 schools on each side? Wide, and that is the honest answer about what this data can show. Designing such a comparison properly belongs to DS-205.","minutes":null,"lo":["LO5"]},{"id":"lab-4-1","n":13,"title":"Chance checks on two patterns","kind":"lab","session":1,"hash":"f11e6130","md":"#### [day4#lab-4-1] Chance checks on two patterns\n\nLab 4.1 · 25 min\n\nPermutation-test the claimed weekend effect on satisfaction and bootstrap the correlation between weekly ticket sales and hotel occupancy; decide for each whether to report, qualify or drop it.\n\n[D4_1_chance_checks.ipynb](https://sdaiaacademy.github.io/ds-203/labs/D4_1_chance_checks.ipynb)\n\n- [ ] The weekend gap in satisfaction, as claimed (3 min)\n- [ ] Shuffle the weekend labels: the p-value (7 min)\n- [ ] Decide: report, qualify or drop (2 min)\n- [ ] The correlation of weekly tickets and occupancy (3 min)\n- [ ] Bootstrap the weeks: an interval (7 min)\n- [ ] Decide, and write the reading (3 min)\n- [ ] ✱ Stretch: Remove the season from both series and bootstrap again","notes":"Starts from U.survey() and U.weekly(). Assistant off for steps 1 to 3 and for the reading. The shuffles take a few seconds. Common failure: a one-sided p-value, counting only shuffles above the observed gap; the lab asks for the two-sided one. The decision for the correlation accepts \"qualify\" or \"report\", and the reading must carry the qualifier either way.","minutes":null,"lo":[]},{"id":"s2","n":14,"title":"Showing uncertainty","kind":"section","session":2,"hash":"ddf02a8a","md":"#### [day4#s2] Showing uncertainty\n\n*Session 2*\n\n- Add an interval to every estimate on a chart\n- Read overlapping and separate intervals without overclaiming\n- Write a caption that names the interval, the sample size and the limit","notes":"","minutes":null,"lo":["LO5"]},{"id":"what-a-bar-hides","n":15,"title":"\"Terrace Farms is our best-rated site\"","kind":"content","session":2,"hash":"016f2c79","md":"#### [day4#what-a-bar-hides] \"Terrace Farms is our best-rated site\"\n\n*The earlier report*\n\nFigure: As published: mean satisfaction in 2025.\n\n- Each bar is one number drawn as if it were exact.\n- The bars rest on **59 to 510** responses. The chart does not say which.\n- And yesterday's fault 1: bars on an axis from 3.8.","notes":"Ask the room to rank how sure they are of each bar. They cannot; the chart gives nothing to go on. Terrace Farms, at the top, has 59 responses in 2025, the Cable Car 510. A ranking of means without sample sizes is the most common chart in customer-satisfaction reporting.","minutes":null,"lo":["LO5"]},{"id":"interval-per-site","n":16,"title":"Every estimate on a chart gets an interval","kind":"content","session":2,"hash":"e0b7e4ef","md":"#### [day4#interval-per-site] Every estimate on a chart gets an interval\n\n*Lab 4.2, steps 1 and 2*\n\n| Site | Responses | Mean | 95% interval |\n| --- | --- | --- | --- |\n| Terrace Farms | 59 | 4.24 | 4.02 to 4.44 |\n| Souq Walk | 442 | 4.22 | 4.13 to 4.30 |\n| Honey Museum | 167 | 4.10 | 3.97 to 4.24 |\n| Cable Car | 510 | 3.93 | 3.84 to 4.00 |\n| Wadi Trail | 132 | 3.91 | 3.76 to 4.05 |\n\n- The fewer the responses, the wider the interval: roughly with one over the square root of n.\n- The site at the top has the widest interval of all.","notes":"Five of the nine sites; bootstrap intervals with 4,000 resamples of each site's responses. The top of a ranking is where small groups collect, because their means move most; the same is true of the bottom. Schools, hospitals and branches topping a league table are small more often than they are good. Ask who has seen that at work.","minutes":null,"lo":["LO5"]},{"id":"points-with-intervals","n":17,"title":"A point, a line for the interval, and n beside the name","kind":"content","session":2,"hash":"616b5364","md":"#### [day4#points-with-intervals] A point, a line for the interval, and n beside the name\n\n*Lab 4.2, step 3*\n\nFigure: Mean satisfaction in 2025 with 95% bootstrap intervals.\n\n- A point is read by position, so the axis may run from 3.6 to 4.6.\n- Seven of the other eight intervals overlap that of Terrace Farms.","notes":"Three decisions of yesterday's grammar: the mark changed from bar to point and rule, the scale became honest for that mark, and the sample size joined the label. In Altair it is two layers: mark_rule with x and x2, and mark_circle. What can be said: the Souq Walk rates above the Cable Car and the Wadi Trail. What cannot: which site is best.","minutes":null,"lo":["LO5"]},{"id":"reading-intervals","n":18,"title":"Overlap does not prove equality: compute the interval of the difference","kind":"content","session":2,"hash":"b8d437a8","md":"#### [day4#reading-intervals] Overlap does not prove equality: compute the interval of the difference\n\n*Lab 4.2, step 4*\n\n- Two intervals that do not overlap: the groups differ.\n- Two intervals that overlap: this sample cannot order them. They may still differ.\n- For a claim about two groups, resample both and take the difference each time.\n\n- **Guided against unguided visits, 2025.** Difference in mean satisfaction: **+0.39** point, interval **+0.31 to +0.47**, from 680 guided and 1,520 unguided responses. The whole interval is far above zero: **report**.\n\n> **What goes wrong.** Reading \"overlapping\" as \"the same\" and announcing that all sites perform equally.","notes":"This pattern is not one of the three the board wanted to announce, and it is the one with a clean outcome: guided visits being rated higher stands, and session 3 shows it was also planned in advance. The limit still goes in the sentence: visitors choose a guided visit, so the data does not show that guiding causes the higher rating.","minutes":null,"lo":["LO5"]},{"id":"marks-for-uncertainty","n":19,"title":"Uncertainty has its own marks","kind":"content","session":2,"hash":"0ae0bb9d","md":"#### [day4#marks-for-uncertainty] Uncertainty has its own marks\n\n*Which mark for which chart*\n\n- **Point and interval.** For a few estimates by group. The default of this course.\n- **Band around a line.** For an estimate over time: a shaded band from the lower to the upper end at each date.\n- **The data itself.** With small groups, draw every value as a faint point behind the estimate. Twelve points say \"twelve\" better than any interval.\n\n> **Avoid** a bar with a whisker on top: the bar still says \"this much from zero\", and readers judge by the bar. And never draw an interval without saying what it is.","notes":"A whisker can mean a standard deviation, a standard error, a 95% interval or a range, which differ by a factor of ten on the same data; an unlabelled error bar carries no information. The third card is a reminder from Day 1: showing the values is often the most honest display, as long as no individual can be singled out.","minutes":null,"lo":["LO5"]},{"id":"caption-for-uncertainty","n":20,"title":"The caption names the interval, the sample and the limit","kind":"content","session":2,"hash":"db385284","md":"#### [day4#caption-for-uncertainty] The caption names the interval, the sample and the limit\n\n*Lab 4.2, step 5*\n\n**As published:** Terrace Farms is our best-rated site.\n\n**Rewritten:** Mean satisfaction in 2025 by site with 95% bootstrap intervals. The Souq Walk (4.22, n = 442) rates above the Cable Car (3.93, n = 510); Terrace Farms' 4.24 rests on 59 responses and cannot be ranked first. The intervals show how far each mean could move with another sample of respondents; they do not correct for who chose to answer or for the mix of visitors at each site.\n\n- An interval covers sampling variation only.\n- Who answers a survey, how the question is put and the mix of visitors are outside it.","notes":"A caption has three duties: what the marks are, what can be concluded, what the interval leaves out. The last sentence is the one analysts omit. A narrow interval around a biased number is a precise wrong answer; Day 2's reversal would pass any interval test. Participants write their own caption without the assistant.","minutes":null,"lo":["LO5"]},{"id":"check-uncertainty","n":21,"title":"What may the report say?","kind":"quiz","session":2,"hash":"e8c7b67a","md":"#### [day4#check-uncertainty] What may the report say?\n\n*Checkpoint*\n\n**Question:** Two call centres have mean satisfaction 4.3 (interval 4.1 to 4.5, n = 80) and 4.1 (interval 4.0 to 4.2, n = 600). The intervals overlap. Which statement is supported?\n\n- A. The two centres deliver the same level of satisfaction\n- B. This sample cannot rank them; the difference needs its own interval\n- C. The first centre is better, since its mean is higher\n- D. The second centre is better, since its interval is narrower","notes":"Answer: the second. The fourth option confuses precision of the estimate with quality of the thing estimated, which is a common reading of narrow intervals by non-specialists; the caption has to prevent it.","minutes":null,"lo":["LO5"]},{"id":"lab-4-2","n":22,"title":"Intervals on the satisfaction chart","kind":"lab","session":2,"hash":"ad636801","md":"#### [day4#lab-4-2] Intervals on the satisfaction chart\n\nLab 4.2 · 25 min\n\nAdd intervals to the satisfaction bar chart of the earlier report, find which sites can be told apart and rewrite its caption.\n\n[D4_2_intervals_caption.ipynb](https://sdaiaacademy.github.io/ds-203/labs/D4_2_intervals_caption.ipynb)\n\n- [ ] The chart as published, and the responses behind each bar (3 min)\n- [ ] A bootstrap interval for each site (7 min)\n- [ ] Points with intervals, sorted, with the sample size (7 min)\n- [ ] The interval of a difference: guided against unguided visits (4 min)\n- [ ] Rewrite the caption (4 min)\n- [ ] ✱ Stretch: Draw the 2025 intervals by origin market inside one site","notes":"Starts from U.survey(), the 2,200 responses of 2025. The tutor may hint at plotting syntax; the caption is written without it. Common failures: an interval of the values (percentiles of the responses) in place of an interval of the mean; and a rule drawn with x only, which gives a tick. The check on the chart looks for a rule from lo to hi, a point, no bars and n in every label.","minutes":null,"lo":[]},{"id":"s3","n":23,"title":"The traps of exploring","kind":"section","session":3,"hash":"a6361372","md":"#### [day4#s3] The traps of exploring\n\n*Session 3*\n\n- Count the comparisons behind a reported pattern\n- Simulate the most striking gap that chance alone produces among that many comparisons\n- Mark a finding exploratory or confirmed and name the check it needs","notes":"","minutes":null,"lo":["LO1"]},{"id":"the-headline","n":24,"title":"\"At the Honey Museum, weekend visitors were far more satisfied in 2025\"","kind":"content","session":3,"hash":"68200e24","md":"#### [day4#the-headline] \"At the Honey Museum, weekend visitors were far more satisfied in 2025\"\n\n*A week after the weekend claim was dropped*\n\n- **+0.30** weekend minus weekday, on a 1 to 5 scale\n- **0.03** p-value by permutation, taken alone\n- **167** responses: 68 weekend, 99 weekday\n\n- Fourteen times the gap that was dropped this morning.\n- It passes a chance check. It is large enough to matter.\n- One question is left: **how was it found?**","notes":"Present this as Nayef Al-Jumaah would: with enthusiasm, and with a programme idea attached, weekend events at the museum. Ask the room to vote: report, qualify or drop. By this morning's two tests it is a \"report\". Hold the vote; you will return to it in ten minutes.","minutes":null,"lo":["LO1"]},{"id":"count-the-comparisons","n":25,"title":"It was the most striking of 27 comparisons","kind":"content","session":3,"hash":"b6bd0820","md":"#### [day4#count-the-comparisons] It was the most striking of 27 comparisons\n\n*Lab 4.3, step 2*\n\nFigure: Twenty-seven points, one per site and year, showing the weekend minus weekday gap in satisfaction in standard errors, sorted: they scatter from about minus 1.5 to plus 2.2 around zero, with the Honey Museum 2025 highlighted at the top as the only one beyond 2\n\n- Nine sites, three years: 27 gaps were looked at. One was kept.\n- 16 are above zero, 11 below.","notes":"The file claims.json records how the headline was found: every site in every year was compared and the gap with the smallest p-value was kept. The gaps are drawn in standard errors so that a cell of 60 responses and a cell of 500 can be compared. Seen among its 26 siblings the headline looks like the end of a scatter, which is what it is.","minutes":null,"lo":["LO1"]},{"id":"at-least-one","n":26,"title":"With 27 comparisons of nothing, a \"finding\" is the likely outcome","kind":"content","session":3,"hash":"4d146a6b","md":"#### [day4#at-least-one] With 27 comparisons of nothing, a \"finding\" is the likely outcome\n\n*Lab 4.3, step 3*\n\n```text\n# file: the chance of at least one p-value below 0.05\n 1 comparison      1 - 0.95^1    =   5%\n 5 comparisons     1 - 0.95^5    =  23%\n27 comparisons     1 - 0.95^27   =  75%\n135 comparisons    1 - 0.95^135  =  99.9%\n```\n\n- A p-value of 0.05 means: one time in twenty, nothing looks like something.\n- Look twenty-seven times and it is three chances in four.\n- 135 is what the search becomes if it also splits by origin market.","notes":"DS-201 showed this arithmetic for tests planned in advance and gave corrections for it. The exploratory situation is worse in one respect: nobody wrote down that there were 27 tests. The analyst remembers one interesting result. The arithmetic assumes independent comparisons, which is close enough here.","minutes":null,"lo":["LO1"]},{"id":"simulate-the-search","n":27,"title":"Check the method that was used, search included","kind":"content","session":3,"hash":"43355992","md":"#### [day4#simulate-the-search] Check the method that was used, search included\n\n*Lab 4.3, step 4*\n\nFigure: The most striking of 27 gaps when the labels mean nothing.\n\n- Shuffle the weekend labels inside every site and year; keep the most striking of the 27 gaps; repeat.\n- Its median is 2.3 standard errors. The headline's is 2.2.\n- A gap as striking as the headline turns up in **about half** of the shuffles.","notes":"The p-value of 0.03 was computed correctly and answers a question nobody asked: how unusual is this gap at a site chosen in advance. The site was chosen afterwards. The simulation repeats the whole procedure, the search included, and gives 0.55. Return to the vote now. The same resampling tool, applied to the method as it was really used.","minutes":null,"lo":["LO1"]},{"id":"forking-paths","n":28,"title":"Every choice made after looking is a comparison","kind":"content","session":3,"hash":"52e7e16d","md":"#### [day4#forking-paths] Every choice made after looking is a comparison\n\n*Beyond 27*\n\n- Which groups: weekend, or Friday alone, or school holidays?\n- Which measure: the mean, or the share of 5s?\n- Which rows: all responses, or \"excluding\" a bad month?\n- Which period: 2025, or the last six months?\n\n- **In the board's past report.** \"Visitors who arrive on a Tuesday spend the most\": spend tabulated by every day of the week, every origin and every purpose, and the largest cell reported.\n\n> **No bad faith is needed.** An honest analyst who looks until something stands out has run many tests and remembers one.","notes":"This is why the count is usually unknown and larger than anyone thinks. Each choice is reasonable on its own; the problem is that they were made while watching the result. Everything this course taught on Days 1 to 3 is such a choice: bin widths, denominators, baselines, facets. Exploring is not the fault. Reporting it as a test is.","minutes":null,"lo":["LO1"]},{"id":"exploratory-or-confirmed","n":29,"title":"What makes a finding confirmed is the order of events","kind":"content","session":3,"hash":"ce3cc5d1","md":"#### [day4#exploratory-or-confirmed] What makes a finding confirmed is the order of events\n\n*Lab 4.3, step 5*\n\n- **Confirmed.** The question was written down **before** the data that answers it was looked at. \"Guided visits are rated higher\": noticed in the 2023 survey, written down, then tested once on the 2024 survey.\n- **Exploratory.** The data suggested the question. \"Hotels in the Ridge zone fill up before the Honey Festival\": seen in a chart of 2024 while looking for something else.\n\n- Exploratory is a label, not an insult: it is where questions come from.\n- The same data cannot both suggest a pattern and confirm it.","notes":"Outcome 1 of the course, introduced in the first session of Day 1 and assessed here. Two of the five past findings are shown; the lab has the participant mark all five from how each was reached. The Ridge zone finding may well be true. The label says what has been done so far, and the reader is owed that.","minutes":null,"lo":["LO1"]},{"id":"from-exploratory-to-confirmed","n":30,"title":"An exploratory finding is reported with its count and its next test","kind":"content","session":3,"hash":"a0f1799c","md":"#### [day4#from-exploratory-to-confirmed] An exploratory finding is reported with its count and its next test\n\n*Lab 4.3, step 6*\n\n1. **1 · Label** \"Exploratory\", in the sentence itself\n2. **2 · Count** how many comparisons it was chosen from\n3. **3 · Write down** the question, before new data exists\n4. **4 · Test once** on data that did not suggest it\n\n> **In the report.** \"Exploratory: among 27 comparisons, the most striking gap was 0.30 point at the Honey Museum in 2025; shuffled labels produce one as striking about half the time. The question will be tested once on the 2026 survey.\"","notes":"The headline is neither printed as a finding nor thrown away: it becomes a written question with a date. If no new data will ever come, a portion of the data can be set aside before exploring and opened once; that has to be decided at the start, which is what the plan of Day 1 is for. Planned experiments are DS-205.","minutes":null,"lo":["LO1"]},{"id":"check-exploring","n":31,"title":"What is this finding worth?","kind":"quiz","session":3,"hash":"5114ac07","md":"#### [day4#check-exploring] What is this finding worth?\n\n*Checkpoint*\n\n**Question:** An analyst compares churn between customers who did and did not use each of 40 app features. One feature shows a difference with p = 0.02. The team wants to announce \"Feature X reduces churn\". What should the analyst say?\n\n- A. It is exploratory: expected among 40 looks; test it once on new customers\n- B. It is confirmed, because the p-value is well below 0.05\n- C. It will be confirmed once the test is rerun with more shuffles\n- D. It should be discarded and left out of the report entirely","notes":"Answer: the first. One minus 0.95 to the power 40 is 0.87. Also note \"reduces\": even a confirmed difference between users and non-users of a feature would not show that the feature causes it.","minutes":null,"lo":["LO1"]},{"id":"lab-4-3","n":32,"title":"Count the comparisons","kind":"lab","session":3,"hash":"b100467e","md":"#### [day4#lab-4-3] Count the comparisons\n\nLab 4.3 · 25 min\n\nCount the comparisons behind a headline pattern, simulate the most striking of 27 chance gaps, mark five past findings exploratory or confirmed and rewrite the finding.\n\n[D4_3_count_comparisons.ipynb](https://sdaiaacademy.github.io/ds-203/labs/D4_3_count_comparisons.ipynb)\n\n- [ ] The headline gap and its p-value, taken alone (4 min)\n- [ ] All 27 site-year gaps (5 min)\n- [ ] The chance of at least one small p-value among 27 (2 min)\n- [ ] Simulate the most striking of 27 gaps under no effect (6 min)\n- [ ] Mark five past findings exploratory or confirmed (5 min)\n- [ ] Rewrite the finding (3 min)\n- [ ] ✱ Stretch: Count again with origin added to site and year","notes":"Starts from U.survey() and two supplied files, claims.json and past_findings.json. The simulation of step 4 takes about ten seconds. Marking the five findings and rewriting the headline are done without the assistant; this is the evidence of outcome 1. Common failure: marking by whether the finding sounds plausible. The only thing that counts is how it was reached.","minutes":null,"lo":[]},{"id":"s4","n":33,"title":"A report that reruns","kind":"section","session":4,"hash":"0e9f41b3","md":"#### [day4#s4] A report that reruns\n\n*Session 4*\n\n- Render a report from raw data with one command and prove that two runs agree\n- Find what makes a report change between runs\n- Write findings with their check, their limit and an open question","notes":"","minutes":null,"lo":["LO6"]},{"id":"what-reruns-means","n":34,"title":"A report that reruns has one path from the raw data to the page","kind":"content","session":4,"hash":"6e3a2a94","md":"#### [day4#what-reruns-means] A report that reruns has one path from the raw data to the page\n\n*The promise*\n\n1. **Raw data** read-only, never edited by hand\n2. **One source** text and code together, parameters at the top\n3. **One command** runs everything in a fresh process\n4. **The page** every number computed by that run\n\n- No number is typed; no chart is pasted.\n- A correction to the data reaches every figure at the next render.\n- Somebody else can run it and get the same page.","notes":"The capstone asks for exactly this: a notebook that reruns from the raw data with a fixed seed, and the report rendered from a clean run. Here the source is report/board_note.py and the command is U.render_report, which executes it top to bottom in a new process and writes an HTML page. Quarto, a parameterised notebook or a script all serve; the tool matters less than the single path.","minutes":null,"lo":["LO6"]},{"id":"two-renders-differ","n":35,"title":"Render twice and compare: the first test of any report","kind":"content","session":4,"hash":"b37f2685","md":"#### [day4#two-renders-differ] Render twice and compare: the first test of any report\n\n*Lab 4.4, steps 1 and 2*\n\n```text\nfirst render : out/draft_a.html, digest 27942ef6cebc\nsecond render: out/draft_b.html, digest 319a4f665407\n  correlation_high: 0.783 then 0.78\n  correlation_low:  0.602 then 0.6\n```\n\n- Nothing was changed between the two runs. The bootstrap drew different resamples.\n- A fixed seed, passed as a parameter, makes two runs agree.\n- A third decimal is enough for two people to hold two versions of \"the\" report.","notes":"Real output of the lab. The digest is a short fingerprint of all the numbers the report printed: equal digests, equal numbers. Other things that make runs differ: today's date used as a filter, a query without an ORDER BY, rows read from a live system, library versions. The lock file of the labs pins the versions; the seed pins the draws.","minutes":null,"lo":["LO6"]},{"id":"stale-cache","n":36,"title":"A cached number is a number with no code behind it","kind":"content","session":4,"hash":"d606d157","md":"#### [day4#stale-cache] A cached number is a number with no code behind it\n\n*Lab 4.4, step 3*\n\n| In the report | From the cache | From the raw data |\n| --- | --- | --- |\n| Stays | 40,600 | 40,000 |\n| Stays from the Gulf | 5,553 | 6,063 |\n| Mean length of stay, nights | 11.27 | 3.30 |\n\n- The summary was saved once, before lab 1.2 found the duplicate rows, the 999 nights and the three spellings of \"Gulf\".\n- It was right on the day it was saved. Later decisions about the data never reached it.","notes":"The numbers of Day 1 return: 600 rows entered twice, 320 stays coded 999, 586 odd spellings. A report that reads a saved summary is two reports glued together, one of them frozen. The rule: every number is computed from the raw files by the render that prints it, or it is marked as taken from elsewhere, with its date and its source.","minutes":null,"lo":["LO6"]},{"id":"findings-table","n":37,"title":"Every finding carries its status, its check and its limit","kind":"content","session":4,"hash":"ac302d1d","md":"#### [day4#findings-table] Every finding carries its status, its check and its limit\n\n*Lab 4.4, step 4*\n\n| Finding | Status | Check | Limit |\n| --- | --- | --- | --- |\n| Weeks with more ticket sales are weeks with fuller hotels (0.70) | exploratory | bootstrap of 156 weeks: 0.60 to 0.78 | season raises both; no causal claim |\n| Guided visits were rated 0.4 point higher in 2025 | confirmed | question written before the 2024 survey was opened | visitors choose a guided visit |\n| Weekend gap at the Honey Museum (0.30) | exploratory | most striking of 27; as striking in half of shuffles | to be tested on the 2026 survey |\n\n> **The table is the report's spine.** A reader with two minutes reads it and nothing else, so no finding may sit in it without a limit.","notes":"Three of the five rows of the board note. The draft the participants receive has two planted flaws: one row with an empty limit, and the Honey Museum row marked \"confirmed\". The lab has them write a small function that finds both, then repair the table and render the final report. The capstone README needs this same table.","minutes":null,"lo":["LO6"]},{"id":"writing-for-the-director","n":38,"title":"An exploratory report says what was seen, how sure, and what is still open","kind":"content","session":4,"hash":"5522bd1a","md":"#### [day4#writing-for-the-director] An exploratory report says what was seen, how sure, and what is still open\n\n*The reader is not an analyst*\n\n- **Findings first**, each one sentence with its number, in the reader's words.\n- **One chart per finding**, titled with the finding, drawn with its uncertainty.\n- **Open questions**: what the data suggested and has not tested.\n- **Limits**: what the data cannot show, and who is missing from it.\n\n- **Words to keep out.** \"Proves\", \"causes\", \"significant\" with no number, \"the data says\". An exploratory report writes \"we saw\", \"in this data\", \"to be tested\".","notes":"Nawal Al-Rashoud asked five questions on Day 1; the note answers them in her order and in her terms, with methods in the table at the end. \"Significant\" means \"important\" to a director and \"unlikely under a null hypothesis\" to an analyst; give the number and avoid the word. Open questions are a deliverable, not an admission: they are the next plan.","minutes":null,"lo":["LO6"]},{"id":"capstone-briefing","n":39,"title":"An exploratory report on a dataset you have not seen","kind":"content","session":4,"hash":"b916a421","md":"#### [day4#capstone-briefing] An exploratory report on a dataset you have not seen\n\n*Capstone day*\n\n- **Ruwaq Museums Network.** One row per visit: museum, visitor type, minutes inside, exit rating. For the head of programmes.\n- **Awan Parks Department.** One row per maintenance request: park, category, days to close, resident rating. For the head of operations.\n- **Miqdam Driving Schools.** One row per driving test: branch, attempt, waiting days, result. For the director of training.\n\n- Submit a public repository: a notebook that reruns with a fixed seed, the rendered report, a README with the findings table.\n- Defend it live in **8 minutes**, and redraw one chart with a different encoding when asked.","notes":"All three datasets are synthetic, in labs/capstone/data, with their dictionaries in datasets.json; an approved public dataset is also accepted with the trainer's agreement. Each has planted features of the kinds met this week, and no participant has seen them. Use of an assistant is free in the capstone and must be marked in the notebook; the live redraw is where the participant shows the work is their own.","minutes":null,"lo":["LO6"]},{"id":"check-report","n":40,"title":"Will this report rerun?","kind":"quiz","session":4,"hash":"75a1a507","md":"#### [day4#check-report] Will this report rerun?\n\n*Checkpoint*\n\n**Question:** A colleague sends a notebook and a PDF report. In the notebook, one cell loads `cleaned_final_v3.csv` from their desktop, and the bootstrap has no seed. Which request comes first?\n\n- A. Set a seed, so that the intervals stop changing\n- B. Send the cleaned file along with the notebook\n- C. List the library versions that were used\n- D. Start from the raw data, with the cleaning steps as code","notes":"Answer: the fourth. All four requests are right and will all be made; the question is the order. Without the path from raw data nothing else can be checked.","minutes":null,"lo":["LO6"]},{"id":"lab-4-4","n":41,"title":"A report that reruns","kind":"lab","session":4,"hash":"c2b0028b","md":"#### [day4#lab-4-4] A report that reruns\n\nLab 4.4 · 25 min\n\nRender a notebook to a report from raw data, find why two runs disagree and why the cached numbers are stale, then choose the capstone dataset.\n\n[D4_4_report_reruns.ipynb](https://sdaiaacademy.github.io/ds-203/labs/D4_4_report_reruns.ipynb)\n\n- [ ] Render the draft twice and compare (5 min)\n- [ ] Fix the seed (4 min)\n- [ ] Read raw data, not the cache (5 min)\n- [ ] Check the findings table: status, check and limit (4 min)\n- [ ] Choose the capstone dataset and write two questions (7 min)\n- [ ] ✱ Stretch: Write the one line of a change log that says which numbers differ between two renders","notes":"Starts from the three supplied files in labs/report. Each render takes about half a minute on a laptop and there are six, so participants read the next step while one runs. Have them open out/draft_a.html in a browser. Protect the last seven minutes: everyone leaves with a capstone dataset chosen and two questions written, without the assistant.","minutes":null,"lo":[]},{"id":"wrap-up","n":42,"title":"Four habits to take home","kind":"content","session":4,"hash":"6e83faae","md":"#### [day4#wrap-up] Four habits to take home\n\n*Day 4, and the course*\n\n- **Ask first.** A question with a unit and a comparison, written before the chart.\n- **Set it against something.** A unit, a denominator, a baseline, a mix.\n- **Draw it honestly.** Position for what matters, scales that fit the mark, uncertainty on the chart.\n- **Say how you know.** Chance checked, comparisons counted, status and limit stated, and it reruns.","notes":"Return to the first slide of Day 1: question, chart, reading, check. Ask each participant for the one habit they will use next week. Then the board's three announcements: one dropped, one qualified, one relabelled as a question for 2026, and one they had not asked about, guided visits, confirmed.","minutes":null,"lo":[]},{"id":"next","n":43,"title":"Your report, your defence","kind":"content","session":4,"hash":"9d7be4d7","md":"#### [day4#next] Your report, your defence\n\n*Capstone*\n\nTonight: read the data dictionary of your dataset and turn your two questions into a one-page plan.\n\n- Do not open the data before the plan is written.\n- Bring the repository with a first render that reruns, however short.","notes":"The plan before the data is the course in one instruction. A short report that reruns beats a long one that does not; say it plainly, because the instinct tonight will be to add charts.","minutes":null,"lo":[]}],"activities":[{"id":"review-day-3-q1","slide":"review-day-3","type":"single","prompt":"A service desk's monthly response time moved between 41 and 46 minutes over two years. The changes must be visible. Which chart is honest?","options":[{"key":"A","text":"Bars, with the y axis from 40 to 47 minutes"},{"key":"B","text":"Bars, with the y axis from 0 to 50 minutes"},{"key":"C","text":"A line with points, y axis from 40 to 47, range stated in the title"},{"key":"D","text":"A filled area, with the y axis from 40 to 47 minutes"}],"correct":[2],"explanation":"A point or a line is read by its position, so its axis may start where the data starts if the chart says so. Bars and areas are read from their base.","misconceptions":["A bar is read by its length, so an axis from 40 makes 46 look six times 41","Honest and unreadable: the changes of interest are flattened into a level band","","An area is read from its base like a bar, so it needs zero as much as a bar does"],"lo":["LO4"]},{"id":"check-chance-q1","slide":"check-chance","type":"single","prompt":"A school network has test scores of 4,000 pupils in 40 schools. Twenty schools used a new timetable. The analyst wants an interval for the difference in mean score between the two groups of schools. What should be resampled?","options":[{"key":"A","text":"The 4,000 pupils, drawn again with replacement"},{"key":"B","text":"The timetable labels of the pupils, shuffled"},{"key":"C","text":"The 4,000 scores, drawn within each school"},{"key":"D","text":"The 40 schools, drawn again with replacement"}],"correct":[3],"explanation":"The timetable was applied to schools, so the school is the unit: 40 independent units, not 4,000.","misconceptions":["Pupils in one school share teachers and intake, so treating them as independent makes the interval too narrow","Shuffling labels tests whether a difference exists; it does not give an interval for its size","Resampling scores without their pupils or schools destroys the structure being studied",""],"lo":["LO5"]},{"id":"check-uncertainty-q1","slide":"check-uncertainty","type":"single","prompt":"Two call centres have mean satisfaction 4.3 (interval 4.1 to 4.5, n = 80) and 4.1 (interval 4.0 to 4.2, n = 600). The intervals overlap. Which statement is supported?","options":[{"key":"A","text":"The two centres deliver the same level of satisfaction"},{"key":"B","text":"This sample cannot rank them; the difference needs its own interval"},{"key":"C","text":"The first centre is better, since its mean is higher"},{"key":"D","text":"The second centre is better, since its interval is narrower"}],"correct":[1],"explanation":"Overlapping intervals leave the order open. A claim about two groups rests on the interval of their difference.","misconceptions":["Overlap shows the sample cannot order the two centres; it does not show that they are equal","","The higher mean rests on 80 responses and its interval reaches down to 4.1","A narrower interval reflects a larger sample, not a better or more reliable service"],"lo":["LO5"]},{"id":"check-exploring-q1","slide":"check-exploring","type":"single","prompt":"An analyst compares churn between customers who did and did not use each of 40 app features. One feature shows a difference with p = 0.02. The team wants to announce \"Feature X reduces churn\". What should the analyst say?","options":[{"key":"A","text":"It is exploratory: expected among 40 looks; test it once on new customers"},{"key":"B","text":"It is confirmed, because the p-value is well below 0.05"},{"key":"C","text":"It will be confirmed once the test is rerun with more shuffles"},{"key":"D","text":"It should be discarded and left out of the report entirely"}],"correct":[0],"explanation":"With 40 comparisons, at least one p-value below 0.05 has an 87% chance when nothing is there. The data that suggested the pattern cannot confirm it.","misconceptions":["","A p-value below 0.05 for one comparison out of forty is what chance alone usually delivers","A larger resample makes the same p-value more exact; it does not undo the search across 40 features","A pattern found by searching can be real; the label and a fresh test are the fair response, not silence"],"lo":["LO1"]},{"id":"check-report-q1","slide":"check-report","type":"single","prompt":"A colleague sends a notebook and a PDF report. In the notebook, one cell loads cleaned_final_v3.csv from their desktop, and the bootstrap has no seed. Which request comes first?","options":[{"key":"A","text":"Set a seed, so that the intervals stop changing"},{"key":"B","text":"Send the cleaned file along with the notebook"},{"key":"C","text":"List the library versions that were used"},{"key":"D","text":"Start from the raw data, with the cleaning steps as code"}],"correct":[3],"explanation":"One path from raw data to page comes first: a hand-made intermediate file is a cache with no code behind it. Then the seed, then the versions.","misconceptions":["A seed makes the draws repeatable, but the numbers would still rest on a file nobody else can rebuild","A copy of the cleaned file lets the notebook run and still hides every decision made in cleaning it","Pinned versions help once the path from the raw data exists; they cannot replace it",""],"lo":["LO6"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day4.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

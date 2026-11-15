@@ -1,0 +1,362 @@
+{
+ "caption": "Mean satisfaction in 2025 by site with 95% bootstrap intervals: the Souq Walk (4.22, n = 442) rates above the Cable Car (3.93, n = 510), but Terrace Farms' 4.24 rests on 59 responses, its interval runs from about 4.0 to 4.4, and it cannot be ranked first. The intervals show how far each mean could move with another sample of respondents; they do not correct for who chose to answer or for the different mix of visitors at each site.",
+ "chart": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-8b328538fd95fc4396fda570bcb0980b"
+   },
+   "datasets": {
+    "data-8b328538fd95fc4396fda570bcb0980b": [
+     {
+      "hi": 4.440677966101695,
+      "label": "Terrace Farms (n = 59)",
+      "lo": 4.016949152542373,
+      "mean": 4.237288135593221,
+      "n": 59,
+      "site": "Terrace Farms",
+      "width": 0.4237288135593218
+     },
+     {
+      "hi": 4.296380090497737,
+      "label": "Souq Walk (n = 442)",
+      "lo": 4.135746606334842,
+      "mean": 4.217194570135747,
+      "n": 442,
+      "site": "Souq Walk",
+      "width": 0.16063348416289536
+     },
+     {
+      "hi": 4.246621621621622,
+      "label": "Tilal Fort (n = 296)",
+      "lo": 4.054054054054054,
+      "mean": 4.148648648648648,
+      "n": 296,
+      "site": "Tilal Fort",
+      "width": 0.19256756756756754
+     },
+     {
+      "hi": 4.216867469879518,
+      "label": "Juniper Park (n = 249)",
+      "lo": 4.004016064257028,
+      "mean": 4.108433734939759,
+      "n": 249,
+      "site": "Juniper Park",
+      "width": 0.21285140562248994
+     },
+     {
+      "hi": 4.233532934131737,
+      "label": "Honey Museum (n = 167)",
+      "lo": 3.964071856287425,
+      "mean": 4.1017964071856285,
+      "n": 167,
+      "site": "Honey Museum",
+      "width": 0.2694610778443116
+     },
+     {
+      "hi": 4.175879396984925,
+      "label": "Stone Village (n = 199)",
+      "lo": 3.919597989949749,
+      "mean": 4.050251256281407,
+      "n": 199,
+      "site": "Stone Village",
+      "width": 0.2562814070351762
+     },
+     {
+      "hi": 4.123287671232877,
+      "label": "Cloud Lookout (n = 146)",
+      "lo": 3.835616438356164,
+      "mean": 3.9863013698630136,
+      "n": 146,
+      "site": "Cloud Lookout",
+      "width": 0.2876712328767126
+     },
+     {
+      "hi": 4.003921568627451,
+      "label": "Cable Car (n = 510)",
+      "lo": 3.8489705882352943,
+      "mean": 3.925490196078431,
+      "n": 510,
+      "site": "Cable Car",
+      "width": 0.1549509803921567
+     },
+     {
+      "hi": 4.0606060606060606,
+      "label": "Wadi Trail (n = 132)",
+      "lo": 3.75,
+      "mean": 3.909090909090909,
+      "n": 132,
+      "site": "Wadi Trail",
+      "width": 0.31060606060606055
+     }
+    ]
+   },
+   "layer": [
+    {
+     "encoding": {
+      "x": {
+       "field": "lo",
+       "scale": {
+        "domain": [
+         3.6,
+         4.6
+        ]
+       },
+       "title": "Mean satisfaction in 2025, with 95% bootstrap interval",
+       "type": "quantitative"
+      },
+      "x2": {
+       "field": "hi"
+      },
+      "y": {
+       "field": "label",
+       "sort": [
+        "Terrace Farms (n = 59)",
+        "Souq Walk (n = 442)",
+        "Tilal Fort (n = 296)",
+        "Juniper Park (n = 249)",
+        "Honey Museum (n = 167)",
+        "Stone Village (n = 199)",
+        "Cloud Lookout (n = 146)",
+        "Cable Car (n = 510)",
+        "Wadi Trail (n = 132)"
+       ],
+       "title": null,
+       "type": "nominal"
+      }
+     },
+     "mark": {
+      "strokeWidth": 2.5,
+      "type": "rule"
+     }
+    },
+    {
+     "encoding": {
+      "x": {
+       "field": "mean",
+       "type": "quantitative"
+      },
+      "y": {
+       "field": "label",
+       "sort": [
+        "Terrace Farms (n = 59)",
+        "Souq Walk (n = 442)",
+        "Tilal Fort (n = 296)",
+        "Juniper Park (n = 249)",
+        "Honey Museum (n = 167)",
+        "Stone Village (n = 199)",
+        "Cloud Lookout (n = 146)",
+        "Cable Car (n = 510)",
+        "Wadi Trail (n = 132)"
+       ],
+       "title": null,
+       "type": "nominal"
+      }
+     },
+     "mark": {
+      "opacity": 1,
+      "size": 110,
+      "type": "circle"
+     }
+    }
+   ],
+   "title": "Most sites cannot be told apart"
+  }
+ },
+ "ci": {
+  "__frame__": {
+   "columns": [
+    "site",
+    "n",
+    "mean",
+    "lo",
+    "hi"
+   ],
+   "data": [
+    [
+     "Terrace Farms",
+     59,
+     4.2372881356,
+     4.0169491525,
+     4.4406779661
+    ],
+    [
+     "Souq Walk",
+     442,
+     4.2171945701,
+     4.1357466063,
+     4.2963800905
+    ],
+    [
+     "Tilal Fort",
+     296,
+     4.1486486486,
+     4.0540540541,
+     4.2466216216
+    ],
+    [
+     "Juniper Park",
+     249,
+     4.1084337349,
+     4.0040160643,
+     4.2168674699
+    ],
+    [
+     "Honey Museum",
+     167,
+     4.1017964072,
+     3.9640718563,
+     4.2335329341
+    ],
+    [
+     "Stone Village",
+     199,
+     4.0502512563,
+     3.9195979899,
+     4.175879397
+    ],
+    [
+     "Cloud Lookout",
+     146,
+     3.9863013699,
+     3.8356164384,
+     4.1232876712
+    ],
+    [
+     "Cable Car",
+     510,
+     3.9254901961,
+     3.8489705882,
+     4.0039215686
+    ],
+    [
+     "Wadi Trail",
+     132,
+     3.9090909091,
+     3.75,
+     4.0606060606
+    ]
+   ],
+   "index": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ },
+ "diff": [
+  0.3911764705882348,
+  0.3134268575851396,
+  0.4660236068111456
+ ],
+ "inside": [
+  [
+   "Tilal region",
+   101,
+   4.544554455445544,
+   4.425742574257426,
+   4.663366336633663
+  ],
+  [
+   "Other regions",
+   157,
+   4.24203821656051,
+   4.127388535031847,
+   4.356687898089172
+  ],
+  [
+   "Gulf",
+   131,
+   3.6259541984732824,
+   3.4885496183206106,
+   3.7635496183206096
+  ],
+  [
+   "Asia",
+   83,
+   3.3734939759036147,
+   3.1927710843373496,
+   3.5542168674698793
+  ],
+  [
+   "Europe",
+   38,
+   3.210526315789474,
+   2.9210526315789473,
+   3.526315789473684
+  ]
+ ],
+ "table": {
+  "__frame__": {
+   "columns": [
+    "site",
+    "n",
+    "mean"
+   ],
+   "data": [
+    [
+     "Terrace Farms",
+     59,
+     4.2372881356
+    ],
+    [
+     "Souq Walk",
+     442,
+     4.2171945701
+    ],
+    [
+     "Tilal Fort",
+     296,
+     4.1486486486
+    ],
+    [
+     "Juniper Park",
+     249,
+     4.1084337349
+    ],
+    [
+     "Honey Museum",
+     167,
+     4.1017964072
+    ],
+    [
+     "Stone Village",
+     199,
+     4.0502512563
+    ],
+    [
+     "Cloud Lookout",
+     146,
+     3.9863013699
+    ],
+    [
+     "Cable Car",
+     510,
+     3.9254901961
+    ],
+    [
+     "Wadi Trail",
+     132,
+     3.9090909091
+    ]
+   ],
+   "index": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ }
+}

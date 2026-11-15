@@ -1,0 +1,1624 @@
+{
+  "v": 1,
+  "engine": "1.0.0",
+  "build": {
+    "at": "2026-11-15T14:45:38Z",
+    "version": "2027.1.0",
+    "commit": "c59b820"
+  },
+  "lang": "en",
+  "dir": "ltr",
+  "slides": [
+    {
+      "deck": "day1",
+      "id": "title",
+      "n": 1,
+      "session": 0,
+      "title": "Questions and first looks",
+      "text": "SDAIA Academy · Exploratory Analysis and Visualisation Questions and first looks Day 1: Before any chart: what is asked, what one row is, what the values look like and which summary describes them Data Science Track4 teaching days + capstone day4 sessions · 4 labsDS-203",
+      "href": "../slides/day1.html#title"
+    },
+    {
+      "deck": "day1",
+      "id": "agenda",
+      "n": 2,
+      "session": 0,
+      "title": "Questions and first looks",
+      "text": "Today Questions and first looks Session 1 · Write the questions first From a brief to questions that name a unit of observation, variables and a comparison, and what exploring can and cannot establish Session 2 · Profiling a table What to find out about a table before trusting a single number from it: grain, key, types, missing values, ranges and categories Session 3 · Distributions Histograms, density and box plots: what each shows of a distribution and what each hides Session 4 · Summaries that fit the shape Choosing a centre and a spread by the shape of the variable: long tails, counts, zero-heavy variables and scores",
+      "href": "../slides/day1.html#agenda"
+    },
+    {
+      "deck": "day1",
+      "id": "the-board",
+      "n": 3,
+      "session": 0,
+      "title": "Tilal Regional Tourism Board: three years, six tables",
+      "text": "The case study Tilal Regional Tourism Board: three years, six tables 9 visitor sites in a highland region 150,000 ticket sales, 2023 to 2025 40,000 visitor stays in the register 6,000 survey responses, Arabic and English You work as Leen Al-Suwayigh, the board's analyst. Nawal Al-Rashoud, the director, wrote the brief. Aws Al-Hudaif runs sites and ticketing, Rashed Al-Shalan collects the hotels' occupancy returns, Atheer Al-Muhaya owns the survey and the complaints log, Nayef Al-Jumaah drew the charts of last year's report, Hanouf Al-Rumaihi is the data protection officer. The board, its people and every record are fictional and generated with a fixed seed.",
+      "href": "../slides/day1.html#the-board"
+    },
+    {
+      "deck": "day1",
+      "id": "how-the-course-works",
+      "n": 4,
+      "session": 0,
+      "title": "Question, chart, reading: in that order, every time",
+      "text": "The method of this course Question, chart, reading: in that order, every time 1 · Ask a question with a unit and a comparison → 2 · Look with a chart and a summary that fit the variable → 3 · Write two sentences: what it shows, what it does not → 4 · Check could it be chance, and does it rerun Part of the course Assistant Supervised quizzes, and the first draft of every chart reading Off Plotting and dataframe syntax in the labs A tutor that hints one step at a time and writes no chart for you The capstone Free; assisted charts and sentences are marked and defended live",
+      "href": "../slides/day1.html#how-the-course-works"
+    },
+    {
+      "deck": "day1",
+      "id": "setup-and-data-rules",
+      "n": 5,
+      "session": 0,
+      "title": "One notebook proves the setup; three rules govern the data",
+      "text": "Before the first lab One notebook proves the setup; three rules govern the data Setup check Open 00_setup_check.ipynb in Colab or locally and run all cells. It imports the libraries, reads the six tables and draws one chart. uv sync uv run jupyter lab Handled as personal data The data is synthetic and is still handled as the board would handle the real thing: stays and hotels appear only under pseudonymised keys no chart singles out one visitor or one hotel small groups are not published, and a rate travels with its denominator",
+      "href": "../slides/day1.html#setup-and-data-rules"
+    },
+    {
+      "deck": "day1",
+      "id": "s1",
+      "n": 6,
+      "session": 1,
+      "title": "Write the questions first",
+      "text": "Session 1 Write the questions first Rewrite a vague request as a question with a unit, variables and a comparison Name the unit of observation of each table before joining or counting Distinguish an exploratory question from a confirmatory one 01",
+      "href": "../slides/day1.html#s1"
+    },
+    {
+      "deck": "day1",
+      "id": "the-brief",
+      "n": 7,
+      "session": 1,
+      "title": "Five asks, none of them answerable as written",
+      "text": "What the director sent Five asks, none of them answerable as written Nawal Al-RashoudWho is actually coming, and do they stay? I keep hearing that our visitors \"pop in and leave\". Nawal Al-RashoudAtheer's team logged a lot of complaints about the Cable Car. Is that our problem site? Nawal Al-RashoudSatisfaction went down last year. Why, and whose fault is it? The trap. Open the data now and you will chart whatever is easiest to chart, then call it the answer.",
+      "href": "../slides/day1.html#the-brief"
+    },
+    {
+      "deck": "day1",
+      "id": "anatomy-of-a-question",
+      "n": 8,
+      "session": 1,
+      "title": "An answerable question names four things",
+      "text": "The tool of this session An answerable question names four things Part It says Ask 3, rewritten Unit of observation what one row is one complaint; one ticket sale Variables which columns are used site; tickets in the sale Comparison what is set against what complaints per thousand visitors, by site Kind exploring, or testing a claim fixed in advance exploratory The test. Could a colleague answer it without phoning you? \"How many complaints per thousand visitors does each site receive?\" passes. \"Is it our problem site?\" does not.",
+      "href": "../slides/day1.html#anatomy-of-a-question"
+    },
+    {
+      "deck": "day1",
+      "id": "unit-of-observation",
+      "n": 9,
+      "session": 1,
+      "title": "\"Visitors\" is a different thing in every table",
+      "text": "What one row is \"Visitors\" is a different thing in every table Table One row is Rows arrivals one origin market in one month 180 tickets one ticket sale at one site 150,000 stays one visiting party's stay in the region 40,000 occupancy one hotel on one day 43,840 survey one visitor's response after a site visit 6,000 complaints one complaint 2,418 Counting rows counts units: 40,000 stays are parties, not people. Two tables meet only after both are brought to one unit, such as the week.",
+      "href": "../slides/day1.html#unit-of-observation"
+    },
+    {
+      "deck": "day1",
+      "id": "exploratory-or-confirmatory",
+      "n": 10,
+      "session": 1,
+      "title": "Exploring finds questions; confirming answers one fixed in advance",
+      "text": "Two kinds of work Exploring finds questions; confirming answers one fixed in advance Exploratory You look at the data to see what is there Many cuts, many charts, the choice made after looking Output: patterns worth a question Honest wording: \"we saw\", \"in this data\" Confirmatory The comparison was written down before the data was seen One planned analysis on data not used to find the pattern Output: evidence for or against a claim Honest wording: \"the test planned in advance showed\" Why a found pattern needs a fresh test. The data that suggested a pattern cannot also confirm it: you chose the pattern because it stood out there.",
+      "href": "../slides/day1.html#exploratory-or-confirmatory"
+    },
+    {
+      "deck": "day1",
+      "id": "the-plan",
+      "n": 11,
+      "session": 1,
+      "title": "The plan is a table, and it passes a checklist",
+      "text": "One page before any chart The plan is a table, and it passes a checklist {\"question\": \"How many complaints per thousand visitors does each site receive over the three years?\", \"table\": \"complaints\", \"also\": [\"tickets\"], \"unit\": \"one complaint logged by the visitor experience team\", \"variables\": [\"site\", \"tickets\"], \"comparison\": \"complaints per thousand visitors by site, with the count and the visitors beside it\", \"kind\": \"exploratory\"} The checklist rejects a question with a word nobody can measure, a unit that is not the table's, fewer than two variables, or no comparison. It does not judge whether the question is interesting. That stays with you and the director.",
+      "href": "../slides/day1.html#the-plan"
+    },
+    {
+      "deck": "day1",
+      "id": "what-the-plan-cannot-do",
+      "n": 12,
+      "session": 1,
+      "title": "The plan answers \"what happened\", not \"why\"",
+      "text": "A narrower promise The plan answers \"what happened\", not \"why\" Ask 5: \"Satisfaction went down last year. Why, and whose fault is it?\" Plan: \"Did mean satisfaction change from 2024 to 2025 inside each origin market, and did the mix of markets among respondents change?\" The data can show where the fall sits. It cannot assign a cause: nothing was varied on purpose. Say so in the plan, before the director expects more.",
+      "href": "../slides/day1.html#what-the-plan-cannot-do"
+    },
+    {
+      "deck": "day1",
+      "id": "check-question",
+      "n": 13,
+      "session": 1,
+      "title": "Which rewrite can be answered?",
+      "text": "Checkpoint Which rewrite can be answered? The director asks: \"Did the festivals bring people, or would they have come anyway?\" Which rewrite belongs in the plan? Were the festivals successful for the region? How many arrivals were recorded in the festival months? By how much did arrivals in each festival month exceed the baseline for that month of the year? Did the festivals cause visitors to choose Tilal over other regions?",
+      "href": "../slides/day1.html#check-question"
+    },
+    {
+      "deck": "day1",
+      "id": "lab-1-1",
+      "n": 14,
+      "session": 1,
+      "title": "Five questions from the brief",
+      "text": "Lab 1.1 · 25 min Five questions from the brief Turn the director's brief into five questions, each with its table, unit of observation, variables and comparison, and pass the plan checklist before any chart is drawn. D1_1_brief_questions.ipynb Read the brief; name the table and the unit behind each ask 5 min Write five questions with variables and comparison 12 min Run the plan checklist and fix what fails 5 min Write what the plan leaves out 3 min ✱ Stretch: Add the question the brief did not ask and should have",
+      "href": "../slides/day1.html#lab-1-1"
+    },
+    {
+      "deck": "day1",
+      "id": "s2",
+      "n": 15,
+      "session": 2,
+      "title": "Profiling a table",
+      "text": "Session 2 Profiling a table Test whether a table has the grain and the key its dictionary claims Locate missing values and impossible values, and say whom they affect Record each data issue with its evidence and a decision 02",
+      "href": "../slides/day1.html#s2"
+    },
+    {
+      "deck": "day1",
+      "id": "profile-before-plot",
+      "n": 16,
+      "session": 2,
+      "title": "A profile asks six things of a table",
+      "text": "Before the first chart of a table A profile asks six things of a table 1 · Grain and key Is one row what the dictionary says? Is the key unique? 2 · Types Are dates dates and numbers numbers, or text that looks like them? 3 · Missing values How many, and above all where? 4 · Ranges Smallest and largest: can they be true? 5 · Categories How many distinct values, and how spelled? 6 · Coverage Which period and which groups does the table hold?",
+      "href": "../slides/day1.html#profile-before-plot"
+    },
+    {
+      "deck": "day1",
+      "id": "summarize-statement",
+      "n": 17,
+      "session": 2,
+      "title": "One statement profiles every column",
+      "text": "Lab 1.2, opening cell One statement profiles every column column_name column_type min max approx_unique null_percentage stay_id VARCHAR T0002344e Tfffb8d8e 39407 0.00 arrival_date VARCHAR 2023-01-01 2032-10-25 1137 0.00 origin VARCHAR Asia gulf 7 0.00 nights BIGINT 0 999 28 0.00 spend_sar DOUBLE 14.0 76181.0 8565 6.45 Four of the planted issues are visible in these five lines. Find them before the next slide. SUMMARIZE is DuckDB's; df.describe(include=\"all\") gives a similar table in pandas.",
+      "href": "../slides/day1.html#summarize-statement"
+    },
+    {
+      "deck": "day1",
+      "id": "grain-and-key",
+      "n": 18,
+      "session": 2,
+      "title": "40,600 rows hold 40,000 stays",
+      "text": "Lab 1.2, step 1 40,600 rows hold 40,000 stays 40,600 rows in the export 40,000 distinct stay keys 600 rows that repeat an earlier row in every column Every repeated key is an exact copy: a double entry, safe to drop. Had the copies differed in any column, the repair would be the owner's decision, not yours. Left in, the copies make every count 1.5% too high and nothing looks wrong.",
+      "href": "../slides/day1.html#grain-and-key"
+    },
+    {
+      "deck": "day1",
+      "id": "where-missing-sits",
+      "n": 19,
+      "session": 2,
+      "title": "The share of missing values matters less than where they sit",
+      "text": "Lab 1.2, step 2 The share of missing values matters less than where they sit Day visits 21.7% without spend Overnight stays 2.1% without spend Overall, spend is missing in 2,577 of 40,000 stays: 6.4%, which sounds harmless. Day visitors spend least and answer least. An average over the rows that remain leans toward overnight visitors. The decision: keep the rows, report the share missing by group, never fill in a typical value.",
+      "href": "../slides/day1.html#where-missing-sits"
+    },
+    {
+      "deck": "day1",
+      "id": "impossible-values",
+      "n": 20,
+      "session": 2,
+      "title": "A code that poses as a number moves every summary",
+      "text": "Lab 1.2, step 3 A code that poses as a number moves every summary 11.26 mean nights with the 320 rows of 999 left in 3.30 mean nights without them 999 means \"not recorded\". It is in 0.8% of the rows and more than triples the mean. One market is stored as Gulf, GCC and gulf with a trailing space: 586 stays would fall out of any group-by. 14 stays arrive in 2032. Look at the smallest and the largest value of every column , and at every distinct value of a category with few of them.",
+      "href": "../slides/day1.html#impossible-values"
+    },
+    {
+      "deck": "day1",
+      "id": "issue-log",
+      "n": 21,
+      "session": 2,
+      "title": "An issue log holds evidence and a decision someone can dispute",
+      "text": "The output of a profile An issue log holds evidence and a decision someone can dispute Issue Rows Decision Rows that repeat an earlier row in every column 600 drop the copies Nights is 999 where the length was not recorded 320 set to missing The Gulf market under three spellings 586 recode to one spelling Spend missing, mostly for day visits 2,577 keep and report the share Arrival dates in 2032 14 set to missing; ask the owner The log travels with every chart made from the table. The supplied clean register, U.stays(), applies exactly these decisions, and every later lab starts from it.",
+      "href": "../slides/day1.html#issue-log"
+    },
+    {
+      "deck": "day1",
+      "id": "check-profile",
+      "n": 22,
+      "session": 2,
+      "title": "What do you do with the 999s?",
+      "text": "Checkpoint What do you do with the 999s? 320 stays have 999 in the column nights. The data dictionary does not mention the value. What goes into the issue log? Set them to missing, record the 320 rows, and ask the register's owner what 999 stands for Replace them with the median length of stay so that no row is lost Keep them: a few very long stays are plausible in a tourism region Delete the 320 rows from the register before any analysis",
+      "href": "../slides/day1.html#check-profile"
+    },
+    {
+      "deck": "day1",
+      "id": "lab-1-2",
+      "n": 23,
+      "session": 2,
+      "title": "Profile the stay register",
+      "text": "Lab 1.2 · 25 min Profile the stay register Profile the visitor table, find rows entered twice, a code that poses as a number, one market under three spellings and spend that is missing for day visitors, and log three issues with evidence and a decision. D1_2_profile_stays.ipynb Shape, grain and key: is one row one stay? 5 min Types and missing values: where spend is missing 6 min Ranges and categories: values that cannot be true 6 min Log three issues with evidence and a decision 6 min Write the reading 2 min ✱ Stretch: Find the fifth issue, in the dates",
+      "href": "../slides/day1.html#lab-1-2"
+    },
+    {
+      "deck": "day1",
+      "id": "s3",
+      "n": 24,
+      "session": 3,
+      "title": "Distributions",
+      "text": "Session 3 Distributions Draw a histogram with a bin width that suits the variable Compare groups of unequal size by shares on a common scale Recognise a distribution with two humps that a box plot hides 03",
+      "href": "../slides/day1.html#s3"
+    },
+    {
+      "deck": "day1",
+      "id": "what-a-distribution-is",
+      "n": 25,
+      "session": 3,
+      "title": "A distribution answers \"which values, how often\"",
+      "text": "One variable at a time A distribution answers \"which values, how often\" Lab 1.3, step 1: nights in the region, all parties, one bin per night. Read four things: where the bulk is, how wide, how many humps, how long the tail. Here: a spike at 0, a hump at 2, a low hump near 7, a tail to 31. Three humps in one histogram usually mean three kinds of unit mixed together.",
+      "href": "../slides/day1.html#what-a-distribution-is"
+    },
+    {
+      "deck": "day1",
+      "id": "bin-width",
+      "n": 26,
+      "session": 3,
+      "title": "The bin width decides what a histogram can show",
+      "text": "The one choice a histogram has The bin width decides what a histogram can show Too wide Bins of 7 nights put 13,205 of the 17,367 stays from other regions into the first bar. Two humps become one. Fitted to the variable Nights is a count: one bin per night. Spend spans three orders of magnitude: equal steps on a log scale. Too narrow Bins of 10 riyals of spend leave a handful of stays in each bar: the shape drowns in noise. Try two or three widths and keep the one where the shape stops changing. Say the width in the axis title or the caption.",
+      "href": "../slides/day1.html#bin-width"
+    },
+    {
+      "deck": "day1",
+      "id": "shares-not-counts",
+      "n": 27,
+      "session": 3,
+      "title": "To compare groups of unequal size, compare shares",
+      "text": "Lab 1.3, step 2 To compare groups of unequal size, compare shares Counts would show the size of each market, not its shape. 80% of parties from the Tilal region are day visits; none from Europe. \"Other regions\" has two humps with nothing at 4 nights.",
+      "href": "../slides/day1.html#shares-not-counts"
+    },
+    {
+      "deck": "day1",
+      "id": "box-plot",
+      "n": 28,
+      "session": 3,
+      "title": "A box plot draws five numbers and takes one line per group",
+      "text": "Lab 1.3, step 3 A box plot draws five numbers and takes one line per group The same stays as the five histograms. Box: first quartile, median, third quartile. Whiskers: the rest, short of far points. Good for many groups and for comparing middles and spreads. \"Other regions\" and \"Asia\" look alike here: medians 3 and 4, boxes 2 to 6 and 2 to 5.",
+      "href": "../slides/day1.html#box-plot"
+    },
+    {
+      "deck": "day1",
+      "id": "what-the-box-hides",
+      "n": 29,
+      "session": 3,
+      "title": "The box cannot show two humps",
+      "text": "Lab 1.3, step 4 The box cannot show two humps Nights, \"Other regions\" 1 2 3 4 5 6 7 8 9 Share of stays 15% 31% 16% 0% 4% 10% 10% 7% 4% 63% of these stays last 1 to 3 nights and 37% last 5 or more. None lasts 4. The median, 3 nights, belongs to the short trips only. The box, 2 to 6, runs straight across the valley. The box plot is not wrong. It was asked \"what kinds of trip are there\" and answers \"where is the middle half\".",
+      "href": "../slides/day1.html#what-the-box-hides"
+    },
+    {
+      "deck": "day1",
+      "id": "density-and-small-groups",
+      "n": 30,
+      "session": 3,
+      "title": "Smooth curves and small groups both invent detail",
+      "text": "Two cautions Smooth curves and small groups both invent detail Density curves A density plot is a smoothed histogram with a bandwidth in place of a bin width. It overlays well, and it draws mass where no value can be: below zero nights, between whole nights. For counts and scores, prefer bars. Small groups A histogram of 40 values has bumps that mean nothing. Read a group's size before its shape: Europe has 2,166 stays here, one site in one month may have a dozen. Responsible use. A point drawn for one extreme party can single out an identifiable visitor. Show far points only where a group is large, or summarise them.",
+      "href": "../slides/day1.html#density-and-small-groups"
+    },
+    {
+      "deck": "day1",
+      "id": "check-distribution",
+      "n": 31,
+      "session": 3,
+      "title": "Which chart for which question?",
+      "text": "Checkpoint Which chart for which question? Aws Al-Hudaif asks whether visitors from other regions come for one kind of trip or several. You have their 17,367 stays with the nights of each. What do you draw first? A box plot of nights for that market A bar with the mean number of nights and an error bar A histogram of nights with bins seven nights wide A histogram of nights with one bin for each night",
+      "href": "../slides/day1.html#check-distribution"
+    },
+    {
+      "deck": "day1",
+      "id": "lab-1-3",
+      "n": 32,
+      "session": 3,
+      "title": "Length of stay by origin",
+      "text": "Lab 1.3 · 25 min Length of stay by origin Compare length of stay by visitor origin with histograms and box plots, and find the market whose box plot hides two kinds of trip. D1_3_length_of_stay.ipynb One histogram of nights for all parties 5 min Shares by origin, one panel each 7 min Box plots by origin 5 min Find the market with two kinds of trip 5 min Write the reading 3 min ✱ Stretch: Change the bin width to 7 nights and say what disappears",
+      "href": "../slides/day1.html#lab-1-3"
+    },
+    {
+      "deck": "day1",
+      "id": "s4",
+      "n": 33,
+      "session": 4,
+      "title": "Summaries that fit the shape",
+      "text": "Session 4 Summaries that fit the shape Predict from mean and median which way a variable is skewed Choose a centre and a spread that the tail does not move Summarise a zero-heavy variable and a score without a single mean 04",
+      "href": "../slides/day1.html#s4"
+    },
+    {
+      "deck": "day1",
+      "id": "mean-follows-tail",
+      "n": 34,
+      "session": 4,
+      "title": "The gap between mean and median is a first reading of the shape",
+      "text": "Lab 1.4, step 1 The gap between mean and median is a first reading of the shape Variable Mean Median Mean / median Spend per party, riyals 2,736 1,498 1.83 Nights 3.30 2 1.65 Booking lead, days 16.2 6 2.70 Satisfaction, 1 to 5 4.12 4 1.03 A mean far above the median says \"long right tail\" before any chart is drawn. Mean and median that agree do not prove symmetry: satisfaction is piled against the top of its scale.",
+      "href": "../slides/day1.html#mean-follows-tail"
+    },
+    {
+      "deck": "day1",
+      "id": "spread-that-describes",
+      "n": 35,
+      "session": 4,
+      "title": "\"Mean plus or minus one standard deviation\" can describe nobody",
+      "text": "Lab 1.4, step 2 \"Mean plus or minus one standard deviation\" can describe nobody Spend, as often reported 2,736 ± 3,788 riyals. The lower end is 1,051 riyals below zero. No party spent that. Spend, by quartiles Median 1,498; half of the parties between 571 and 3,392. Three amounts that real parties spent. The standard deviation squares distances, so a few large bills dominate it. Removing the top 1% of spend cuts the standard deviation by 24% and the median by 1.5%.",
+      "href": "../slides/day1.html#spread-that-describes"
+    },
+    {
+      "deck": "day1",
+      "id": "log-scale",
+      "n": 36,
+      "session": 4,
+      "title": "Variables that multiply are symmetric on a log scale",
+      "text": "Lab 1.4, step 3 Variables that multiply are symmetric on a log scale Spend per party, equal steps on a log scale. Spend is nights times party size times a daily rate. On a log scale, equal distances are equal ratios. Geometric mean 1,344 riyals: near the median 1,498, half the mean 2,736.",
+      "href": "../slides/day1.html#log-scale"
+    },
+    {
+      "deck": "day1",
+      "id": "zero-heavy",
+      "n": 37,
+      "session": 4,
+      "title": "A zero-heavy variable needs two numbers",
+      "text": "Lab 1.4, step 4 A zero-heavy variable needs two numbers 36% of parties did not book at all: lead time 0 14 days median lead of those who booked 6 days median of everyone, which describes neither group Two populations share one column: walk-ins and bookers. First the share at zero, then a summary of the rest. The same shape: spend on tickets among all residents, complaints per visitor, days absent.",
+      "href": "../slides/day1.html#zero-heavy"
+    },
+    {
+      "deck": "day1",
+      "id": "scores-need-shares",
+      "n": 38,
+      "session": 4,
+      "title": "A score from 1 to 5 is summarised by shares",
+      "text": "Lab 1.4, step 5 A score from 1 to 5 is summarised by shares 5 39.2% 4 38.3% 3 18.1% 2 4.1% 1 0.4% \"77% score 4 or 5\" is a sentence a board can repeat. \"Mean 4.12\" hides whether the rest are at 3 or at 1. A mean of scores assumes the step from 4 to 5 equals the step from 1 to 2. It is still used to compare groups, as Day 2 will; show the shares beside it.",
+      "href": "../slides/day1.html#scores-need-shares"
+    },
+    {
+      "deck": "day1",
+      "id": "summary-carries-n",
+      "n": 39,
+      "session": 4,
+      "title": "Every question gets a chart, a summary and two sentences",
+      "text": "The evidence for outcome 3 Every question gets a chart, a summary and two sentences Shape Centre Spread Chart Long right tail (spend) median, or geometric mean quartiles histogram on a log scale Count with humps (nights) median, with the share in each hump shares by range bars, one per value Zero-heavy (booking lead) share of zeros, median of the rest quartiles of the rest two parts Score (satisfaction) share scoring 4 or 5 all five shares bars of shares A summary always carries the number of values it rests on and what was left out: here the 2,577 stays with no stated spend, most of them day visits.",
+      "href": "../slides/day1.html#summary-carries-n"
+    },
+    {
+      "deck": "day1",
+      "id": "check-summary",
+      "n": 40,
+      "session": 4,
+      "title": "Which sentence goes into the report?",
+      "text": "Checkpoint Which sentence goes into the report? A museum records minutes spent inside by each visitor. 45% of the records show 0 minutes because those visitors used only the cafe. The others stay a median of 70 minutes. Which summary is honest? Visitors spend a mean of 41 minutes in the museum 45% of visitors use only the cafe; the others stay a median of 70 minutes The median visitor spends 25 minutes in the museum Museum visitors stay a median of 70 minutes inside",
+      "href": "../slides/day1.html#check-summary"
+    },
+    {
+      "deck": "day1",
+      "id": "lab-1-4",
+      "n": 41,
+      "session": 4,
+      "title": "Centre and spread for four variables",
+      "text": "Lab 1.4 · 25 min Centre and spread for four variables Choose centre and spread measures for four skewed variables (spend, nights, booking lead time, satisfaction) and say what each summary leaves out. D1_4_centre_spread.ipynb Mean and median of the four variables, and the gap between them 5 min Spread: standard deviation against quartiles 5 min Spend on a log scale: the geometric mean 5 min A zero-heavy variable needs two numbers 4 min A score from 1 to 5 needs shares 3 min Choose and write the reading 3 min ✱ Stretch: Remove the top 1% of spend and see which summaries move",
+      "href": "../slides/day1.html#lab-1-4"
+    },
+    {
+      "deck": "day1",
+      "id": "wrap-up",
+      "n": 42,
+      "session": 4,
+      "title": "Three things to keep",
+      "text": "Day 1 Three things to keep The question comes first Unit of observation, variables, comparison, and whether you are exploring or confirming. A plan that passes a checklist before any chart. Profile, then log Grain, types, missing values, ranges, categories, coverage. Each issue with its rows and a decision someone can dispute. Shape before summary Look at the distribution, then choose the centre and the spread that describe it. Always with the number of values and what was left out.",
+      "href": "../slides/day1.html#wrap-up"
+    },
+    {
+      "deck": "day1",
+      "id": "next",
+      "n": 43,
+      "session": 4,
+      "title": "Relationships and time",
+      "text": "Day 2 Relationships and time Two variables at once, counts against rates, three years of monthly arrivals, and a total that says the opposite of its parts. Keep your plan from lab 1.1 at hand: Day 2 answers questions 2 to 5. Every lab starts from the supplied tables. Nothing from today's notebooks is needed.",
+      "href": "../slides/day1.html#next"
+    },
+    {
+      "deck": "day2",
+      "id": "title",
+      "n": 1,
+      "session": 0,
+      "title": "Relationships and time",
+      "text": "SDAIA Academy · Exploratory Analysis and Visualisation Relationships and time Day 2: Two variables together, counts against rates, change over time, and a total that says the opposite of its parts Data Science Track4 teaching days + capstone day4 sessions · 4 labsDS-203",
+      "href": "../slides/day2.html#title"
+    },
+    {
+      "deck": "day2",
+      "id": "agenda",
+      "n": 2,
+      "session": 0,
+      "title": "Relationships and time",
+      "text": "Today Relationships and time Session 1 · Two variables at once Scatter plots when there are tens of thousands of points: transparency, binning, and one number that depends on the unit Session 2 · Counts, rates and denominators Why a count ranks by size, how to choose a denominator, and which cells are too small to publish Session 3 · Change over time Reading a time series as trend, season and events, and choosing what to compare a month with Session 4 · When the total reverses Totals are weighted averages: how a change of mix reverses a comparison, and which answer serves which question",
+      "href": "../slides/day2.html#agenda"
+    },
+    {
+      "deck": "day2",
+      "id": "review-day-1",
+      "n": 3,
+      "session": 0,
+      "title": "Which summary would you send the director?",
+      "text": "Review · Day 1 Which summary would you send the director? Spend per stay has a mean of 2,736 riyals and a median of 1,498. It is missing for 22% of day visits and 2% of overnight stays. Which sentence is honest? A typical party spends about 2,700 riyals in the region Half of the parties that reported spend spent under 1,500 riyals; day visits are under-reported Spend is about 1,500 riyals once missing values are filled in Spend cannot be summarised until the largest stays are removed",
+      "href": "../slides/day2.html#review-day-1"
+    },
+    {
+      "deck": "day2",
+      "id": "s1",
+      "n": 4,
+      "session": 1,
+      "title": "Two variables at once",
+      "text": "Session 1 Two variables at once Bring two tables to one unit of observation before relating them Reveal a relation in an overplotted scatter with transparency and binning Explain why a correlation changes with the unit it is computed on 01",
+      "href": "../slides/day2.html#s1"
+    },
+    {
+      "deck": "day2",
+      "id": "one-unit-first",
+      "n": 5,
+      "session": 1,
+      "title": "Two tables relate only at one unit of observation",
+      "text": "Before two variables can meet Two tables relate only at one unit of observation tickets 150,000 sales, summed to tickets per day + occupancy 43,840 hotel-days, rooms sold over rooms → one table 43,840 rows: a hotel, a day, its occupancy, the day's tickets Bring each table to the unit of the answer, then join. Count the rows before and after. More rows: something was repeated. Fewer: something was dropped. The day's ticket total is repeated on 40 hotels. That is intended, and it has a consequence you will see.",
+      "href": "../slides/day2.html#one-unit-first"
+    },
+    {
+      "deck": "day2",
+      "id": "overplotting",
+      "n": 6,
+      "session": 1,
+      "title": "43,840 opaque points draw a block, not a relation",
+      "text": "The first attempt 43,840 opaque points draw a block, not a relation Every point is there. Nothing can be read. A scatter plot shows each unit as a point. Past a few thousand, points hide points. The block says only where data exists: 152 to 836 tickets a day, 0 to 100% of rooms. Overplotting hides density, and density is the message.",
+      "href": "../slides/day2.html#overplotting"
+    },
+    {
+      "deck": "day2",
+      "id": "transparency",
+      "n": 7,
+      "session": 1,
+      "title": "Transparency turns overlap into darkness",
+      "text": "Repair 1 · Lab 2.1, step 2 Transparency turns overlap into darkness The same points at opacity 0.04. A dark band now rises from left to right. The horizontal stripes are banding: a hotel of 8 rooms can only be 0, 1/8, 2/8 … full, nine possible values. Banding is a feature of the unit, not of tourism. Name it so that nobody explains it. alt.Chart(hd).mark_circle(size=8, opacity=0.04).encode(x=\"tickets_day:Q\", y=\"rate:Q\")",
+      "href": "../slides/day2.html#transparency"
+    },
+    {
+      "deck": "day2",
+      "id": "binned-heatmap",
+      "n": 8,
+      "session": 1,
+      "title": "Bin both axes and colour by count",
+      "text": "Repair 2 · Lab 2.1, step 3 Bin both axes and colour by count A histogram in two dimensions. Each cell counts the hotel-days that fall in it. The count goes to colour. It works for a million points as well as for forty thousand. It shows where the points are. It does not yet say how much occupancy rises.",
+      "href": "../slides/day2.html#binned-heatmap"
+    },
+    {
+      "deck": "day2",
+      "id": "binned-medians",
+      "n": 9,
+      "session": 1,
+      "title": "To read \"how much\", summarise y inside bins of x",
+      "text": "Repair 3 · Lab 2.1, step 4 To read \"how much\", summarise y inside bins of x Eight groups of days, equal in size, by tickets sold. Cut the days into eighths by tickets sold; take the median occupancy of each. Quietest eighth: 40% of rooms sold. Busiest eighth: 77%. The y axis runs from 0 to 100%, so the rise is drawn at its true size.",
+      "href": "../slides/day2.html#binned-medians"
+    },
+    {
+      "deck": "day2",
+      "id": "correlation-and-unit",
+      "n": 10,
+      "session": 1,
+      "title": "One relation, two units, two correlations",
+      "text": "Lab 2.1, step 5 One relation, two units, two correlations 0.39 across 43,840 hotel-days 0.70 across 156 weeks, all hotels together Adding up 40 hotels and 7 days averages away what is particular to one hotel on one night. Weeks answer: does the region's occupancy move with the sites? Hotel-days answer: can one hotel's night be told from the day's ticket sales? There is no \"the correlation\". Report the coefficient with its unit and its number of units.",
+      "href": "../slides/day2.html#correlation-and-unit"
+    },
+    {
+      "deck": "day2",
+      "id": "what-a-relation-does-not-say",
+      "n": 11,
+      "session": 1,
+      "title": "A relation between two series is not yet a reason",
+      "text": "The second sentence of the reading A relation between two series is not yet a reason Summer raises ticket sales. Summer raises hotel bookings. Festivals do the same, in October and February. Two series that share a calendar move together whether or not one feeds the other. What the reading may say \"Weeks with more ticket sales are weeks with fuller hotels (0.70 across 156 weeks). Both rise in summer and at festivals, so the data does not show that site visits fill hotels.\"",
+      "href": "../slides/day2.html#what-a-relation-does-not-say"
+    },
+    {
+      "deck": "day2",
+      "id": "check-two-variables",
+      "n": 12,
+      "session": 1,
+      "title": "Which picture, and which number?",
+      "text": "Checkpoint Which picture, and which number? A transport authority has 2 million trips, each with distance and fare. An analyst wants to show how fare rises with distance. What should the first chart be? A scatter plot of every trip, so that no trip is left out A scatter plot of 200 trips picked at random from the file The correlation of fare and distance, printed as one figure A binned heatmap of the trips, then the median fare by distance band",
+      "href": "../slides/day2.html#check-two-variables"
+    },
+    {
+      "deck": "day2",
+      "id": "lab-2-1",
+      "n": 13,
+      "session": 1,
+      "title": "Occupancy against ticket sales",
+      "text": "Lab 2.1 · 25 min Occupancy against ticket sales Plot hotel occupancy against ticket sales for 43,840 hotel-days, first as a solid block, then with transparency, a binned heatmap and binned medians. D2_1_occupancy_tickets.ipynb Join hotel-days to daily ticket sales 4 min A scatter with transparency 5 min Bin both axes: a heatmap of counts 6 min Median occupancy by level of ticket sales 5 min One number at two units: hotel-days and weeks 3 min Write the reading 2 min ✱ Stretch: Colour the binned medians by weekend and weekday",
+      "href": "../slides/day2.html#lab-2-1"
+    },
+    {
+      "deck": "day2",
+      "id": "s2",
+      "n": 14,
+      "session": 2,
+      "title": "Counts, rates and denominators",
+      "text": "Session 2 Counts, rates and denominators Convert counts to rates with a denominator that fits the question Compare a ranking by count with a ranking by rate Mark the cells of a table that a publication rule holds back 02",
+      "href": "../slides/day2.html#s2"
+    },
+    {
+      "deck": "day2",
+      "id": "counts-rank-size",
+      "n": 15,
+      "session": 2,
+      "title": "A ranking by count is mostly a ranking by size",
+      "text": "Ask 3 of the brief A ranking by count is mostly a ranking by size Site Complaints Visitors Cable Car 599 100,822 Souq Walk 394 77,599 Tilal Fort 296 53,558 Wadi Trail 243 21,408 Terrace Farms 167 12,083 \"A lot of complaints about the Cable Car\": 599 of 2,418, a quarter of the log. It also receives a quarter of all visitors. The count answers \"where is the workload?\". It does not answer \"where does a visit go wrong most often?\".",
+      "href": "../slides/day2.html#counts-rank-size"
+    },
+    {
+      "deck": "day2",
+      "id": "choose-a-denominator",
+      "n": 16,
+      "session": 2,
+      "title": "The denominator is whoever could have produced the event",
+      "text": "The choice that decides the answer The denominator is whoever could have produced the event Question Rate Denominator Where does a visit go wrong most often? complaints per thousand visitors tickets sold at the site Which market complains most readily? complaints per thousand visitors of that origin tickets sold to that origin Is the queue the issue on busy days? queue complaints per thousand visitors, by day tickets sold that day Per thousand, so that the reader sees numbers like 5.9, not 0.0059. A rate travels with its two parts: 599 of 100,822.",
+      "href": "../slides/day2.html#choose-a-denominator"
+    },
+    {
+      "deck": "day2",
+      "id": "aggregate-then-join",
+      "n": 17,
+      "session": 2,
+      "title": "Bring each table to the unit of the answer, then join",
+      "text": "Lab 2.2, step 2 Bring each table to the unit of the answer, then join WITH c AS (SELECT site, count(*) AS complaints FROM complaints GROUP BY site), v AS (SELECT site, sum(tickets) AS visitors FROM tickets GROUP BY site) SELECT site, complaints, visitors, 1000.0 * complaints / visitors AS per_thousand FROM c JOIN v USING (site) ORDER BY per_thousand DESC Nine rows in, nine rows out. The totals still read 2,418 complaints and all tickets sold. Joining the raw tables on site pairs every complaint with every sale: millions of rows and a rate that means nothing.",
+      "href": "../slides/day2.html#aggregate-then-join"
+    },
+    {
+      "deck": "day2",
+      "id": "two-rankings",
+      "n": 18,
+      "session": 2,
+      "title": "By rate, the Cable Car is fifth and the smallest site is first",
+      "text": "Lab 2.2, step 3 By rate, the Cable Car is fifth and the smallest site is first Complaints per thousand visitors, 2023 to 2025. Cable Car: first by count, fifth by rate (5.9). Terrace Farms: seventh by count, first by rate (13.8), on 167 complaints. Wadi Trail is high on both readings of \"problem\": fourth by count (243), second by rate (11.4).",
+      "href": "../slides/day2.html#two-rankings"
+    },
+    {
+      "deck": "day2",
+      "id": "small-cells",
+      "n": 19,
+      "session": 2,
+      "title": "Cut finer and the highest rates rest on the fewest cases",
+      "text": "Lab 2.2, steps 4 and 5 Cut finer and the highest rates rest on the fewest cases Site × origin Complaints Visitors Published Terrace Farms × Asia 6 441 withheld Terrace Farms × Europe 4 321 withheld Cloud Lookout × Asia 6 1,769 withheld Honey Museum × Asia 8 2,075 withheld The board's rule: publish a cell only with at least 10 complaints and 1,000 visitors. Four of 45 cells are held back. Two of them would have shown the highest rates in the table. One more complaint moves a rate built on 4 by a quarter.",
+      "href": "../slides/day2.html#small-cells"
+    },
+    {
+      "deck": "day2",
+      "id": "withheld-is-not-hidden",
+      "n": 20,
+      "session": 2,
+      "title": "A withheld cell beside a published total can be recovered",
+      "text": "The stretch of lab 2.2 A withheld cell beside a published total can be recovered By subtraction Honey Museum: 139 complaints in total, four origin cells published, one withheld. The fifth is 139 minus the four: 8. What the analyst does marks every cell that fails the rule checks each row and column for a single withheld cell hands the table to the person who owns the rule Where this continues. Second-cell suppression, differencing between releases and the classification of outputs are taught in DS-207. Here you learn to see the problem and to mark the cells.",
+      "href": "../slides/day2.html#withheld-is-not-hidden"
+    },
+    {
+      "deck": "day2",
+      "id": "check-rates",
+      "n": 21,
+      "session": 2,
+      "title": "Which sentence can be printed?",
+      "text": "Checkpoint Which sentence can be printed? A city logs 420 pothole reports in District A (300 km of road) and 150 in District B (60 km of road). The mayor asks where the roads are worse. What do you report? District B: 2.5 reports per km of road against 1.4 in District A District A: it has almost three times as many reports as B Both: the city has 570 reports on 360 km, or 1.6 per km Neither: reports per resident are needed before any answer",
+      "href": "../slides/day2.html#check-rates"
+    },
+    {
+      "deck": "day2",
+      "id": "lab-2-2",
+      "n": 22,
+      "session": 2,
+      "title": "Complaint rates and small cells",
+      "text": "Lab 2.2 · 25 min Complaint rates and small cells Convert complaints to rates per thousand visitors by site and by origin, compare the two rankings and mark the cells too small to publish. D2_2_complaint_rates.ipynb Count complaints by site and rank the sites 3 min Visitors by site, and complaints per thousand visitors 6 min Set the two rankings side by side 3 min Rates by site and origin 5 min Apply the publication rule 5 min Write the reading 3 min ✱ Stretch: Show that one withheld cell can be recovered from the row total",
+      "href": "../slides/day2.html#lab-2-2"
+    },
+    {
+      "deck": "day2",
+      "id": "s3",
+      "n": 23,
+      "session": 3,
+      "title": "Change over time",
+      "text": "Session 3 Change over time Draw a time series so that season and trend can be told apart Compare a month with the same month a year earlier and with a seasonal baseline Mark the months that exceed the baseline and say by how much 03",
+      "href": "../slides/day2.html#s3"
+    },
+    {
+      "deck": "day2",
+      "id": "trend-season-event",
+      "n": 24,
+      "session": 3,
+      "title": "A monthly line holds three things at once",
+      "text": "Reading a time series A monthly line holds three things at once Arrivals per month, all origin markets. Trend: each summer peak is higher than the last. Season: the same shape every year, highest in July. Events: three spikes that are not in summer. Draw it this way. Time on x, left to right, evenly spaced; a line for a continuous series; the y axis from zero when sizes are compared.",
+      "href": "../slides/day2.html#trend-season-event"
+    },
+    {
+      "deck": "day2",
+      "id": "seasonal-profile",
+      "n": 25,
+      "session": 3,
+      "title": "A seasonal index says how a month compares with an average month",
+      "text": "Lab 2.3, step 2 A seasonal index says how a month compares with an average month 1.43 July: 43% above an average month 0.78 January: 22% below Divide each month of 2023 by the mean of its twelve months. Twelve numbers with a mean of 1. 2023 had no festival, so its shape is the season alone. What goes wrong. \"Arrivals rose 30% from May to July\" describes the calendar. It happens every year.",
+      "href": "../slides/day2.html#seasonal-profile"
+    },
+    {
+      "deck": "day2",
+      "id": "year-on-year",
+      "n": 26,
+      "session": 3,
+      "title": "The same month a year earlier removes the season, and hides what repeats",
+      "text": "Lab 2.3, step 3 The same month a year earlier removes the season, and hides what repeats Month Festival Change on a year earlier October 2024 Honey Festival, first edition +37% February 2025 Heritage Nights, first edition +27% October 2025 Honey Festival, second edition +7% A typical month grew 6.9% on the year before. October 2025 looks ordinary because it is compared with October 2024, which had the same festival.",
+      "href": "../slides/day2.html#year-on-year"
+    },
+    {
+      "deck": "day2",
+      "id": "seasonal-baseline",
+      "n": 27,
+      "session": 3,
+      "title": "A baseline is what the month would have been: season times trend",
+      "text": "Lab 2.3, step 4 A baseline is what the month would have been: season times trend Actual arrivals and the baseline, dashed. Baseline: the same month of 2023, grown by the typical yearly growth. October 2024: +29%. February 2025: +18%. October 2025: +29%. Every other month sits within 5% of the baseline.",
+      "href": "../slides/day2.html#seasonal-baseline"
+    },
+    {
+      "deck": "day2",
+      "id": "what-a-baseline-is",
+      "n": 28,
+      "session": 3,
+      "title": "A baseline is a choice, and the excess inherits it",
+      "text": "What the reading must carry A baseline is a choice, and the excess inherits it It rests on one year 2023 is the only year without a festival. A wet July in 2023 would sit in every later baseline. It assumes steady growth One growth figure for every month and every market. Session 4 shows the markets grew at different speeds. It does not name a cause \"29% above the baseline in the festival month\" is what the data shows. A school holiday in the same month would look the same. In the report. State the baseline in one line under the chart, and give the excess as a percentage and as arrivals.",
+      "href": "../slides/day2.html#what-a-baseline-is"
+    },
+    {
+      "deck": "day2",
+      "id": "check-time",
+      "n": 29,
+      "session": 3,
+      "title": "Compared with what?",
+      "text": "Checkpoint Compared with what? A library ran a reading campaign in March 2025. Loans were 9,000 in February 2025, 11,500 in March 2025 and 11,000 in March 2024. Loans grew 3% a year before the campaign. Which statement is supported? The campaign raised loans by 28%, from 9,000 to 11,500 Loans stood 4.5% above the level expected without a campaign Loans stood about 1.5% above a baseline of 11,330 for March 2025 The campaign failed, since loans rose less than in a normal year",
+      "href": "../slides/day2.html#check-time"
+    },
+    {
+      "deck": "day2",
+      "id": "lab-2-3",
+      "n": 30,
+      "session": 3,
+      "title": "Monthly arrivals, season and festivals",
+      "text": "Lab 2.3 · 25 min Monthly arrivals, season and festivals Plot monthly arrivals, separate the summer season from the trend and mark the two festival effects against a seasonal baseline. D2_3_monthly_arrivals.ipynb A line chart of monthly arrivals 4 min The seasonal profile of a festival-free year 5 min Change on the same month a year earlier 5 min A baseline from season and trend; the months above it 7 min Mark the festival months and write the reading 4 min ✱ Stretch: Repeat the baseline for one origin market",
+      "href": "../slides/day2.html#lab-2-3"
+    },
+    {
+      "deck": "day2",
+      "id": "s4",
+      "n": 31,
+      "session": 4,
+      "title": "When the total reverses",
+      "text": "Session 4 When the total reverses Split a total into what each group does and how large each group is Detect a reversal between a total and its groups Report a comparison at a fixed mix 04",
+      "href": "../slides/day2.html#s4"
+    },
+    {
+      "deck": "day2",
+      "id": "two-true-tables",
+      "n": 32,
+      "session": 4,
+      "title": "Satisfaction fell overall and rose in every market",
+      "text": "Ask 5 of the brief Satisfaction fell overall and rose in every market All respondents 2024 2025 Mean satisfaction 4.15 4.07 Origin market 2024 2025 Tilal region 4.50 4.60 Other regions 4.20 4.30 Gulf 3.70 3.80 Asia 3.41 3.49 Europe 3.30 3.41 Both tables are right. They come from the same 4,200 responses, and nobody made an arithmetic error.",
+      "href": "../slides/day2.html#two-true-tables"
+    },
+    {
+      "deck": "day2",
+      "id": "weighted-average",
+      "n": 33,
+      "session": 4,
+      "title": "A total is a weighted average: the weights are the mix",
+      "text": "The mechanism A total is a weighted average: the weights are the mix overall mean = sum over groups of ( share of the group × mean of the group ) 2024: 0.40 × 4.50 + 0.35 × 4.20 + 0.12 × 3.70 + 0.07 × 3.41 + 0.06 × 3.30 = 4.15 2025: 0.26 × 4.60 + 0.30 × 4.30 + 0.19 × 3.80 + 0.13 × 3.49 + 0.12 × 3.41 = 4.07 The total moves when the group means move, or when the shares move. Here the means all rose by about 0.1 and the shares moved against them.",
+      "href": "../slides/day2.html#weighted-average"
+    },
+    {
+      "deck": "day2",
+      "id": "the-mix-changed",
+      "n": 34,
+      "session": 4,
+      "title": "The markets that score lowest grew from a quarter of the responses to almost half",
+      "text": "Lab 2.4, step 3 The markets that score lowest grew from a quarter of the responses to almost half Tilal region 40% → 26% Other regions 35% → 30% Gulf 12% → 19% Asia 7% → 13% Europe 6% → 12% Bars: share of survey responses in 2025. Values: 2024 → 2025. International visitors rate lower in both years, and there are far more of them in 2025. That is the board's own strategy working: Day 3 shows international arrivals up 42% to 67% since 2023.",
+      "href": "../slides/day2.html#the-mix-changed"
+    },
+    {
+      "deck": "day2",
+      "id": "reversal-chart",
+      "n": 35,
+      "session": 4,
+      "title": "One chart can hold the parts and the total",
+      "text": "Lab 2.4, step 5 One chart can hold the parts and the total Mean satisfaction, 1 to 5. Each line is labelled at its end. Five lines up, one line down: the reader sees the reversal before reading a word. The total differs from the parts in colour and in line style. The axis starts at 3.0. For positions on a 1 to 5 scale that is fair; for bars it would not be.",
+      "href": "../slides/day2.html#reversal-chart"
+    },
+    {
+      "deck": "day2",
+      "id": "fixed-mix",
+      "n": 36,
+      "session": 4,
+      "title": "Hold the mix fixed, and the comparison answers one question",
+      "text": "Lab 2.4, step 4 Hold the mix fixed, and the comparison answers one question 4.15 2024, as surveyed 4.07 2025, as surveyed 4.25 2025 means at the 2024 mix at_2024_mix = (mean_2025_by_origin * share_2024_by_origin).sum() # 4.25 With last year's mix of visitors, this year would have scored up 0.10, not down 0.08. Say which mix was used. Another reference mix gives another figure, with the same direction here.",
+      "href": "../slides/day2.html#fixed-mix"
+    },
+    {
+      "deck": "day2",
+      "id": "which-answer",
+      "n": 37,
+      "session": 4,
+      "title": "The total and the fixed-mix figure answer different questions",
+      "text": "Neither number is \"the right one\" The total and the fixed-mix figure answer different questions Question Figure Answer How satisfied was the average respondent this year? the total 4.07, down 0.08 Did the experience of comparable visitors improve? by market, or at a fixed mix up about 0.10 in every market Why did the total fall? the change of mix more visitors from markets that rate lower When to suspect a reversal. Groups differ in level, and their shares changed between the things you compare. Check the mix before explaining any change in a total.",
+      "href": "../slides/day2.html#which-answer"
+    },
+    {
+      "deck": "day2",
+      "id": "check-reversal",
+      "n": 38,
+      "session": 4,
+      "title": "What do you check first?",
+      "text": "Checkpoint What do you check first? A centre's pass rate fell from 82% to 76%. Evening courses always pass less often than day courses, and evening enrolment doubled. What comes before writing \"teaching quality fell\"? Wait for one more year of results so that the fall is certain Compare pass rates inside day and evening courses, and the shares of each Recompute the pass rate for day courses only and report that figure Weight the pass rate by enrolment so that large courses count for more",
+      "href": "../slides/day2.html#check-reversal"
+    },
+    {
+      "deck": "day2",
+      "id": "lab-2-4",
+      "n": 39,
+      "session": 4,
+      "title": "The satisfaction reversal",
+      "text": "Lab 2.4 · 25 min The satisfaction reversal Find the satisfaction reversal once visitor origin is taken into account: down overall from 2024 to 2025, up in every origin market. D2_4_satisfaction_reversal.ipynb Mean satisfaction by year 3 min Mean satisfaction by origin and year 5 min The mix of respondents by year 4 min 2025 at the 2024 mix 6 min One chart of the reversal 4 min Write the sentence the board may print 3 min ✱ Stretch: Find a second variable that could move the total the same way",
+      "href": "../slides/day2.html#lab-2-4"
+    },
+    {
+      "deck": "day2",
+      "id": "wrap-up",
+      "n": 40,
+      "session": 4,
+      "title": "A number depends on what it is set against",
+      "text": "Day 2 A number depends on what it is set against Its unit 0.39 by hotel-day, 0.70 by week. Say which. Its denominator First by count, fifth by rate. Print both parts. Its baseline +7% on last year, +29% on the season. State the baseline. Its mix Down overall, up in every market. Check the shares.",
+      "href": "../slides/day2.html#wrap-up"
+    },
+    {
+      "deck": "day2",
+      "id": "next",
+      "n": 41,
+      "session": 4,
+      "title": "Building honest charts",
+      "text": "Day 3 Building honest charts A chart as a specification, small multiples, six misleading charts to repair, and one chart in Arabic and English. Tonight, look at one chart in a report you receive at work and ask where its y axis starts. Every lab of Day 3 starts from the supplied tables.",
+      "href": "../slides/day2.html#next"
+    },
+    {
+      "deck": "day3",
+      "id": "title",
+      "n": 1,
+      "session": 0,
+      "title": "Building honest charts",
+      "text": "SDAIA Academy · Exploratory Analysis and Visualisation Building honest charts Day 3: A chart as a specification: marks, encodings and scales chosen so that the picture and the numbers agree Data Science Track4 teaching days + capstone day4 sessions · 4 labsDS-203",
+      "href": "../slides/day3.html#title"
+    },
+    {
+      "deck": "day3",
+      "id": "agenda",
+      "n": 2,
+      "session": 0,
+      "title": "Building honest charts",
+      "text": "Today Building honest charts Session 1 · Marks, encodings and scales A chart is data, marks, encodings and scales; choosing the channel for the comparison that matters Session 2 · Small multiples Small multiples: when panels beat one crowded chart, and what shared and free scales each let a reader compare Session 3 · Charts that mislead Six ways a correct number becomes a wrong impression, and the repair for each Session 4 · Colour, labels and Arabic text Colour that survives colour-vision deficiency and print, labels that carry the finding, and charts that read in Arabic and English",
+      "href": "../slides/day3.html#agenda"
+    },
+    {
+      "deck": "day3",
+      "id": "review-day-2",
+      "n": 3,
+      "session": 0,
+      "title": "What does the director need beside this number?",
+      "text": "Review · Day 2 What does the director need beside this number? A report says: \"Branch C has the most late deliveries: 310 this quarter.\" Before the sentence is printed, what has to stand beside 310? The average number of late deliveries per branch The number of late deliveries in the quarter before A p-value for the difference between the branches The deliveries Branch C made, so 310 becomes a rate",
+      "href": "../slides/day3.html#review-day-2"
+    },
+    {
+      "deck": "day3",
+      "id": "s1",
+      "n": 4,
+      "session": 1,
+      "title": "Marks, encodings and scales",
+      "text": "Session 1 Marks, encodings and scales Describe any chart as data, marks, encodings and scales Rank position, length, area and colour by how precisely they are read Build a layered chart from a written specification 01",
+      "href": "../slides/day3.html#s1"
+    },
+    {
+      "deck": "day3",
+      "id": "chart-as-specification",
+      "n": 5,
+      "session": 1,
+      "title": "Every chart is four decisions",
+      "text": "The grammar of graphics Every chart is four decisions Part The decision In lab 3.1 Data what one row is one site: complaints, visitors, rate Marks the shape drawn for each row a circle, a rule, a text Encodings which column drives which visual channel rate → x, site → y, visitors → size Scales how values become positions, sizes and colours x from zero; sites sorted by rate Why think this way. \"Bar chart\" and \"scatter plot\" are names for a few common combinations. The four parts describe all of them, and tell you what to change.",
+      "href": "../slides/day3.html#chart-as-specification"
+    },
+    {
+      "deck": "day3",
+      "id": "channels-ranked",
+      "n": 6,
+      "session": 1,
+      "title": "Give the most precise channel to the comparison that matters",
+      "text": "Not all channels are read equally well Give the most precise channel to the comparison that matters Position on a common scale most precise Length Angle and slope Area Colour intensity least precise Colour hue tells categories apart; it does not order them. A small difference shows in position long before it shows in area or shade.",
+      "href": "../slides/day3.html#channels-ranked"
+    },
+    {
+      "deck": "day3",
+      "id": "specification-to-code",
+      "n": 7,
+      "session": 1,
+      "title": "The written specification and the code have the same four parts",
+      "text": "Lab 3.1, steps 2 and 3 The written specification and the code have the same four parts alt.Chart(rates).mark_circle().encode( # data, mark x=alt.X(\"per_thousand:Q\", # encoding: a quantity scale=alt.Scale(zero=True), # scale: from zero title=\"Complaints per thousand visitors, 2023 to 2025\"), y=alt.Y(\"site:N\", sort=\"-x\", title=None), # a name, sorted by x ).properties(title=\"Complaints per thousand visitors by site\") :Q a quantity, :N a name, :O an order, :T a time. The type picks the default scale. Sorting and titles are part of the specification, not decoration.",
+      "href": "../slides/day3.html#specification-to-code"
+    },
+    {
+      "deck": "day3",
+      "id": "layers",
+      "n": 8,
+      "session": 1,
+      "title": "Layers share the data and the scales, and add one mark each",
+      "text": "Lab 3.1, step 4 Layers share the data and the scales, and add one mark each Rule, circle and text: three layers. The rate has position; the visitors have area. The largest circle is fifth from the top. One chart now says what lab 2.2 needed a paragraph for. alt.layer(rule, dot, label)",
+      "href": "../slides/day3.html#layers"
+    },
+    {
+      "deck": "day3",
+      "id": "change-one-mark",
+      "n": 9,
+      "session": 1,
+      "title": "Change one part and you can say what was gained and lost",
+      "text": "Lab 3.1, step 5 Change one part and you can say what was gained and lost The same data, x and y, as bars. A bar's length already carries the rate, so size is taken: the visitors drop off the chart. Bars are familiar and read fast. A bar is measured from its base. A point is read by its place. The rule that follows. Bars and areas need an axis from zero. Points and lines may use an axis that starts elsewhere, if the chart says so.",
+      "href": "../slides/day3.html#change-one-mark"
+    },
+    {
+      "deck": "day3",
+      "id": "check-grammar",
+      "n": 10,
+      "session": 1,
+      "title": "Which channel for which variable?",
+      "text": "Checkpoint Which channel for which variable? A chart must let a manager compare average waiting time across 12 clinics, and also show roughly how many patients each clinic sees. Which specification serves that? Clinic on y, patients on x, waiting time as circle size Clinic on y sorted by wait, waiting time on x, patients as circle size Clinic on y, patients on x, waiting time as colour intensity A pie chart with one slice per clinic, sized by waiting time",
+      "href": "../slides/day3.html#check-grammar"
+    },
+    {
+      "deck": "day3",
+      "id": "lab-3-1",
+      "n": 11,
+      "session": 1,
+      "title": "A chart from a written specification",
+      "text": "Lab 3.1 · 25 min A chart from a written specification Rebuild one chart from a written specification: complaint rates by site as marks, encodings, scales and a text layer. D3_1_chart_from_spec.ipynb Read the specification: data, marks, encodings 3 min The base chart: position for the rate 6 min Sort, start the scale at zero, write the titles 5 min A second encoding and a text layer 6 min Change one mark and say what the reader loses 3 min Write the reading 2 min ✱ Stretch: Write the specification of a chart from lab 1.3 in the same form",
+      "href": "../slides/day3.html#lab-3-1"
+    },
+    {
+      "deck": "day3",
+      "id": "s2",
+      "n": 12,
+      "session": 2,
+      "title": "Small multiples",
+      "text": "Session 2 Small multiples Replace a crowded chart with small multiples Choose shared scales to compare levels and free scales to compare shapes State the scale choice on the chart 02",
+      "href": "../slides/day3.html#s2"
+    },
+    {
+      "deck": "day3",
+      "id": "crowded-chart",
+      "n": 13,
+      "session": 2,
+      "title": "Five lines on one panel answer one question and hide four",
+      "text": "Lab 3.2, step 1 Five lines on one panel answer one question and hide four Monthly arrivals by origin market. You can read which market is largest. When does Europe peak? Does Asia have a season? The bottom tenth of the chart holds three lines. The legend has to be decoded for every line.",
+      "href": "../slides/day3.html#crowded-chart"
+    },
+    {
+      "deck": "day3",
+      "id": "shared-scales",
+      "n": 14,
+      "session": 2,
+      "title": "Small multiples: the same chart, one panel per group",
+      "text": "Lab 3.2, step 2 Small multiples: the same chart, one panel per group One y scale for all panels. No legend: each panel is labelled. Once one panel is understood, all are. A shared scale compares levels across panels: who is big. Asia and Europe are still flat lines.",
+      "href": "../slides/day3.html#shared-scales"
+    },
+    {
+      "deck": "day3",
+      "id": "free-scales",
+      "n": 15,
+      "session": 2,
+      "title": "A scale per panel shows each group's shape",
+      "text": "Lab 3.2, step 3 A scale per panel shows each group's shape Each panel has its own scale from zero. Europe peaks in December, in every other market's low season. Asia has almost no season and the steepest growth. Heights can no longer be compared across panels, and the chart says so.",
+      "href": "../slides/day3.html#free-scales"
+    },
+    {
+      "deck": "day3",
+      "id": "which-scale-for-which-question",
+      "n": 16,
+      "session": 2,
+      "title": "The question chooses the scale",
+      "text": "Lab 3.2, steps 4 and 5 The question chooses the scale The reader should compare Scales Because levels: which market is largest shared heights mean the same in every panel shapes: who has a season, and when free, from zero each shape fills its panel growth: who grew fastest shared, on an index every line starts at 100 What goes wrong. Free scales with no note. The reader compares heights across panels anyway and concludes that all markets are the same size.",
+      "href": "../slides/day3.html#which-scale-for-which-question"
+    },
+    {
+      "deck": "day3",
+      "id": "limits-of-small-multiples",
+      "n": 17,
+      "session": 2,
+      "title": "Small multiples trade exact comparison for clarity",
+      "text": "When panels stop helping Small multiples trade exact comparison for clarity They suit Three to about twenty groups; one simple chart repeated; a reader who compares patterns. They strain Two lines whose gap is the message: put those on one panel, where the gap has position. They need A deliberate order of panels, identical axes in type, and few tick labels on each. A useful middle way. Draw every group in grey in every panel and highlight one. The reader gets the shape and the place among the others.",
+      "href": "../slides/day3.html#limits-of-small-multiples"
+    },
+    {
+      "deck": "day3",
+      "id": "check-facets",
+      "n": 18,
+      "session": 2,
+      "title": "Shared or free?",
+      "text": "Checkpoint Shared or free? Weekly sales of 8 product lines are drawn as small multiples. The largest line sells fifty times the smallest. The manager asks: \"Which lines have a December peak?\" Which design answers that? A shared y scale, so that all eight panels can be compared A single panel with eight lines, one colour for each line A y scale per panel from zero, with a note that scales differ A y scale per panel, fitted tightly to each line's range",
+      "href": "../slides/day3.html#check-facets"
+    },
+    {
+      "deck": "day3",
+      "id": "lab-3-2",
+      "n": 19,
+      "session": 2,
+      "title": "Arrivals in small multiples",
+      "text": "Lab 3.2 · 25 min Arrivals in small multiples Facet arrivals by origin market, draw the panels with shared and with free scales and choose the one that answers each question. D3_2_facet_arrivals.ipynb Five lines in one panel: what can be read 4 min One panel per market, shared scale 5 min The same panels with free scales 5 min What each version answers: peak month and peak-to-trough ratio 5 min Choose, order the panels and say the scale on the chart 4 min Write the reading 2 min ✱ Stretch: Index each market to 2023 = 100 and compare with the free-scale version",
+      "href": "../slides/day3.html#lab-3-2"
+    },
+    {
+      "deck": "day3",
+      "id": "s3",
+      "n": 20,
+      "session": 3,
+      "title": "Charts that mislead",
+      "text": "Session 3 Charts that mislead Name the fault of a misleading chart Repair a chart by changing its scale, window, measure or encoding Say what a reader concludes before and after the repair 03",
+      "href": "../slides/day3.html#s3"
+    },
+    {
+      "deck": "day3",
+      "id": "six-faults",
+      "n": 21,
+      "session": 3,
+      "title": "Six charts, every number correct, every impression wrong",
+      "text": "The board's earlier report Six charts, every number correct, every impression wrong Fault What it does Repair Cut baseline a bar's axis does not start at zero start at zero, or change the mark Picked window a few periods chosen out of many show the whole series Count for rate counts compared across unequal groups divide by the denominator Two axes two scales stretched until shapes agree one variable against the other Running total a cumulative line, which can only rise plot the amount per period Uneven steps unequal periods drawn as equal steps equal periods on a time axis",
+      "href": "../slides/day3.html#six-faults"
+    },
+    {
+      "deck": "day3",
+      "id": "fault-cut-baseline",
+      "n": 22,
+      "session": 3,
+      "title": "\"Satisfaction collapsed in 2025\"",
+      "text": "Fault 1 · Cut baseline \"Satisfaction collapsed in 2025\" As published: the axis runs from 4.0 to 4.2. Repaired: bars from zero. A bar says \"this much\". Cut the base and the 2025 bar is half the 2024 bar for a fall of 2%. If 0.08 matters, use points on a stated axis, with intervals.",
+      "href": "../slides/day3.html#fault-cut-baseline"
+    },
+    {
+      "deck": "day3",
+      "id": "fault-picked-window",
+      "n": 23,
+      "session": 3,
+      "title": "\"Arrivals up 37% in a year\"",
+      "text": "Fault 2 · Picked window \"Arrivals up 37% in a year\" As published: two months of thirty-six. Repaired: every month. October 2024 was the first Honey Festival. The typical yearly growth is about 7%. Ask of any two-point comparison: why these two points?",
+      "href": "../slides/day3.html#fault-picked-window"
+    },
+    {
+      "deck": "day3",
+      "id": "fault-count-for-rate",
+      "n": 24,
+      "session": 3,
+      "title": "\"The Cable Car is our problem site\"",
+      "text": "Fault 3 · Count for rate \"The Cable Car is our problem site\" As published: complaints. Repaired: per thousand visitors. The picture of yesterday's lab 2.2: the busiest site leads any count. The repair changes the measure, not the drawing.",
+      "href": "../slides/day3.html#fault-count-for-rate"
+    },
+    {
+      "deck": "day3",
+      "id": "fault-two-axes",
+      "n": 25,
+      "session": 3,
+      "title": "\"Hotels follow the sites exactly\"",
+      "text": "Fault 4 · Two axes \"Hotels follow the sites exactly\" As published: two y axes, each fitted to its line. Repaired: one variable against the other. With two free axes, any two series can be made to overlap. Where they cross means nothing. The scatter shows the relation at its true strength: 0.70, loosely.",
+      "href": "../slides/day3.html#fault-two-axes"
+    },
+    {
+      "deck": "day3",
+      "id": "fault-running-total",
+      "n": 26,
+      "session": 3,
+      "title": "\"Local visits keep climbing\"",
+      "text": "Fault 5 · Running total \"Local visits keep climbing\" As published: arrivals since January 2023. Repaired: arrivals per month. A running total rises whenever anything arrives at all. It cannot show a fall. Local arrivals fell 6% over two years: 258,000 in 2023, 242,000 in 2025.",
+      "href": "../slides/day3.html#fault-running-total"
+    },
+    {
+      "deck": "day3",
+      "id": "fault-uneven-steps",
+      "n": 27,
+      "session": 3,
+      "title": "\"Arrivals fell off a cliff in 2025\"",
+      "text": "Fault 6 · Uneven steps \"Arrivals fell off a cliff in 2025\" As published: years, a half year and two months. Repaired: three periods of equal length. A year, half a year and a month were drawn as equal steps. Yearly arrivals: 842,000, 914,000, 998,000.",
+      "href": "../slides/day3.html#fault-uneven-steps"
+    },
+    {
+      "deck": "day3",
+      "id": "before-you-publish",
+      "n": 28,
+      "session": 3,
+      "title": "Five questions before a chart goes out",
+      "text": "Lab 3.3, step 4 Five questions before a chart goes out Does a bar or an area start at zero? Is the whole period shown, in equal steps? Is it the right measure: rate, per period, per unit? Is there one y axis? Does the title say what the chart shows, and no more? The test of a repair Write what a reader concludes from the chart before and after. If the two sentences agree, the fault was cosmetic. In all six cases here they disagree.",
+      "href": "../slides/day3.html#before-you-publish"
+    },
+    {
+      "deck": "day3",
+      "id": "check-misleading",
+      "n": 29,
+      "session": 3,
+      "title": "Name the fault",
+      "text": "Checkpoint Name the fault A slide shows app downloads \"since launch\" as a line that rises every month, under the title \"Growth is accelerating\". Monthly downloads have in fact been falling for half a year. Which fault is this, and which repair? Cut baseline: restart the y axis of the line at zero Picked window: add the months before the launch Two axes: move downloads to a second panel Running total: plot the downloads of each month",
+      "href": "../slides/day3.html#check-misleading"
+    },
+    {
+      "deck": "day3",
+      "id": "lab-3-3",
+      "n": 30,
+      "session": 3,
+      "title": "Repair six misleading charts",
+      "text": "Lab 3.3 · 25 min Repair six misleading charts Repair six misleading charts from the board's earlier report and name each fault: a cut baseline, a picked window, counts for rates, two axes, a running total and uneven time steps. D3_3_repair_six_charts.ipynb Name the fault of each of the six charts 5 min Repair charts 1 to 3: baseline, window, rate 9 min Repair charts 4 to 6: two axes, running total, time steps 9 min Write what a reader now concludes 2 min ✱ Stretch: Find a seventh chart in your own work and name its fault",
+      "href": "../slides/day3.html#lab-3-3"
+    },
+    {
+      "deck": "day3",
+      "id": "s4",
+      "n": 31,
+      "session": 4,
+      "title": "Colour, labels and Arabic text",
+      "text": "Session 4 Colour, labels and Arabic text Choose a palette by the type of variable and test it for colour-vision deficiency Add a second channel so that colour is never the only carrier Produce one chart in Arabic and in English from the same code 04",
+      "href": "../slides/day3.html#s4"
+    },
+    {
+      "deck": "day3",
+      "id": "palette-by-variable",
+      "n": 32,
+      "session": 4,
+      "title": "The type of the variable chooses the kind of palette",
+      "text": "Colour is an encoding The type of the variable chooses the kind of palette Categorical Names with no order: origin market, site. Distinct hues of similar weight. Five to seven at most. Sequential Low to high: a count, a rate. One hue from light to dark, as in the heatmap of lab 2.1. Diverging Two directions from a midpoint: above and below a baseline. Two hues meeting in a neutral colour. What goes wrong. A rainbow for a quantity: the eye sees bands where the data has none. Or a light-to-dark ramp for names: the reader sees an order that does not exist.",
+      "href": "../slides/day3.html#palette-by-variable"
+    },
+    {
+      "deck": "day3",
+      "id": "colour-vision",
+      "n": 33,
+      "session": 4,
+      "title": "Test the palette for colour-vision deficiency",
+      "text": "Lab 3.4, step 1 Test the palette for colour-vision deficiency Under red-green deficiency the draft's red and green are 7 units apart: hard to tell. The Okabe-Ito palette keeps every pair above 18. Do not trust the look on your own screen.",
+      "href": "../slides/day3.html#colour-vision"
+    },
+    {
+      "deck": "day3",
+      "id": "second-channel",
+      "n": 34,
+      "session": 4,
+      "title": "Colour is never the only carrier",
+      "text": "Lab 3.4, step 2 Colour is never the only carrier Safe palette, and a dash pattern per market. A second channel repeats the first: dash for lines, shape for points. Better still, label the lines directly at their ends and drop the legend. The test: print the chart in grey. Can each line still be named?",
+      "href": "../slides/day3.html#second-channel"
+    },
+    {
+      "deck": "day3",
+      "id": "labels-carry-the-finding",
+      "n": 35,
+      "session": 4,
+      "title": "The title states the finding; the rest says how to read it",
+      "text": "The words on a chart The title states the finding; the rest says how to read it Text Draft Finished Title Arrivals Arrivals grew fastest from the smallest markets Subtitle none Yearly arrivals by origin market, 2023 = 100 y axis index Arrivals, 2023 = 100 Legend origin Origin market A title that names the finding can be checked against the chart. \"Arrivals\" cannot be wrong, or useful. Units, the base of an index, the period and the source belong on the chart, since charts get copied without their page.",
+      "href": "../slides/day3.html#labels-carry-the-finding"
+    },
+    {
+      "deck": "day3",
+      "id": "one-function-two-languages",
+      "n": 36,
+      "session": 4,
+      "title": "The words live in a file; the chart is drawn by one function",
+      "text": "Lab 3.4, step 3 The words live in a file; the chart is drawn by one function L = U.js(\"labels.json\") # every text, in Arabic and English def chart(data, lang): T = L[\"text\"][lang] # title, subtitle, x, y, legend d = data.assign(origin_label=data[\"origin\"].map(L[\"origins\"]) if lang == \"ar\" else data[\"origin\"]) return alt.Chart(d).mark_line().encode( x=alt.X(\"year:O\", title=T[\"x\"]), y=alt.Y(\"index:Q\", title=T[\"y\"]), color=alt.Color(\"origin_label:N\", title=T[\"legend\"]), ).properties(title=alt.Title(T[\"title\"], subtitle=T[\"subtitle\"])) The data keeps its own column; the labels are mapped at drawing time. Two charts copied and edited by hand drift apart at the first correction.",
+      "href": "../slides/day3.html#one-function-two-languages"
+    },
+    {
+      "deck": "day3",
+      "id": "arabic-details",
+      "n": 37,
+      "session": 4,
+      "title": "In Arabic the words move; the data does not",
+      "text": "Lab 3.4, step 4 In Arabic the words move; the data does not The Arabic version, from the same function. Title anchored at the right; y axis on the right. House style of this course: Western digits, and time from left to right, in both versions. Let the text engine shape and order Arabic. Never reverse or reshape strings by hand.",
+      "href": "../slides/day3.html#arabic-details"
+    },
+    {
+      "deck": "day3",
+      "id": "check-colour",
+      "n": 38,
+      "session": 4,
+      "title": "Which change comes first?",
+      "text": "Checkpoint Which change comes first? A line chart of four regions uses red, green, blue and orange lines and a legend. It will be printed in a bilingual annual report. Which single change helps the most readers? Label each line at its end, and give each its own dash pattern Make the four lines thicker so that the colours show better Use four shades of one blue, from light to dark Add the region names to the legend in both languages",
+      "href": "../slides/day3.html#check-colour"
+    },
+    {
+      "deck": "day3",
+      "id": "lab-3-4",
+      "n": 39,
+      "session": 4,
+      "title": "One chart, two languages, safe colours",
+      "text": "Lab 3.4 · 25 min One chart, two languages, safe colours Make one chart readable in Arabic and English and colour-blind safe: test the palette, add a second channel and draw both language versions from one function. D3_4_bilingual_chart.ipynb Test the supplied palette for colour-vision deficiency 4 min A safe palette and a second channel 6 min One function, two languages: titles and names from a label file 7 min Arabic details: axis side, alignment, digits 5 min Write the reading 3 min ✱ Stretch: Replace the legend with a label at the end of each line",
+      "href": "../slides/day3.html#lab-3-4"
+    },
+    {
+      "deck": "day3",
+      "id": "wrap-up",
+      "n": 40,
+      "session": 4,
+      "title": "A chart is decisions you can defend",
+      "text": "Day 3 A chart is decisions you can defend Four parts Data, marks, encodings, scales. Position goes to the comparison that matters. Panels Shared scales for levels, free scales for shapes, and the choice written on the chart. Six faults Baseline, window, measure, axes, running totals, steps. Test a repair by what a reader concludes. The finish A tested palette, a second channel, a title that states the finding, one function for two languages.",
+      "href": "../slides/day3.html#wrap-up"
+    },
+    {
+      "deck": "day3",
+      "id": "next",
+      "n": 41,
+      "session": 4,
+      "title": "Check and report",
+      "text": "Day 4 Check and report Could it be chance, how to draw what is not known, why the best of many comparisons looks real, and a report that anyone can run again. Tomorrow uses the bootstrap and the permutation test of DS-201. Reread your notes on both. In lab 4.4 you choose your capstone dataset.",
+      "href": "../slides/day3.html#next"
+    },
+    {
+      "deck": "day4",
+      "id": "title",
+      "n": 1,
+      "session": 0,
+      "title": "Check and report",
+      "text": "SDAIA Academy · Exploratory Analysis and Visualisation Check and report Day 4: Which patterns survive a chance check, how to draw what is not known, and a report that anyone can run again Data Science Track4 teaching days + capstone day4 sessions · 4 labsDS-203",
+      "href": "../slides/day4.html#title"
+    },
+    {
+      "deck": "day4",
+      "id": "agenda",
+      "n": 2,
+      "session": 0,
+      "title": "Check and report",
+      "text": "Today Check and report Session 1 · Could it be chance Applying the resampling of DS-201 to patterns found by exploring: which rule for which pattern, and what to do with the result Session 2 · Showing uncertainty Drawing uncertainty: interval marks, what a bar hides, and captions that say what the interval is Session 3 · The traps of exploring Why the best of many comparisons looks real, how to count the comparisons made, and what turns an exploratory finding into a confirmed one Session 4 · A report that reruns What makes a report rerun: raw data read-only, one path from raw data to the page, fixed seeds, and findings written with their limits",
+      "href": "../slides/day4.html#agenda"
+    },
+    {
+      "deck": "day4",
+      "id": "review-day-3",
+      "n": 3,
+      "session": 0,
+      "title": "Where may this axis start?",
+      "text": "Review · Day 3 Where may this axis start? A service desk's monthly response time moved between 41 and 46 minutes over two years. The changes must be visible. Which chart is honest? Bars, with the y axis from 40 to 47 minutes Bars, with the y axis from 0 to 50 minutes A line with points, y axis from 40 to 47, range stated in the title A filled area, with the y axis from 40 to 47 minutes",
+      "href": "../slides/day4.html#review-day-3"
+    },
+    {
+      "deck": "day4",
+      "id": "s1",
+      "n": 4,
+      "session": 1,
+      "title": "Could it be chance",
+      "text": "Session 1 Could it be chance Choose shuffling for a gap between groups and resampling for an interval Resample the unit that was sampled, here the week Decide to report, qualify or drop a pattern and give the reason 01",
+      "href": "../slides/day4.html#s1"
+    },
+    {
+      "deck": "day4",
+      "id": "three-patterns",
+      "n": 5,
+      "session": 1,
+      "title": "Three patterns, and three decisions open for each",
+      "text": "What the board wants to announce Three patterns, and three decisions open for each The weekend \"Weekend visitors are more satisfied than weekday visitors.\" Sites and hotels \"When the sites are busy, the hotels fill.\" The Honey Museum \"At the Honey Museum, weekend visitors were far more satisfied in 2025.\" Decision Meaning Report the pattern stands and matters Qualify it stands, with a stated limit Drop the data does not support announcing it",
+      "href": "../slides/day4.html#three-patterns"
+    },
+    {
+      "deck": "day4",
+      "id": "which-rule",
+      "n": 6,
+      "session": 1,
+      "title": "Shuffle to test a difference; resample to put an interval on an estimate",
+      "text": "From DS-201, in one slide Shuffle to test a difference; resample to put an interval on an estimate Permutation test Bootstrap Question could this gap arise if the label meant nothing? how far could this estimate move with another sample? Procedure shuffle the labels, recompute the gap draw the units again with replacement, recompute Result a p-value an interval Here the weekend gap the weekly correlation New today. Not the procedures: choosing between them, choosing the unit to resample, and deciding what to do with the result.",
+      "href": "../slides/day4.html#which-rule"
+    },
+    {
+      "deck": "day4",
+      "id": "weekend-gap",
+      "n": 7,
+      "session": 1,
+      "title": "Shuffled labels give this gap one time in three",
+      "text": "Lab 4.1, steps 1 to 3 Shuffled labels give this gap one time in three Gaps under shuffled labels; the lines mark the observed gap. Weekend 4.13, weekday 4.11: a gap of +0.02. p-value about 0.35. Decision: drop the claim.",
+      "href": "../slides/day4.html#weekend-gap"
+    },
+    {
+      "deck": "day4",
+      "id": "drop-is-not-no-effect",
+      "n": 8,
+      "session": 1,
+      "title": "\"Drop\" means \"this data cannot tell\", not \"there is no difference\"",
+      "text": "The sentence that goes in the report \"Drop\" means \"this data cannot tell\", not \"there is no difference\" Not supported \"The day of the week makes no difference to satisfaction.\" Supported \"The survey shows no clear difference between weekend and weekday visitors (gap 0.02 point, p about 0.35).\" A p-value of 0.35 is the absence of evidence for a difference. It is not evidence of absence. To claim \"no difference worth acting on\", give the interval of the gap and say what size would matter.",
+      "href": "../slides/day4.html#drop-is-not-no-effect"
+    },
+    {
+      "deck": "day4",
+      "id": "resample-the-unit",
+      "n": 9,
+      "session": 1,
+      "title": "Resample the unit that was sampled: here, the week",
+      "text": "Lab 4.1, steps 4 and 5 Resample the unit that was sampled: here, the week 43,840 hotel-days Forty hotels share one day's weather and one day's ticket total. Days in a week resemble each other. Resampling them as if independent gives an interval far too narrow. 156 weeks One row per week for the whole region. Draw 156 weeks with replacement, recompute the correlation, repeat 5,000 times. k = gen.integers(0, len(x), len(x)) # 156 weeks, drawn with replacement r[i] = np.corrcoef(x[k], y[k])[0, 1] What goes wrong. Counting rows as evidence. The number that matters is how many independent units there are.",
+      "href": "../slides/day4.html#resample-the-unit"
+    },
+    {
+      "deck": "day4",
+      "id": "correlation-interval",
+      "n": 10,
+      "session": 1,
+      "title": "The correlation is not chance, and still needs a qualifier",
+      "text": "Lab 4.1, steps 5 and 6 The correlation is not chance, and still needs a qualifier 0.70 weekly tickets and hotel occupancy 0.60 to 0.78 95% bootstrap interval, 156 weeks 0.44 with each calendar month's mean removed The interval stays far from zero: weeks with busy sites do have fuller hotels. Part of the 0.70 is the shared season. What remains is smaller and still positive. Decision: qualify. The check answers \"is it chance\", never \"is it cause\".",
+      "href": "../slides/day4.html#correlation-interval"
+    },
+    {
+      "deck": "day4",
+      "id": "what-a-chance-check-settles",
+      "n": 11,
+      "session": 1,
+      "title": "A chance check answers one question out of four",
+      "text": "Before deciding A chance check answers one question out of four Question Answered by Session Could it be chance? a permutation test or a bootstrap interval this one Is it large enough to matter? the size of the effect, in the units of the decision this one Was it found by searching? counting the comparisons that were made 4.3 Is it the mix, the season or the measure? the checks of Day 2 2.2 to 2.4 The decision carries its reason. \"Drop: p about 0.35 and a gap of 0.02.\" \"Qualify: interval 0.60 to 0.78; season raises both.\"",
+      "href": "../slides/day4.html#what-a-chance-check-settles"
+    },
+    {
+      "deck": "day4",
+      "id": "check-chance",
+      "n": 12,
+      "session": 1,
+      "title": "Which procedure, on which unit?",
+      "text": "Checkpoint Which procedure, on which unit? A school network has test scores of 4,000 pupils in 40 schools. Twenty schools used a new timetable. The analyst wants an interval for the difference in mean score between the two groups of schools. What should be resampled? The 4,000 pupils, drawn again with replacement The timetable labels of the pupils, shuffled The 4,000 scores, drawn within each school The 40 schools, drawn again with replacement",
+      "href": "../slides/day4.html#check-chance"
+    },
+    {
+      "deck": "day4",
+      "id": "lab-4-1",
+      "n": 13,
+      "session": 1,
+      "title": "Chance checks on two patterns",
+      "text": "Lab 4.1 · 25 min Chance checks on two patterns Permutation-test the claimed weekend effect on satisfaction and bootstrap the correlation between weekly ticket sales and hotel occupancy; decide for each whether to report, qualify or drop it. D4_1_chance_checks.ipynb The weekend gap in satisfaction, as claimed 3 min Shuffle the weekend labels: the p-value 7 min Decide: report, qualify or drop 2 min The correlation of weekly tickets and occupancy 3 min Bootstrap the weeks: an interval 7 min Decide, and write the reading 3 min ✱ Stretch: Remove the season from both series and bootstrap again",
+      "href": "../slides/day4.html#lab-4-1"
+    },
+    {
+      "deck": "day4",
+      "id": "s2",
+      "n": 14,
+      "session": 2,
+      "title": "Showing uncertainty",
+      "text": "Session 2 Showing uncertainty Add an interval to every estimate on a chart Read overlapping and separate intervals without overclaiming Write a caption that names the interval, the sample size and the limit 02",
+      "href": "../slides/day4.html#s2"
+    },
+    {
+      "deck": "day4",
+      "id": "what-a-bar-hides",
+      "n": 15,
+      "session": 2,
+      "title": "\"Terrace Farms is our best-rated site\"",
+      "text": "The earlier report \"Terrace Farms is our best-rated site\" As published: mean satisfaction in 2025. Each bar is one number drawn as if it were exact. The bars rest on 59 to 510 responses. The chart does not say which. And yesterday's fault 1: bars on an axis from 3.8.",
+      "href": "../slides/day4.html#what-a-bar-hides"
+    },
+    {
+      "deck": "day4",
+      "id": "interval-per-site",
+      "n": 16,
+      "session": 2,
+      "title": "Every estimate on a chart gets an interval",
+      "text": "Lab 4.2, steps 1 and 2 Every estimate on a chart gets an interval Site Responses Mean 95% interval Terrace Farms 59 4.24 4.02 to 4.44 Souq Walk 442 4.22 4.13 to 4.30 Honey Museum 167 4.10 3.97 to 4.24 Cable Car 510 3.93 3.84 to 4.00 Wadi Trail 132 3.91 3.76 to 4.05 The fewer the responses, the wider the interval: roughly with one over the square root of n. The site at the top has the widest interval of all.",
+      "href": "../slides/day4.html#interval-per-site"
+    },
+    {
+      "deck": "day4",
+      "id": "points-with-intervals",
+      "n": 17,
+      "session": 2,
+      "title": "A point, a line for the interval, and n beside the name",
+      "text": "Lab 4.2, step 3 A point, a line for the interval, and n beside the name Mean satisfaction in 2025 with 95% bootstrap intervals. A point is read by position, so the axis may run from 3.6 to 4.6. Seven of the other eight intervals overlap that of Terrace Farms.",
+      "href": "../slides/day4.html#points-with-intervals"
+    },
+    {
+      "deck": "day4",
+      "id": "reading-intervals",
+      "n": 18,
+      "session": 2,
+      "title": "Overlap does not prove equality: compute the interval of the difference",
+      "text": "Lab 4.2, step 4 Overlap does not prove equality: compute the interval of the difference Two intervals that do not overlap: the groups differ. Two intervals that overlap: this sample cannot order them. They may still differ. For a claim about two groups, resample both and take the difference each time. Guided against unguided visits, 2025 Difference in mean satisfaction: +0.39 point, interval +0.31 to +0.47, from 680 guided and 1,520 unguided responses. The whole interval is far above zero: report. What goes wrong. Reading \"overlapping\" as \"the same\" and announcing that all sites perform equally.",
+      "href": "../slides/day4.html#reading-intervals"
+    },
+    {
+      "deck": "day4",
+      "id": "marks-for-uncertainty",
+      "n": 19,
+      "session": 2,
+      "title": "Uncertainty has its own marks",
+      "text": "Which mark for which chart Uncertainty has its own marks Point and interval For a few estimates by group. The default of this course. Band around a line For an estimate over time: a shaded band from the lower to the upper end at each date. The data itself With small groups, draw every value as a faint point behind the estimate. Twelve points say \"twelve\" better than any interval. Avoid a bar with a whisker on top: the bar still says \"this much from zero\", and readers judge by the bar. And never draw an interval without saying what it is.",
+      "href": "../slides/day4.html#marks-for-uncertainty"
+    },
+    {
+      "deck": "day4",
+      "id": "caption-for-uncertainty",
+      "n": 20,
+      "session": 2,
+      "title": "The caption names the interval, the sample and the limit",
+      "text": "Lab 4.2, step 5 The caption names the interval, the sample and the limit As publishedTerrace Farms is our best-rated site. RewrittenMean satisfaction in 2025 by site with 95% bootstrap intervals. The Souq Walk (4.22, n = 442) rates above the Cable Car (3.93, n = 510); Terrace Farms' 4.24 rests on 59 responses and cannot be ranked first. The intervals show how far each mean could move with another sample of respondents; they do not correct for who chose to answer or for the mix of visitors at each site. An interval covers sampling variation only. Who answers a survey, how the question is put and the mix of visitors are outside it.",
+      "href": "../slides/day4.html#caption-for-uncertainty"
+    },
+    {
+      "deck": "day4",
+      "id": "check-uncertainty",
+      "n": 21,
+      "session": 2,
+      "title": "What may the report say?",
+      "text": "Checkpoint What may the report say? Two call centres have mean satisfaction 4.3 (interval 4.1 to 4.5, n = 80) and 4.1 (interval 4.0 to 4.2, n = 600). The intervals overlap. Which statement is supported? The two centres deliver the same level of satisfaction This sample cannot rank them; the difference needs its own interval The first centre is better, since its mean is higher The second centre is better, since its interval is narrower",
+      "href": "../slides/day4.html#check-uncertainty"
+    },
+    {
+      "deck": "day4",
+      "id": "lab-4-2",
+      "n": 22,
+      "session": 2,
+      "title": "Intervals on the satisfaction chart",
+      "text": "Lab 4.2 · 25 min Intervals on the satisfaction chart Add intervals to the satisfaction bar chart of the earlier report, find which sites can be told apart and rewrite its caption. D4_2_intervals_caption.ipynb The chart as published, and the responses behind each bar 3 min A bootstrap interval for each site 7 min Points with intervals, sorted, with the sample size 7 min The interval of a difference: guided against unguided visits 4 min Rewrite the caption 4 min ✱ Stretch: Draw the 2025 intervals by origin market inside one site",
+      "href": "../slides/day4.html#lab-4-2"
+    },
+    {
+      "deck": "day4",
+      "id": "s3",
+      "n": 23,
+      "session": 3,
+      "title": "The traps of exploring",
+      "text": "Session 3 The traps of exploring Count the comparisons behind a reported pattern Simulate the most striking gap that chance alone produces among that many comparisons Mark a finding exploratory or confirmed and name the check it needs 03",
+      "href": "../slides/day4.html#s3"
+    },
+    {
+      "deck": "day4",
+      "id": "the-headline",
+      "n": 24,
+      "session": 3,
+      "title": "\"At the Honey Museum, weekend visitors were far more satisfied in 2025\"",
+      "text": "A week after the weekend claim was dropped \"At the Honey Museum, weekend visitors were far more satisfied in 2025\" +0.30 weekend minus weekday, on a 1 to 5 scale 0.03 p-value by permutation, taken alone 167 responses: 68 weekend, 99 weekday Fourteen times the gap that was dropped this morning. It passes a chance check. It is large enough to matter. One question is left: how was it found?",
+      "href": "../slides/day4.html#the-headline"
+    },
+    {
+      "deck": "day4",
+      "id": "count-the-comparisons",
+      "n": 25,
+      "session": 3,
+      "title": "It was the most striking of 27 comparisons",
+      "text": "Lab 4.3, step 2 It was the most striking of 27 comparisons Nine sites, three years: 27 gaps were looked at. One was kept. 16 are above zero, 11 below.",
+      "href": "../slides/day4.html#count-the-comparisons"
+    },
+    {
+      "deck": "day4",
+      "id": "at-least-one",
+      "n": 26,
+      "session": 3,
+      "title": "With 27 comparisons of nothing, a \"finding\" is the likely outcome",
+      "text": "Lab 4.3, step 3 With 27 comparisons of nothing, a \"finding\" is the likely outcome 1 comparison 1 - 0.95^1 = 5% 5 comparisons 1 - 0.95^5 = 23% 27 comparisons 1 - 0.95^27 = 75% 135 comparisons 1 - 0.95^135 = 99.9% A p-value of 0.05 means: one time in twenty, nothing looks like something. Look twenty-seven times and it is three chances in four. 135 is what the search becomes if it also splits by origin market.",
+      "href": "../slides/day4.html#at-least-one"
+    },
+    {
+      "deck": "day4",
+      "id": "simulate-the-search",
+      "n": 27,
+      "session": 3,
+      "title": "Check the method that was used, search included",
+      "text": "Lab 4.3, step 4 Check the method that was used, search included The most striking of 27 gaps when the labels mean nothing. Shuffle the weekend labels inside every site and year; keep the most striking of the 27 gaps; repeat. Its median is 2.3 standard errors. The headline's is 2.2. A gap as striking as the headline turns up in about half of the shuffles.",
+      "href": "../slides/day4.html#simulate-the-search"
+    },
+    {
+      "deck": "day4",
+      "id": "forking-paths",
+      "n": 28,
+      "session": 3,
+      "title": "Every choice made after looking is a comparison",
+      "text": "Beyond 27 Every choice made after looking is a comparison Which groups: weekend, or Friday alone, or school holidays? Which measure: the mean, or the share of 5s? Which rows: all responses, or \"excluding\" a bad month? Which period: 2025, or the last six months? In the board's past report \"Visitors who arrive on a Tuesday spend the most\": spend tabulated by every day of the week, every origin and every purpose, and the largest cell reported. No bad faith is needed. An honest analyst who looks until something stands out has run many tests and remembers one.",
+      "href": "../slides/day4.html#forking-paths"
+    },
+    {
+      "deck": "day4",
+      "id": "exploratory-or-confirmed",
+      "n": 29,
+      "session": 3,
+      "title": "What makes a finding confirmed is the order of events",
+      "text": "Lab 4.3, step 5 What makes a finding confirmed is the order of events Confirmed The question was written down before the data that answers it was looked at. \"Guided visits are rated higher\": noticed in the 2023 survey, written down, then tested once on the 2024 survey. Exploratory The data suggested the question. \"Hotels in the Ridge zone fill up before the Honey Festival\": seen in a chart of 2024 while looking for something else. Exploratory is a label, not an insult: it is where questions come from. The same data cannot both suggest a pattern and confirm it.",
+      "href": "../slides/day4.html#exploratory-or-confirmed"
+    },
+    {
+      "deck": "day4",
+      "id": "from-exploratory-to-confirmed",
+      "n": 30,
+      "session": 3,
+      "title": "An exploratory finding is reported with its count and its next test",
+      "text": "Lab 4.3, step 6 An exploratory finding is reported with its count and its next test 1 · Label \"Exploratory\", in the sentence itself → 2 · Count how many comparisons it was chosen from → 3 · Write down the question, before new data exists → 4 · Test once on data that did not suggest it In the report. \"Exploratory: among 27 comparisons, the most striking gap was 0.30 point at the Honey Museum in 2025; shuffled labels produce one as striking about half the time. The question will be tested once on the 2026 survey.\"",
+      "href": "../slides/day4.html#from-exploratory-to-confirmed"
+    },
+    {
+      "deck": "day4",
+      "id": "check-exploring",
+      "n": 31,
+      "session": 3,
+      "title": "What is this finding worth?",
+      "text": "Checkpoint What is this finding worth? An analyst compares churn between customers who did and did not use each of 40 app features. One feature shows a difference with p = 0.02. The team wants to announce \"Feature X reduces churn\". What should the analyst say? It is exploratory: expected among 40 looks; test it once on new customers It is confirmed, because the p-value is well below 0.05 It will be confirmed once the test is rerun with more shuffles It should be discarded and left out of the report entirely",
+      "href": "../slides/day4.html#check-exploring"
+    },
+    {
+      "deck": "day4",
+      "id": "lab-4-3",
+      "n": 32,
+      "session": 3,
+      "title": "Count the comparisons",
+      "text": "Lab 4.3 · 25 min Count the comparisons Count the comparisons behind a headline pattern, simulate the most striking of 27 chance gaps, mark five past findings exploratory or confirmed and rewrite the finding. D4_3_count_comparisons.ipynb The headline gap and its p-value, taken alone 4 min All 27 site-year gaps 5 min The chance of at least one small p-value among 27 2 min Simulate the most striking of 27 gaps under no effect 6 min Mark five past findings exploratory or confirmed 5 min Rewrite the finding 3 min ✱ Stretch: Count again with origin added to site and year",
+      "href": "../slides/day4.html#lab-4-3"
+    },
+    {
+      "deck": "day4",
+      "id": "s4",
+      "n": 33,
+      "session": 4,
+      "title": "A report that reruns",
+      "text": "Session 4 A report that reruns Render a report from raw data with one command and prove that two runs agree Find what makes a report change between runs Write findings with their check, their limit and an open question 04",
+      "href": "../slides/day4.html#s4"
+    },
+    {
+      "deck": "day4",
+      "id": "what-reruns-means",
+      "n": 34,
+      "session": 4,
+      "title": "A report that reruns has one path from the raw data to the page",
+      "text": "The promise A report that reruns has one path from the raw data to the page Raw data read-only, never edited by hand → One source text and code together, parameters at the top → One command runs everything in a fresh process → The page every number computed by that run No number is typed; no chart is pasted. A correction to the data reaches every figure at the next render. Somebody else can run it and get the same page.",
+      "href": "../slides/day4.html#what-reruns-means"
+    },
+    {
+      "deck": "day4",
+      "id": "two-renders-differ",
+      "n": 35,
+      "session": 4,
+      "title": "Render twice and compare: the first test of any report",
+      "text": "Lab 4.4, steps 1 and 2 Render twice and compare: the first test of any report first render : out/draft_a.html, digest 27942ef6cebc second render: out/draft_b.html, digest 319a4f665407 correlation_high: 0.783 then 0.78 correlation_low: 0.602 then 0.6 Nothing was changed between the two runs. The bootstrap drew different resamples. A fixed seed, passed as a parameter, makes two runs agree. A third decimal is enough for two people to hold two versions of \"the\" report.",
+      "href": "../slides/day4.html#two-renders-differ"
+    },
+    {
+      "deck": "day4",
+      "id": "stale-cache",
+      "n": 36,
+      "session": 4,
+      "title": "A cached number is a number with no code behind it",
+      "text": "Lab 4.4, step 3 A cached number is a number with no code behind it In the report From the cache From the raw data Stays 40,600 40,000 Stays from the Gulf 5,553 6,063 Mean length of stay, nights 11.27 3.30 The summary was saved once, before lab 1.2 found the duplicate rows, the 999 nights and the three spellings of \"Gulf\". It was right on the day it was saved. Later decisions about the data never reached it.",
+      "href": "../slides/day4.html#stale-cache"
+    },
+    {
+      "deck": "day4",
+      "id": "findings-table",
+      "n": 37,
+      "session": 4,
+      "title": "Every finding carries its status, its check and its limit",
+      "text": "Lab 4.4, step 4 Every finding carries its status, its check and its limit Finding Status Check Limit Weeks with more ticket sales are weeks with fuller hotels (0.70) exploratory bootstrap of 156 weeks: 0.60 to 0.78 season raises both; no causal claim Guided visits were rated 0.4 point higher in 2025 confirmed question written before the 2024 survey was opened visitors choose a guided visit Weekend gap at the Honey Museum (0.30) exploratory most striking of 27; as striking in half of shuffles to be tested on the 2026 survey The table is the report's spine. A reader with two minutes reads it and nothing else, so no finding may sit in it without a limit.",
+      "href": "../slides/day4.html#findings-table"
+    },
+    {
+      "deck": "day4",
+      "id": "writing-for-the-director",
+      "n": 38,
+      "session": 4,
+      "title": "An exploratory report says what was seen, how sure, and what is still open",
+      "text": "The reader is not an analyst An exploratory report says what was seen, how sure, and what is still open Findings first , each one sentence with its number, in the reader's words. One chart per finding , titled with the finding, drawn with its uncertainty. Open questions : what the data suggested and has not tested. Limits : what the data cannot show, and who is missing from it. Words to keep out \"Proves\", \"causes\", \"significant\" with no number, \"the data says\". An exploratory report writes \"we saw\", \"in this data\", \"to be tested\".",
+      "href": "../slides/day4.html#writing-for-the-director"
+    },
+    {
+      "deck": "day4",
+      "id": "capstone-briefing",
+      "n": 39,
+      "session": 4,
+      "title": "An exploratory report on a dataset you have not seen",
+      "text": "Capstone day An exploratory report on a dataset you have not seen Ruwaq Museums Network One row per visit: museum, visitor type, minutes inside, exit rating. For the head of programmes. Awan Parks Department One row per maintenance request: park, category, days to close, resident rating. For the head of operations. Miqdam Driving Schools One row per driving test: branch, attempt, waiting days, result. For the director of training. Submit a public repository: a notebook that reruns with a fixed seed, the rendered report, a README with the findings table. Defend it live in 8 minutes, and redraw one chart with a different encoding when asked.",
+      "href": "../slides/day4.html#capstone-briefing"
+    },
+    {
+      "deck": "day4",
+      "id": "check-report",
+      "n": 40,
+      "session": 4,
+      "title": "Will this report rerun?",
+      "text": "Checkpoint Will this report rerun? A colleague sends a notebook and a PDF report. In the notebook, one cell loads cleaned_final_v3.csv from their desktop, and the bootstrap has no seed. Which request comes first? Set a seed, so that the intervals stop changing Send the cleaned file along with the notebook List the library versions that were used Start from the raw data, with the cleaning steps as code",
+      "href": "../slides/day4.html#check-report"
+    },
+    {
+      "deck": "day4",
+      "id": "lab-4-4",
+      "n": 41,
+      "session": 4,
+      "title": "A report that reruns",
+      "text": "Lab 4.4 · 25 min A report that reruns Render a notebook to a report from raw data, find why two runs disagree and why the cached numbers are stale, then choose the capstone dataset. D4_4_report_reruns.ipynb Render the draft twice and compare 5 min Fix the seed 4 min Read raw data, not the cache 5 min Check the findings table: status, check and limit 4 min Choose the capstone dataset and write two questions 7 min ✱ Stretch: Write the one line of a change log that says which numbers differ between two renders",
+      "href": "../slides/day4.html#lab-4-4"
+    },
+    {
+      "deck": "day4",
+      "id": "wrap-up",
+      "n": 42,
+      "session": 4,
+      "title": "Four habits to take home",
+      "text": "Day 4, and the course Four habits to take home Ask first A question with a unit and a comparison, written before the chart. Set it against something A unit, a denominator, a baseline, a mix. Draw it honestly Position for what matters, scales that fit the mark, uncertainty on the chart. Say how you know Chance checked, comparisons counted, status and limit stated, and it reruns.",
+      "href": "../slides/day4.html#wrap-up"
+    },
+    {
+      "deck": "day4",
+      "id": "next",
+      "n": 43,
+      "session": 4,
+      "title": "Your report, your defence",
+      "text": "Capstone Your report, your defence Tonight: read the data dictionary of your dataset and turn your two questions into a one-page plan. Do not open the data before the plan is written. Bring the repository with a first render that reruns, however short.",
+      "href": "../slides/day4.html#next"
+    },
+    {
+      "deck": "capstone",
+      "id": "title",
+      "n": 1,
+      "session": 0,
+      "title": "Capstone: the exploratory report and its defence",
+      "text": "SDAIA Academy · Exploratory Analysis and Visualisation Capstone: the exploratory report and its defence Capstone: Each participant defends an exploratory report on an unseen dataset in eight minutes, and redraws one chart on request Data Science Track4 teaching days + capstone day8 min talk and demoDS-203",
+      "href": "../slides/capstone.html#title"
+    },
+    {
+      "deck": "capstone",
+      "id": "agenda",
+      "n": 2,
+      "session": 0,
+      "title": "How the day runs",
+      "text": "Capstone How the day runs Expectations and final prep the rubric, the format of the defence, one last render from a clean run Defences eight minutes each: five to present, three for the redraw and questions Review and closing peer feedback, the trainer's review, the follow-up task",
+      "href": "../slides/capstone.html#agenda"
+    },
+    {
+      "deck": "capstone",
+      "id": "what-you-submit",
+      "n": 3,
+      "session": 0,
+      "title": "A public repository that a stranger can rerun",
+      "text": "The submission A public repository that a stranger can rerun The plan Three to five questions with unit, variables and comparison, committed before the data was opened. The report One source that reads the raw file, with parameters and a fixed seed at the top, and the page rendered from a clean run. The README The named reader, the link to the report, and each finding with its status, its check and its limit. Assistants are allowed today. Charts and sentences written with one are marked in the notebook, and you defend them like the rest.",
+      "href": "../slides/capstone.html#what-you-submit"
+    },
+    {
+      "deck": "capstone",
+      "id": "rubric",
+      "n": 4,
+      "session": 0,
+      "title": "The rubric",
+      "text": "How the repository is scored The rubric Plan and questions 15% Analysis and charts 30% Honesty and uncertainty 20% Chance checks 15% Reproducibility and writing 20% Full marks on honesty go to the report that says what it does not know: intervals named, small groups handled, limits in the reader's words.",
+      "href": "../slides/capstone.html#rubric"
+    },
+    {
+      "deck": "capstone",
+      "id": "format",
+      "n": 5,
+      "session": 0,
+      "title": "8 minutes for each defence",
+      "text": "Format 8 minutes for each defence 1 · The reader and the questions Who the report is for and what it set out to answer. One minute. 2 · Findings, checks, limits Two or three findings with their charts, how each was checked, what stays open. Four minutes. 3 · The redraw The assessor names one chart and one change of encoding. You redraw it live and say what a reader would now conclude. Three minutes, with questions. Peer feedback. After each defence, everyone writes one strength, one question and one suggestion.",
+      "href": "../slides/capstone.html#format"
+    },
+    {
+      "deck": "capstone",
+      "id": "running-order",
+      "n": 6,
+      "session": 0,
+      "title": "Who presents when",
+      "text": "Running order Who presents when # Presenter Dataset 1 2 3 4 5 6 7 8",
+      "href": "../slides/capstone.html#running-order"
+    },
+    {
+      "deck": "capstone",
+      "id": "final-prep",
+      "n": 7,
+      "session": 0,
+      "title": "Final prep · 20 minutes",
+      "text": "Before the first defence Final prep · 20 minutes Render once more from a clean run, open the report on this screen, and have the notebook ready for the redraw.",
+      "href": "../slides/capstone.html#final-prep"
+    },
+    {
+      "deck": "capstone",
+      "id": "now-presenting",
+      "n": 8,
+      "session": 0,
+      "title": "Report, redraw and questions",
+      "text": "Now presenting Report, redraw and questions",
+      "href": "../slides/capstone.html#now-presenting"
+    },
+    {
+      "deck": "capstone",
+      "id": "review",
+      "n": 9,
+      "session": 0,
+      "title": "What the defences showed",
+      "text": "Trainer review What the defences showed Strongest patterns What several reports got right: a plan that came first, a chart that drew its uncertainty, a limit stated plainly. Common gaps What most reports would fix next: comparisons not counted, a rate without its denominator, a number typed by hand. One surprise A redraw that changed what the room concluded.",
+      "href": "../slides/capstone.html#review"
+    },
+    {
+      "deck": "capstone",
+      "id": "what-next",
+      "n": 10,
+      "session": 0,
+      "title": "Keep going",
+      "text": "After the course Keep going The follow-up task: within two weeks, an exploratory note on a dataset of the national Open Data Platform that touches your own work. The brief is in labs/followup/README.md. Your report stays yours: keep it rerunning, and test one of its exploratory findings when new data arrives. Next Academy courses: DS-205 Designing and Reading Experiments, for testing what exploration suggests; DS-207 Responsible Data Practice and Conduct in Analytical Work, for releasing tables of small groups.",
+      "href": "../slides/capstone.html#what-next"
+    },
+    {
+      "deck": "capstone",
+      "id": "thanks",
+      "n": 11,
+      "session": 0,
+      "title": "Thank you",
+      "text": "SDAIA Academy Thank you Exploratory Analysis and Visualisation",
+      "href": "../slides/capstone.html#thanks"
+    }
+  ]
+}

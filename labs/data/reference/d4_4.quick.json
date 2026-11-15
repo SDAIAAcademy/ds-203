@@ -1,0 +1,71 @@
+{
+ "changelog": "4 numbers changed: day_visit_share_local, gulf_stays, mean_nights, stays",
+ "choice": {
+  "dataset": "awan_parks",
+  "questions": [
+   "How many days does a maintenance request take to close in each park, and how far do the parks differ once the category of request is the same?",
+   "Do requests that needed more crew visits get lower ratings from the resident who reported them?"
+  ]
+ },
+ "diff": [
+  "correlation_high",
+  "correlation_low"
+ ],
+ "fixed": [
+  {
+   "check": "Bootstrap of 156 weeks: 95% interval about 0.60 to 0.78.",
+   "finding": "Weeks with more ticket sales are weeks with fuller hotels (correlation 0.70).",
+   "limit": "Summer and festivals raise both series; the data does not show that site visits fill hotels.",
+   "planned": false,
+   "status": "exploratory"
+  },
+  {
+   "check": "Baseline from the 2023 seasonal shape and the median yearly growth; all other months within 5% of it.",
+   "finding": "The three festival months stood 18% to 29% above the seasonal baseline.",
+   "limit": "Three festival months and one choice of baseline; other events in those months are not ruled out.",
+   "planned": false,
+   "status": "exploratory"
+  },
+  {
+   "check": "Means by origin, and the 2025 mean recomputed at the 2024 mix of visitors (4.25).",
+   "finding": "Satisfaction rose in every origin market from 2024 to 2025 while the overall mean fell from 4.15 to 4.07.",
+   "limit": "Survey respondents choose to answer; the mix is taken from the respondents, not from all visitors.",
+   "planned": false,
+   "status": "exploratory"
+  },
+  {
+   "check": "Largest of 27 site-year gaps; p = 0.03 taken alone; a gap that large appears among 27 in about half of shuffles.",
+   "finding": "At the Honey Museum, weekend visitors were more satisfied than weekday visitors in 2025 (gap 0.30).",
+   "limit": "Found by searching 27 comparisons; to be tested on the 2026 survey before any announcement.",
+   "planned": false,
+   "status": "exploratory"
+  },
+  {
+   "check": "Question written down before the 2024 survey was opened; 2025 difference +0.39, interval +0.31 to +0.47.",
+   "finding": "Guided visits were rated about 0.4 point higher than unguided ones in 2025.",
+   "limit": "Visitors choose a guided visit; the data does not show that guiding causes the higher rating.",
+   "planned": true,
+   "status": "confirmed"
+  }
+ ],
+ "problems": [
+  [
+   3,
+   "no limit"
+  ],
+  [
+   4,
+   "confirmed without a plan"
+  ]
+ ],
+ "raw": {
+  "findings": null,
+  "seed": 203,
+  "source": "raw"
+ },
+ "seeded": {
+  "findings": null,
+  "seed": 203,
+  "source": "cache"
+ }
+}

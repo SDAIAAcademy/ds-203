@@ -1,0 +1,80 @@
+{
+ "note": "This plan describes what happened in 2023 to 2025; it cannot say why satisfaction fell or whether the festivals caused the extra arrivals, because every question is exploratory and nothing was fixed before the data existed. A cause needs a comparison planned in advance and checked on data we have not looked at, such as next season's survey.",
+ "plan": [
+  {
+   "also": [],
+   "comparison": "the distribution of nights by origin market, and the share of parties with 0 nights per market",
+   "kind": "exploratory",
+   "question": "How many nights do visiting parties from each origin market spend in the region, and what share are day visits?",
+   "table": "stays",
+   "unit": "one visiting party's stay in the region",
+   "variables": [
+    "origin",
+    "nights"
+   ]
+  },
+  {
+   "also": [
+    "tickets"
+   ],
+   "comparison": "the share of rooms sold per week against the tickets sold per week",
+   "kind": "exploratory",
+   "question": "In weeks when more tickets are sold at the sites, is a larger share of hotel rooms sold?",
+   "table": "occupancy",
+   "unit": "one hotel on one day",
+   "variables": [
+    "rooms_sold",
+    "rooms",
+    "tickets",
+    "sale_date"
+   ]
+  },
+  {
+   "also": [
+    "tickets"
+   ],
+   "comparison": "complaints per thousand visitors by site, with the count and the visitors beside it",
+   "kind": "exploratory",
+   "question": "How many complaints per thousand visitors does each site receive over the three years?",
+   "table": "complaints",
+   "unit": "one complaint logged by the visitor experience team",
+   "variables": [
+    "site",
+    "tickets"
+   ]
+  },
+  {
+   "also": [],
+   "comparison": "arrivals in a festival month against the baseline for the same month of the year",
+   "kind": "exploratory",
+   "question": "By how much did arrivals in each festival month exceed what season and trend lead us to expect for that month?",
+   "table": "arrivals",
+   "unit": "one origin market in one month",
+   "variables": [
+    "month",
+    "arrivals",
+    "origin"
+   ]
+  },
+  {
+   "also": [],
+   "comparison": "mean satisfaction in 2025 against 2024 by origin market, and the share of each market between the two years",
+   "kind": "exploratory",
+   "question": "Did mean satisfaction change from 2024 to 2025 inside each origin market, and did the mix of markets among respondents change?",
+   "table": "survey",
+   "unit": "one visitor's response after a site visit",
+   "variables": [
+    "visit_date",
+    "origin",
+    "satisfaction"
+   ]
+  }
+ ],
+ "tables": {
+  "1": "stays",
+  "2": "occupancy",
+  "3": "complaints",
+  "4": "arrivals",
+  "5": "survey"
+ }
+}

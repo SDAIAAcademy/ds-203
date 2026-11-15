@@ -1,0 +1,48 @@
+{
+ "grain": [
+  40600,
+  40000,
+  600
+ ],
+ "late": 14,
+ "log": [
+  {
+   "decision": "drop the copies",
+   "issue": "600 rows repeat an earlier row in every column",
+   "rows": 600
+  },
+  {
+   "decision": "set to missing",
+   "issue": "nights is 999 where the length of stay was not recorded",
+   "rows": 320
+  },
+  {
+   "decision": "recode to one spelling",
+   "issue": "the Gulf market is spelled Gulf, GCC and 'gulf ' with a trailing space",
+   "rows": 586
+  },
+  {
+   "decision": "keep and report the share",
+   "issue": "spend is missing, far more often for day visits than for overnight stays",
+   "rows": 2577
+  }
+ ],
+ "missing": [
+  0.21652873823829497,
+  0.021392603996279548
+ ],
+ "odd": {
+  "nights_at_max": 320,
+  "nights_max": 999,
+  "origins": [
+   "Asia",
+   "Europe",
+   "GCC",
+   "Gulf",
+   "Other regions",
+   "Tilal region",
+   "gulf "
+  ]
+ },
+ "reading": "The register holds 40,000 stays in 40,600 rows: 600 rows were entered twice, 320 stays carry 999 nights as a code for not recorded, and the Gulf market is spelled three ways. Spend is missing for about 22% of day visits and 2% of overnight stays, so any average spend from this table describes overnight visitors better than day visitors."
+}

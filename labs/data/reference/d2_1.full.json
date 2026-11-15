@@ -1,0 +1,162 @@
+{
+ "binned": {
+  "__frame__": {
+   "columns": [
+    "tickets_mid",
+    "median_rate",
+    "hotel_days"
+   ],
+   "data": [
+    [
+     213.0,
+     0.3962264151,
+     5480
+    ],
+    [
+     248.0,
+     0.4637681159,
+     5640
+    ],
+    [
+     275.0,
+     0.5,
+     5400
+    ],
+    [
+     308.0,
+     0.5277777778,
+     5400
+    ],
+    [
+     356.0,
+     0.5714285714,
+     5480
+    ],
+    [
+     410.0,
+     0.6376811594,
+     5520
+    ],
+    [
+     469.0,
+     0.7142857143,
+     5480
+    ],
+    [
+     630.0,
+     0.7714285714,
+     5440
+    ]
+   ],
+   "index": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  }
+ },
+ "clear": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "encoding": {
+    "x": {
+     "field": "tickets_day",
+     "title": "Tickets sold at the sites that day",
+     "type": "quantitative"
+    },
+    "y": {
+     "axis": {
+      "format": "%"
+     },
+     "field": "rate",
+     "title": "Share of the hotel's rooms sold",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "opacity": 0.04,
+    "size": 8,
+    "type": "circle"
+   },
+   "title": "43,840 hotel-days, opacity 0.04"
+  }
+ },
+ "corr": [
+  0.39370512712385425,
+  0.6991357723103363
+ ],
+ "heat": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "encoding": {
+    "color": {
+     "aggregate": "count",
+     "scale": {
+      "scheme": "viridis"
+     },
+     "title": "Hotel-days",
+     "type": "quantitative"
+    },
+    "x": {
+     "bin": {
+      "maxbins": 30
+     },
+     "field": "tickets_day",
+     "title": "Tickets sold at the sites that day",
+     "type": "quantitative"
+    },
+    "y": {
+     "axis": {
+      "format": "%"
+     },
+     "bin": {
+      "maxbins": 20
+     },
+     "field": "rate",
+     "title": "Share of the hotel's rooms sold",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "type": "rect"
+   },
+   "title": "Where the 43,840 hotel-days are"
+  }
+ },
+ "reading": "On the busiest eighth of days at the sites the median hotel sells 77% of its rooms, against 40% on the quietest eighth, and the median rises at every step in between. This shows that hotels and sites are busy together, not that visits to the sites fill the hotels: season and weekends drive both, and for a single hotel on a single day the link is loose (correlation 0.39).",
+ "shape": [
+  43840,
+  0
+ ],
+ "solid": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "encoding": {
+    "x": {
+     "field": "tickets_day",
+     "title": "Tickets sold at the sites that day",
+     "type": "quantitative"
+    },
+    "y": {
+     "axis": {
+      "format": "%"
+     },
+     "field": "rate",
+     "title": "Share of the hotel's rooms sold",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "opacity": 1.0,
+    "size": 8,
+    "type": "circle"
+   },
+   "title": "43,840 hotel-days, opacity 1.0"
+  }
+ }
+}
