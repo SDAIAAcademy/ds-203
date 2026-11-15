@@ -729,7 +729,7 @@
           "title": "The traps of exploring",
           "outcomes": [
             "Count the comparisons behind a reported pattern",
-            "Simulate the largest gap that chance alone produces among that many comparisons",
+            "Simulate the most striking gap that chance alone produces among that many comparisons",
             "Mark a finding exploratory or confirmed and name the check it needs"
           ],
           "lo": [
@@ -739,7 +739,7 @@
             "id": "4.3",
             "title": "Count the comparisons",
             "minutes": 25,
-            "summary": "Count the comparisons behind a headline pattern, simulate the largest of 27 chance gaps, mark five past findings exploratory or confirmed and rewrite the finding.",
+            "summary": "Count the comparisons behind a headline pattern, simulate the most striking of 27 chance gaps, mark five past findings exploratory or confirmed and rewrite the finding.",
             "href": "D4_3_count_comparisons.ipynb",
             "steps": [
               {
@@ -755,7 +755,7 @@
                 "minutes": 2
               },
               {
-                "text": "Simulate the largest of 27 gaps under no effect",
+                "text": "Simulate the most striking of 27 gaps under no effect",
                 "minutes": 6
               },
               {

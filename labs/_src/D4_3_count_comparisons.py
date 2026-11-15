@@ -13,7 +13,7 @@
 # - [ ] 1 · The headline gap and its p-value, taken alone (4 min)
 # - [ ] 2 · All 27 site-year gaps (5 min)
 # - [ ] 3 · The chance of at least one small p-value among 27 (2 min)
-# - [ ] 4 · Simulate the largest of 27 gaps (6 min)
+# - [ ] 4 · Simulate the most striking of 27 gaps (6 min)
 # - [ ] 5 · Mark five past findings: exploratory or confirmed (5 min)
 # - [ ] 6 · Rewrite the finding (3 min)
 # - [ ] ✱ Stretch · Count again with origin market added
@@ -144,7 +144,7 @@ print(f"27 comparisons with nothing in them: {P_ANY:.0%} chance of at least one 
 U.check(abs(P_ANY - 0.75) < 0.005, "three chances in four of at least one 'finding' among 27 comparisons of nothing")
 
 # %% [markdown]
-# ## 4 · Simulate the largest of 27 (6 min)
+# ## 4 · Simulate the most striking of 27 (6 min)
 #
 # The honest question is not "how unusual is a gap of 0.30 at this site" but "how unusual is it that the most striking of 27 gaps, in standard errors, is this striking". Shuffle the weekend labels inside every site and year at once, compute the 27 values of `z`, keep the largest in absolute value, and repeat.
 #
@@ -172,7 +172,7 @@ except NotImplementedError:
 U.keep("d4_3", "top", top)
 U.keep("d4_3", "p_search", P_SEARCH)
 print(f"the largest |z| of 27, over {len(top)} shuffles: median {np.median(top):.2f}; the headline's |z| is {Z_TOP:.2f}")
-print(f"share of shuffles in which the largest of 27 is at least that large: {P_SEARCH:.2f}")
+print(f"share of shuffles in which the most striking of 27 is at least that striking: {P_SEARCH:.2f}")
 U.check(0.3 < P_SEARCH < 0.7 and 1.9 < float(np.median(top)) < 2.5, "with labels that mean nothing, the most striking of 27 gaps is as striking as the headline about half the time")
 c4 = alt.layer(
     alt.Chart(pd.DataFrame({"z": top})).mark_bar().encode(x=alt.X("z:Q", bin=alt.Bin(maxbins=30), title="Most striking gap of 27, in standard errors, under shuffled labels"), y=alt.Y("count():Q", title="Shuffles")),
