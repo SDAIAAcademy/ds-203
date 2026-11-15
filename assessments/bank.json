@@ -503,7 +503,7 @@
       "type": "single",
       "prompt": "A ministry lists the five schools with the most pupils absent last week. All five are among the largest schools in the country. What does the list show?",
       "options": [
-        "Which schools have the most pupils",
+        "Mainly which schools are the largest",
         "Which schools have an absence problem",
         "That large schools cause more absence",
         "That absence was recorded wrongly"

@@ -52,8 +52,8 @@
     <tr><td><b>Result</b></td><td>a p-value</td><td>an interval</td></tr>
     <tr><td><b>Here</b></td><td>the weekend gap</td><td>the weekly correlation</td></tr>
   </table>
-  <div class="callout note mt"><b>New today.</b> Not the procedures: choosing between them, choosing the unit to resample, and deciding what to do with the result.</div>
-  <aside class="notes"><p>A recap, two minutes. DS-201 taught both procedures, p-values and their misreadings, and corrections for several planned tests. If the room is unsure, run the first cells of lab 4.1 live. What DS-201 could not teach is what happens when the pattern was found by looking, which is this course's situation all the time.</p></aside>
+  <div class="callout note mt"><b>New today.</b> Not the procedures: applying them to patterns found by exploring, and deciding what to do with the result.</div>
+  <aside class="notes"><p>A recap, two minutes. DS-201 taught both procedures, resampling the unit that was sampled, p-values and their misreadings, and corrections for several planned tests. If the room is unsure, run the first cells of lab 4.1 live. What DS-201 could not teach is what happens when the pattern was found by looking, which is this course's situation all the time.</p></aside>
 </section>
 
 <section class="slide" id="weekend-gap" data-lo="LO5" data-label="The weekend gap">
@@ -97,7 +97,7 @@
   <pre class="code s"><code class="language-python">k = gen.integers(0, len(x), len(x))        # 156 weeks, drawn with replacement
 r[i] = np.corrcoef(x[k], y[k])[0, 1]</code></pre>
   <div class="callout warn"><b>What goes wrong.</b> Counting rows as evidence. The number that matters is how many independent units there are.</div>
-  <aside class="notes"><p>This is the one new technical idea of the session. The bootstrap imitates the way the data came about; if the data came in clusters, resample clusters. Neighbouring weeks are still somewhat alike, so even this interval is a little optimistic; a block bootstrap would address it and is beyond this course. Say so: a stated limit beats silent precision.</p></aside>
+  <aside class="notes"><p>A recap of DS-201, Day 2 ("resample the right unit"), applied to a table built on Day 2 of this course. The bootstrap imitates the way the data came about; if the data came in clusters, resample clusters. Neighbouring weeks are still somewhat alike, so even this interval is a little optimistic; a block bootstrap would address it and is beyond this course. Say so: a stated limit beats silent precision.</p></aside>
 </section>
 
 <section class="slide" id="correlation-interval" data-lo="LO5" data-label="The correlation's interval">
@@ -138,7 +138,7 @@ r[i] = np.corrcoef(x[k], y[k])[0, 1]</code></pre>
     <div class="opts">
       <div class="opt" data-why="Pupils in one school share teachers and intake, so treating them as independent makes the interval too narrow">The 4,000 pupils, drawn again with replacement</div>
       <div class="opt" data-why="Shuffling labels tests whether a difference exists; it does not give an interval for its size">The timetable labels of the pupils, shuffled</div>
-      <div class="opt" data-why="Resampling scores without their pupils or schools destroys the structure being studied">The 4,000 scores, drawn within each school</div>
+      <div class="opt" data-why="Keeps the same 40 schools in every resample, so the variation between schools, the main source of uncertainty, never enters the interval">The 4,000 scores, drawn within each school</div>
       <div class="opt" data-ok>The 40 schools, drawn again with replacement</div>
     </div>
     <div class="callout tip why"><b>Why.</b> The timetable was applied to schools, so the school is the unit: 40 independent units, not 4,000.</div>
@@ -226,7 +226,7 @@ r[i] = np.corrcoef(x[k], y[k])[0, 1]</code></pre>
     <div class="card c-coral"><h4>The data itself</h4><p class="small mb0">With small groups, draw every value as a faint point behind the estimate. Twelve points say "twelve" better than any interval.</p></div>
   </div>
   <div class="callout warn mt"><b>Avoid</b> a bar with a whisker on top: the bar still says "this much from zero", and readers judge by the bar. And never draw an interval without saying what it is.</div>
-  <aside class="notes"><p>A whisker can mean a standard deviation, a standard error, a 95% interval or a range, which differ by a factor of ten on the same data; an unlabelled error bar carries no information. The third card is a reminder from Day 1: showing the values is often the most honest display, as long as no individual can be singled out.</p></aside>
+  <aside class="notes"><p>A whisker can mean a standard deviation, a standard error, a 95% interval or a range, which on the same data can differ tenfold or more; an unlabelled error bar carries no information. The third card is a reminder from Day 1: showing the values is often the most honest display, as long as no individual can be singled out.</p></aside>
 </section>
 
 <section class="slide" id="caption-for-uncertainty" data-lo="LO5" data-label="The caption">
@@ -521,7 +521,7 @@ second render: out/draft_b.html, digest 319a4f665407
     <div class="card c-coral"><h4>Draw it honestly</h4><p class="small mb0">Position for what matters, scales that fit the mark, uncertainty on the chart.</p></div>
     <div class="card c-purple"><h4>Say how you know</h4><p class="small mb0">Chance checked, comparisons counted, status and limit stated, and it reruns.</p></div>
   </div>
-  <aside class="notes"><p>Return to the first slide of Day 1: question, chart, reading, check. Ask each participant for the one habit they will use next week. Then the board's three announcements: one dropped, one qualified, one relabelled as a question for 2026, and one they had not asked about, guided visits, confirmed.</p></aside>
+  <aside class="notes"><p>Return to the first slide of Day 1: question, chart, reading, check. Ask each participant for the one habit they will use next week. Then the board's three announcements: one dropped, one qualified, and one qualified as exploratory and held as a question for the 2026 survey, not announced, and one they had not asked about, guided visits, confirmed.</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="Next">
