@@ -84,6 +84,8 @@ An exploratory report on an unseen synthetic or approved public dataset, in a pu
 - FN-104 SQL and Data Wrangling
 - DS-201 Statistical Inference by Simulation
 - Makes a basic chart in any plotting library
+- Pre-work: about two hours of dataframe and plotting practice, `labs/P0_prework_dataframes_plotting.ipynb`, before the supervised entry quiz
+- Setup: a laptop with uv, or Google Colab. Nothing calls or downloads a model. Run `00_setup_check` before Day 1; see `labs/README.md`.
 
 <!-- academy:tools -->
 ## Tools
