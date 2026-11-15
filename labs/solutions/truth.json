@@ -1,0 +1,117 @@
+{
+ "seed": 203,
+ "festivals": {
+  "2024-10": "Honey Festival",
+  "2025-10": "Honey Festival",
+  "2025-02": "Heritage Nights"
+ },
+ "stays_issues": {
+  "spend_missing": 2577,
+  "spend_missing_share_day_visitors": 0.2171,
+  "spend_missing_share_overnight": 0.0208,
+  "nights_999": 320,
+  "origin_spellings": {
+   "GCC": 405,
+   "gulf ": 181
+  },
+  "dates_2032": 14,
+  "duplicate_rows": 600,
+  "rows": 40600
+ },
+ "stays_clean_rows": 40000,
+ "survey": {
+  "attempt": 86,
+  "weekend_gap_all": 0.0214,
+  "weekend_p_all_about": 0.352,
+  "headline_cell": {
+   "site": "Honey Museum",
+   "year": 2025,
+   "gap": 0.3,
+   "p_about": 0.03,
+   "n_weekend": 68,
+   "n_weekday": 99
+  },
+  "cells_compared": 27,
+  "cells_below_0.05": 1
+ },
+ "satisfaction_2024": {
+  "Tilal region": 4.5,
+  "Other regions": 4.2,
+  "Gulf": 3.7,
+  "Asia": 3.4,
+  "Europe": 3.3
+ },
+ "satisfaction_shift": {
+  "2023": -0.03,
+  "2024": 0.0,
+  "2025": 0.1
+ },
+ "survey_mix": {
+  "2023": [
+   0.42,
+   0.35,
+   0.11,
+   0.06,
+   0.06
+  ],
+  "2024": [
+   0.4,
+   0.35,
+   0.12,
+   0.07,
+   0.06
+  ],
+  "2025": [
+   0.26,
+   0.3,
+   0.19,
+   0.13,
+   0.12
+  ]
+ },
+ "complaint_rate_multiplier": {
+  "Cable Car": 1.0,
+  "Souq Walk": 0.8,
+  "Tilal Fort": 0.9,
+  "Juniper Park": 0.7,
+  "Stone Village": 1.1,
+  "Honey Museum": 0.75,
+  "Cloud Lookout": 1.2,
+  "Wadi Trail": 1.8,
+  "Terrace Farms": 2.6
+ },
+ "visitors_by_site": {
+  "Cable Car": 100822,
+  "Cloud Lookout": 22956,
+  "Honey Museum": 27810,
+  "Juniper Park": 46556,
+  "Souq Walk": 77599,
+  "Stone Village": 36575,
+  "Terrace Farms": 12083,
+  "Tilal Fort": 53558,
+  "Wadi Trail": 21408
+ },
+ "complaints": 2418,
+ "past_findings_key": {
+  "F1": {
+   "status": "confirmed",
+   "check": "none: the comparison was planned and the data used once"
+  },
+  "F2": {
+   "status": "exploratory",
+   "check": "name the Tuesday comparison in advance and test it on a new year of stays"
+  },
+  "F3": {
+   "status": "confirmed",
+   "check": "none: found in one year, written down, tested on a year not yet seen"
+  },
+  "F4": {
+   "status": "exploratory",
+   "check": "test the same weeks before the 2025 festival, stated before looking"
+  },
+  "F5": {
+   "status": "exploratory",
+   "check": "count the comparisons tried, then test rain months at the Wadi Trail on new responses"
+  }
+ }
+}

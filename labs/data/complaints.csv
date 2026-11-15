@@ -1,0 +1,2419 @@
+complaint_id,complaint_date,site,origin,category
+C00001,2023-01-01,Terrace Farms,Other regions,signage
+C00002,2023-01-02,Souq Walk,Other regions,staff
+C00003,2023-01-03,Souq Walk,Tilal region,cleanliness
+C00004,2023-01-04,Cable Car,Other regions,access
+C00005,2023-01-04,Souq Walk,Gulf,cleanliness
+C00006,2023-01-04,Wadi Trail,Other regions,cleanliness
+C00007,2023-01-05,Souq Walk,Tilal region,queue
+C00008,2023-01-05,Souq Walk,Tilal region,queue
+C00009,2023-01-05,Tilal Fort,Other regions,price
+C00010,2023-01-06,Cable Car,Europe,queue
+C00011,2023-01-06,Cable Car,Other regions,price
+C00012,2023-01-06,Cable Car,Tilal region,cleanliness
+C00013,2023-01-06,Cable Car,Tilal region,queue
+C00014,2023-01-09,Cloud Lookout,Tilal region,access
+C00015,2023-01-09,Wadi Trail,Tilal region,price
+C00016,2023-01-10,Juniper Park,Other regions,queue
+C00017,2023-01-11,Cloud Lookout,Europe,cleanliness
+C00018,2023-01-12,Cable Car,Other regions,queue
+C00019,2023-01-13,Souq Walk,Other regions,price
+C00020,2023-01-14,Wadi Trail,Asia,cleanliness
+C00021,2023-01-16,Juniper Park,Other regions,signage
+C00022,2023-01-16,Souq Walk,Europe,queue
+C00023,2023-01-16,Souq Walk,Tilal region,price
+C00024,2023-01-18,Stone Village,Other regions,signage
+C00025,2023-01-22,Cable Car,Other regions,staff
+C00026,2023-01-22,Souq Walk,Tilal region,queue
+C00027,2023-01-23,Honey Museum,Tilal region,access
+C00028,2023-01-24,Honey Museum,Europe,signage
+C00029,2023-01-24,Honey Museum,Europe,staff
+C00030,2023-01-26,Stone Village,Europe,queue
+C00031,2023-01-27,Cable Car,Other regions,queue
+C00032,2023-01-27,Cloud Lookout,Other regions,cleanliness
+C00033,2023-01-27,Cloud Lookout,Other regions,signage
+C00034,2023-01-28,Cable Car,Europe,staff
+C00035,2023-01-28,Cable Car,Other regions,queue
+C00036,2023-01-28,Stone Village,Gulf,price
+C00037,2023-01-28,Wadi Trail,Tilal region,queue
+C00038,2023-01-29,Cable Car,Europe,staff
+C00039,2023-01-29,Cable Car,Other regions,queue
+C00040,2023-01-29,Honey Museum,Tilal region,signage
+C00041,2023-01-29,Juniper Park,Tilal region,queue
+C00042,2023-01-31,Cloud Lookout,Other regions,staff
+C00043,2023-02-02,Wadi Trail,Tilal region,queue
+C00044,2023-02-03,Souq Walk,Other regions,cleanliness
+C00045,2023-02-03,Souq Walk,Other regions,staff
+C00046,2023-02-03,Souq Walk,Tilal region,access
+C00047,2023-02-04,Cable Car,Other regions,queue
+C00048,2023-02-04,Cloud Lookout,Tilal region,cleanliness
+C00049,2023-02-04,Tilal Fort,Other regions,cleanliness
+C00050,2023-02-05,Tilal Fort,Other regions,access
+C00051,2023-02-06,Cable Car,Other regions,queue
+C00052,2023-02-07,Terrace Farms,Tilal region,cleanliness
+C00053,2023-02-08,Cable Car,Other regions,cleanliness
+C00054,2023-02-09,Souq Walk,Tilal region,cleanliness
+C00055,2023-02-09,Tilal Fort,Other regions,access
+C00056,2023-02-10,Cloud Lookout,Other regions,staff
+C00057,2023-02-10,Honey Museum,Tilal region,queue
+C00058,2023-02-10,Souq Walk,Tilal region,cleanliness
+C00059,2023-02-10,Tilal Fort,Tilal region,staff
+C00060,2023-02-11,Souq Walk,Gulf,signage
+C00061,2023-02-11,Tilal Fort,Tilal region,cleanliness
+C00062,2023-02-11,Wadi Trail,Asia,signage
+C00063,2023-02-12,Souq Walk,Other regions,cleanliness
+C00064,2023-02-12,Stone Village,Tilal region,queue
+C00065,2023-02-13,Honey Museum,Tilal region,queue
+C00066,2023-02-14,Cable Car,Gulf,staff
+C00067,2023-02-16,Cable Car,Tilal region,queue
+C00068,2023-02-16,Souq Walk,Tilal region,cleanliness
+C00069,2023-02-17,Cable Car,Other regions,price
+C00070,2023-02-17,Cable Car,Tilal region,price
+C00071,2023-02-18,Cable Car,Other regions,queue
+C00072,2023-02-18,Cable Car,Other regions,signage
+C00073,2023-02-18,Honey Museum,Other regions,cleanliness
+C00074,2023-02-19,Cable Car,Other regions,signage
+C00075,2023-02-19,Cable Car,Tilal region,cleanliness
+C00076,2023-02-20,Honey Museum,Tilal region,access
+C00077,2023-02-20,Juniper Park,Other regions,access
+C00078,2023-02-20,Tilal Fort,Other regions,access
+C00079,2023-02-20,Tilal Fort,Other regions,queue
+C00080,2023-02-21,Cable Car,Asia,price
+C00081,2023-02-22,Souq Walk,Other regions,staff
+C00082,2023-02-24,Souq Walk,Tilal region,cleanliness
+C00083,2023-02-24,Tilal Fort,Tilal region,staff
+C00084,2023-02-24,Wadi Trail,Other regions,queue
+C00085,2023-02-25,Cloud Lookout,Other regions,access
+C00086,2023-02-25,Souq Walk,Other regions,price
+C00087,2023-02-25,Stone Village,Tilal region,access
+C00088,2023-02-25,Tilal Fort,Gulf,access
+C00089,2023-02-26,Juniper Park,Tilal region,signage
+C00090,2023-02-26,Souq Walk,Other regions,cleanliness
+C00091,2023-02-26,Tilal Fort,Europe,signage
+C00092,2023-02-27,Tilal Fort,Other regions,signage
+C00093,2023-02-28,Cable Car,Other regions,signage
+C00094,2023-02-28,Juniper Park,Other regions,staff
+C00095,2023-03-01,Stone Village,Tilal region,queue
+C00096,2023-03-01,Wadi Trail,Europe,signage
+C00097,2023-03-02,Cable Car,Other regions,cleanliness
+C00098,2023-03-03,Terrace Farms,Other regions,price
+C00099,2023-03-05,Cable Car,Tilal region,cleanliness
+C00100,2023-03-05,Juniper Park,Tilal region,price
+C00101,2023-03-05,Souq Walk,Tilal region,access
+C00102,2023-03-05,Stone Village,Tilal region,queue
+C00103,2023-03-06,Cable Car,Gulf,cleanliness
+C00104,2023-03-07,Cable Car,Tilal region,queue
+C00105,2023-03-08,Stone Village,Other regions,cleanliness
+C00106,2023-03-10,Cloud Lookout,Other regions,signage
+C00107,2023-03-11,Cable Car,Other regions,cleanliness
+C00108,2023-03-11,Cable Car,Tilal region,queue
+C00109,2023-03-11,Stone Village,Tilal region,signage
+C00110,2023-03-12,Stone Village,Other regions,queue
+C00111,2023-03-13,Cable Car,Europe,access
+C00112,2023-03-13,Souq Walk,Other regions,access
+C00113,2023-03-15,Cable Car,Gulf,cleanliness
+C00114,2023-03-16,Stone Village,Other regions,queue
+C00115,2023-03-17,Cable Car,Tilal region,access
+C00116,2023-03-17,Stone Village,Other regions,staff
+C00117,2023-03-17,Tilal Fort,Asia,cleanliness
+C00118,2023-03-17,Tilal Fort,Other regions,queue
+C00119,2023-03-18,Cable Car,Gulf,queue
+C00120,2023-03-18,Juniper Park,Tilal region,cleanliness
+C00121,2023-03-19,Cable Car,Gulf,queue
+C00122,2023-03-19,Cloud Lookout,Other regions,queue
+C00123,2023-03-19,Souq Walk,Other regions,access
+C00124,2023-03-19,Stone Village,Other regions,access
+C00125,2023-03-20,Souq Walk,Other regions,cleanliness
+C00126,2023-03-20,Souq Walk,Other regions,price
+C00127,2023-03-20,Stone Village,Asia,signage
+C00128,2023-03-21,Cable Car,Other regions,staff
+C00129,2023-03-21,Honey Museum,Tilal region,access
+C00130,2023-03-22,Wadi Trail,Tilal region,price
+C00131,2023-03-24,Juniper Park,Europe,access
+C00132,2023-03-24,Souq Walk,Other regions,signage
+C00133,2023-03-24,Stone Village,Other regions,price
+C00134,2023-03-25,Juniper Park,Tilal region,queue
+C00135,2023-03-25,Tilal Fort,Gulf,cleanliness
+C00136,2023-03-27,Stone Village,Other regions,queue
+C00137,2023-03-28,Cable Car,Other regions,queue
+C00138,2023-03-29,Cable Car,Other regions,signage
+C00139,2023-03-29,Souq Walk,Gulf,signage
+C00140,2023-03-30,Cable Car,Tilal region,access
+C00141,2023-03-30,Terrace Farms,Tilal region,cleanliness
+C00142,2023-03-30,Wadi Trail,Other regions,signage
+C00143,2023-03-31,Cable Car,Other regions,price
+C00144,2023-03-31,Honey Museum,Tilal region,cleanliness
+C00145,2023-03-31,Stone Village,Asia,staff
+C00146,2023-03-31,Tilal Fort,Tilal region,staff
+C00147,2023-04-01,Juniper Park,Gulf,cleanliness
+C00148,2023-04-01,Tilal Fort,Other regions,cleanliness
+C00149,2023-04-02,Terrace Farms,Other regions,access
+C00150,2023-04-03,Stone Village,Tilal region,cleanliness
+C00151,2023-04-04,Cable Car,Gulf,price
+C00152,2023-04-04,Cloud Lookout,Tilal region,cleanliness
+C00153,2023-04-04,Tilal Fort,Asia,queue
+C00154,2023-04-05,Terrace Farms,Tilal region,staff
+C00155,2023-04-06,Tilal Fort,Tilal region,price
+C00156,2023-04-07,Cable Car,Other regions,price
+C00157,2023-04-07,Tilal Fort,Asia,queue
+C00158,2023-04-08,Cable Car,Asia,staff
+C00159,2023-04-08,Souq Walk,Other regions,signage
+C00160,2023-04-08,Wadi Trail,Europe,access
+C00161,2023-04-08,Wadi Trail,Other regions,signage
+C00162,2023-04-08,Wadi Trail,Other regions,signage
+C00163,2023-04-09,Cloud Lookout,Other regions,access
+C00164,2023-04-10,Cloud Lookout,Tilal region,queue
+C00165,2023-04-10,Souq Walk,Asia,price
+C00166,2023-04-11,Stone Village,Other regions,cleanliness
+C00167,2023-04-12,Cable Car,Other regions,signage
+C00168,2023-04-12,Wadi Trail,Asia,queue
+C00169,2023-04-13,Cable Car,Asia,staff
+C00170,2023-04-13,Cable Car,Other regions,queue
+C00171,2023-04-13,Tilal Fort,Other regions,access
+C00172,2023-04-13,Wadi Trail,Tilal region,queue
+C00173,2023-04-14,Cable Car,Other regions,staff
+C00174,2023-04-14,Souq Walk,Other regions,cleanliness
+C00175,2023-04-14,Tilal Fort,Other regions,signage
+C00176,2023-04-14,Wadi Trail,Other regions,access
+C00177,2023-04-15,Cable Car,Other regions,queue
+C00178,2023-04-15,Souq Walk,Tilal region,queue
+C00179,2023-04-15,Wadi Trail,Other regions,access
+C00180,2023-04-16,Cable Car,Tilal region,price
+C00181,2023-04-17,Juniper Park,Other regions,signage
+C00182,2023-04-17,Souq Walk,Tilal region,signage
+C00183,2023-04-18,Souq Walk,Tilal region,cleanliness
+C00184,2023-04-19,Cable Car,Other regions,access
+C00185,2023-04-19,Terrace Farms,Other regions,staff
+C00186,2023-04-19,Tilal Fort,Other regions,cleanliness
+C00187,2023-04-19,Wadi Trail,Other regions,price
+C00188,2023-04-20,Stone Village,Other regions,price
+C00189,2023-04-21,Stone Village,Other regions,price
+C00190,2023-04-21,Terrace Farms,Tilal region,signage
+C00191,2023-04-21,Tilal Fort,Tilal region,cleanliness
+C00192,2023-04-21,Wadi Trail,Gulf,cleanliness
+C00193,2023-04-22,Stone Village,Gulf,signage
+C00194,2023-04-22,Stone Village,Other regions,access
+C00195,2023-04-22,Stone Village,Other regions,price
+C00196,2023-04-22,Terrace Farms,Tilal region,staff
+C00197,2023-04-24,Tilal Fort,Tilal region,queue
+C00198,2023-04-25,Cable Car,Other regions,queue
+C00199,2023-04-25,Cable Car,Tilal region,queue
+C00200,2023-04-26,Cable Car,Asia,queue
+C00201,2023-04-26,Juniper Park,Tilal region,cleanliness
+C00202,2023-04-26,Terrace Farms,Other regions,signage
+C00203,2023-04-26,Terrace Farms,Other regions,signage
+C00204,2023-04-28,Cable Car,Gulf,signage
+C00205,2023-04-28,Cable Car,Other regions,staff
+C00206,2023-04-28,Tilal Fort,Other regions,access
+C00207,2023-04-29,Cable Car,Tilal region,signage
+C00208,2023-04-29,Juniper Park,Other regions,cleanliness
+C00209,2023-04-29,Juniper Park,Other regions,price
+C00210,2023-04-29,Souq Walk,Other regions,price
+C00211,2023-04-29,Wadi Trail,Europe,signage
+C00212,2023-05-01,Cloud Lookout,Other regions,signage
+C00213,2023-05-01,Tilal Fort,Tilal region,cleanliness
+C00214,2023-05-03,Tilal Fort,Other regions,signage
+C00215,2023-05-03,Tilal Fort,Tilal region,queue
+C00216,2023-05-03,Wadi Trail,Tilal region,cleanliness
+C00217,2023-05-04,Cloud Lookout,Other regions,cleanliness
+C00218,2023-05-04,Juniper Park,Other regions,access
+C00219,2023-05-04,Juniper Park,Other regions,access
+C00220,2023-05-05,Cable Car,Gulf,price
+C00221,2023-05-05,Cable Car,Tilal region,signage
+C00222,2023-05-05,Juniper Park,Europe,signage
+C00223,2023-05-05,Stone Village,Other regions,access
+C00224,2023-05-05,Terrace Farms,Gulf,price
+C00225,2023-05-05,Tilal Fort,Other regions,access
+C00226,2023-05-06,Cable Car,Other regions,queue
+C00227,2023-05-06,Stone Village,Gulf,signage
+C00228,2023-05-06,Stone Village,Other regions,cleanliness
+C00229,2023-05-06,Wadi Trail,Europe,queue
+C00230,2023-05-07,Cable Car,Other regions,cleanliness
+C00231,2023-05-07,Cable Car,Other regions,queue
+C00232,2023-05-07,Cable Car,Other regions,staff
+C00233,2023-05-08,Cable Car,Other regions,queue
+C00234,2023-05-08,Cable Car,Other regions,staff
+C00235,2023-05-09,Cable Car,Gulf,queue
+C00236,2023-05-09,Tilal Fort,Other regions,cleanliness
+C00237,2023-05-11,Cable Car,Other regions,queue
+C00238,2023-05-11,Cloud Lookout,Other regions,price
+C00239,2023-05-11,Terrace Farms,Other regions,cleanliness
+C00240,2023-05-12,Cable Car,Asia,access
+C00241,2023-05-12,Cable Car,Other regions,access
+C00242,2023-05-13,Cable Car,Other regions,price
+C00243,2023-05-14,Honey Museum,Asia,queue
+C00244,2023-05-15,Cable Car,Tilal region,cleanliness
+C00245,2023-05-15,Souq Walk,Other regions,signage
+C00246,2023-05-15,Terrace Farms,Other regions,access
+C00247,2023-05-17,Cloud Lookout,Tilal region,access
+C00248,2023-05-17,Tilal Fort,Tilal region,price
+C00249,2023-05-19,Cable Car,Gulf,staff
+C00250,2023-05-19,Wadi Trail,Tilal region,access
+C00251,2023-05-20,Souq Walk,Gulf,staff
+C00252,2023-05-20,Terrace Farms,Other regions,queue
+C00253,2023-05-21,Souq Walk,Other regions,staff
+C00254,2023-05-21,Tilal Fort,Tilal region,access
+C00255,2023-05-22,Juniper Park,Tilal region,signage
+C00256,2023-05-22,Souq Walk,Tilal region,access
+C00257,2023-05-22,Stone Village,Other regions,queue
+C00258,2023-05-24,Souq Walk,Asia,staff
+C00259,2023-05-26,Cable Car,Other regions,queue
+C00260,2023-05-27,Juniper Park,Other regions,price
+C00261,2023-05-27,Souq Walk,Other regions,price
+C00262,2023-05-27,Terrace Farms,Tilal region,signage
+C00263,2023-05-27,Wadi Trail,Other regions,queue
+C00264,2023-05-28,Cable Car,Tilal region,signage
+C00265,2023-05-29,Terrace Farms,Other regions,signage
+C00266,2023-05-30,Stone Village,Other regions,price
+C00267,2023-06-01,Souq Walk,Other regions,signage
+C00268,2023-06-02,Cable Car,Gulf,price
+C00269,2023-06-02,Souq Walk,Tilal region,cleanliness
+C00270,2023-06-02,Souq Walk,Tilal region,staff
+C00271,2023-06-02,Wadi Trail,Tilal region,price
+C00272,2023-06-03,Honey Museum,Other regions,queue
+C00273,2023-06-03,Souq Walk,Tilal region,access
+C00274,2023-06-03,Stone Village,Other regions,staff
+C00275,2023-06-04,Cable Car,Gulf,queue
+C00276,2023-06-04,Tilal Fort,Other regions,cleanliness
+C00277,2023-06-05,Stone Village,Tilal region,cleanliness
+C00278,2023-06-07,Cloud Lookout,Gulf,queue
+C00279,2023-06-07,Cloud Lookout,Other regions,staff
+C00280,2023-06-07,Juniper Park,Tilal region,staff
+C00281,2023-06-07,Souq Walk,Other regions,staff
+C00282,2023-06-08,Honey Museum,Tilal region,cleanliness
+C00283,2023-06-08,Souq Walk,Other regions,price
+C00284,2023-06-09,Cable Car,Tilal region,cleanliness
+C00285,2023-06-09,Souq Walk,Other regions,queue
+C00286,2023-06-09,Stone Village,Tilal region,price
+C00287,2023-06-09,Tilal Fort,Tilal region,queue
+C00288,2023-06-10,Souq Walk,Other regions,staff
+C00289,2023-06-11,Cable Car,Asia,cleanliness
+C00290,2023-06-12,Cable Car,Other regions,price
+C00291,2023-06-12,Cloud Lookout,Other regions,cleanliness
+C00292,2023-06-13,Cable Car,Other regions,queue
+C00293,2023-06-13,Honey Museum,Other regions,access
+C00294,2023-06-14,Cloud Lookout,Other regions,price
+C00295,2023-06-15,Terrace Farms,Tilal region,queue
+C00296,2023-06-16,Cable Car,Gulf,queue
+C00297,2023-06-16,Cable Car,Other regions,queue
+C00298,2023-06-17,Cable Car,Gulf,signage
+C00299,2023-06-17,Souq Walk,Other regions,staff
+C00300,2023-06-17,Tilal Fort,Other regions,price
+C00301,2023-06-19,Cable Car,Other regions,signage
+C00302,2023-06-19,Tilal Fort,Other regions,price
+C00303,2023-06-20,Cable Car,Other regions,queue
+C00304,2023-06-20,Juniper Park,Other regions,queue
+C00305,2023-06-20,Souq Walk,Tilal region,access
+C00306,2023-06-21,Cable Car,Gulf,price
+C00307,2023-06-21,Cable Car,Other regions,signage
+C00308,2023-06-21,Cable Car,Tilal region,access
+C00309,2023-06-22,Cable Car,Other regions,signage
+C00310,2023-06-24,Cable Car,Other regions,staff
+C00311,2023-06-24,Honey Museum,Other regions,cleanliness
+C00312,2023-06-24,Honey Museum,Other regions,staff
+C00313,2023-06-24,Souq Walk,Other regions,signage
+C00314,2023-06-24,Souq Walk,Other regions,signage
+C00315,2023-06-25,Terrace Farms,Other regions,queue
+C00316,2023-06-26,Cable Car,Tilal region,signage
+C00317,2023-06-26,Cloud Lookout,Other regions,price
+C00318,2023-06-26,Juniper Park,Other regions,staff
+C00319,2023-06-26,Juniper Park,Tilal region,signage
+C00320,2023-06-26,Souq Walk,Tilal region,price
+C00321,2023-06-28,Honey Museum,Other regions,cleanliness
+C00322,2023-06-28,Souq Walk,Other regions,price
+C00323,2023-06-28,Terrace Farms,Other regions,cleanliness
+C00324,2023-06-28,Wadi Trail,Europe,signage
+C00325,2023-06-29,Souq Walk,Tilal region,signage
+C00326,2023-06-29,Wadi Trail,Tilal region,queue
+C00327,2023-06-30,Wadi Trail,Other regions,cleanliness
+C00328,2023-06-30,Wadi Trail,Other regions,signage
+C00329,2023-07-01,Stone Village,Other regions,signage
+C00330,2023-07-01,Wadi Trail,Gulf,staff
+C00331,2023-07-02,Cable Car,Gulf,price
+C00332,2023-07-02,Cable Car,Other regions,queue
+C00333,2023-07-02,Honey Museum,Gulf,access
+C00334,2023-07-02,Juniper Park,Asia,price
+C00335,2023-07-02,Souq Walk,Asia,cleanliness
+C00336,2023-07-03,Terrace Farms,Tilal region,access
+C00337,2023-07-04,Tilal Fort,Tilal region,access
+C00338,2023-07-05,Cable Car,Asia,price
+C00339,2023-07-05,Honey Museum,Other regions,queue
+C00340,2023-07-05,Honey Museum,Tilal region,price
+C00341,2023-07-05,Tilal Fort,Gulf,staff
+C00342,2023-07-06,Honey Museum,Other regions,price
+C00343,2023-07-06,Stone Village,Gulf,queue
+C00344,2023-07-06,Tilal Fort,Gulf,price
+C00345,2023-07-07,Cable Car,Gulf,staff
+C00346,2023-07-07,Stone Village,Other regions,signage
+C00347,2023-07-07,Stone Village,Tilal region,queue
+C00348,2023-07-07,Terrace Farms,Tilal region,staff
+C00349,2023-07-07,Tilal Fort,Tilal region,access
+C00350,2023-07-08,Juniper Park,Gulf,signage
+C00351,2023-07-08,Souq Walk,Gulf,signage
+C00352,2023-07-08,Stone Village,Tilal region,signage
+C00353,2023-07-08,Terrace Farms,Gulf,queue
+C00354,2023-07-09,Cable Car,Gulf,queue
+C00355,2023-07-09,Wadi Trail,Other regions,signage
+C00356,2023-07-10,Cloud Lookout,Tilal region,signage
+C00357,2023-07-10,Honey Museum,Asia,staff
+C00358,2023-07-11,Cloud Lookout,Gulf,cleanliness
+C00359,2023-07-11,Souq Walk,Other regions,cleanliness
+C00360,2023-07-11,Stone Village,Asia,staff
+C00361,2023-07-12,Honey Museum,Other regions,queue
+C00362,2023-07-12,Juniper Park,Other regions,signage
+C00363,2023-07-12,Tilal Fort,Other regions,queue
+C00364,2023-07-13,Cable Car,Other regions,queue
+C00365,2023-07-14,Cable Car,Asia,queue
+C00366,2023-07-14,Cable Car,Other regions,staff
+C00367,2023-07-14,Cloud Lookout,Other regions,queue
+C00368,2023-07-14,Souq Walk,Other regions,signage
+C00369,2023-07-15,Cable Car,Gulf,price
+C00370,2023-07-15,Cable Car,Other regions,queue
+C00371,2023-07-15,Souq Walk,Tilal region,access
+C00372,2023-07-15,Stone Village,Other regions,price
+C00373,2023-07-16,Cable Car,Asia,access
+C00374,2023-07-16,Juniper Park,Tilal region,access
+C00375,2023-07-16,Wadi Trail,Tilal region,signage
+C00376,2023-07-17,Cable Car,Tilal region,queue
+C00377,2023-07-18,Cable Car,Other regions,cleanliness
+C00378,2023-07-18,Tilal Fort,Tilal region,access
+C00379,2023-07-19,Juniper Park,Tilal region,queue
+C00380,2023-07-19,Souq Walk,Other regions,price
+C00381,2023-07-19,Tilal Fort,Gulf,price
+C00382,2023-07-20,Honey Museum,Gulf,queue
+C00383,2023-07-20,Souq Walk,Other regions,signage
+C00384,2023-07-20,Stone Village,Other regions,cleanliness
+C00385,2023-07-20,Stone Village,Other regions,staff
+C00386,2023-07-21,Cable Car,Gulf,queue
+C00387,2023-07-21,Souq Walk,Tilal region,queue
+C00388,2023-07-21,Stone Village,Other regions,signage
+C00389,2023-07-22,Cable Car,Europe,queue
+C00390,2023-07-22,Cable Car,Other regions,price
+C00391,2023-07-22,Cable Car,Other regions,signage
+C00392,2023-07-22,Terrace Farms,Other regions,access
+C00393,2023-07-22,Wadi Trail,Other regions,cleanliness
+C00394,2023-07-23,Cable Car,Asia,queue
+C00395,2023-07-23,Cable Car,Gulf,access
+C00396,2023-07-23,Cloud Lookout,Gulf,price
+C00397,2023-07-23,Honey Museum,Tilal region,queue
+C00398,2023-07-23,Souq Walk,Gulf,cleanliness
+C00399,2023-07-23,Stone Village,Tilal region,price
+C00400,2023-07-23,Wadi Trail,Gulf,staff
+C00401,2023-07-25,Cable Car,Other regions,cleanliness
+C00402,2023-07-25,Cloud Lookout,Gulf,signage
+C00403,2023-07-25,Juniper Park,Tilal region,access
+C00404,2023-07-25,Souq Walk,Tilal region,cleanliness
+C00405,2023-07-26,Cable Car,Other regions,queue
+C00406,2023-07-27,Juniper Park,Gulf,queue
+C00407,2023-07-27,Terrace Farms,Other regions,cleanliness
+C00408,2023-07-27,Wadi Trail,Asia,cleanliness
+C00409,2023-07-27,Wadi Trail,Tilal region,queue
+C00410,2023-07-28,Cable Car,Other regions,cleanliness
+C00411,2023-07-28,Cable Car,Tilal region,price
+C00412,2023-07-28,Juniper Park,Other regions,cleanliness
+C00413,2023-07-28,Souq Walk,Other regions,signage
+C00414,2023-07-28,Stone Village,Other regions,signage
+C00415,2023-07-28,Stone Village,Tilal region,price
+C00416,2023-07-28,Terrace Farms,Other regions,cleanliness
+C00417,2023-07-28,Tilal Fort,Tilal region,cleanliness
+C00418,2023-07-29,Souq Walk,Gulf,queue
+C00419,2023-07-29,Souq Walk,Tilal region,queue
+C00420,2023-07-29,Terrace Farms,Other regions,signage
+C00421,2023-07-29,Tilal Fort,Gulf,cleanliness
+C00422,2023-07-29,Wadi Trail,Other regions,queue
+C00423,2023-07-30,Cable Car,Gulf,access
+C00424,2023-07-30,Juniper Park,Gulf,access
+C00425,2023-07-30,Souq Walk,Asia,cleanliness
+C00426,2023-07-30,Terrace Farms,Europe,staff
+C00427,2023-07-31,Cable Car,Gulf,signage
+C00428,2023-07-31,Cable Car,Other regions,signage
+C00429,2023-07-31,Juniper Park,Tilal region,access
+C00430,2023-07-31,Wadi Trail,Other regions,price
+C00431,2023-08-01,Honey Museum,Gulf,queue
+C00432,2023-08-01,Juniper Park,Gulf,cleanliness
+C00433,2023-08-01,Souq Walk,Other regions,queue
+C00434,2023-08-01,Stone Village,Gulf,staff
+C00435,2023-08-01,Stone Village,Other regions,price
+C00436,2023-08-01,Tilal Fort,Asia,signage
+C00437,2023-08-02,Tilal Fort,Gulf,cleanliness
+C00438,2023-08-03,Stone Village,Other regions,signage
+C00439,2023-08-04,Cable Car,Gulf,queue
+C00440,2023-08-04,Honey Museum,Gulf,staff
+C00441,2023-08-04,Souq Walk,Other regions,signage
+C00442,2023-08-05,Cloud Lookout,Gulf,staff
+C00443,2023-08-05,Juniper Park,Asia,price
+C00444,2023-08-05,Juniper Park,Gulf,cleanliness
+C00445,2023-08-05,Terrace Farms,Other regions,signage
+C00446,2023-08-05,Tilal Fort,Gulf,access
+C00447,2023-08-05,Tilal Fort,Tilal region,price
+C00448,2023-08-06,Cable Car,Other regions,queue
+C00449,2023-08-06,Honey Museum,Tilal region,access
+C00450,2023-08-06,Honey Museum,Tilal region,signage
+C00451,2023-08-06,Tilal Fort,Other regions,staff
+C00452,2023-08-07,Terrace Farms,Gulf,price
+C00453,2023-08-08,Cable Car,Other regions,queue
+C00454,2023-08-08,Cable Car,Tilal region,queue
+C00455,2023-08-08,Juniper Park,Other regions,cleanliness
+C00456,2023-08-08,Wadi Trail,Tilal region,signage
+C00457,2023-08-09,Juniper Park,Gulf,price
+C00458,2023-08-09,Juniper Park,Tilal region,queue
+C00459,2023-08-09,Souq Walk,Gulf,staff
+C00460,2023-08-09,Souq Walk,Other regions,signage
+C00461,2023-08-09,Stone Village,Gulf,signage
+C00462,2023-08-10,Cloud Lookout,Europe,queue
+C00463,2023-08-10,Tilal Fort,Other regions,access
+C00464,2023-08-11,Honey Museum,Gulf,cleanliness
+C00465,2023-08-11,Stone Village,Gulf,signage
+C00466,2023-08-12,Cable Car,Other regions,queue
+C00467,2023-08-12,Juniper Park,Other regions,price
+C00468,2023-08-12,Juniper Park,Other regions,staff
+C00469,2023-08-13,Terrace Farms,Other regions,price
+C00470,2023-08-14,Cable Car,Asia,signage
+C00471,2023-08-14,Cable Car,Tilal region,price
+C00472,2023-08-14,Cloud Lookout,Other regions,access
+C00473,2023-08-14,Juniper Park,Other regions,queue
+C00474,2023-08-14,Stone Village,Tilal region,queue
+C00475,2023-08-14,Tilal Fort,Gulf,price
+C00476,2023-08-14,Tilal Fort,Other regions,queue
+C00477,2023-08-15,Honey Museum,Other regions,signage
+C00478,2023-08-15,Juniper Park,Other regions,signage
+C00479,2023-08-16,Cable Car,Gulf,queue
+C00480,2023-08-17,Cable Car,Gulf,signage
+C00481,2023-08-17,Cable Car,Tilal region,access
+C00482,2023-08-17,Honey Museum,Europe,queue
+C00483,2023-08-17,Terrace Farms,Other regions,signage
+C00484,2023-08-17,Tilal Fort,Other regions,signage
+C00485,2023-08-17,Wadi Trail,Tilal region,access
+C00486,2023-08-18,Wadi Trail,Other regions,signage
+C00487,2023-08-19,Terrace Farms,Other regions,cleanliness
+C00488,2023-08-20,Cable Car,Gulf,queue
+C00489,2023-08-21,Cable Car,Europe,staff
+C00490,2023-08-21,Cloud Lookout,Gulf,queue
+C00491,2023-08-22,Souq Walk,Gulf,access
+C00492,2023-08-23,Souq Walk,Other regions,queue
+C00493,2023-08-25,Cable Car,Other regions,queue
+C00494,2023-08-25,Cable Car,Other regions,queue
+C00495,2023-08-25,Juniper Park,Asia,cleanliness
+C00496,2023-08-25,Tilal Fort,Asia,cleanliness
+C00497,2023-08-26,Juniper Park,Other regions,price
+C00498,2023-08-26,Souq Walk,Other regions,staff
+C00499,2023-08-26,Stone Village,Other regions,price
+C00500,2023-08-26,Terrace Farms,Gulf,signage
+C00501,2023-08-27,Cable Car,Other regions,queue
+C00502,2023-08-27,Cable Car,Tilal region,staff
+C00503,2023-08-27,Cloud Lookout,Tilal region,signage
+C00504,2023-08-27,Souq Walk,Other regions,cleanliness
+C00505,2023-08-28,Cloud Lookout,Gulf,queue
+C00506,2023-08-28,Juniper Park,Other regions,access
+C00507,2023-08-28,Juniper Park,Tilal region,cleanliness
+C00508,2023-08-28,Souq Walk,Tilal region,queue
+C00509,2023-08-28,Souq Walk,Tilal region,staff
+C00510,2023-08-29,Cloud Lookout,Other regions,cleanliness
+C00511,2023-08-29,Tilal Fort,Gulf,price
+C00512,2023-08-29,Tilal Fort,Other regions,signage
+C00513,2023-08-30,Juniper Park,Gulf,queue
+C00514,2023-08-31,Stone Village,Other regions,price
+C00515,2023-08-31,Terrace Farms,Gulf,staff
+C00516,2023-08-31,Tilal Fort,Gulf,queue
+C00517,2023-09-01,Cloud Lookout,Gulf,access
+C00518,2023-09-01,Souq Walk,Other regions,signage
+C00519,2023-09-05,Cable Car,Europe,access
+C00520,2023-09-05,Cable Car,Other regions,queue
+C00521,2023-09-05,Cable Car,Tilal region,signage
+C00522,2023-09-06,Souq Walk,Other regions,staff
+C00523,2023-09-08,Terrace Farms,Gulf,cleanliness
+C00524,2023-09-09,Juniper Park,Europe,queue
+C00525,2023-09-09,Stone Village,Other regions,price
+C00526,2023-09-10,Souq Walk,Other regions,price
+C00527,2023-09-10,Tilal Fort,Other regions,cleanliness
+C00528,2023-09-11,Cable Car,Europe,cleanliness
+C00529,2023-09-11,Stone Village,Tilal region,cleanliness
+C00530,2023-09-13,Cable Car,Other regions,signage
+C00531,2023-09-13,Honey Museum,Tilal region,cleanliness
+C00532,2023-09-13,Souq Walk,Other regions,signage
+C00533,2023-09-13,Terrace Farms,Other regions,signage
+C00534,2023-09-13,Wadi Trail,Europe,signage
+C00535,2023-09-14,Juniper Park,Tilal region,signage
+C00536,2023-09-15,Juniper Park,Other regions,price
+C00537,2023-09-15,Stone Village,Tilal region,queue
+C00538,2023-09-15,Terrace Farms,Other regions,signage
+C00539,2023-09-15,Terrace Farms,Tilal region,price
+C00540,2023-09-15,Tilal Fort,Other regions,access
+C00541,2023-09-15,Tilal Fort,Other regions,queue
+C00542,2023-09-15,Wadi Trail,Other regions,price
+C00543,2023-09-15,Wadi Trail,Other regions,signage
+C00544,2023-09-16,Stone Village,Asia,queue
+C00545,2023-09-16,Stone Village,Other regions,price
+C00546,2023-09-16,Stone Village,Other regions,staff
+C00547,2023-09-16,Wadi Trail,Asia,cleanliness
+C00548,2023-09-16,Wadi Trail,Gulf,access
+C00549,2023-09-17,Cloud Lookout,Tilal region,price
+C00550,2023-09-18,Souq Walk,Other regions,access
+C00551,2023-09-18,Tilal Fort,Tilal region,queue
+C00552,2023-09-19,Tilal Fort,Gulf,access
+C00553,2023-09-20,Souq Walk,Other regions,access
+C00554,2023-09-21,Cable Car,Tilal region,queue
+C00555,2023-09-21,Juniper Park,Gulf,queue
+C00556,2023-09-21,Stone Village,Other regions,price
+C00557,2023-09-22,Honey Museum,Other regions,staff
+C00558,2023-09-22,Juniper Park,Asia,price
+C00559,2023-09-22,Juniper Park,Tilal region,price
+C00560,2023-09-22,Wadi Trail,Asia,queue
+C00561,2023-09-23,Juniper Park,Other regions,price
+C00562,2023-09-23,Tilal Fort,Other regions,cleanliness
+C00563,2023-09-23,Wadi Trail,Asia,cleanliness
+C00564,2023-09-24,Cable Car,Other regions,queue
+C00565,2023-09-24,Souq Walk,Gulf,cleanliness
+C00566,2023-09-25,Cable Car,Gulf,cleanliness
+C00567,2023-09-25,Stone Village,Tilal region,queue
+C00568,2023-09-29,Souq Walk,Other regions,price
+C00569,2023-09-29,Tilal Fort,Tilal region,queue
+C00570,2023-09-29,Wadi Trail,Gulf,cleanliness
+C00571,2023-09-30,Cable Car,Other regions,queue
+C00572,2023-09-30,Cloud Lookout,Europe,staff
+C00573,2023-09-30,Cloud Lookout,Other regions,queue
+C00574,2023-09-30,Souq Walk,Asia,price
+C00575,2023-09-30,Terrace Farms,Other regions,signage
+C00576,2023-10-01,Souq Walk,Tilal region,signage
+C00577,2023-10-01,Tilal Fort,Other regions,staff
+C00578,2023-10-01,Wadi Trail,Europe,signage
+C00579,2023-10-02,Honey Museum,Other regions,signage
+C00580,2023-10-03,Juniper Park,Other regions,staff
+C00581,2023-10-04,Honey Museum,Europe,price
+C00582,2023-10-05,Cable Car,Other regions,signage
+C00583,2023-10-06,Cable Car,Asia,cleanliness
+C00584,2023-10-06,Tilal Fort,Asia,staff
+C00585,2023-10-07,Cable Car,Gulf,price
+C00586,2023-10-07,Cable Car,Tilal region,queue
+C00587,2023-10-07,Juniper Park,Asia,signage
+C00588,2023-10-09,Cable Car,Gulf,signage
+C00589,2023-10-09,Wadi Trail,Gulf,access
+C00590,2023-10-12,Souq Walk,Other regions,queue
+C00591,2023-10-12,Tilal Fort,Tilal region,queue
+C00592,2023-10-12,Wadi Trail,Europe,signage
+C00593,2023-10-13,Cloud Lookout,Gulf,staff
+C00594,2023-10-13,Tilal Fort,Other regions,price
+C00595,2023-10-14,Cable Car,Other regions,price
+C00596,2023-10-14,Souq Walk,Gulf,access
+C00597,2023-10-15,Souq Walk,Other regions,cleanliness
+C00598,2023-10-15,Souq Walk,Tilal region,queue
+C00599,2023-10-16,Cable Car,Other regions,cleanliness
+C00600,2023-10-16,Wadi Trail,Tilal region,signage
+C00601,2023-10-17,Juniper Park,Tilal region,staff
+C00602,2023-10-18,Cable Car,Other regions,queue
+C00603,2023-10-18,Cable Car,Other regions,queue
+C00604,2023-10-18,Cloud Lookout,Tilal region,queue
+C00605,2023-10-18,Tilal Fort,Tilal region,queue
+C00606,2023-10-19,Honey Museum,Tilal region,cleanliness
+C00607,2023-10-20,Honey Museum,Other regions,staff
+C00608,2023-10-20,Juniper Park,Other regions,access
+C00609,2023-10-21,Cable Car,Other regions,queue
+C00610,2023-10-22,Cable Car,Tilal region,cleanliness
+C00611,2023-10-24,Cable Car,Other regions,queue
+C00612,2023-10-25,Souq Walk,Gulf,signage
+C00613,2023-10-26,Honey Museum,Other regions,cleanliness
+C00614,2023-10-26,Tilal Fort,Other regions,cleanliness
+C00615,2023-10-26,Wadi Trail,Tilal region,cleanliness
+C00616,2023-10-27,Souq Walk,Other regions,queue
+C00617,2023-10-27,Wadi Trail,Europe,signage
+C00618,2023-10-28,Honey Museum,Other regions,queue
+C00619,2023-10-28,Wadi Trail,Other regions,signage
+C00620,2023-10-28,Wadi Trail,Other regions,signage
+C00621,2023-10-29,Cable Car,Tilal region,queue
+C00622,2023-10-29,Tilal Fort,Other regions,cleanliness
+C00623,2023-10-30,Honey Museum,Gulf,staff
+C00624,2023-10-30,Wadi Trail,Tilal region,price
+C00625,2023-10-31,Cable Car,Asia,price
+C00626,2023-10-31,Juniper Park,Asia,access
+C00627,2023-10-31,Souq Walk,Tilal region,staff
+C00628,2023-11-01,Stone Village,Other regions,access
+C00629,2023-11-02,Cable Car,Other regions,access
+C00630,2023-11-02,Cable Car,Other regions,access
+C00631,2023-11-03,Cable Car,Other regions,cleanliness
+C00632,2023-11-03,Stone Village,Asia,staff
+C00633,2023-11-03,Stone Village,Gulf,cleanliness
+C00634,2023-11-03,Terrace Farms,Gulf,access
+C00635,2023-11-04,Juniper Park,Tilal region,cleanliness
+C00636,2023-11-04,Souq Walk,Other regions,staff
+C00637,2023-11-04,Wadi Trail,Tilal region,price
+C00638,2023-11-05,Cable Car,Gulf,queue
+C00639,2023-11-06,Cable Car,Tilal region,signage
+C00640,2023-11-08,Cable Car,Other regions,price
+C00641,2023-11-08,Juniper Park,Other regions,cleanliness
+C00642,2023-11-08,Souq Walk,Tilal region,cleanliness
+C00643,2023-11-08,Stone Village,Tilal region,price
+C00644,2023-11-10,Cable Car,Other regions,access
+C00645,2023-11-10,Cable Car,Other regions,queue
+C00646,2023-11-10,Cloud Lookout,Gulf,cleanliness
+C00647,2023-11-11,Juniper Park,Tilal region,price
+C00648,2023-11-11,Terrace Farms,Tilal region,cleanliness
+C00649,2023-11-12,Cable Car,Asia,queue
+C00650,2023-11-12,Honey Museum,Gulf,access
+C00651,2023-11-12,Terrace Farms,Other regions,cleanliness
+C00652,2023-11-12,Tilal Fort,Other regions,signage
+C00653,2023-11-12,Tilal Fort,Other regions,staff
+C00654,2023-11-12,Wadi Trail,Europe,signage
+C00655,2023-11-13,Cable Car,Asia,staff
+C00656,2023-11-13,Stone Village,Europe,price
+C00657,2023-11-15,Cable Car,Asia,price
+C00658,2023-11-16,Juniper Park,Other regions,staff
+C00659,2023-11-16,Souq Walk,Gulf,staff
+C00660,2023-11-16,Souq Walk,Other regions,access
+C00661,2023-11-17,Cloud Lookout,Other regions,cleanliness
+C00662,2023-11-17,Honey Museum,Other regions,queue
+C00663,2023-11-17,Stone Village,Other regions,signage
+C00664,2023-11-18,Cable Car,Europe,queue
+C00665,2023-11-19,Terrace Farms,Other regions,signage
+C00666,2023-11-19,Terrace Farms,Tilal region,queue
+C00667,2023-11-20,Cable Car,Other regions,queue
+C00668,2023-11-20,Tilal Fort,Tilal region,access
+C00669,2023-11-21,Souq Walk,Other regions,staff
+C00670,2023-11-22,Cable Car,Tilal region,access
+C00671,2023-11-22,Wadi Trail,Tilal region,signage
+C00672,2023-11-23,Cable Car,Gulf,queue
+C00673,2023-11-24,Cable Car,Asia,cleanliness
+C00674,2023-11-24,Cloud Lookout,Other regions,cleanliness
+C00675,2023-11-24,Souq Walk,Tilal region,price
+C00676,2023-11-25,Cable Car,Asia,cleanliness
+C00677,2023-11-25,Honey Museum,Asia,queue
+C00678,2023-11-26,Souq Walk,Other regions,cleanliness
+C00679,2023-11-27,Tilal Fort,Asia,queue
+C00680,2023-11-29,Cable Car,Other regions,queue
+C00681,2023-11-29,Juniper Park,Other regions,access
+C00682,2023-11-29,Souq Walk,Tilal region,queue
+C00683,2023-11-29,Stone Village,Asia,price
+C00684,2023-12-02,Cable Car,Europe,price
+C00685,2023-12-02,Cable Car,Other regions,signage
+C00686,2023-12-02,Honey Museum,Other regions,queue
+C00687,2023-12-02,Juniper Park,Tilal region,price
+C00688,2023-12-02,Terrace Farms,Other regions,signage
+C00689,2023-12-03,Souq Walk,Other regions,signage
+C00690,2023-12-03,Souq Walk,Other regions,staff
+C00691,2023-12-03,Terrace Farms,Other regions,cleanliness
+C00692,2023-12-04,Cable Car,Gulf,queue
+C00693,2023-12-05,Tilal Fort,Tilal region,queue
+C00694,2023-12-05,Wadi Trail,Europe,queue
+C00695,2023-12-06,Cable Car,Other regions,signage
+C00696,2023-12-06,Stone Village,Europe,cleanliness
+C00697,2023-12-07,Souq Walk,Gulf,cleanliness
+C00698,2023-12-08,Cable Car,Other regions,queue
+C00699,2023-12-08,Souq Walk,Other regions,access
+C00700,2023-12-08,Souq Walk,Tilal region,price
+C00701,2023-12-08,Terrace Farms,Tilal region,price
+C00702,2023-12-08,Wadi Trail,Europe,staff
+C00703,2023-12-09,Terrace Farms,Other regions,signage
+C00704,2023-12-09,Terrace Farms,Other regions,signage
+C00705,2023-12-09,Wadi Trail,Gulf,queue
+C00706,2023-12-10,Cable Car,Other regions,queue
+C00707,2023-12-10,Cable Car,Other regions,queue
+C00708,2023-12-10,Cloud Lookout,Other regions,price
+C00709,2023-12-10,Stone Village,Other regions,signage
+C00710,2023-12-10,Terrace Farms,Europe,cleanliness
+C00711,2023-12-11,Honey Museum,Gulf,signage
+C00712,2023-12-11,Souq Walk,Other regions,cleanliness
+C00713,2023-12-12,Honey Museum,Other regions,price
+C00714,2023-12-12,Souq Walk,Other regions,signage
+C00715,2023-12-14,Juniper Park,Other regions,queue
+C00716,2023-12-14,Stone Village,Europe,staff
+C00717,2023-12-14,Stone Village,Other regions,cleanliness
+C00718,2023-12-14,Tilal Fort,Other regions,cleanliness
+C00719,2023-12-14,Tilal Fort,Tilal region,signage
+C00720,2023-12-14,Wadi Trail,Other regions,signage
+C00721,2023-12-15,Cable Car,Other regions,cleanliness
+C00722,2023-12-15,Souq Walk,Other regions,access
+C00723,2023-12-16,Juniper Park,Tilal region,staff
+C00724,2023-12-16,Souq Walk,Other regions,price
+C00725,2023-12-16,Stone Village,Other regions,access
+C00726,2023-12-16,Wadi Trail,Asia,cleanliness
+C00727,2023-12-16,Wadi Trail,Europe,signage
+C00728,2023-12-17,Terrace Farms,Other regions,access
+C00729,2023-12-18,Cloud Lookout,Other regions,cleanliness
+C00730,2023-12-19,Souq Walk,Tilal region,signage
+C00731,2023-12-19,Tilal Fort,Asia,signage
+C00732,2023-12-19,Tilal Fort,Europe,queue
+C00733,2023-12-20,Juniper Park,Other regions,queue
+C00734,2023-12-21,Souq Walk,Gulf,access
+C00735,2023-12-22,Cable Car,Asia,price
+C00736,2023-12-22,Juniper Park,Tilal region,staff
+C00737,2023-12-22,Wadi Trail,Europe,staff
+C00738,2023-12-23,Cable Car,Other regions,cleanliness
+C00739,2023-12-23,Juniper Park,Other regions,access
+C00740,2023-12-23,Tilal Fort,Asia,staff
+C00741,2023-12-26,Stone Village,Europe,price
+C00742,2023-12-27,Terrace Farms,Tilal region,access
+C00743,2023-12-28,Wadi Trail,Other regions,access
+C00744,2023-12-29,Cable Car,Gulf,cleanliness
+C00745,2023-12-29,Cable Car,Other regions,price
+C00746,2023-12-29,Stone Village,Europe,cleanliness
+C00747,2023-12-30,Cloud Lookout,Tilal region,queue
+C00748,2023-12-30,Juniper Park,Gulf,queue
+C00749,2023-12-30,Souq Walk,Gulf,price
+C00750,2023-12-31,Cloud Lookout,Other regions,queue
+C00751,2023-12-31,Souq Walk,Gulf,queue
+C00752,2024-01-01,Honey Museum,Tilal region,cleanliness
+C00753,2024-01-01,Stone Village,Europe,signage
+C00754,2024-01-01,Tilal Fort,Other regions,cleanliness
+C00755,2024-01-02,Stone Village,Other regions,price
+C00756,2024-01-02,Stone Village,Tilal region,access
+C00757,2024-01-03,Juniper Park,Gulf,staff
+C00758,2024-01-03,Stone Village,Other regions,queue
+C00759,2024-01-04,Tilal Fort,Gulf,cleanliness
+C00760,2024-01-05,Cable Car,Other regions,queue
+C00761,2024-01-05,Juniper Park,Tilal region,price
+C00762,2024-01-06,Cable Car,Other regions,queue
+C00763,2024-01-06,Souq Walk,Europe,access
+C00764,2024-01-06,Souq Walk,Tilal region,price
+C00765,2024-01-06,Stone Village,Tilal region,signage
+C00766,2024-01-06,Tilal Fort,Other regions,queue
+C00767,2024-01-06,Wadi Trail,Asia,signage
+C00768,2024-01-08,Wadi Trail,Europe,queue
+C00769,2024-01-10,Cable Car,Other regions,queue
+C00770,2024-01-11,Cable Car,Europe,price
+C00771,2024-01-11,Cable Car,Other regions,queue
+C00772,2024-01-11,Tilal Fort,Europe,signage
+C00773,2024-01-11,Tilal Fort,Other regions,price
+C00774,2024-01-11,Tilal Fort,Other regions,staff
+C00775,2024-01-12,Cable Car,Gulf,price
+C00776,2024-01-12,Souq Walk,Other regions,queue
+C00777,2024-01-12,Tilal Fort,Tilal region,signage
+C00778,2024-01-13,Cable Car,Other regions,price
+C00779,2024-01-13,Honey Museum,Tilal region,access
+C00780,2024-01-13,Souq Walk,Gulf,queue
+C00781,2024-01-13,Terrace Farms,Other regions,cleanliness
+C00782,2024-01-14,Stone Village,Asia,price
+C00783,2024-01-15,Souq Walk,Tilal region,signage
+C00784,2024-01-16,Wadi Trail,Other regions,cleanliness
+C00785,2024-01-17,Souq Walk,Gulf,price
+C00786,2024-01-17,Wadi Trail,Europe,cleanliness
+C00787,2024-01-18,Cable Car,Other regions,queue
+C00788,2024-01-18,Souq Walk,Other regions,cleanliness
+C00789,2024-01-18,Terrace Farms,Other regions,cleanliness
+C00790,2024-01-18,Terrace Farms,Other regions,staff
+C00791,2024-01-20,Cable Car,Other regions,queue
+C00792,2024-01-20,Tilal Fort,Asia,signage
+C00793,2024-01-21,Souq Walk,Tilal region,cleanliness
+C00794,2024-01-22,Cable Car,Other regions,cleanliness
+C00795,2024-01-22,Souq Walk,Tilal region,access
+C00796,2024-01-22,Terrace Farms,Other regions,signage
+C00797,2024-01-22,Wadi Trail,Asia,staff
+C00798,2024-01-23,Souq Walk,Other regions,access
+C00799,2024-01-23,Tilal Fort,Other regions,signage
+C00800,2024-01-24,Cable Car,Other regions,queue
+C00801,2024-01-24,Cable Car,Other regions,queue
+C00802,2024-01-24,Souq Walk,Tilal region,signage
+C00803,2024-01-25,Juniper Park,Other regions,price
+C00804,2024-01-25,Souq Walk,Other regions,cleanliness
+C00805,2024-01-26,Cable Car,Tilal region,price
+C00806,2024-01-26,Cloud Lookout,Other regions,cleanliness
+C00807,2024-01-26,Juniper Park,Other regions,queue
+C00808,2024-01-26,Tilal Fort,Tilal region,queue
+C00809,2024-01-27,Cable Car,Other regions,staff
+C00810,2024-01-28,Tilal Fort,Tilal region,queue
+C00811,2024-01-29,Cable Car,Other regions,queue
+C00812,2024-01-30,Souq Walk,Tilal region,staff
+C00813,2024-01-30,Tilal Fort,Other regions,staff
+C00814,2024-01-31,Stone Village,Europe,access
+C00815,2024-01-31,Tilal Fort,Other regions,signage
+C00816,2024-02-01,Cable Car,Europe,queue
+C00817,2024-02-03,Juniper Park,Tilal region,queue
+C00818,2024-02-03,Stone Village,Other regions,cleanliness
+C00819,2024-02-03,Tilal Fort,Tilal region,staff
+C00820,2024-02-04,Honey Museum,Europe,staff
+C00821,2024-02-04,Honey Museum,Gulf,queue
+C00822,2024-02-05,Cable Car,Other regions,signage
+C00823,2024-02-05,Tilal Fort,Tilal region,price
+C00824,2024-02-06,Cable Car,Tilal region,cleanliness
+C00825,2024-02-07,Stone Village,Gulf,staff
+C00826,2024-02-08,Honey Museum,Other regions,signage
+C00827,2024-02-09,Cloud Lookout,Other regions,queue
+C00828,2024-02-09,Juniper Park,Tilal region,cleanliness
+C00829,2024-02-10,Cable Car,Tilal region,staff
+C00830,2024-02-10,Juniper Park,Gulf,queue
+C00831,2024-02-10,Juniper Park,Tilal region,access
+C00832,2024-02-10,Souq Walk,Other regions,cleanliness
+C00833,2024-02-11,Terrace Farms,Other regions,staff
+C00834,2024-02-12,Stone Village,Asia,signage
+C00835,2024-02-13,Cable Car,Tilal region,queue
+C00836,2024-02-13,Stone Village,Europe,queue
+C00837,2024-02-14,Stone Village,Europe,signage
+C00838,2024-02-16,Souq Walk,Asia,cleanliness
+C00839,2024-02-16,Stone Village,Other regions,price
+C00840,2024-02-17,Cable Car,Other regions,staff
+C00841,2024-02-17,Cable Car,Tilal region,queue
+C00842,2024-02-17,Juniper Park,Tilal region,price
+C00843,2024-02-17,Tilal Fort,Tilal region,staff
+C00844,2024-02-21,Cloud Lookout,Other regions,cleanliness
+C00845,2024-02-22,Souq Walk,Other regions,access
+C00846,2024-02-22,Terrace Farms,Other regions,queue
+C00847,2024-02-22,Terrace Farms,Tilal region,queue
+C00848,2024-02-23,Cable Car,Other regions,access
+C00849,2024-02-23,Honey Museum,Other regions,staff
+C00850,2024-02-23,Wadi Trail,Other regions,access
+C00851,2024-02-24,Souq Walk,Europe,queue
+C00852,2024-02-24,Stone Village,Other regions,queue
+C00853,2024-02-25,Cable Car,Gulf,price
+C00854,2024-02-26,Wadi Trail,Europe,signage
+C00855,2024-02-27,Cable Car,Tilal region,access
+C00856,2024-02-27,Cloud Lookout,Other regions,signage
+C00857,2024-02-27,Souq Walk,Tilal region,price
+C00858,2024-02-27,Tilal Fort,Europe,price
+C00859,2024-02-28,Cable Car,Gulf,queue
+C00860,2024-02-28,Tilal Fort,Other regions,cleanliness
+C00861,2024-02-29,Cable Car,Tilal region,price
+C00862,2024-03-01,Cable Car,Asia,queue
+C00863,2024-03-02,Cable Car,Other regions,staff
+C00864,2024-03-02,Cable Car,Tilal region,queue
+C00865,2024-03-02,Cable Car,Tilal region,signage
+C00866,2024-03-02,Souq Walk,Asia,staff
+C00867,2024-03-02,Wadi Trail,Other regions,signage
+C00868,2024-03-03,Cloud Lookout,Gulf,signage
+C00869,2024-03-03,Stone Village,Gulf,access
+C00870,2024-03-03,Wadi Trail,Other regions,price
+C00871,2024-03-05,Souq Walk,Gulf,cleanliness
+C00872,2024-03-06,Cable Car,Gulf,cleanliness
+C00873,2024-03-07,Stone Village,Other regions,price
+C00874,2024-03-07,Wadi Trail,Other regions,signage
+C00875,2024-03-10,Cable Car,Other regions,queue
+C00876,2024-03-10,Cloud Lookout,Other regions,queue
+C00877,2024-03-10,Tilal Fort,Other regions,queue
+C00878,2024-03-11,Souq Walk,Other regions,signage
+C00879,2024-03-12,Stone Village,Gulf,queue
+C00880,2024-03-15,Souq Walk,Other regions,access
+C00881,2024-03-16,Cable Car,Gulf,staff
+C00882,2024-03-16,Cable Car,Other regions,signage
+C00883,2024-03-16,Cable Car,Tilal region,queue
+C00884,2024-03-16,Souq Walk,Tilal region,queue
+C00885,2024-03-17,Juniper Park,Other regions,staff
+C00886,2024-03-17,Souq Walk,Tilal region,signage
+C00887,2024-03-17,Terrace Farms,Tilal region,signage
+C00888,2024-03-18,Cable Car,Gulf,price
+C00889,2024-03-18,Cable Car,Tilal region,queue
+C00890,2024-03-18,Stone Village,Other regions,cleanliness
+C00891,2024-03-18,Terrace Farms,Other regions,queue
+C00892,2024-03-19,Terrace Farms,Tilal region,signage
+C00893,2024-03-20,Stone Village,Other regions,signage
+C00894,2024-03-21,Cable Car,Europe,queue
+C00895,2024-03-22,Wadi Trail,Tilal region,queue
+C00896,2024-03-23,Cloud Lookout,Europe,cleanliness
+C00897,2024-03-23,Souq Walk,Other regions,access
+C00898,2024-03-23,Stone Village,Europe,queue
+C00899,2024-03-23,Wadi Trail,Europe,signage
+C00900,2024-03-25,Cable Car,Asia,access
+C00901,2024-03-26,Honey Museum,Europe,staff
+C00902,2024-03-26,Honey Museum,Other regions,staff
+C00903,2024-03-27,Cable Car,Other regions,cleanliness
+C00904,2024-03-27,Cloud Lookout,Gulf,access
+C00905,2024-03-28,Souq Walk,Other regions,price
+C00906,2024-03-29,Cable Car,Other regions,cleanliness
+C00907,2024-03-29,Wadi Trail,Other regions,queue
+C00908,2024-03-30,Stone Village,Europe,signage
+C00909,2024-03-30,Tilal Fort,Other regions,price
+C00910,2024-03-30,Tilal Fort,Other regions,signage
+C00911,2024-04-01,Stone Village,Gulf,price
+C00912,2024-04-01,Tilal Fort,Gulf,queue
+C00913,2024-04-02,Cable Car,Gulf,cleanliness
+C00914,2024-04-04,Cloud Lookout,Asia,staff
+C00915,2024-04-04,Souq Walk,Other regions,cleanliness
+C00916,2024-04-04,Wadi Trail,Tilal region,price
+C00917,2024-04-05,Cable Car,Tilal region,access
+C00918,2024-04-06,Cable Car,Other regions,staff
+C00919,2024-04-06,Honey Museum,Tilal region,queue
+C00920,2024-04-06,Souq Walk,Tilal region,staff
+C00921,2024-04-06,Wadi Trail,Tilal region,signage
+C00922,2024-04-07,Cloud Lookout,Other regions,staff
+C00923,2024-04-07,Tilal Fort,Other regions,cleanliness
+C00924,2024-04-08,Juniper Park,Other regions,price
+C00925,2024-04-09,Cable Car,Other regions,signage
+C00926,2024-04-09,Stone Village,Gulf,signage
+C00927,2024-04-09,Tilal Fort,Europe,signage
+C00928,2024-04-10,Cloud Lookout,Other regions,cleanliness
+C00929,2024-04-10,Terrace Farms,Tilal region,staff
+C00930,2024-04-10,Wadi Trail,Other regions,cleanliness
+C00931,2024-04-11,Cable Car,Tilal region,price
+C00932,2024-04-11,Tilal Fort,Gulf,access
+C00933,2024-04-12,Souq Walk,Gulf,price
+C00934,2024-04-12,Souq Walk,Other regions,staff
+C00935,2024-04-12,Terrace Farms,Other regions,signage
+C00936,2024-04-13,Cable Car,Other regions,queue
+C00937,2024-04-13,Juniper Park,Other regions,staff
+C00938,2024-04-14,Cable Car,Other regions,access
+C00939,2024-04-15,Souq Walk,Tilal region,cleanliness
+C00940,2024-04-15,Wadi Trail,Other regions,signage
+C00941,2024-04-16,Stone Village,Asia,queue
+C00942,2024-04-16,Terrace Farms,Tilal region,signage
+C00943,2024-04-17,Tilal Fort,Other regions,queue
+C00944,2024-04-18,Cable Car,Other regions,access
+C00945,2024-04-18,Souq Walk,Other regions,signage
+C00946,2024-04-19,Honey Museum,Asia,access
+C00947,2024-04-19,Souq Walk,Other regions,queue
+C00948,2024-04-19,Terrace Farms,Other regions,price
+C00949,2024-04-20,Cable Car,Gulf,queue
+C00950,2024-04-20,Juniper Park,Europe,queue
+C00951,2024-04-20,Souq Walk,Tilal region,signage
+C00952,2024-04-20,Stone Village,Other regions,cleanliness
+C00953,2024-04-20,Tilal Fort,Other regions,price
+C00954,2024-04-21,Cable Car,Other regions,access
+C00955,2024-04-23,Terrace Farms,Gulf,price
+C00956,2024-04-24,Cable Car,Other regions,queue
+C00957,2024-04-24,Cloud Lookout,Other regions,staff
+C00958,2024-04-24,Juniper Park,Other regions,price
+C00959,2024-04-25,Tilal Fort,Other regions,queue
+C00960,2024-04-26,Souq Walk,Europe,staff
+C00961,2024-04-26,Tilal Fort,Tilal region,price
+C00962,2024-04-27,Juniper Park,Tilal region,signage
+C00963,2024-04-27,Wadi Trail,Other regions,price
+C00964,2024-04-28,Wadi Trail,Other regions,cleanliness
+C00965,2024-04-29,Cable Car,Asia,price
+C00966,2024-04-29,Terrace Farms,Other regions,cleanliness
+C00967,2024-04-29,Wadi Trail,Tilal region,cleanliness
+C00968,2024-04-30,Honey Museum,Other regions,signage
+C00969,2024-04-30,Juniper Park,Other regions,access
+C00970,2024-05-01,Tilal Fort,Asia,signage
+C00971,2024-05-02,Souq Walk,Tilal region,price
+C00972,2024-05-03,Cable Car,Asia,cleanliness
+C00973,2024-05-03,Cable Car,Tilal region,queue
+C00974,2024-05-03,Honey Museum,Other regions,cleanliness
+C00975,2024-05-03,Stone Village,Europe,staff
+C00976,2024-05-03,Stone Village,Tilal region,signage
+C00977,2024-05-04,Terrace Farms,Other regions,price
+C00978,2024-05-05,Cable Car,Tilal region,queue
+C00979,2024-05-06,Cable Car,Tilal region,cleanliness
+C00980,2024-05-06,Stone Village,Tilal region,queue
+C00981,2024-05-06,Terrace Farms,Tilal region,signage
+C00982,2024-05-07,Cloud Lookout,Other regions,queue
+C00983,2024-05-07,Souq Walk,Gulf,signage
+C00984,2024-05-07,Stone Village,Other regions,price
+C00985,2024-05-08,Cable Car,Other regions,signage
+C00986,2024-05-09,Juniper Park,Europe,access
+C00987,2024-05-09,Terrace Farms,Other regions,price
+C00988,2024-05-10,Cable Car,Other regions,queue
+C00989,2024-05-11,Souq Walk,Other regions,cleanliness
+C00990,2024-05-12,Honey Museum,Tilal region,signage
+C00991,2024-05-12,Stone Village,Other regions,cleanliness
+C00992,2024-05-13,Tilal Fort,Other regions,queue
+C00993,2024-05-15,Cable Car,Other regions,queue
+C00994,2024-05-15,Cable Car,Tilal region,access
+C00995,2024-05-15,Juniper Park,Other regions,staff
+C00996,2024-05-16,Cloud Lookout,Asia,cleanliness
+C00997,2024-05-17,Juniper Park,Other regions,cleanliness
+C00998,2024-05-17,Stone Village,Other regions,cleanliness
+C00999,2024-05-17,Tilal Fort,Tilal region,price
+C01000,2024-05-17,Tilal Fort,Tilal region,price
+C01001,2024-05-18,Souq Walk,Gulf,cleanliness
+C01002,2024-05-18,Stone Village,Other regions,price
+C01003,2024-05-18,Tilal Fort,Other regions,staff
+C01004,2024-05-20,Terrace Farms,Tilal region,signage
+C01005,2024-05-22,Cable Car,Asia,signage
+C01006,2024-05-22,Juniper Park,Other regions,signage
+C01007,2024-05-23,Souq Walk,Gulf,staff
+C01008,2024-05-23,Terrace Farms,Other regions,cleanliness
+C01009,2024-05-24,Cable Car,Other regions,staff
+C01010,2024-05-24,Cloud Lookout,Other regions,cleanliness
+C01011,2024-05-24,Tilal Fort,Other regions,price
+C01012,2024-05-24,Wadi Trail,Gulf,staff
+C01013,2024-05-24,Wadi Trail,Other regions,access
+C01014,2024-05-25,Cable Car,Other regions,cleanliness
+C01015,2024-05-25,Cable Car,Other regions,queue
+C01016,2024-05-25,Cable Car,Other regions,queue
+C01017,2024-05-25,Souq Walk,Gulf,access
+C01018,2024-05-25,Souq Walk,Tilal region,cleanliness
+C01019,2024-05-25,Terrace Farms,Gulf,cleanliness
+C01020,2024-05-26,Cable Car,Other regions,cleanliness
+C01021,2024-05-26,Wadi Trail,Other regions,signage
+C01022,2024-05-27,Souq Walk,Other regions,cleanliness
+C01023,2024-05-27,Terrace Farms,Tilal region,access
+C01024,2024-05-30,Honey Museum,Tilal region,access
+C01025,2024-05-30,Souq Walk,Gulf,access
+C01026,2024-05-30,Souq Walk,Other regions,signage
+C01027,2024-05-30,Wadi Trail,Other regions,access
+C01028,2024-05-30,Wadi Trail,Other regions,staff
+C01029,2024-05-31,Tilal Fort,Other regions,price
+C01030,2024-06-01,Cable Car,Gulf,signage
+C01031,2024-06-01,Tilal Fort,Other regions,cleanliness
+C01032,2024-06-01,Tilal Fort,Other regions,signage
+C01033,2024-06-02,Cable Car,Other regions,price
+C01034,2024-06-02,Honey Museum,Other regions,access
+C01035,2024-06-02,Juniper Park,Tilal region,signage
+C01036,2024-06-02,Tilal Fort,Tilal region,signage
+C01037,2024-06-02,Wadi Trail,Gulf,signage
+C01038,2024-06-03,Terrace Farms,Other regions,access
+C01039,2024-06-04,Tilal Fort,Tilal region,signage
+C01040,2024-06-04,Wadi Trail,Other regions,price
+C01041,2024-06-05,Cable Car,Other regions,queue
+C01042,2024-06-05,Cable Car,Tilal region,queue
+C01043,2024-06-05,Stone Village,Other regions,price
+C01044,2024-06-06,Cable Car,Other regions,price
+C01045,2024-06-06,Juniper Park,Other regions,queue
+C01046,2024-06-06,Wadi Trail,Other regions,cleanliness
+C01047,2024-06-07,Cable Car,Gulf,queue
+C01048,2024-06-07,Cloud Lookout,Europe,access
+C01049,2024-06-07,Tilal Fort,Other regions,price
+C01050,2024-06-07,Wadi Trail,Other regions,signage
+C01051,2024-06-08,Juniper Park,Other regions,access
+C01052,2024-06-08,Souq Walk,Other regions,cleanliness
+C01053,2024-06-09,Cable Car,Gulf,signage
+C01054,2024-06-09,Stone Village,Other regions,queue
+C01055,2024-06-09,Tilal Fort,Other regions,queue
+C01056,2024-06-11,Cable Car,Asia,queue
+C01057,2024-06-11,Cable Car,Tilal region,queue
+C01058,2024-06-11,Stone Village,Other regions,signage
+C01059,2024-06-12,Tilal Fort,Other regions,access
+C01060,2024-06-12,Tilal Fort,Other regions,access
+C01061,2024-06-13,Juniper Park,Gulf,queue
+C01062,2024-06-14,Cable Car,Other regions,cleanliness
+C01063,2024-06-14,Honey Museum,Other regions,queue
+C01064,2024-06-14,Juniper Park,Gulf,access
+C01065,2024-06-14,Souq Walk,Other regions,price
+C01066,2024-06-14,Stone Village,Asia,access
+C01067,2024-06-15,Tilal Fort,Other regions,access
+C01068,2024-06-16,Honey Museum,Other regions,queue
+C01069,2024-06-17,Cable Car,Other regions,staff
+C01070,2024-06-17,Souq Walk,Other regions,price
+C01071,2024-06-17,Souq Walk,Other regions,price
+C01072,2024-06-17,Souq Walk,Tilal region,cleanliness
+C01073,2024-06-17,Tilal Fort,Tilal region,staff
+C01074,2024-06-19,Honey Museum,Tilal region,queue
+C01075,2024-06-19,Terrace Farms,Gulf,access
+C01076,2024-06-20,Cable Car,Gulf,queue
+C01077,2024-06-20,Souq Walk,Other regions,cleanliness
+C01078,2024-06-20,Stone Village,Other regions,cleanliness
+C01079,2024-06-21,Stone Village,Other regions,queue
+C01080,2024-06-21,Wadi Trail,Gulf,signage
+C01081,2024-06-22,Cable Car,Other regions,cleanliness
+C01082,2024-06-22,Honey Museum,Other regions,staff
+C01083,2024-06-22,Juniper Park,Other regions,queue
+C01084,2024-06-22,Souq Walk,Other regions,price
+C01085,2024-06-22,Stone Village,Other regions,staff
+C01086,2024-06-22,Tilal Fort,Other regions,price
+C01087,2024-06-25,Cable Car,Asia,queue
+C01088,2024-06-25,Cable Car,Tilal region,staff
+C01089,2024-06-25,Souq Walk,Gulf,cleanliness
+C01090,2024-06-25,Souq Walk,Other regions,price
+C01091,2024-06-25,Wadi Trail,Other regions,access
+C01092,2024-06-26,Cloud Lookout,Asia,access
+C01093,2024-06-26,Cloud Lookout,Europe,signage
+C01094,2024-06-26,Souq Walk,Other regions,signage
+C01095,2024-06-27,Souq Walk,Gulf,access
+C01096,2024-06-27,Terrace Farms,Tilal region,signage
+C01097,2024-06-28,Cable Car,Other regions,cleanliness
+C01098,2024-06-28,Cloud Lookout,Other regions,access
+C01099,2024-06-28,Honey Museum,Asia,signage
+C01100,2024-06-28,Souq Walk,Other regions,staff
+C01101,2024-06-28,Tilal Fort,Other regions,cleanliness
+C01102,2024-06-29,Cable Car,Gulf,staff
+C01103,2024-06-29,Cable Car,Other regions,queue
+C01104,2024-06-29,Cloud Lookout,Gulf,cleanliness
+C01105,2024-06-29,Honey Museum,Other regions,price
+C01106,2024-06-29,Souq Walk,Europe,staff
+C01107,2024-06-29,Souq Walk,Other regions,staff
+C01108,2024-06-29,Souq Walk,Tilal region,staff
+C01109,2024-06-29,Tilal Fort,Other regions,queue
+C01110,2024-06-30,Cable Car,Tilal region,price
+C01111,2024-07-01,Cable Car,Other regions,cleanliness
+C01112,2024-07-02,Cloud Lookout,Gulf,signage
+C01113,2024-07-02,Honey Museum,Asia,cleanliness
+C01114,2024-07-02,Souq Walk,Other regions,cleanliness
+C01115,2024-07-02,Tilal Fort,Other regions,price
+C01116,2024-07-03,Cable Car,Tilal region,signage
+C01117,2024-07-03,Honey Museum,Gulf,queue
+C01118,2024-07-03,Souq Walk,Other regions,cleanliness
+C01119,2024-07-03,Souq Walk,Other regions,signage
+C01120,2024-07-04,Cloud Lookout,Other regions,access
+C01121,2024-07-04,Juniper Park,Other regions,queue
+C01122,2024-07-05,Cable Car,Other regions,price
+C01123,2024-07-05,Cable Car,Other regions,signage
+C01124,2024-07-05,Juniper Park,Other regions,cleanliness
+C01125,2024-07-05,Souq Walk,Gulf,queue
+C01126,2024-07-05,Stone Village,Gulf,cleanliness
+C01127,2024-07-05,Tilal Fort,Asia,queue
+C01128,2024-07-05,Wadi Trail,Other regions,signage
+C01129,2024-07-06,Cable Car,Other regions,queue
+C01130,2024-07-06,Cloud Lookout,Other regions,cleanliness
+C01131,2024-07-06,Stone Village,Other regions,staff
+C01132,2024-07-06,Wadi Trail,Gulf,queue
+C01133,2024-07-07,Cable Car,Other regions,price
+C01134,2024-07-07,Cable Car,Other regions,queue
+C01135,2024-07-07,Cloud Lookout,Other regions,staff
+C01136,2024-07-07,Wadi Trail,Other regions,price
+C01137,2024-07-08,Juniper Park,Other regions,signage
+C01138,2024-07-09,Juniper Park,Other regions,signage
+C01139,2024-07-09,Souq Walk,Tilal region,signage
+C01140,2024-07-09,Wadi Trail,Other regions,signage
+C01141,2024-07-09,Wadi Trail,Other regions,signage
+C01142,2024-07-10,Cable Car,Other regions,queue
+C01143,2024-07-11,Cable Car,Other regions,queue
+C01144,2024-07-11,Cable Car,Other regions,signage
+C01145,2024-07-11,Honey Museum,Tilal region,queue
+C01146,2024-07-11,Souq Walk,Other regions,cleanliness
+C01147,2024-07-11,Wadi Trail,Tilal region,queue
+C01148,2024-07-12,Souq Walk,Other regions,price
+C01149,2024-07-12,Tilal Fort,Gulf,queue
+C01150,2024-07-12,Wadi Trail,Other regions,access
+C01151,2024-07-13,Cable Car,Other regions,price
+C01152,2024-07-13,Souq Walk,Gulf,signage
+C01153,2024-07-13,Souq Walk,Tilal region,cleanliness
+C01154,2024-07-13,Souq Walk,Tilal region,cleanliness
+C01155,2024-07-13,Stone Village,Other regions,staff
+C01156,2024-07-13,Wadi Trail,Other regions,access
+C01157,2024-07-13,Wadi Trail,Other regions,queue
+C01158,2024-07-14,Cloud Lookout,Gulf,signage
+C01159,2024-07-14,Honey Museum,Other regions,cleanliness
+C01160,2024-07-14,Souq Walk,Tilal region,access
+C01161,2024-07-14,Wadi Trail,Other regions,signage
+C01162,2024-07-15,Wadi Trail,Other regions,cleanliness
+C01163,2024-07-16,Cable Car,Other regions,price
+C01164,2024-07-16,Souq Walk,Other regions,access
+C01165,2024-07-16,Souq Walk,Other regions,queue
+C01166,2024-07-16,Terrace Farms,Asia,access
+C01167,2024-07-16,Wadi Trail,Other regions,price
+C01168,2024-07-17,Souq Walk,Other regions,staff
+C01169,2024-07-17,Terrace Farms,Tilal region,signage
+C01170,2024-07-17,Wadi Trail,Tilal region,signage
+C01171,2024-07-18,Cable Car,Other regions,price
+C01172,2024-07-19,Cable Car,Other regions,price
+C01173,2024-07-19,Souq Walk,Asia,access
+C01174,2024-07-19,Souq Walk,Gulf,access
+C01175,2024-07-19,Souq Walk,Other regions,access
+C01176,2024-07-19,Souq Walk,Other regions,signage
+C01177,2024-07-19,Souq Walk,Other regions,signage
+C01178,2024-07-19,Souq Walk,Other regions,staff
+C01179,2024-07-19,Terrace Farms,Other regions,cleanliness
+C01180,2024-07-20,Terrace Farms,Tilal region,cleanliness
+C01181,2024-07-21,Cable Car,Other regions,signage
+C01182,2024-07-22,Honey Museum,Gulf,price
+C01183,2024-07-22,Juniper Park,Gulf,queue
+C01184,2024-07-22,Souq Walk,Other regions,staff
+C01185,2024-07-22,Terrace Farms,Tilal region,signage
+C01186,2024-07-23,Cable Car,Tilal region,queue
+C01187,2024-07-23,Souq Walk,Other regions,queue
+C01188,2024-07-23,Stone Village,Gulf,queue
+C01189,2024-07-24,Cloud Lookout,Gulf,cleanliness
+C01190,2024-07-24,Honey Museum,Tilal region,cleanliness
+C01191,2024-07-24,Juniper Park,Gulf,access
+C01192,2024-07-24,Juniper Park,Other regions,signage
+C01193,2024-07-25,Cable Car,Gulf,queue
+C01194,2024-07-25,Honey Museum,Other regions,signage
+C01195,2024-07-25,Souq Walk,Tilal region,signage
+C01196,2024-07-26,Terrace Farms,Tilal region,signage
+C01197,2024-07-26,Tilal Fort,Other regions,access
+C01198,2024-07-27,Cable Car,Other regions,queue
+C01199,2024-07-27,Terrace Farms,Other regions,cleanliness
+C01200,2024-07-28,Cable Car,Tilal region,queue
+C01201,2024-07-28,Terrace Farms,Other regions,staff
+C01202,2024-07-29,Cable Car,Gulf,cleanliness
+C01203,2024-07-29,Honey Museum,Other regions,signage
+C01204,2024-07-30,Cloud Lookout,Other regions,cleanliness
+C01205,2024-07-30,Stone Village,Other regions,price
+C01206,2024-07-31,Stone Village,Gulf,signage
+C01207,2024-08-01,Cable Car,Other regions,queue
+C01208,2024-08-01,Stone Village,Gulf,staff
+C01209,2024-08-01,Tilal Fort,Other regions,price
+C01210,2024-08-02,Cable Car,Other regions,access
+C01211,2024-08-02,Honey Museum,Gulf,cleanliness
+C01212,2024-08-02,Juniper Park,Tilal region,price
+C01213,2024-08-02,Terrace Farms,Other regions,signage
+C01214,2024-08-02,Tilal Fort,Gulf,queue
+C01215,2024-08-02,Tilal Fort,Other regions,signage
+C01216,2024-08-02,Wadi Trail,Gulf,price
+C01217,2024-08-03,Juniper Park,Other regions,staff
+C01218,2024-08-04,Cable Car,Gulf,queue
+C01219,2024-08-04,Cable Car,Gulf,signage
+C01220,2024-08-04,Souq Walk,Gulf,cleanliness
+C01221,2024-08-04,Souq Walk,Other regions,price
+C01222,2024-08-04,Stone Village,Tilal region,price
+C01223,2024-08-05,Cable Car,Other regions,signage
+C01224,2024-08-05,Cable Car,Tilal region,access
+C01225,2024-08-06,Stone Village,Asia,queue
+C01226,2024-08-06,Tilal Fort,Other regions,signage
+C01227,2024-08-07,Cable Car,Gulf,queue
+C01228,2024-08-07,Tilal Fort,Gulf,access
+C01229,2024-08-08,Cable Car,Gulf,queue
+C01230,2024-08-08,Cable Car,Tilal region,price
+C01231,2024-08-08,Cable Car,Tilal region,price
+C01232,2024-08-08,Stone Village,Other regions,signage
+C01233,2024-08-09,Honey Museum,Gulf,cleanliness
+C01234,2024-08-09,Juniper Park,Other regions,signage
+C01235,2024-08-09,Souq Walk,Tilal region,cleanliness
+C01236,2024-08-09,Souq Walk,Tilal region,price
+C01237,2024-08-09,Wadi Trail,Europe,access
+C01238,2024-08-10,Cable Car,Gulf,queue
+C01239,2024-08-10,Cable Car,Other regions,queue
+C01240,2024-08-10,Cable Car,Other regions,queue
+C01241,2024-08-10,Cable Car,Tilal region,access
+C01242,2024-08-10,Cloud Lookout,Tilal region,cleanliness
+C01243,2024-08-11,Juniper Park,Europe,price
+C01244,2024-08-11,Tilal Fort,Tilal region,staff
+C01245,2024-08-13,Cable Car,Gulf,staff
+C01246,2024-08-14,Cable Car,Tilal region,price
+C01247,2024-08-14,Souq Walk,Gulf,access
+C01248,2024-08-15,Juniper Park,Other regions,cleanliness
+C01249,2024-08-15,Juniper Park,Other regions,queue
+C01250,2024-08-15,Tilal Fort,Asia,cleanliness
+C01251,2024-08-17,Cable Car,Other regions,cleanliness
+C01252,2024-08-17,Cable Car,Other regions,price
+C01253,2024-08-17,Juniper Park,Other regions,staff
+C01254,2024-08-17,Stone Village,Gulf,queue
+C01255,2024-08-17,Stone Village,Gulf,staff
+C01256,2024-08-18,Cable Car,Tilal region,queue
+C01257,2024-08-18,Juniper Park,Other regions,cleanliness
+C01258,2024-08-18,Juniper Park,Other regions,signage
+C01259,2024-08-18,Souq Walk,Gulf,signage
+C01260,2024-08-18,Stone Village,Europe,staff
+C01261,2024-08-18,Tilal Fort,Gulf,staff
+C01262,2024-08-19,Cable Car,Other regions,queue
+C01263,2024-08-19,Souq Walk,Other regions,access
+C01264,2024-08-19,Stone Village,Asia,price
+C01265,2024-08-19,Tilal Fort,Europe,signage
+C01266,2024-08-20,Cloud Lookout,Tilal region,staff
+C01267,2024-08-20,Juniper Park,Gulf,queue
+C01268,2024-08-20,Terrace Farms,Gulf,signage
+C01269,2024-08-21,Stone Village,Gulf,signage
+C01270,2024-08-22,Cloud Lookout,Other regions,access
+C01271,2024-08-22,Stone Village,Other regions,queue
+C01272,2024-08-23,Stone Village,Gulf,queue
+C01273,2024-08-24,Wadi Trail,Tilal region,price
+C01274,2024-08-25,Honey Museum,Other regions,price
+C01275,2024-08-25,Souq Walk,Tilal region,price
+C01276,2024-08-25,Terrace Farms,Other regions,access
+C01277,2024-08-25,Tilal Fort,Other regions,price
+C01278,2024-08-26,Cable Car,Asia,access
+C01279,2024-08-26,Juniper Park,Other regions,access
+C01280,2024-08-27,Tilal Fort,Tilal region,signage
+C01281,2024-08-27,Tilal Fort,Tilal region,signage
+C01282,2024-08-28,Cable Car,Gulf,price
+C01283,2024-08-28,Cable Car,Gulf,staff
+C01284,2024-08-29,Cable Car,Other regions,signage
+C01285,2024-08-29,Terrace Farms,Other regions,signage
+C01286,2024-08-30,Cable Car,Gulf,queue
+C01287,2024-08-30,Cable Car,Other regions,access
+C01288,2024-08-30,Cable Car,Tilal region,queue
+C01289,2024-08-30,Souq Walk,Tilal region,price
+C01290,2024-08-30,Terrace Farms,Other regions,queue
+C01291,2024-08-30,Tilal Fort,Other regions,staff
+C01292,2024-08-31,Cable Car,Other regions,access
+C01293,2024-08-31,Cable Car,Other regions,cleanliness
+C01294,2024-08-31,Wadi Trail,Gulf,queue
+C01295,2024-09-01,Cable Car,Other regions,queue
+C01296,2024-09-01,Cable Car,Other regions,queue
+C01297,2024-09-03,Cloud Lookout,Asia,price
+C01298,2024-09-03,Souq Walk,Tilal region,staff
+C01299,2024-09-05,Cable Car,Other regions,cleanliness
+C01300,2024-09-05,Tilal Fort,Other regions,access
+C01301,2024-09-06,Souq Walk,Other regions,staff
+C01302,2024-09-06,Souq Walk,Tilal region,staff
+C01303,2024-09-06,Stone Village,Tilal region,access
+C01304,2024-09-07,Tilal Fort,Gulf,queue
+C01305,2024-09-09,Terrace Farms,Tilal region,queue
+C01306,2024-09-09,Tilal Fort,Other regions,access
+C01307,2024-09-10,Honey Museum,Gulf,queue
+C01308,2024-09-11,Cloud Lookout,Other regions,price
+C01309,2024-09-12,Honey Museum,Tilal region,price
+C01310,2024-09-12,Wadi Trail,Tilal region,signage
+C01311,2024-09-13,Cable Car,Other regions,cleanliness
+C01312,2024-09-13,Souq Walk,Tilal region,signage
+C01313,2024-09-14,Cable Car,Gulf,queue
+C01314,2024-09-14,Cable Car,Gulf,queue
+C01315,2024-09-14,Cable Car,Other regions,signage
+C01316,2024-09-14,Souq Walk,Other regions,access
+C01317,2024-09-14,Souq Walk,Other regions,staff
+C01318,2024-09-14,Souq Walk,Tilal region,cleanliness
+C01319,2024-09-14,Tilal Fort,Other regions,access
+C01320,2024-09-17,Cable Car,Other regions,access
+C01321,2024-09-17,Cable Car,Other regions,queue
+C01322,2024-09-17,Souq Walk,Tilal region,queue
+C01323,2024-09-18,Cable Car,Other regions,queue
+C01324,2024-09-19,Wadi Trail,Other regions,cleanliness
+C01325,2024-09-20,Cable Car,Other regions,access
+C01326,2024-09-20,Juniper Park,Other regions,cleanliness
+C01327,2024-09-20,Juniper Park,Other regions,staff
+C01328,2024-09-20,Souq Walk,Asia,queue
+C01329,2024-09-20,Terrace Farms,Other regions,price
+C01330,2024-09-21,Stone Village,Other regions,price
+C01331,2024-09-21,Tilal Fort,Gulf,queue
+C01332,2024-09-23,Souq Walk,Other regions,price
+C01333,2024-09-25,Cable Car,Gulf,queue
+C01334,2024-09-25,Honey Museum,Other regions,cleanliness
+C01335,2024-09-25,Souq Walk,Other regions,cleanliness
+C01336,2024-09-26,Cable Car,Gulf,queue
+C01337,2024-09-27,Cable Car,Other regions,signage
+C01338,2024-09-27,Cable Car,Other regions,signage
+C01339,2024-09-27,Stone Village,Tilal region,signage
+C01340,2024-09-27,Tilal Fort,Other regions,staff
+C01341,2024-09-28,Stone Village,Other regions,cleanliness
+C01342,2024-09-30,Cable Car,Gulf,price
+C01343,2024-10-01,Tilal Fort,Other regions,price
+C01344,2024-10-01,Tilal Fort,Other regions,signage
+C01345,2024-10-01,Tilal Fort,Tilal region,price
+C01346,2024-10-01,Tilal Fort,Tilal region,price
+C01347,2024-10-02,Cable Car,Other regions,staff
+C01348,2024-10-02,Honey Museum,Other regions,staff
+C01349,2024-10-02,Souq Walk,Other regions,cleanliness
+C01350,2024-10-02,Tilal Fort,Other regions,access
+C01351,2024-10-03,Wadi Trail,Tilal region,access
+C01352,2024-10-04,Honey Museum,Tilal region,cleanliness
+C01353,2024-10-04,Souq Walk,Other regions,cleanliness
+C01354,2024-10-04,Souq Walk,Other regions,queue
+C01355,2024-10-04,Tilal Fort,Asia,signage
+C01356,2024-10-04,Tilal Fort,Other regions,staff
+C01357,2024-10-05,Terrace Farms,Tilal region,signage
+C01358,2024-10-06,Souq Walk,Other regions,access
+C01359,2024-10-06,Tilal Fort,Asia,price
+C01360,2024-10-07,Tilal Fort,Other regions,queue
+C01361,2024-10-08,Tilal Fort,Other regions,staff
+C01362,2024-10-08,Tilal Fort,Tilal region,staff
+C01363,2024-10-08,Wadi Trail,Other regions,staff
+C01364,2024-10-09,Terrace Farms,Tilal region,queue
+C01365,2024-10-09,Wadi Trail,Asia,cleanliness
+C01366,2024-10-10,Cloud Lookout,Tilal region,price
+C01367,2024-10-10,Honey Museum,Gulf,access
+C01368,2024-10-11,Cable Car,Other regions,access
+C01369,2024-10-11,Honey Museum,Tilal region,staff
+C01370,2024-10-11,Souq Walk,Asia,access
+C01371,2024-10-11,Tilal Fort,Gulf,queue
+C01372,2024-10-11,Wadi Trail,Tilal region,staff
+C01373,2024-10-12,Cable Car,Other regions,queue
+C01374,2024-10-12,Cable Car,Other regions,signage
+C01375,2024-10-12,Juniper Park,Other regions,signage
+C01376,2024-10-12,Stone Village,Other regions,staff
+C01377,2024-10-12,Tilal Fort,Tilal region,cleanliness
+C01378,2024-10-12,Wadi Trail,Other regions,cleanliness
+C01379,2024-10-13,Cable Car,Other regions,staff
+C01380,2024-10-13,Cloud Lookout,Tilal region,price
+C01381,2024-10-13,Souq Walk,Other regions,access
+C01382,2024-10-13,Wadi Trail,Europe,access
+C01383,2024-10-15,Wadi Trail,Gulf,queue
+C01384,2024-10-16,Cable Car,Asia,staff
+C01385,2024-10-16,Cable Car,Tilal region,queue
+C01386,2024-10-16,Tilal Fort,Tilal region,access
+C01387,2024-10-17,Cloud Lookout,Other regions,signage
+C01388,2024-10-17,Juniper Park,Other regions,price
+C01389,2024-10-18,Cable Car,Other regions,price
+C01390,2024-10-18,Cable Car,Other regions,signage
+C01391,2024-10-18,Juniper Park,Tilal region,queue
+C01392,2024-10-18,Stone Village,Other regions,staff
+C01393,2024-10-18,Wadi Trail,Other regions,price
+C01394,2024-10-19,Cable Car,Other regions,cleanliness
+C01395,2024-10-19,Cable Car,Other regions,queue
+C01396,2024-10-19,Cable Car,Tilal region,staff
+C01397,2024-10-19,Stone Village,Europe,signage
+C01398,2024-10-19,Terrace Farms,Tilal region,signage
+C01399,2024-10-19,Tilal Fort,Other regions,access
+C01400,2024-10-19,Wadi Trail,Other regions,signage
+C01401,2024-10-20,Souq Walk,Other regions,staff
+C01402,2024-10-20,Tilal Fort,Tilal region,queue
+C01403,2024-10-21,Cable Car,Asia,signage
+C01404,2024-10-21,Cable Car,Europe,queue
+C01405,2024-10-21,Cloud Lookout,Tilal region,price
+C01406,2024-10-21,Wadi Trail,Tilal region,staff
+C01407,2024-10-22,Cable Car,Other regions,signage
+C01408,2024-10-22,Cable Car,Other regions,staff
+C01409,2024-10-22,Juniper Park,Tilal region,staff
+C01410,2024-10-23,Cloud Lookout,Other regions,staff
+C01411,2024-10-24,Cable Car,Tilal region,price
+C01412,2024-10-24,Souq Walk,Other regions,cleanliness
+C01413,2024-10-24,Tilal Fort,Europe,access
+C01414,2024-10-25,Cloud Lookout,Tilal region,price
+C01415,2024-10-25,Honey Museum,Tilal region,cleanliness
+C01416,2024-10-25,Souq Walk,Gulf,signage
+C01417,2024-10-25,Tilal Fort,Gulf,queue
+C01418,2024-10-26,Souq Walk,Gulf,queue
+C01419,2024-10-26,Terrace Farms,Tilal region,access
+C01420,2024-10-26,Tilal Fort,Other regions,price
+C01421,2024-10-26,Tilal Fort,Other regions,signage
+C01422,2024-10-28,Cable Car,Other regions,access
+C01423,2024-10-28,Cable Car,Tilal region,cleanliness
+C01424,2024-10-28,Souq Walk,Tilal region,cleanliness
+C01425,2024-10-28,Wadi Trail,Europe,staff
+C01426,2024-10-29,Juniper Park,Other regions,queue
+C01427,2024-10-30,Cable Car,Other regions,queue
+C01428,2024-10-30,Souq Walk,Gulf,cleanliness
+C01429,2024-10-30,Tilal Fort,Gulf,staff
+C01430,2024-10-31,Cable Car,Gulf,signage
+C01431,2024-10-31,Cable Car,Other regions,queue
+C01432,2024-10-31,Cloud Lookout,Tilal region,price
+C01433,2024-10-31,Stone Village,Tilal region,price
+C01434,2024-11-01,Souq Walk,Asia,cleanliness
+C01435,2024-11-01,Souq Walk,Tilal region,cleanliness
+C01436,2024-11-01,Stone Village,Other regions,signage
+C01437,2024-11-01,Wadi Trail,Gulf,cleanliness
+C01438,2024-11-02,Cable Car,Gulf,queue
+C01439,2024-11-02,Cable Car,Other regions,cleanliness
+C01440,2024-11-02,Cable Car,Tilal region,staff
+C01441,2024-11-02,Tilal Fort,Gulf,price
+C01442,2024-11-03,Cable Car,Other regions,signage
+C01443,2024-11-03,Cloud Lookout,Other regions,staff
+C01444,2024-11-03,Stone Village,Tilal region,price
+C01445,2024-11-03,Tilal Fort,Other regions,staff
+C01446,2024-11-04,Cloud Lookout,Europe,queue
+C01447,2024-11-04,Terrace Farms,Other regions,access
+C01448,2024-11-05,Souq Walk,Asia,access
+C01449,2024-11-05,Souq Walk,Other regions,signage
+C01450,2024-11-05,Wadi Trail,Gulf,price
+C01451,2024-11-06,Honey Museum,Other regions,cleanliness
+C01452,2024-11-08,Juniper Park,Other regions,price
+C01453,2024-11-09,Cable Car,Asia,queue
+C01454,2024-11-10,Honey Museum,Europe,staff
+C01455,2024-11-10,Souq Walk,Asia,price
+C01456,2024-11-11,Wadi Trail,Tilal region,signage
+C01457,2024-11-12,Honey Museum,Europe,cleanliness
+C01458,2024-11-12,Stone Village,Other regions,signage
+C01459,2024-11-14,Tilal Fort,Other regions,staff
+C01460,2024-11-15,Juniper Park,Tilal region,signage
+C01461,2024-11-15,Stone Village,Other regions,access
+C01462,2024-11-15,Wadi Trail,Europe,access
+C01463,2024-11-16,Cable Car,Other regions,price
+C01464,2024-11-16,Cable Car,Tilal region,cleanliness
+C01465,2024-11-16,Juniper Park,Other regions,signage
+C01466,2024-11-17,Souq Walk,Other regions,price
+C01467,2024-11-17,Wadi Trail,Other regions,signage
+C01468,2024-11-18,Juniper Park,Tilal region,price
+C01469,2024-11-19,Cable Car,Other regions,price
+C01470,2024-11-19,Juniper Park,Tilal region,price
+C01471,2024-11-19,Tilal Fort,Other regions,access
+C01472,2024-11-20,Souq Walk,Gulf,price
+C01473,2024-11-20,Tilal Fort,Other regions,access
+C01474,2024-11-21,Cloud Lookout,Other regions,cleanliness
+C01475,2024-11-21,Juniper Park,Tilal region,access
+C01476,2024-11-23,Cloud Lookout,Other regions,queue
+C01477,2024-11-23,Terrace Farms,Europe,signage
+C01478,2024-11-23,Terrace Farms,Other regions,cleanliness
+C01479,2024-11-24,Cloud Lookout,Europe,signage
+C01480,2024-11-24,Wadi Trail,Europe,queue
+C01481,2024-11-26,Cable Car,Tilal region,access
+C01482,2024-11-26,Honey Museum,Tilal region,signage
+C01483,2024-11-26,Souq Walk,Other regions,staff
+C01484,2024-11-26,Tilal Fort,Tilal region,cleanliness
+C01485,2024-11-26,Wadi Trail,Tilal region,access
+C01486,2024-11-27,Cable Car,Other regions,queue
+C01487,2024-11-27,Juniper Park,Gulf,signage
+C01488,2024-11-27,Souq Walk,Tilal region,access
+C01489,2024-11-27,Stone Village,Other regions,cleanliness
+C01490,2024-11-28,Cable Car,Other regions,cleanliness
+C01491,2024-11-29,Cloud Lookout,Europe,cleanliness
+C01492,2024-11-29,Souq Walk,Other regions,access
+C01493,2024-11-29,Souq Walk,Other regions,staff
+C01494,2024-11-29,Stone Village,Europe,staff
+C01495,2024-11-29,Tilal Fort,Tilal region,access
+C01496,2024-12-01,Wadi Trail,Asia,access
+C01497,2024-12-02,Tilal Fort,Gulf,queue
+C01498,2024-12-03,Souq Walk,Tilal region,staff
+C01499,2024-12-03,Terrace Farms,Asia,signage
+C01500,2024-12-03,Tilal Fort,Other regions,price
+C01501,2024-12-03,Wadi Trail,Europe,signage
+C01502,2024-12-04,Stone Village,Europe,queue
+C01503,2024-12-04,Wadi Trail,Tilal region,cleanliness
+C01504,2024-12-05,Cable Car,Gulf,cleanliness
+C01505,2024-12-06,Juniper Park,Other regions,signage
+C01506,2024-12-06,Wadi Trail,Asia,cleanliness
+C01507,2024-12-06,Wadi Trail,Tilal region,signage
+C01508,2024-12-07,Cable Car,Europe,signage
+C01509,2024-12-07,Cable Car,Gulf,cleanliness
+C01510,2024-12-07,Souq Walk,Other regions,queue
+C01511,2024-12-07,Wadi Trail,Europe,access
+C01512,2024-12-08,Cable Car,Other regions,queue
+C01513,2024-12-11,Tilal Fort,Other regions,cleanliness
+C01514,2024-12-13,Cable Car,Asia,staff
+C01515,2024-12-13,Cable Car,Other regions,signage
+C01516,2024-12-13,Souq Walk,Tilal region,cleanliness
+C01517,2024-12-14,Cable Car,Asia,queue
+C01518,2024-12-14,Stone Village,Europe,signage
+C01519,2024-12-14,Wadi Trail,Tilal region,access
+C01520,2024-12-15,Terrace Farms,Other regions,cleanliness
+C01521,2024-12-16,Cloud Lookout,Other regions,queue
+C01522,2024-12-16,Souq Walk,Gulf,cleanliness
+C01523,2024-12-17,Cable Car,Asia,queue
+C01524,2024-12-17,Cable Car,Other regions,staff
+C01525,2024-12-17,Tilal Fort,Other regions,queue
+C01526,2024-12-18,Juniper Park,Europe,signage
+C01527,2024-12-18,Terrace Farms,Other regions,staff
+C01528,2024-12-18,Tilal Fort,Tilal region,cleanliness
+C01529,2024-12-18,Wadi Trail,Other regions,signage
+C01530,2024-12-19,Juniper Park,Tilal region,price
+C01531,2024-12-19,Terrace Farms,Gulf,signage
+C01532,2024-12-20,Souq Walk,Other regions,price
+C01533,2024-12-20,Terrace Farms,Other regions,queue
+C01534,2024-12-20,Wadi Trail,Other regions,cleanliness
+C01535,2024-12-21,Souq Walk,Other regions,price
+C01536,2024-12-21,Wadi Trail,Other regions,access
+C01537,2024-12-22,Honey Museum,Other regions,price
+C01538,2024-12-25,Cloud Lookout,Other regions,queue
+C01539,2024-12-25,Souq Walk,Other regions,cleanliness
+C01540,2024-12-25,Wadi Trail,Asia,queue
+C01541,2024-12-25,Wadi Trail,Asia,signage
+C01542,2024-12-26,Cable Car,Gulf,queue
+C01543,2024-12-26,Wadi Trail,Asia,signage
+C01544,2024-12-27,Cable Car,Other regions,signage
+C01545,2024-12-27,Cloud Lookout,Other regions,price
+C01546,2024-12-27,Souq Walk,Asia,queue
+C01547,2024-12-27,Tilal Fort,Other regions,signage
+C01548,2024-12-28,Juniper Park,Europe,price
+C01549,2024-12-28,Juniper Park,Gulf,price
+C01550,2024-12-29,Cable Car,Other regions,queue
+C01551,2024-12-31,Juniper Park,Tilal region,price
+C01552,2025-01-01,Souq Walk,Europe,price
+C01553,2025-01-01,Terrace Farms,Other regions,cleanliness
+C01554,2025-01-02,Juniper Park,Other regions,access
+C01555,2025-01-02,Wadi Trail,Tilal region,cleanliness
+C01556,2025-01-03,Cable Car,Europe,signage
+C01557,2025-01-03,Cloud Lookout,Other regions,queue
+C01558,2025-01-03,Stone Village,Tilal region,cleanliness
+C01559,2025-01-04,Cable Car,Europe,queue
+C01560,2025-01-06,Souq Walk,Other regions,price
+C01561,2025-01-06,Wadi Trail,Europe,signage
+C01562,2025-01-07,Cloud Lookout,Tilal region,access
+C01563,2025-01-07,Stone Village,Asia,signage
+C01564,2025-01-07,Tilal Fort,Europe,signage
+C01565,2025-01-10,Juniper Park,Europe,cleanliness
+C01566,2025-01-10,Juniper Park,Gulf,queue
+C01567,2025-01-10,Stone Village,Tilal region,signage
+C01568,2025-01-11,Cable Car,Other regions,access
+C01569,2025-01-11,Souq Walk,Tilal region,cleanliness
+C01570,2025-01-13,Juniper Park,Other regions,cleanliness
+C01571,2025-01-14,Honey Museum,Europe,price
+C01572,2025-01-15,Tilal Fort,Gulf,price
+C01573,2025-01-17,Cable Car,Europe,queue
+C01574,2025-01-17,Juniper Park,Other regions,signage
+C01575,2025-01-18,Cable Car,Tilal region,staff
+C01576,2025-01-18,Honey Museum,Gulf,staff
+C01577,2025-01-19,Honey Museum,Other regions,staff
+C01578,2025-01-19,Stone Village,Other regions,cleanliness
+C01579,2025-01-20,Cable Car,Other regions,queue
+C01580,2025-01-20,Tilal Fort,Other regions,queue
+C01581,2025-01-23,Cable Car,Other regions,access
+C01582,2025-01-24,Stone Village,Tilal region,access
+C01583,2025-01-24,Wadi Trail,Europe,cleanliness
+C01584,2025-01-24,Wadi Trail,Tilal region,cleanliness
+C01585,2025-01-25,Tilal Fort,Other regions,price
+C01586,2025-01-27,Terrace Farms,Tilal region,price
+C01587,2025-01-27,Tilal Fort,Tilal region,cleanliness
+C01588,2025-01-29,Cable Car,Other regions,cleanliness
+C01589,2025-01-29,Tilal Fort,Tilal region,access
+C01590,2025-01-30,Honey Museum,Tilal region,cleanliness
+C01591,2025-02-03,Honey Museum,Other regions,staff
+C01592,2025-02-03,Souq Walk,Asia,access
+C01593,2025-02-03,Tilal Fort,Other regions,price
+C01594,2025-02-05,Souq Walk,Other regions,price
+C01595,2025-02-05,Souq Walk,Tilal region,signage
+C01596,2025-02-06,Souq Walk,Gulf,price
+C01597,2025-02-07,Cable Car,Other regions,signage
+C01598,2025-02-07,Tilal Fort,Other regions,cleanliness
+C01599,2025-02-07,Wadi Trail,Tilal region,signage
+C01600,2025-02-08,Cable Car,Tilal region,price
+C01601,2025-02-08,Cloud Lookout,Other regions,staff
+C01602,2025-02-08,Juniper Park,Tilal region,signage
+C01603,2025-02-08,Stone Village,Other regions,cleanliness
+C01604,2025-02-08,Wadi Trail,Other regions,access
+C01605,2025-02-09,Cable Car,Gulf,staff
+C01606,2025-02-10,Cloud Lookout,Other regions,price
+C01607,2025-02-10,Honey Museum,Gulf,signage
+C01608,2025-02-10,Wadi Trail,Europe,signage
+C01609,2025-02-11,Cloud Lookout,Tilal region,signage
+C01610,2025-02-11,Juniper Park,Other regions,cleanliness
+C01611,2025-02-11,Souq Walk,Europe,staff
+C01612,2025-02-11,Stone Village,Other regions,signage
+C01613,2025-02-13,Cable Car,Asia,queue
+C01614,2025-02-13,Souq Walk,Gulf,access
+C01615,2025-02-13,Stone Village,Other regions,cleanliness
+C01616,2025-02-13,Stone Village,Tilal region,queue
+C01617,2025-02-13,Terrace Farms,Other regions,price
+C01618,2025-02-14,Tilal Fort,Other regions,price
+C01619,2025-02-15,Cloud Lookout,Other regions,signage
+C01620,2025-02-15,Souq Walk,Asia,staff
+C01621,2025-02-15,Stone Village,Other regions,cleanliness
+C01622,2025-02-16,Cable Car,Tilal region,signage
+C01623,2025-02-16,Cloud Lookout,Other regions,queue
+C01624,2025-02-16,Juniper Park,Other regions,cleanliness
+C01625,2025-02-16,Stone Village,Gulf,staff
+C01626,2025-02-16,Terrace Farms,Other regions,staff
+C01627,2025-02-17,Honey Museum,Other regions,staff
+C01628,2025-02-17,Souq Walk,Asia,access
+C01629,2025-02-18,Stone Village,Other regions,cleanliness
+C01630,2025-02-18,Tilal Fort,Asia,cleanliness
+C01631,2025-02-20,Cable Car,Other regions,price
+C01632,2025-02-20,Souq Walk,Other regions,staff
+C01633,2025-02-21,Cable Car,Tilal region,signage
+C01634,2025-02-21,Cloud Lookout,Europe,cleanliness
+C01635,2025-02-21,Terrace Farms,Europe,staff
+C01636,2025-02-22,Cable Car,Tilal region,queue
+C01637,2025-02-22,Wadi Trail,Europe,staff
+C01638,2025-02-23,Souq Walk,Other regions,cleanliness
+C01639,2025-02-23,Stone Village,Europe,price
+C01640,2025-02-24,Cable Car,Europe,access
+C01641,2025-02-25,Cable Car,Other regions,staff
+C01642,2025-02-25,Souq Walk,Tilal region,cleanliness
+C01643,2025-02-25,Terrace Farms,Other regions,access
+C01644,2025-02-26,Cable Car,Europe,price
+C01645,2025-02-26,Cable Car,Gulf,queue
+C01646,2025-02-28,Cable Car,Other regions,queue
+C01647,2025-02-28,Stone Village,Europe,signage
+C01648,2025-02-28,Terrace Farms,Other regions,price
+C01649,2025-02-28,Terrace Farms,Other regions,queue
+C01650,2025-03-01,Cable Car,Other regions,access
+C01651,2025-03-01,Cable Car,Other regions,access
+C01652,2025-03-01,Cable Car,Other regions,signage
+C01653,2025-03-01,Juniper Park,Asia,access
+C01654,2025-03-01,Souq Walk,Asia,price
+C01655,2025-03-03,Souq Walk,Other regions,signage
+C01656,2025-03-04,Stone Village,Europe,signage
+C01657,2025-03-04,Stone Village,Gulf,cleanliness
+C01658,2025-03-05,Juniper Park,Tilal region,staff
+C01659,2025-03-06,Souq Walk,Tilal region,price
+C01660,2025-03-06,Tilal Fort,Other regions,queue
+C01661,2025-03-07,Juniper Park,Tilal region,staff
+C01662,2025-03-07,Souq Walk,Other regions,access
+C01663,2025-03-07,Tilal Fort,Other regions,queue
+C01664,2025-03-07,Tilal Fort,Other regions,staff
+C01665,2025-03-08,Cable Car,Other regions,signage
+C01666,2025-03-08,Juniper Park,Other regions,access
+C01667,2025-03-08,Souq Walk,Asia,access
+C01668,2025-03-08,Terrace Farms,Other regions,signage
+C01669,2025-03-08,Tilal Fort,Asia,signage
+C01670,2025-03-08,Wadi Trail,Other regions,queue
+C01671,2025-03-09,Cable Car,Other regions,queue
+C01672,2025-03-09,Cable Car,Tilal region,signage
+C01673,2025-03-10,Cable Car,Other regions,price
+C01674,2025-03-10,Terrace Farms,Asia,access
+C01675,2025-03-11,Stone Village,Europe,cleanliness
+C01676,2025-03-11,Wadi Trail,Europe,access
+C01677,2025-03-12,Cable Car,Tilal region,cleanliness
+C01678,2025-03-13,Honey Museum,Gulf,queue
+C01679,2025-03-14,Cable Car,Europe,cleanliness
+C01680,2025-03-14,Souq Walk,Tilal region,access
+C01681,2025-03-14,Stone Village,Asia,staff
+C01682,2025-03-14,Stone Village,Other regions,access
+C01683,2025-03-14,Tilal Fort,Asia,price
+C01684,2025-03-14,Tilal Fort,Asia,staff
+C01685,2025-03-15,Cable Car,Asia,queue
+C01686,2025-03-15,Cable Car,Gulf,queue
+C01687,2025-03-15,Cable Car,Tilal region,staff
+C01688,2025-03-15,Tilal Fort,Other regions,queue
+C01689,2025-03-15,Tilal Fort,Other regions,staff
+C01690,2025-03-15,Wadi Trail,Other regions,signage
+C01691,2025-03-16,Cable Car,Asia,queue
+C01692,2025-03-16,Tilal Fort,Other regions,signage
+C01693,2025-03-16,Wadi Trail,Other regions,signage
+C01694,2025-03-17,Stone Village,Europe,signage
+C01695,2025-03-17,Wadi Trail,Europe,cleanliness
+C01696,2025-03-18,Souq Walk,Tilal region,cleanliness
+C01697,2025-03-19,Souq Walk,Asia,signage
+C01698,2025-03-20,Cable Car,Other regions,access
+C01699,2025-03-20,Honey Museum,Other regions,price
+C01700,2025-03-21,Cable Car,Tilal region,staff
+C01701,2025-03-21,Juniper Park,Tilal region,price
+C01702,2025-03-21,Souq Walk,Gulf,access
+C01703,2025-03-22,Cable Car,Asia,price
+C01704,2025-03-22,Cloud Lookout,Other regions,signage
+C01705,2025-03-22,Juniper Park,Europe,staff
+C01706,2025-03-22,Souq Walk,Europe,signage
+C01707,2025-03-22,Souq Walk,Other regions,queue
+C01708,2025-03-24,Wadi Trail,Other regions,signage
+C01709,2025-03-24,Wadi Trail,Tilal region,price
+C01710,2025-03-24,Wadi Trail,Tilal region,queue
+C01711,2025-03-25,Wadi Trail,Tilal region,price
+C01712,2025-03-26,Souq Walk,Gulf,price
+C01713,2025-03-26,Stone Village,Other regions,signage
+C01714,2025-03-26,Terrace Farms,Tilal region,signage
+C01715,2025-03-27,Cable Car,Tilal region,signage
+C01716,2025-03-28,Souq Walk,Other regions,access
+C01717,2025-03-28,Stone Village,Other regions,queue
+C01718,2025-03-28,Stone Village,Tilal region,cleanliness
+C01719,2025-03-28,Tilal Fort,Asia,price
+C01720,2025-03-28,Tilal Fort,Other regions,access
+C01721,2025-03-29,Cable Car,Asia,cleanliness
+C01722,2025-03-29,Terrace Farms,Tilal region,queue
+C01723,2025-03-31,Souq Walk,Gulf,queue
+C01724,2025-03-31,Wadi Trail,Europe,signage
+C01725,2025-04-02,Cable Car,Asia,queue
+C01726,2025-04-03,Cable Car,Tilal region,access
+C01727,2025-04-04,Cable Car,Tilal region,queue
+C01728,2025-04-05,Cable Car,Other regions,queue
+C01729,2025-04-05,Honey Museum,Tilal region,staff
+C01730,2025-04-05,Terrace Farms,Tilal region,queue
+C01731,2025-04-05,Tilal Fort,Other regions,queue
+C01732,2025-04-06,Cloud Lookout,Other regions,signage
+C01733,2025-04-06,Honey Museum,Other regions,price
+C01734,2025-04-07,Cloud Lookout,Other regions,signage
+C01735,2025-04-09,Cable Car,Other regions,queue
+C01736,2025-04-09,Terrace Farms,Other regions,staff
+C01737,2025-04-10,Cable Car,Other regions,cleanliness
+C01738,2025-04-10,Juniper Park,Tilal region,price
+C01739,2025-04-10,Souq Walk,Gulf,queue
+C01740,2025-04-10,Tilal Fort,Other regions,queue
+C01741,2025-04-10,Tilal Fort,Other regions,staff
+C01742,2025-04-12,Cable Car,Other regions,queue
+C01743,2025-04-12,Cloud Lookout,Other regions,cleanliness
+C01744,2025-04-12,Souq Walk,Other regions,cleanliness
+C01745,2025-04-13,Cable Car,Other regions,queue
+C01746,2025-04-13,Stone Village,Other regions,cleanliness
+C01747,2025-04-14,Wadi Trail,Other regions,queue
+C01748,2025-04-15,Cloud Lookout,Tilal region,price
+C01749,2025-04-15,Juniper Park,Tilal region,price
+C01750,2025-04-16,Cloud Lookout,Tilal region,signage
+C01751,2025-04-16,Souq Walk,Other regions,staff
+C01752,2025-04-17,Souq Walk,Gulf,queue
+C01753,2025-04-17,Souq Walk,Tilal region,price
+C01754,2025-04-17,Terrace Farms,Other regions,access
+C01755,2025-04-18,Cable Car,Other regions,queue
+C01756,2025-04-18,Souq Walk,Other regions,staff
+C01757,2025-04-18,Tilal Fort,Gulf,signage
+C01758,2025-04-19,Cable Car,Other regions,cleanliness
+C01759,2025-04-19,Cable Car,Other regions,price
+C01760,2025-04-19,Honey Museum,Asia,price
+C01761,2025-04-19,Juniper Park,Tilal region,signage
+C01762,2025-04-19,Stone Village,Other regions,price
+C01763,2025-04-19,Stone Village,Other regions,signage
+C01764,2025-04-19,Tilal Fort,Tilal region,signage
+C01765,2025-04-20,Souq Walk,Other regions,price
+C01766,2025-04-20,Stone Village,Other regions,price
+C01767,2025-04-20,Tilal Fort,Gulf,signage
+C01768,2025-04-20,Wadi Trail,Asia,signage
+C01769,2025-04-21,Tilal Fort,Tilal region,staff
+C01770,2025-04-22,Honey Museum,Europe,cleanliness
+C01771,2025-04-22,Terrace Farms,Other regions,cleanliness
+C01772,2025-04-23,Terrace Farms,Tilal region,queue
+C01773,2025-04-23,Tilal Fort,Other regions,signage
+C01774,2025-04-24,Wadi Trail,Europe,signage
+C01775,2025-04-26,Souq Walk,Other regions,cleanliness
+C01776,2025-04-26,Terrace Farms,Other regions,access
+C01777,2025-04-26,Wadi Trail,Europe,signage
+C01778,2025-04-26,Wadi Trail,Other regions,price
+C01779,2025-04-26,Wadi Trail,Other regions,signage
+C01780,2025-04-27,Juniper Park,Asia,cleanliness
+C01781,2025-04-28,Cloud Lookout,Tilal region,signage
+C01782,2025-04-28,Souq Walk,Other regions,cleanliness
+C01783,2025-04-29,Cable Car,Other regions,queue
+C01784,2025-04-29,Juniper Park,Tilal region,access
+C01785,2025-04-29,Stone Village,Other regions,cleanliness
+C01786,2025-04-30,Cloud Lookout,Other regions,queue
+C01787,2025-04-30,Souq Walk,Other regions,signage
+C01788,2025-05-01,Cable Car,Other regions,queue
+C01789,2025-05-01,Cable Car,Other regions,signage
+C01790,2025-05-02,Cable Car,Europe,cleanliness
+C01791,2025-05-02,Cable Car,Other regions,access
+C01792,2025-05-02,Honey Museum,Gulf,staff
+C01793,2025-05-02,Wadi Trail,Europe,queue
+C01794,2025-05-02,Wadi Trail,Europe,staff
+C01795,2025-05-03,Honey Museum,Tilal region,cleanliness
+C01796,2025-05-03,Souq Walk,Tilal region,cleanliness
+C01797,2025-05-03,Stone Village,Tilal region,price
+C01798,2025-05-04,Honey Museum,Tilal region,signage
+C01799,2025-05-05,Stone Village,Tilal region,access
+C01800,2025-05-06,Cable Car,Other regions,signage
+C01801,2025-05-06,Cable Car,Other regions,signage
+C01802,2025-05-06,Terrace Farms,Other regions,signage
+C01803,2025-05-06,Wadi Trail,Asia,price
+C01804,2025-05-07,Juniper Park,Tilal region,cleanliness
+C01805,2025-05-08,Cable Car,Other regions,staff
+C01806,2025-05-08,Stone Village,Europe,signage
+C01807,2025-05-09,Cable Car,Other regions,price
+C01808,2025-05-09,Juniper Park,Other regions,staff
+C01809,2025-05-09,Terrace Farms,Other regions,staff
+C01810,2025-05-10,Cable Car,Europe,cleanliness
+C01811,2025-05-10,Cable Car,Other regions,signage
+C01812,2025-05-10,Honey Museum,Other regions,cleanliness
+C01813,2025-05-11,Souq Walk,Asia,price
+C01814,2025-05-11,Wadi Trail,Other regions,staff
+C01815,2025-05-12,Souq Walk,Other regions,access
+C01816,2025-05-12,Terrace Farms,Other regions,price
+C01817,2025-05-13,Cloud Lookout,Other regions,queue
+C01818,2025-05-13,Cloud Lookout,Other regions,signage
+C01819,2025-05-14,Cable Car,Other regions,queue
+C01820,2025-05-14,Honey Museum,Gulf,access
+C01821,2025-05-15,Cable Car,Tilal region,queue
+C01822,2025-05-16,Cable Car,Other regions,queue
+C01823,2025-05-16,Tilal Fort,Tilal region,signage
+C01824,2025-05-17,Cable Car,Other regions,queue
+C01825,2025-05-17,Terrace Farms,Gulf,signage
+C01826,2025-05-18,Tilal Fort,Other regions,price
+C01827,2025-05-19,Cloud Lookout,Other regions,staff
+C01828,2025-05-19,Terrace Farms,Gulf,signage
+C01829,2025-05-20,Cable Car,Gulf,queue
+C01830,2025-05-20,Juniper Park,Asia,access
+C01831,2025-05-20,Juniper Park,Other regions,access
+C01832,2025-05-20,Souq Walk,Tilal region,queue
+C01833,2025-05-21,Terrace Farms,Tilal region,cleanliness
+C01834,2025-05-21,Terrace Farms,Tilal region,signage
+C01835,2025-05-22,Cable Car,Other regions,cleanliness
+C01836,2025-05-22,Cloud Lookout,Tilal region,queue
+C01837,2025-05-23,Cable Car,Other regions,access
+C01838,2025-05-23,Juniper Park,Other regions,cleanliness
+C01839,2025-05-23,Souq Walk,Other regions,signage
+C01840,2025-05-23,Wadi Trail,Other regions,signage
+C01841,2025-05-24,Souq Walk,Other regions,staff
+C01842,2025-05-24,Tilal Fort,Gulf,price
+C01843,2025-05-25,Cable Car,Asia,price
+C01844,2025-05-25,Cable Car,Tilal region,staff
+C01845,2025-05-25,Souq Walk,Tilal region,queue
+C01846,2025-05-25,Souq Walk,Tilal region,staff
+C01847,2025-05-25,Tilal Fort,Other regions,access
+C01848,2025-05-25,Tilal Fort,Other regions,staff
+C01849,2025-05-26,Cable Car,Tilal region,queue
+C01850,2025-05-27,Stone Village,Gulf,signage
+C01851,2025-05-27,Stone Village,Other regions,queue
+C01852,2025-05-27,Terrace Farms,Other regions,signage
+C01853,2025-05-29,Souq Walk,Asia,queue
+C01854,2025-05-29,Stone Village,Other regions,signage
+C01855,2025-05-29,Wadi Trail,Other regions,price
+C01856,2025-05-30,Cloud Lookout,Tilal region,price
+C01857,2025-05-30,Juniper Park,Tilal region,cleanliness
+C01858,2025-05-31,Souq Walk,Asia,signage
+C01859,2025-05-31,Souq Walk,Gulf,staff
+C01860,2025-05-31,Souq Walk,Other regions,access
+C01861,2025-05-31,Souq Walk,Other regions,cleanliness
+C01862,2025-05-31,Tilal Fort,Other regions,staff
+C01863,2025-06-01,Cloud Lookout,Tilal region,price
+C01864,2025-06-01,Juniper Park,Other regions,access
+C01865,2025-06-02,Cable Car,Gulf,cleanliness
+C01866,2025-06-02,Cable Car,Other regions,signage
+C01867,2025-06-02,Stone Village,Gulf,staff
+C01868,2025-06-02,Tilal Fort,Europe,queue
+C01869,2025-06-03,Souq Walk,Asia,queue
+C01870,2025-06-03,Souq Walk,Other regions,cleanliness
+C01871,2025-06-03,Souq Walk,Other regions,staff
+C01872,2025-06-03,Tilal Fort,Gulf,cleanliness
+C01873,2025-06-03,Tilal Fort,Other regions,signage
+C01874,2025-06-03,Tilal Fort,Tilal region,price
+C01875,2025-06-03,Wadi Trail,Other regions,signage
+C01876,2025-06-04,Cable Car,Asia,queue
+C01877,2025-06-04,Tilal Fort,Tilal region,signage
+C01878,2025-06-04,Wadi Trail,Tilal region,queue
+C01879,2025-06-05,Juniper Park,Other regions,access
+C01880,2025-06-06,Cable Car,Other regions,cleanliness
+C01881,2025-06-06,Souq Walk,Gulf,access
+C01882,2025-06-06,Stone Village,Europe,signage
+C01883,2025-06-06,Terrace Farms,Other regions,signage
+C01884,2025-06-06,Tilal Fort,Other regions,staff
+C01885,2025-06-07,Cable Car,Gulf,queue
+C01886,2025-06-07,Cable Car,Other regions,queue
+C01887,2025-06-07,Cloud Lookout,Other regions,access
+C01888,2025-06-07,Cloud Lookout,Other regions,staff
+C01889,2025-06-07,Juniper Park,Gulf,signage
+C01890,2025-06-07,Stone Village,Tilal region,staff
+C01891,2025-06-08,Cable Car,Other regions,cleanliness
+C01892,2025-06-08,Honey Museum,Other regions,queue
+C01893,2025-06-08,Tilal Fort,Other regions,signage
+C01894,2025-06-09,Cable Car,Other regions,signage
+C01895,2025-06-09,Souq Walk,Asia,signage
+C01896,2025-06-09,Souq Walk,Tilal region,cleanliness
+C01897,2025-06-09,Souq Walk,Tilal region,queue
+C01898,2025-06-09,Stone Village,Gulf,access
+C01899,2025-06-09,Terrace Farms,Gulf,price
+C01900,2025-06-10,Stone Village,Europe,price
+C01901,2025-06-11,Cable Car,Other regions,queue
+C01902,2025-06-11,Terrace Farms,Gulf,queue
+C01903,2025-06-12,Cable Car,Other regions,staff
+C01904,2025-06-12,Wadi Trail,Asia,cleanliness
+C01905,2025-06-13,Souq Walk,Gulf,queue
+C01906,2025-06-13,Terrace Farms,Other regions,access
+C01907,2025-06-14,Cable Car,Gulf,staff
+C01908,2025-06-14,Cable Car,Other regions,cleanliness
+C01909,2025-06-14,Cable Car,Other regions,staff
+C01910,2025-06-15,Juniper Park,Other regions,signage
+C01911,2025-06-15,Souq Walk,Tilal region,queue
+C01912,2025-06-16,Cable Car,Other regions,queue
+C01913,2025-06-16,Cloud Lookout,Asia,queue
+C01914,2025-06-16,Honey Museum,Gulf,queue
+C01915,2025-06-16,Souq Walk,Tilal region,cleanliness
+C01916,2025-06-16,Terrace Farms,Gulf,cleanliness
+C01917,2025-06-16,Wadi Trail,Gulf,cleanliness
+C01918,2025-06-17,Souq Walk,Other regions,staff
+C01919,2025-06-18,Cable Car,Tilal region,signage
+C01920,2025-06-18,Terrace Farms,Tilal region,price
+C01921,2025-06-18,Wadi Trail,Gulf,cleanliness
+C01922,2025-06-18,Wadi Trail,Other regions,queue
+C01923,2025-06-19,Cable Car,Asia,cleanliness
+C01924,2025-06-19,Honey Museum,Other regions,cleanliness
+C01925,2025-06-19,Juniper Park,Other regions,price
+C01926,2025-06-19,Stone Village,Gulf,signage
+C01927,2025-06-19,Stone Village,Other regions,staff
+C01928,2025-06-19,Wadi Trail,Gulf,signage
+C01929,2025-06-20,Cable Car,Europe,cleanliness
+C01930,2025-06-20,Stone Village,Other regions,queue
+C01931,2025-06-20,Terrace Farms,Other regions,cleanliness
+C01932,2025-06-20,Terrace Farms,Other regions,price
+C01933,2025-06-20,Wadi Trail,Other regions,signage
+C01934,2025-06-21,Cloud Lookout,Other regions,signage
+C01935,2025-06-21,Stone Village,Other regions,signage
+C01936,2025-06-21,Wadi Trail,Europe,cleanliness
+C01937,2025-06-23,Cable Car,Other regions,signage
+C01938,2025-06-23,Souq Walk,Gulf,access
+C01939,2025-06-23,Wadi Trail,Other regions,price
+C01940,2025-06-24,Cable Car,Gulf,cleanliness
+C01941,2025-06-24,Cable Car,Other regions,signage
+C01942,2025-06-24,Honey Museum,Other regions,signage
+C01943,2025-06-24,Stone Village,Other regions,price
+C01944,2025-06-25,Cable Car,Tilal region,access
+C01945,2025-06-26,Terrace Farms,Asia,access
+C01946,2025-06-26,Tilal Fort,Asia,access
+C01947,2025-06-26,Tilal Fort,Tilal region,cleanliness
+C01948,2025-06-27,Souq Walk,Tilal region,signage
+C01949,2025-06-27,Terrace Farms,Other regions,signage
+C01950,2025-06-28,Cable Car,Other regions,queue
+C01951,2025-06-28,Honey Museum,Gulf,signage
+C01952,2025-06-28,Souq Walk,Tilal region,signage
+C01953,2025-06-28,Souq Walk,Tilal region,staff
+C01954,2025-06-28,Wadi Trail,Europe,signage
+C01955,2025-06-28,Wadi Trail,Other regions,staff
+C01956,2025-06-29,Souq Walk,Tilal region,queue
+C01957,2025-06-30,Cable Car,Other regions,queue
+C01958,2025-06-30,Tilal Fort,Asia,signage
+C01959,2025-07-01,Honey Museum,Gulf,signage
+C01960,2025-07-01,Honey Museum,Other regions,queue
+C01961,2025-07-01,Souq Walk,Gulf,staff
+C01962,2025-07-01,Souq Walk,Tilal region,staff
+C01963,2025-07-02,Souq Walk,Other regions,signage
+C01964,2025-07-03,Stone Village,Tilal region,price
+C01965,2025-07-03,Wadi Trail,Other regions,price
+C01966,2025-07-04,Cable Car,Other regions,access
+C01967,2025-07-04,Honey Museum,Gulf,queue
+C01968,2025-07-04,Stone Village,Other regions,access
+C01969,2025-07-05,Cable Car,Gulf,queue
+C01970,2025-07-05,Cable Car,Other regions,cleanliness
+C01971,2025-07-05,Cloud Lookout,Gulf,price
+C01972,2025-07-05,Juniper Park,Asia,cleanliness
+C01973,2025-07-05,Souq Walk,Gulf,queue
+C01974,2025-07-05,Souq Walk,Other regions,signage
+C01975,2025-07-05,Souq Walk,Tilal region,queue
+C01976,2025-07-05,Stone Village,Asia,access
+C01977,2025-07-05,Stone Village,Asia,staff
+C01978,2025-07-05,Terrace Farms,Other regions,signage
+C01979,2025-07-05,Tilal Fort,Other regions,access
+C01980,2025-07-05,Wadi Trail,Gulf,queue
+C01981,2025-07-05,Wadi Trail,Gulf,signage
+C01982,2025-07-06,Cable Car,Gulf,queue
+C01983,2025-07-06,Cable Car,Other regions,queue
+C01984,2025-07-06,Cloud Lookout,Other regions,access
+C01985,2025-07-07,Juniper Park,Other regions,signage
+C01986,2025-07-07,Stone Village,Other regions,queue
+C01987,2025-07-07,Terrace Farms,Tilal region,signage
+C01988,2025-07-09,Cable Car,Other regions,queue
+C01989,2025-07-09,Tilal Fort,Other regions,price
+C01990,2025-07-09,Wadi Trail,Tilal region,signage
+C01991,2025-07-10,Cable Car,Asia,access
+C01992,2025-07-10,Cable Car,Gulf,signage
+C01993,2025-07-11,Souq Walk,Other regions,queue
+C01994,2025-07-12,Cable Car,Other regions,staff
+C01995,2025-07-12,Stone Village,Other regions,staff
+C01996,2025-07-12,Wadi Trail,Gulf,cleanliness
+C01997,2025-07-13,Cloud Lookout,Other regions,queue
+C01998,2025-07-15,Cloud Lookout,Tilal region,price
+C01999,2025-07-15,Cloud Lookout,Tilal region,signage
+C02000,2025-07-15,Honey Museum,Other regions,price
+C02001,2025-07-16,Cable Car,Tilal region,queue
+C02002,2025-07-16,Honey Museum,Gulf,queue
+C02003,2025-07-16,Souq Walk,Other regions,access
+C02004,2025-07-16,Souq Walk,Other regions,queue
+C02005,2025-07-16,Wadi Trail,Other regions,cleanliness
+C02006,2025-07-17,Cable Car,Gulf,price
+C02007,2025-07-17,Wadi Trail,Europe,signage
+C02008,2025-07-18,Cable Car,Other regions,staff
+C02009,2025-07-18,Stone Village,Tilal region,price
+C02010,2025-07-18,Terrace Farms,Gulf,signage
+C02011,2025-07-18,Wadi Trail,Gulf,staff
+C02012,2025-07-20,Tilal Fort,Other regions,price
+C02013,2025-07-21,Cable Car,Gulf,queue
+C02014,2025-07-21,Juniper Park,Europe,signage
+C02015,2025-07-21,Juniper Park,Tilal region,access
+C02016,2025-07-21,Stone Village,Other regions,price
+C02017,2025-07-21,Tilal Fort,Other regions,price
+C02018,2025-07-21,Wadi Trail,Tilal region,staff
+C02019,2025-07-22,Honey Museum,Gulf,price
+C02020,2025-07-22,Tilal Fort,Other regions,queue
+C02021,2025-07-23,Cable Car,Other regions,cleanliness
+C02022,2025-07-23,Souq Walk,Other regions,cleanliness
+C02023,2025-07-23,Souq Walk,Other regions,cleanliness
+C02024,2025-07-23,Stone Village,Gulf,price
+C02025,2025-07-25,Cable Car,Gulf,queue
+C02026,2025-07-25,Juniper Park,Tilal region,cleanliness
+C02027,2025-07-25,Souq Walk,Tilal region,queue
+C02028,2025-07-25,Terrace Farms,Other regions,cleanliness
+C02029,2025-07-25,Wadi Trail,Europe,signage
+C02030,2025-07-26,Cable Car,Gulf,queue
+C02031,2025-07-26,Cloud Lookout,Tilal region,queue
+C02032,2025-07-26,Honey Museum,Gulf,staff
+C02033,2025-07-26,Souq Walk,Tilal region,signage
+C02034,2025-07-26,Tilal Fort,Gulf,access
+C02035,2025-07-26,Tilal Fort,Other regions,queue
+C02036,2025-07-27,Cable Car,Tilal region,signage
+C02037,2025-07-28,Honey Museum,Other regions,staff
+C02038,2025-07-28,Tilal Fort,Tilal region,cleanliness
+C02039,2025-07-29,Cable Car,Other regions,queue
+C02040,2025-07-29,Cloud Lookout,Gulf,access
+C02041,2025-07-29,Honey Museum,Other regions,price
+C02042,2025-07-29,Souq Walk,Tilal region,staff
+C02043,2025-07-29,Terrace Farms,Other regions,signage
+C02044,2025-07-29,Terrace Farms,Other regions,signage
+C02045,2025-07-29,Terrace Farms,Tilal region,cleanliness
+C02046,2025-07-30,Cloud Lookout,Other regions,cleanliness
+C02047,2025-07-31,Cable Car,Gulf,queue
+C02048,2025-07-31,Tilal Fort,Tilal region,price
+C02049,2025-07-31,Wadi Trail,Europe,price
+C02050,2025-08-01,Honey Museum,Asia,price
+C02051,2025-08-01,Juniper Park,Other regions,queue
+C02052,2025-08-01,Souq Walk,Other regions,staff
+C02053,2025-08-02,Cable Car,Other regions,price
+C02054,2025-08-02,Cable Car,Other regions,signage
+C02055,2025-08-02,Cloud Lookout,Gulf,queue
+C02056,2025-08-02,Cloud Lookout,Other regions,price
+C02057,2025-08-02,Juniper Park,Gulf,staff
+C02058,2025-08-02,Stone Village,Tilal region,signage
+C02059,2025-08-02,Tilal Fort,Gulf,price
+C02060,2025-08-02,Tilal Fort,Other regions,cleanliness
+C02061,2025-08-02,Wadi Trail,Other regions,signage
+C02062,2025-08-03,Cable Car,Other regions,signage
+C02063,2025-08-03,Souq Walk,Other regions,queue
+C02064,2025-08-03,Wadi Trail,Gulf,price
+C02065,2025-08-03,Wadi Trail,Gulf,price
+C02066,2025-08-03,Wadi Trail,Other regions,queue
+C02067,2025-08-04,Tilal Fort,Europe,queue
+C02068,2025-08-04,Wadi Trail,Other regions,staff
+C02069,2025-08-07,Souq Walk,Other regions,queue
+C02070,2025-08-08,Cable Car,Other regions,cleanliness
+C02071,2025-08-08,Cable Car,Other regions,signage
+C02072,2025-08-08,Souq Walk,Gulf,signage
+C02073,2025-08-08,Souq Walk,Tilal region,staff
+C02074,2025-08-08,Wadi Trail,Tilal region,signage
+C02075,2025-08-09,Cable Car,Gulf,signage
+C02076,2025-08-09,Honey Museum,Tilal region,signage
+C02077,2025-08-09,Terrace Farms,Other regions,signage
+C02078,2025-08-09,Wadi Trail,Gulf,signage
+C02079,2025-08-10,Cable Car,Gulf,price
+C02080,2025-08-10,Cable Car,Other regions,signage
+C02081,2025-08-10,Honey Museum,Other regions,signage
+C02082,2025-08-10,Souq Walk,Other regions,price
+C02083,2025-08-11,Terrace Farms,Other regions,queue
+C02084,2025-08-11,Tilal Fort,Gulf,cleanliness
+C02085,2025-08-11,Tilal Fort,Other regions,cleanliness
+C02086,2025-08-11,Tilal Fort,Tilal region,queue
+C02087,2025-08-12,Cloud Lookout,Other regions,cleanliness
+C02088,2025-08-12,Tilal Fort,Gulf,access
+C02089,2025-08-13,Cable Car,Other regions,signage
+C02090,2025-08-13,Honey Museum,Gulf,cleanliness
+C02091,2025-08-13,Juniper Park,Gulf,cleanliness
+C02092,2025-08-14,Terrace Farms,Other regions,queue
+C02093,2025-08-15,Cloud Lookout,Other regions,cleanliness
+C02094,2025-08-15,Stone Village,Gulf,staff
+C02095,2025-08-15,Tilal Fort,Other regions,price
+C02096,2025-08-16,Cable Car,Tilal region,queue
+C02097,2025-08-16,Cloud Lookout,Other regions,cleanliness
+C02098,2025-08-16,Souq Walk,Other regions,access
+C02099,2025-08-16,Wadi Trail,Europe,cleanliness
+C02100,2025-08-16,Wadi Trail,Other regions,access
+C02101,2025-08-16,Wadi Trail,Tilal region,queue
+C02102,2025-08-17,Cable Car,Other regions,signage
+C02103,2025-08-17,Honey Museum,Other regions,signage
+C02104,2025-08-17,Juniper Park,Gulf,staff
+C02105,2025-08-17,Stone Village,Tilal region,cleanliness
+C02106,2025-08-17,Tilal Fort,Tilal region,price
+C02107,2025-08-18,Cloud Lookout,Other regions,access
+C02108,2025-08-18,Cloud Lookout,Other regions,price
+C02109,2025-08-18,Souq Walk,Other regions,signage
+C02110,2025-08-18,Tilal Fort,Asia,cleanliness
+C02111,2025-08-19,Cable Car,Tilal region,price
+C02112,2025-08-19,Juniper Park,Other regions,signage
+C02113,2025-08-19,Souq Walk,Tilal region,access
+C02114,2025-08-19,Tilal Fort,Other regions,cleanliness
+C02115,2025-08-20,Tilal Fort,Other regions,queue
+C02116,2025-08-21,Tilal Fort,Gulf,queue
+C02117,2025-08-21,Tilal Fort,Other regions,queue
+C02118,2025-08-21,Wadi Trail,Other regions,price
+C02119,2025-08-22,Cable Car,Gulf,cleanliness
+C02120,2025-08-22,Cable Car,Tilal region,staff
+C02121,2025-08-22,Tilal Fort,Other regions,signage
+C02122,2025-08-23,Cable Car,Tilal region,queue
+C02123,2025-08-23,Cable Car,Tilal region,signage
+C02124,2025-08-23,Cloud Lookout,Gulf,cleanliness
+C02125,2025-08-23,Juniper Park,Gulf,access
+C02126,2025-08-23,Souq Walk,Asia,access
+C02127,2025-08-23,Stone Village,Gulf,staff
+C02128,2025-08-23,Tilal Fort,Other regions,price
+C02129,2025-08-23,Tilal Fort,Other regions,signage
+C02130,2025-08-23,Wadi Trail,Other regions,cleanliness
+C02131,2025-08-24,Souq Walk,Other regions,queue
+C02132,2025-08-25,Cloud Lookout,Other regions,queue
+C02133,2025-08-25,Souq Walk,Gulf,access
+C02134,2025-08-25,Wadi Trail,Tilal region,queue
+C02135,2025-08-26,Cable Car,Gulf,cleanliness
+C02136,2025-08-27,Cable Car,Gulf,signage
+C02137,2025-08-27,Juniper Park,Other regions,queue
+C02138,2025-08-27,Wadi Trail,Other regions,staff
+C02139,2025-08-28,Souq Walk,Tilal region,access
+C02140,2025-08-28,Tilal Fort,Gulf,price
+C02141,2025-08-28,Tilal Fort,Other regions,price
+C02142,2025-08-28,Wadi Trail,Gulf,queue
+C02143,2025-08-29,Cable Car,Other regions,queue
+C02144,2025-08-30,Tilal Fort,Gulf,cleanliness
+C02145,2025-08-31,Cable Car,Other regions,cleanliness
+C02146,2025-08-31,Juniper Park,Tilal region,queue
+C02147,2025-08-31,Stone Village,Asia,staff
+C02148,2025-09-01,Cable Car,Other regions,price
+C02149,2025-09-01,Juniper Park,Tilal region,access
+C02150,2025-09-02,Cable Car,Gulf,queue
+C02151,2025-09-02,Cloud Lookout,Other regions,staff
+C02152,2025-09-02,Souq Walk,Other regions,staff
+C02153,2025-09-03,Cloud Lookout,Gulf,staff
+C02154,2025-09-03,Souq Walk,Europe,staff
+C02155,2025-09-05,Cable Car,Tilal region,price
+C02156,2025-09-05,Souq Walk,Gulf,cleanliness
+C02157,2025-09-06,Tilal Fort,Gulf,staff
+C02158,2025-09-06,Tilal Fort,Other regions,signage
+C02159,2025-09-07,Cable Car,Asia,staff
+C02160,2025-09-08,Souq Walk,Tilal region,access
+C02161,2025-09-08,Souq Walk,Tilal region,staff
+C02162,2025-09-08,Wadi Trail,Other regions,signage
+C02163,2025-09-09,Stone Village,Gulf,cleanliness
+C02164,2025-09-09,Tilal Fort,Gulf,signage
+C02165,2025-09-10,Tilal Fort,Tilal region,price
+C02166,2025-09-11,Wadi Trail,Tilal region,access
+C02167,2025-09-12,Cable Car,Asia,staff
+C02168,2025-09-12,Cloud Lookout,Tilal region,staff
+C02169,2025-09-12,Souq Walk,Gulf,queue
+C02170,2025-09-12,Terrace Farms,Gulf,price
+C02171,2025-09-12,Terrace Farms,Gulf,signage
+C02172,2025-09-13,Terrace Farms,Gulf,staff
+C02173,2025-09-13,Tilal Fort,Other regions,access
+C02174,2025-09-14,Cable Car,Tilal region,queue
+C02175,2025-09-14,Tilal Fort,Asia,cleanliness
+C02176,2025-09-16,Juniper Park,Gulf,staff
+C02177,2025-09-16,Souq Walk,Other regions,signage
+C02178,2025-09-16,Souq Walk,Tilal region,staff
+C02179,2025-09-18,Cable Car,Other regions,price
+C02180,2025-09-19,Cable Car,Other regions,signage
+C02181,2025-09-19,Stone Village,Other regions,signage
+C02182,2025-09-19,Tilal Fort,Other regions,staff
+C02183,2025-09-19,Tilal Fort,Tilal region,access
+C02184,2025-09-20,Cable Car,Other regions,signage
+C02185,2025-09-20,Souq Walk,Other regions,staff
+C02186,2025-09-20,Terrace Farms,Other regions,staff
+C02187,2025-09-20,Tilal Fort,Other regions,signage
+C02188,2025-09-21,Cable Car,Gulf,staff
+C02189,2025-09-23,Cable Car,Other regions,queue
+C02190,2025-09-24,Cloud Lookout,Other regions,signage
+C02191,2025-09-25,Cloud Lookout,Gulf,queue
+C02192,2025-09-25,Juniper Park,Tilal region,signage
+C02193,2025-09-26,Cable Car,Asia,price
+C02194,2025-09-26,Souq Walk,Europe,signage
+C02195,2025-09-26,Souq Walk,Other regions,price
+C02196,2025-09-26,Souq Walk,Tilal region,price
+C02197,2025-09-26,Tilal Fort,Other regions,staff
+C02198,2025-09-28,Terrace Farms,Tilal region,cleanliness
+C02199,2025-09-28,Tilal Fort,Other regions,queue
+C02200,2025-09-29,Cable Car,Other regions,signage
+C02201,2025-09-29,Cable Car,Tilal region,staff
+C02202,2025-09-29,Souq Walk,Other regions,staff
+C02203,2025-10-01,Stone Village,Europe,price
+C02204,2025-10-01,Stone Village,Other regions,access
+C02205,2025-10-01,Terrace Farms,Other regions,signage
+C02206,2025-10-02,Cloud Lookout,Other regions,cleanliness
+C02207,2025-10-02,Stone Village,Europe,access
+C02208,2025-10-03,Cable Car,Gulf,price
+C02209,2025-10-03,Cable Car,Other regions,cleanliness
+C02210,2025-10-03,Honey Museum,Tilal region,cleanliness
+C02211,2025-10-04,Cable Car,Other regions,price
+C02212,2025-10-04,Souq Walk,Other regions,price
+C02213,2025-10-04,Souq Walk,Other regions,queue
+C02214,2025-10-04,Stone Village,Other regions,cleanliness
+C02215,2025-10-05,Cable Car,Gulf,price
+C02216,2025-10-05,Cable Car,Other regions,access
+C02217,2025-10-05,Tilal Fort,Other regions,cleanliness
+C02218,2025-10-05,Tilal Fort,Other regions,price
+C02219,2025-10-05,Tilal Fort,Tilal region,access
+C02220,2025-10-06,Cable Car,Gulf,cleanliness
+C02221,2025-10-06,Souq Walk,Other regions,queue
+C02222,2025-10-06,Terrace Farms,Other regions,queue
+C02223,2025-10-06,Tilal Fort,Other regions,queue
+C02224,2025-10-06,Wadi Trail,Europe,signage
+C02225,2025-10-07,Cable Car,Other regions,signage
+C02226,2025-10-08,Cable Car,Asia,access
+C02227,2025-10-08,Juniper Park,Tilal region,signage
+C02228,2025-10-08,Wadi Trail,Tilal region,price
+C02229,2025-10-09,Cable Car,Asia,price
+C02230,2025-10-09,Cable Car,Asia,signage
+C02231,2025-10-09,Cable Car,Other regions,price
+C02232,2025-10-09,Souq Walk,Gulf,queue
+C02233,2025-10-10,Cable Car,Other regions,access
+C02234,2025-10-10,Cable Car,Other regions,queue
+C02235,2025-10-10,Tilal Fort,Other regions,price
+C02236,2025-10-10,Wadi Trail,Other regions,signage
+C02237,2025-10-10,Wadi Trail,Tilal region,signage
+C02238,2025-10-11,Cable Car,Gulf,access
+C02239,2025-10-11,Cable Car,Other regions,queue
+C02240,2025-10-12,Cable Car,Other regions,queue
+C02241,2025-10-12,Terrace Farms,Tilal region,signage
+C02242,2025-10-13,Cable Car,Asia,queue
+C02243,2025-10-13,Cable Car,Gulf,cleanliness
+C02244,2025-10-13,Cable Car,Other regions,staff
+C02245,2025-10-13,Souq Walk,Other regions,cleanliness
+C02246,2025-10-14,Cable Car,Tilal region,queue
+C02247,2025-10-14,Souq Walk,Other regions,staff
+C02248,2025-10-14,Terrace Farms,Tilal region,cleanliness
+C02249,2025-10-15,Souq Walk,Other regions,price
+C02250,2025-10-15,Souq Walk,Tilal region,access
+C02251,2025-10-16,Tilal Fort,Europe,signage
+C02252,2025-10-18,Cable Car,Other regions,price
+C02253,2025-10-18,Stone Village,Asia,staff
+C02254,2025-10-18,Stone Village,Other regions,price
+C02255,2025-10-18,Wadi Trail,Europe,staff
+C02256,2025-10-19,Cable Car,Europe,price
+C02257,2025-10-19,Cable Car,Other regions,queue
+C02258,2025-10-19,Cable Car,Other regions,queue
+C02259,2025-10-19,Juniper Park,Europe,access
+C02260,2025-10-20,Honey Museum,Gulf,price
+C02261,2025-10-20,Souq Walk,Other regions,queue
+C02262,2025-10-20,Wadi Trail,Other regions,access
+C02263,2025-10-21,Souq Walk,Other regions,staff
+C02264,2025-10-22,Cable Car,Asia,queue
+C02265,2025-10-24,Cable Car,Other regions,queue
+C02266,2025-10-24,Cable Car,Other regions,signage
+C02267,2025-10-24,Tilal Fort,Other regions,queue
+C02268,2025-10-24,Wadi Trail,Gulf,cleanliness
+C02269,2025-10-25,Cable Car,Gulf,cleanliness
+C02270,2025-10-25,Tilal Fort,Gulf,staff
+C02271,2025-10-25,Wadi Trail,Other regions,price
+C02272,2025-10-26,Cable Car,Other regions,queue
+C02273,2025-10-26,Cable Car,Other regions,queue
+C02274,2025-10-26,Cloud Lookout,Other regions,signage
+C02275,2025-10-26,Cloud Lookout,Tilal region,staff
+C02276,2025-10-26,Souq Walk,Other regions,access
+C02277,2025-10-27,Souq Walk,Other regions,access
+C02278,2025-10-27,Terrace Farms,Other regions,signage
+C02279,2025-10-27,Tilal Fort,Gulf,cleanliness
+C02280,2025-10-29,Cloud Lookout,Other regions,signage
+C02281,2025-10-29,Juniper Park,Other regions,access
+C02282,2025-10-29,Tilal Fort,Other regions,queue
+C02283,2025-10-30,Tilal Fort,Other regions,price
+C02284,2025-10-30,Tilal Fort,Other regions,queue
+C02285,2025-10-30,Wadi Trail,Europe,signage
+C02286,2025-10-31,Cable Car,Asia,access
+C02287,2025-10-31,Cable Car,Asia,staff
+C02288,2025-10-31,Cable Car,Gulf,cleanliness
+C02289,2025-10-31,Souq Walk,Other regions,access
+C02290,2025-10-31,Stone Village,Asia,price
+C02291,2025-11-01,Cable Car,Other regions,cleanliness
+C02292,2025-11-01,Souq Walk,Europe,signage
+C02293,2025-11-01,Souq Walk,Tilal region,price
+C02294,2025-11-01,Stone Village,Asia,signage
+C02295,2025-11-02,Cable Car,Asia,queue
+C02296,2025-11-02,Cable Car,Tilal region,signage
+C02297,2025-11-03,Cable Car,Asia,staff
+C02298,2025-11-03,Cable Car,Other regions,access
+C02299,2025-11-03,Honey Museum,Other regions,access
+C02300,2025-11-04,Juniper Park,Gulf,queue
+C02301,2025-11-04,Stone Village,Europe,staff
+C02302,2025-11-04,Tilal Fort,Tilal region,access
+C02303,2025-11-05,Terrace Farms,Other regions,signage
+C02304,2025-11-06,Cable Car,Tilal region,signage
+C02305,2025-11-06,Wadi Trail,Other regions,staff
+C02306,2025-11-07,Stone Village,Other regions,price
+C02307,2025-11-07,Tilal Fort,Europe,signage
+C02308,2025-11-08,Cable Car,Asia,queue
+C02309,2025-11-08,Cable Car,Gulf,queue
+C02310,2025-11-08,Cloud Lookout,Asia,staff
+C02311,2025-11-09,Souq Walk,Other regions,queue
+C02312,2025-11-10,Wadi Trail,Other regions,signage
+C02313,2025-11-11,Cable Car,Gulf,cleanliness
+C02314,2025-11-11,Wadi Trail,Other regions,price
+C02315,2025-11-12,Cloud Lookout,Other regions,signage
+C02316,2025-11-12,Stone Village,Gulf,access
+C02317,2025-11-12,Wadi Trail,Other regions,price
+C02318,2025-11-13,Souq Walk,Europe,staff
+C02319,2025-11-14,Cable Car,Other regions,cleanliness
+C02320,2025-11-14,Souq Walk,Gulf,access
+C02321,2025-11-14,Wadi Trail,Europe,staff
+C02322,2025-11-15,Cable Car,Other regions,queue
+C02323,2025-11-15,Cloud Lookout,Other regions,staff
+C02324,2025-11-15,Souq Walk,Other regions,cleanliness
+C02325,2025-11-16,Souq Walk,Other regions,price
+C02326,2025-11-17,Cable Car,Other regions,queue
+C02327,2025-11-17,Tilal Fort,Tilal region,cleanliness
+C02328,2025-11-18,Cable Car,Other regions,price
+C02329,2025-11-19,Juniper Park,Other regions,price
+C02330,2025-11-19,Stone Village,Other regions,queue
+C02331,2025-11-20,Cable Car,Other regions,queue
+C02332,2025-11-20,Cloud Lookout,Other regions,access
+C02333,2025-11-20,Juniper Park,Gulf,queue
+C02334,2025-11-20,Stone Village,Asia,price
+C02335,2025-11-21,Cable Car,Other regions,staff
+C02336,2025-11-21,Cable Car,Tilal region,queue
+C02337,2025-11-21,Wadi Trail,Europe,access
+C02338,2025-11-22,Cable Car,Other regions,queue
+C02339,2025-11-22,Honey Museum,Other regions,access
+C02340,2025-11-22,Juniper Park,Other regions,price
+C02341,2025-11-22,Stone Village,Other regions,staff
+C02342,2025-11-23,Wadi Trail,Other regions,signage
+C02343,2025-11-24,Honey Museum,Other regions,access
+C02344,2025-11-24,Terrace Farms,Asia,access
+C02345,2025-11-24,Terrace Farms,Asia,queue
+C02346,2025-11-25,Cable Car,Asia,staff
+C02347,2025-11-25,Wadi Trail,Other regions,staff
+C02348,2025-11-26,Cable Car,Tilal region,queue
+C02349,2025-11-26,Souq Walk,Gulf,signage
+C02350,2025-11-26,Souq Walk,Tilal region,cleanliness
+C02351,2025-11-26,Stone Village,Gulf,signage
+C02352,2025-11-27,Wadi Trail,Gulf,cleanliness
+C02353,2025-11-28,Cable Car,Other regions,signage
+C02354,2025-11-29,Souq Walk,Other regions,price
+C02355,2025-11-29,Souq Walk,Tilal region,access
+C02356,2025-11-29,Stone Village,Europe,staff
+C02357,2025-11-29,Wadi Trail,Other regions,cleanliness
+C02358,2025-11-29,Wadi Trail,Other regions,staff
+C02359,2025-11-30,Honey Museum,Other regions,queue
+C02360,2025-12-02,Souq Walk,Gulf,cleanliness
+C02361,2025-12-02,Stone Village,Gulf,price
+C02362,2025-12-04,Cloud Lookout,Other regions,price
+C02363,2025-12-04,Stone Village,Other regions,signage
+C02364,2025-12-05,Souq Walk,Europe,cleanliness
+C02365,2025-12-05,Stone Village,Gulf,queue
+C02366,2025-12-05,Stone Village,Other regions,signage
+C02367,2025-12-05,Tilal Fort,Other regions,price
+C02368,2025-12-05,Wadi Trail,Europe,signage
+C02369,2025-12-06,Souq Walk,Tilal region,staff
+C02370,2025-12-07,Honey Museum,Other regions,access
+C02371,2025-12-08,Terrace Farms,Other regions,queue
+C02372,2025-12-10,Honey Museum,Tilal region,cleanliness
+C02373,2025-12-10,Juniper Park,Europe,queue
+C02374,2025-12-12,Cable Car,Other regions,price
+C02375,2025-12-12,Cable Car,Other regions,queue
+C02376,2025-12-12,Cable Car,Other regions,queue
+C02377,2025-12-12,Souq Walk,Europe,queue
+C02378,2025-12-12,Tilal Fort,Europe,signage
+C02379,2025-12-12,Wadi Trail,Gulf,signage
+C02380,2025-12-15,Tilal Fort,Other regions,cleanliness
+C02381,2025-12-15,Tilal Fort,Other regions,signage
+C02382,2025-12-16,Cable Car,Gulf,price
+C02383,2025-12-16,Cable Car,Other regions,queue
+C02384,2025-12-16,Cable Car,Tilal region,price
+C02385,2025-12-16,Cable Car,Tilal region,staff
+C02386,2025-12-17,Cable Car,Other regions,staff
+C02387,2025-12-17,Tilal Fort,Europe,staff
+C02388,2025-12-18,Cable Car,Gulf,price
+C02389,2025-12-18,Cable Car,Gulf,queue
+C02390,2025-12-18,Souq Walk,Other regions,access
+C02391,2025-12-19,Juniper Park,Other regions,cleanliness
+C02392,2025-12-19,Terrace Farms,Other regions,staff
+C02393,2025-12-20,Honey Museum,Gulf,cleanliness
+C02394,2025-12-20,Tilal Fort,Other regions,queue
+C02395,2025-12-21,Cloud Lookout,Gulf,queue
+C02396,2025-12-21,Juniper Park,Tilal region,cleanliness
+C02397,2025-12-22,Cable Car,Other regions,queue
+C02398,2025-12-22,Cloud Lookout,Other regions,signage
+C02399,2025-12-24,Juniper Park,Other regions,queue
+C02400,2025-12-25,Juniper Park,Other regions,staff
+C02401,2025-12-25,Souq Walk,Other regions,queue
+C02402,2025-12-25,Souq Walk,Tilal region,signage
+C02403,2025-12-25,Stone Village,Other regions,queue
+C02404,2025-12-26,Souq Walk,Asia,queue
+C02405,2025-12-26,Souq Walk,Other regions,access
+C02406,2025-12-27,Cable Car,Europe,price
+C02407,2025-12-27,Cable Car,Tilal region,queue
+C02408,2025-12-27,Honey Museum,Gulf,access
+C02409,2025-12-27,Juniper Park,Tilal region,queue
+C02410,2025-12-27,Souq Walk,Europe,access
+C02411,2025-12-27,Stone Village,Europe,cleanliness
+C02412,2025-12-27,Wadi Trail,Other regions,cleanliness
+C02413,2025-12-28,Cable Car,Other regions,signage
+C02414,2025-12-29,Cable Car,Other regions,queue
+C02415,2025-12-29,Souq Walk,Other regions,access
+C02416,2025-12-29,Tilal Fort,Tilal region,staff
+C02417,2025-12-31,Cable Car,Asia,cleanliness
+C02418,2025-12-31,Stone Village,Other regions,price

@@ -1,0 +1,1045 @@
+{
+ "box": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "encoding": {
+    "x": {
+     "field": "nights",
+     "title": "Nights in the region",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "origin",
+     "sort": [
+      "Tilal region",
+      "Other regions",
+      "Gulf",
+      "Asia",
+      "Europe"
+     ],
+     "title": null,
+     "type": "nominal"
+    }
+   },
+   "height": 220,
+   "mark": {
+    "size": 24,
+    "type": "boxplot"
+   },
+   "title": "Length of stay by origin market"
+  }
+ },
+ "hist_all": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "encoding": {
+    "x": {
+     "bin": {
+      "step": 1
+     },
+     "field": "nights",
+     "title": "Nights in the region",
+     "type": "quantitative"
+    },
+    "y": {
+     "aggregate": "count",
+     "title": "Stays",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "type": "bar"
+   },
+   "title": "Length of stay, all parties"
+  }
+ },
+ "hist_by_origin": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-34d8f906c34bcd7f0fbacf92aae66bab"
+   },
+   "datasets": {
+    "data-34d8f906c34bcd7f0fbacf92aae66bab": [
+     {
+      "nights": 1,
+      "origin": "Asia",
+      "share": 0.12280701754385964
+     },
+     {
+      "nights": 2,
+      "origin": "Asia",
+      "share": 0.1682910981156595
+     },
+     {
+      "nights": 3,
+      "origin": "Asia",
+      "share": 0.198180636777128
+     },
+     {
+      "nights": 4,
+      "origin": "Asia",
+      "share": 0.1627680311890838
+     },
+     {
+      "nights": 5,
+      "origin": "Asia",
+      "share": 0.12345679012345678
+     },
+     {
+      "nights": 6,
+      "origin": "Asia",
+      "share": 0.08187134502923976
+     },
+     {
+      "nights": 7,
+      "origin": "Asia",
+      "share": 0.05230669265756985
+     },
+     {
+      "nights": 8,
+      "origin": "Asia",
+      "share": 0.04158544509421702
+     },
+     {
+      "nights": 9,
+      "origin": "Asia",
+      "share": 0.017218973359324236
+     },
+     {
+      "nights": 10,
+      "origin": "Asia",
+      "share": 0.014619883040935672
+     },
+     {
+      "nights": 11,
+      "origin": "Asia",
+      "share": 0.007147498375568551
+     },
+     {
+      "nights": 12,
+      "origin": "Asia",
+      "share": 0.004548408057179987
+     },
+     {
+      "nights": 13,
+      "origin": "Asia",
+      "share": 0.0035737491877842753
+     },
+     {
+      "nights": 14,
+      "origin": "Asia",
+      "share": 0.000649772579597141
+     },
+     {
+      "nights": 15,
+      "origin": "Asia",
+      "share": 0.0003248862897985705
+     },
+     {
+      "nights": 17,
+      "origin": "Asia",
+      "share": 0.0003248862897985705
+     },
+     {
+      "nights": 18,
+      "origin": "Asia",
+      "share": 0.0003248862897985705
+     },
+     {
+      "nights": 2,
+      "origin": "Europe",
+      "share": 0.0433996383363472
+     },
+     {
+      "nights": 3,
+      "origin": "Europe",
+      "share": 0.09086799276672694
+     },
+     {
+      "nights": 4,
+      "origin": "Europe",
+      "share": 0.1112115732368897
+     },
+     {
+      "nights": 5,
+      "origin": "Europe",
+      "share": 0.11482820976491863
+     },
+     {
+      "nights": 6,
+      "origin": "Europe",
+      "share": 0.11708860759493671
+     },
+     {
+      "nights": 7,
+      "origin": "Europe",
+      "share": 0.09945750452079566
+     },
+     {
+      "nights": 8,
+      "origin": "Europe",
+      "share": 0.08860759493670886
+     },
+     {
+      "nights": 9,
+      "origin": "Europe",
+      "share": 0.08544303797468354
+     },
+     {
+      "nights": 10,
+      "origin": "Europe",
+      "share": 0.05515370705244123
+     },
+     {
+      "nights": 11,
+      "origin": "Europe",
+      "share": 0.04656419529837252
+     },
+     {
+      "nights": 12,
+      "origin": "Europe",
+      "share": 0.03300180831826401
+     },
+     {
+      "nights": 13,
+      "origin": "Europe",
+      "share": 0.02531645569620253
+     },
+     {
+      "nights": 14,
+      "origin": "Europe",
+      "share": 0.022151898734177215
+     },
+     {
+      "nights": 15,
+      "origin": "Europe",
+      "share": 0.0189873417721519
+     },
+     {
+      "nights": 16,
+      "origin": "Europe",
+      "share": 0.014466546112115732
+     },
+     {
+      "nights": 17,
+      "origin": "Europe",
+      "share": 0.009945750452079566
+     },
+     {
+      "nights": 18,
+      "origin": "Europe",
+      "share": 0.006329113924050633
+     },
+     {
+      "nights": 19,
+      "origin": "Europe",
+      "share": 0.005877034358047016
+     },
+     {
+      "nights": 20,
+      "origin": "Europe",
+      "share": 0.0031645569620253164
+     },
+     {
+      "nights": 21,
+      "origin": "Europe",
+      "share": 0.0018083182640144665
+     },
+     {
+      "nights": 22,
+      "origin": "Europe",
+      "share": 0.0022603978300180833
+     },
+     {
+      "nights": 23,
+      "origin": "Europe",
+      "share": 0.0018083182640144665
+     },
+     {
+      "nights": 24,
+      "origin": "Europe",
+      "share": 0.0004520795660036166
+     },
+     {
+      "nights": 25,
+      "origin": "Europe",
+      "share": 0.00135623869801085
+     },
+     {
+      "nights": 31,
+      "origin": "Europe",
+      "share": 0.0004520795660036166
+     },
+     {
+      "nights": 1,
+      "origin": "Gulf",
+      "share": 0.0655464980868408
+     },
+     {
+      "nights": 2,
+      "origin": "Gulf",
+      "share": 0.1332556978872068
+     },
+     {
+      "nights": 3,
+      "origin": "Gulf",
+      "share": 0.15321909831974714
+     },
+     {
+      "nights": 4,
+      "origin": "Gulf",
+      "share": 0.15255365163866244
+     },
+     {
+      "nights": 5,
+      "origin": "Gulf",
+      "share": 0.1327566128763933
+     },
+     {
+      "nights": 6,
+      "origin": "Gulf",
+      "share": 0.11112959574114124
+     },
+     {
+      "nights": 7,
+      "origin": "Gulf",
+      "share": 0.08384628181666944
+     },
+     {
+      "nights": 8,
+      "origin": "Gulf",
+      "share": 0.05689569123273998
+     },
+     {
+      "nights": 9,
+      "origin": "Gulf",
+      "share": 0.04292131092996174
+     },
+     {
+      "nights": 10,
+      "origin": "Gulf",
+      "share": 0.025786058892031276
+     },
+     {
+      "nights": 11,
+      "origin": "Gulf",
+      "share": 0.01663616702711695
+     },
+     {
+      "nights": 12,
+      "origin": "Gulf",
+      "share": 0.009815338545999001
+     },
+     {
+      "nights": 13,
+      "origin": "Gulf",
+      "share": 0.004159041756779238
+     },
+     {
+      "nights": 14,
+      "origin": "Gulf",
+      "share": 0.005989020129762102
+     },
+     {
+      "nights": 15,
+      "origin": "Gulf",
+      "share": 0.0016636167027116952
+     },
+     {
+      "nights": 16,
+      "origin": "Gulf",
+      "share": 0.0014972550324405256
+     },
+     {
+      "nights": 17,
+      "origin": "Gulf",
+      "share": 0.0006654466810846781
+     },
+     {
+      "nights": 19,
+      "origin": "Gulf",
+      "share": 0.00033272334054233906
+     },
+     {
+      "nights": 20,
+      "origin": "Gulf",
+      "share": 0.0008318083513558476
+     },
+     {
+      "nights": 21,
+      "origin": "Gulf",
+      "share": 0.0004990850108135085
+     },
+     {
+      "nights": 1,
+      "origin": "Other regions",
+      "share": 0.15345194909886567
+     },
+     {
+      "nights": 2,
+      "origin": "Other regions",
+      "share": 0.3136983935049231
+     },
+     {
+      "nights": 3,
+      "origin": "Other regions",
+      "share": 0.15817354753267693
+     },
+     {
+      "nights": 5,
+      "origin": "Other regions",
+      "share": 0.04042148903092071
+     },
+     {
+      "nights": 6,
+      "origin": "Other regions",
+      "share": 0.09460471008234007
+     },
+     {
+      "nights": 7,
+      "origin": "Other regions",
+      "share": 0.09811711867334601
+     },
+     {
+      "nights": 8,
+      "origin": "Other regions",
+      "share": 0.07439396556687972
+     },
+     {
+      "nights": 9,
+      "origin": "Other regions",
+      "share": 0.040766971843150805
+     },
+     {
+      "nights": 10,
+      "origin": "Other regions",
+      "share": 0.017274140611504576
+     },
+     {
+      "nights": 11,
+      "origin": "Other regions",
+      "share": 0.0062762710888466635
+     },
+     {
+      "nights": 12,
+      "origin": "Other regions",
+      "share": 0.0023607992169056256
+     },
+     {
+      "nights": 13,
+      "origin": "Other regions",
+      "share": 0.0002879023435250763
+     },
+     {
+      "nights": 14,
+      "origin": "Other regions",
+      "share": 0.00011516093741003051
+     },
+     {
+      "nights": 15,
+      "origin": "Other regions",
+      "share": 5.758046870501526e-05
+     },
+     {
+      "nights": 0,
+      "origin": "Tilal region",
+      "share": 0.8010352342898656
+     },
+     {
+      "nights": 1,
+      "origin": "Tilal region",
+      "share": 0.11024337086814384
+     },
+     {
+      "nights": 2,
+      "origin": "Tilal region",
+      "share": 0.0625681075190701
+     },
+     {
+      "nights": 3,
+      "origin": "Tilal region",
+      "share": 0.021521976026153286
+     },
+     {
+      "nights": 4,
+      "origin": "Tilal region",
+      "share": 0.00408645114420632
+     },
+     {
+      "nights": 5,
+      "origin": "Tilal region",
+      "share": 0.0004540501271340356
+     },
+     {
+      "nights": 6,
+      "origin": "Tilal region",
+      "share": 9.081002542680712e-05
+     }
+    ]
+   },
+   "encoding": {
+    "row": {
+     "field": "origin",
+     "header": {
+      "labelAlign": "left",
+      "labelAngle": 0
+     },
+     "sort": [
+      "Tilal region",
+      "Other regions",
+      "Gulf",
+      "Asia",
+      "Europe"
+     ],
+     "title": null,
+     "type": "nominal"
+    },
+    "x": {
+     "field": "nights",
+     "scale": {
+      "domain": [
+       -0.5,
+       31.5
+      ]
+     },
+     "title": "Nights in the region",
+     "type": "quantitative"
+    },
+    "y": {
+     "axis": {
+      "format": "%",
+      "tickCount": 3
+     },
+     "field": "share",
+     "title": null,
+     "type": "quantitative"
+    }
+   },
+   "height": 70,
+   "mark": {
+    "size": 11,
+    "type": "bar"
+   },
+   "title": {
+    "subtitle": "Share of each market's stays, by nights in the region",
+    "text": "Length of stay by origin market"
+   }
+  }
+ },
+ "humps": [
+  "Other regions"
+ ],
+ "reading": "Visitors do not all pop in and leave: 80% of parties from the Tilal region are day visits, while parties from Europe stay a median of 7 nights and parties from other regions come either for a weekend of 1 to 3 nights (63%) or for about a week. The chart shows how long parties stay, not how many people or how much money each kind of trip brings, and 320 stays with no recorded length are left out.",
+ "shares": {
+  "__frame__": {
+   "columns": [
+    "origin",
+    "nights",
+    "share"
+   ],
+   "data": [
+    [
+     "Asia",
+     1,
+     0.1228070175
+    ],
+    [
+     "Asia",
+     2,
+     0.1682910981
+    ],
+    [
+     "Asia",
+     3,
+     0.1981806368
+    ],
+    [
+     "Asia",
+     4,
+     0.1627680312
+    ],
+    [
+     "Asia",
+     5,
+     0.1234567901
+    ],
+    [
+     "Asia",
+     6,
+     0.081871345
+    ],
+    [
+     "Asia",
+     7,
+     0.0523066927
+    ],
+    [
+     "Asia",
+     8,
+     0.0415854451
+    ],
+    [
+     "Asia",
+     9,
+     0.0172189734
+    ],
+    [
+     "Asia",
+     10,
+     0.014619883
+    ],
+    [
+     "Asia",
+     11,
+     0.0071474984
+    ],
+    [
+     "Asia",
+     12,
+     0.0045484081
+    ],
+    [
+     "Asia",
+     13,
+     0.0035737492
+    ],
+    [
+     "Asia",
+     14,
+     0.0006497726
+    ],
+    [
+     "Asia",
+     15,
+     0.0003248863
+    ],
+    [
+     "Asia",
+     17,
+     0.0003248863
+    ],
+    [
+     "Asia",
+     18,
+     0.0003248863
+    ],
+    [
+     "Europe",
+     2,
+     0.0433996383
+    ],
+    [
+     "Europe",
+     3,
+     0.0908679928
+    ],
+    [
+     "Europe",
+     4,
+     0.1112115732
+    ],
+    [
+     "Europe",
+     5,
+     0.1148282098
+    ],
+    [
+     "Europe",
+     6,
+     0.1170886076
+    ],
+    [
+     "Europe",
+     7,
+     0.0994575045
+    ],
+    [
+     "Europe",
+     8,
+     0.0886075949
+    ],
+    [
+     "Europe",
+     9,
+     0.085443038
+    ],
+    [
+     "Europe",
+     10,
+     0.0551537071
+    ],
+    [
+     "Europe",
+     11,
+     0.0465641953
+    ],
+    [
+     "Europe",
+     12,
+     0.0330018083
+    ],
+    [
+     "Europe",
+     13,
+     0.0253164557
+    ],
+    [
+     "Europe",
+     14,
+     0.0221518987
+    ],
+    [
+     "Europe",
+     15,
+     0.0189873418
+    ],
+    [
+     "Europe",
+     16,
+     0.0144665461
+    ],
+    [
+     "Europe",
+     17,
+     0.0099457505
+    ],
+    [
+     "Europe",
+     18,
+     0.0063291139
+    ],
+    [
+     "Europe",
+     19,
+     0.0058770344
+    ],
+    [
+     "Europe",
+     20,
+     0.003164557
+    ],
+    [
+     "Europe",
+     21,
+     0.0018083183
+    ],
+    [
+     "Europe",
+     22,
+     0.0022603978
+    ],
+    [
+     "Europe",
+     23,
+     0.0018083183
+    ],
+    [
+     "Europe",
+     24,
+     0.0004520796
+    ],
+    [
+     "Europe",
+     25,
+     0.0013562387
+    ],
+    [
+     "Europe",
+     31,
+     0.0004520796
+    ],
+    [
+     "Gulf",
+     1,
+     0.0655464981
+    ],
+    [
+     "Gulf",
+     2,
+     0.1332556979
+    ],
+    [
+     "Gulf",
+     3,
+     0.1532190983
+    ],
+    [
+     "Gulf",
+     4,
+     0.1525536516
+    ],
+    [
+     "Gulf",
+     5,
+     0.1327566129
+    ],
+    [
+     "Gulf",
+     6,
+     0.1111295957
+    ],
+    [
+     "Gulf",
+     7,
+     0.0838462818
+    ],
+    [
+     "Gulf",
+     8,
+     0.0568956912
+    ],
+    [
+     "Gulf",
+     9,
+     0.0429213109
+    ],
+    [
+     "Gulf",
+     10,
+     0.0257860589
+    ],
+    [
+     "Gulf",
+     11,
+     0.016636167
+    ],
+    [
+     "Gulf",
+     12,
+     0.0098153385
+    ],
+    [
+     "Gulf",
+     13,
+     0.0041590418
+    ],
+    [
+     "Gulf",
+     14,
+     0.0059890201
+    ],
+    [
+     "Gulf",
+     15,
+     0.0016636167
+    ],
+    [
+     "Gulf",
+     16,
+     0.001497255
+    ],
+    [
+     "Gulf",
+     17,
+     0.0006654467
+    ],
+    [
+     "Gulf",
+     19,
+     0.0003327233
+    ],
+    [
+     "Gulf",
+     20,
+     0.0008318084
+    ],
+    [
+     "Gulf",
+     21,
+     0.000499085
+    ],
+    [
+     "Other regions",
+     1,
+     0.1534519491
+    ],
+    [
+     "Other regions",
+     2,
+     0.3136983935
+    ],
+    [
+     "Other regions",
+     3,
+     0.1581735475
+    ],
+    [
+     "Other regions",
+     5,
+     0.040421489
+    ],
+    [
+     "Other regions",
+     6,
+     0.0946047101
+    ],
+    [
+     "Other regions",
+     7,
+     0.0981171187
+    ],
+    [
+     "Other regions",
+     8,
+     0.0743939656
+    ],
+    [
+     "Other regions",
+     9,
+     0.0407669718
+    ],
+    [
+     "Other regions",
+     10,
+     0.0172741406
+    ],
+    [
+     "Other regions",
+     11,
+     0.0062762711
+    ],
+    [
+     "Other regions",
+     12,
+     0.0023607992
+    ],
+    [
+     "Other regions",
+     13,
+     0.0002879023
+    ],
+    [
+     "Other regions",
+     14,
+     0.0001151609
+    ],
+    [
+     "Other regions",
+     15,
+     5.75805e-05
+    ],
+    [
+     "Tilal region",
+     0,
+     0.8010352343
+    ],
+    [
+     "Tilal region",
+     1,
+     0.1102433709
+    ],
+    [
+     "Tilal region",
+     2,
+     0.0625681075
+    ],
+    [
+     "Tilal region",
+     3,
+     0.021521976
+    ],
+    [
+     "Tilal region",
+     4,
+     0.0040864511
+    ],
+    [
+     "Tilal region",
+     5,
+     0.0004540501
+    ],
+    [
+     "Tilal region",
+     6,
+     9.081e-05
+    ]
+   ],
+   "index": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82
+   ]
+  }
+ }
+}

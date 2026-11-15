@@ -1,0 +1,5 @@
+{
+ "min_complaints": 10,
+ "min_visitors": 1000,
+ "rule": "The board's own publication rule: a cell with fewer than 10 complaints or fewer than 1,000 visitors is not published."
+}

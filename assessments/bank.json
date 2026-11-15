@@ -3,166 +3,407 @@
   "version": 1,
   "questions": [
     {
-      "id": "q-example-1",
+      "id": "q-plan-01",
       "type": "single",
-      "prompt": "REPLACE: a practice question on LO1, as a short scenario",
+      "prompt": "A hospital manager writes: \"Are our clinics doing well on waiting?\" The appointments table has one row per appointment, with clinic, booking date, visit date and minutes waited. Which rewrite is ready for an analysis plan?",
       "options": [
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: the right answer",
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: a wrong option that a common misconception makes tempting"
+        "Which clinics are performing badly on waiting?",
+        "What is the median wait in minutes per appointment, by clinic, for visits in 2025?",
+        "How long do patients wait at our clinics?",
+        "Why do some clinics make patients wait longer?"
       ],
       "correct": [
         1
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "It names the unit (an appointment), the variable (minutes waited), the comparison (by clinic) and the period.",
       "misconceptions": [
-        "REPLACE: the misconception behind this option",
+        "Keeps a judgement word, \"badly\", that has no measure",
         "",
-        "REPLACE: the misconception behind this option",
-        "REPLACE: the misconception behind this option"
-      ],
-      "lo": [
-        "LO1"
-      ],
-      "day": "day1",
-      "session": 1,
-      "level": "apply",
-      "pool": "practice",
-      "weight": 1
-    },
-    {
-      "id": "q-example-2",
-      "type": "tf",
-      "prompt": "REPLACE: a statement on LO2 that is true",
-      "options": [
-        "True",
-        "False"
-      ],
-      "correct": [
-        0
-      ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
-      "misconceptions": [
-        "",
-        "REPLACE: the misconception behind this option"
+        "Names a variable and no comparison or unit",
+        "Asks for a cause, which a table of appointments cannot give"
       ],
       "lo": [
         "LO2"
       ],
       "day": "day1",
       "session": 1,
-      "level": "understand",
+      "slide": "anatomy-of-a-question",
+      "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "timer": 75
     },
     {
-      "id": "q-example-3",
+      "id": "q-plan-02",
       "type": "single",
-      "prompt": "REPLACE: a practice question on LO3, as a short scenario",
+      "prompt": "A library has a loans table (one row per loan) and a members table (one row per member). An analyst counts the rows of the loans table for 2025 and reports \"18,400 people borrowed a book\". What is wrong?",
       "options": [
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: the right answer",
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: a wrong option that a common misconception makes tempting"
+        "The count is of loans, so a member with ten loans is counted ten times",
+        "The loans table should have been joined to the members table first",
+        "A count cannot be reported without a percentage beside it",
+        "The year 2025 is too short a period for a count of members"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "One row is one loan. Counting rows counts loans; people need a count of distinct members.",
+      "misconceptions": [
+        "",
+        "Believes a join fixes the unit; a join alone still leaves one row per loan",
+        "Confuses a presentation habit with the error, which is the unit",
+        "Looks for the fault in the period, not in what a row is"
+      ],
+      "lo": [
+        "LO2"
+      ],
+      "day": "day1",
+      "session": 1,
+      "slide": "unit-of-observation",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1,
+      "timer": 75
+    },
+    {
+      "id": "q-plan-03",
+      "type": "single",
+      "prompt": "A plan entry reads: question \"How do complaints differ across branches?\", table \"complaints\", unit \"one complaint\", variables [\"branch\"], comparison \"look at complaints by branch\". Which part fails a plan checklist first?",
+      "options": [
+        "The unit, because a complaint is too small a unit to analyse",
+        "The table, because complaints need a second table before they can be counted",
+        "The question, because it does not end with the name of a branch",
+        "The comparison, because it does not say what is set against what, such as complaints per thousand customers by branch"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "A comparison names the two things compared and the measure; \"look at\" names neither, and a rate needs its denominator.",
+      "misconceptions": [
+        "Mistakes a fine-grained unit for a fault; the unit is correct for this table",
+        "Counting complaints needs one table; it is the rate that needs a second",
+        "Invents a rule about the wording of the question",
+        ""
+      ],
+      "lo": [
+        "LO2"
+      ],
+      "day": "day1",
+      "session": 1,
+      "slide": "the-plan",
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1,
+      "timer": 90
+    },
+    {
+      "id": "q-explore-01",
+      "type": "single",
+      "prompt": "An analyst tabulates average basket value by weekday, by store and by payment method, and notices that card payments on Thursdays are highest. She reports: \"Thursday card payments are the most valuable\". How should the finding be labelled?",
+      "options": [
+        "Confirmed, because it was computed from the complete sales table",
+        "Confirmed, because the difference is large",
+        "Exploratory, because the comparison was chosen after looking at many cuts of the same data",
+        "Exploratory, because sales data cannot be used for confirmation"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "The pattern was picked because it stood out among many comparisons; the data that suggested it cannot also confirm it.",
+      "misconceptions": [
+        "Believes complete data makes a searched pattern confirmed",
+        "Takes the size of a gap as proof that it was not selected",
+        "",
+        "Thinks the kind of data decides; it is the order of question and look that decides"
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 1,
+      "slide": "exploratory-or-confirmatory",
+      "level": "understand",
+      "pool": "practice",
+      "weight": 1,
+      "timer": 75
+    },
+    {
+      "id": "q-explore-02",
+      "type": "single",
+      "prompt": "A pattern was found by exploring the 2024 survey: members rate evening classes higher. What would make it a confirmed finding?",
+      "options": [
+        "Recomputing it on the 2024 survey with a different software package",
+        "Writing the comparison down now and testing it on the 2025 survey, which has not been looked at",
+        "Finding a second pattern in the 2024 survey that points the same way",
+        "Showing the 2024 chart to three colleagues who agree with the reading"
       ],
       "correct": [
         1
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "A fresh test fixes the comparison first and uses data that played no part in finding the pattern.",
       "misconceptions": [
-        "REPLACE: the misconception behind this option",
+        "Confuses reproducing a number with testing a claim",
         "",
-        "REPLACE: the misconception behind this option",
-        "REPLACE: the misconception behind this option"
+        "More searching in the same data adds comparisons, not evidence",
+        "Agreement about a chart is not a test of what the chart suggests"
+      ],
+      "lo": [
+        "LO1"
+      ],
+      "day": "day1",
+      "session": 1,
+      "slide": "what-the-plan-cannot-do",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1,
+      "timer": 75
+    },
+    {
+      "id": "q-profile-01",
+      "type": "single",
+      "prompt": "An orders table should have one row per order. It has 52,300 rows and 52,000 distinct order numbers. The 300 repeated order numbers each appear twice, with different delivery dates. What goes into the issue log?",
+      "options": [
+        "Record 300 orders with conflicting rows and ask the owner which row is right",
+        "Keep the row with the later delivery date, which is the more recent",
+        "Drop the second row of each pair: they are double entries",
+        "Average the two delivery dates of each pair"
+      ],
+      "correct": [
+        0
+      ],
+      "explanation": "Rows that share a key and differ are a conflict, not a copy; choosing between them is the owner's decision.",
+      "misconceptions": [
+        "",
+        "Invents a rule that the later row is right",
+        "Treats conflicting rows as exact copies",
+        "Creates a delivery date that never existed"
       ],
       "lo": [
         "LO3"
       ],
       "day": "day1",
-      "session": 1,
+      "session": 2,
+      "slide": "grain-and-key",
       "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "timer": 90
     },
     {
-      "id": "q-example-4",
-      "type": "tf",
-      "prompt": "REPLACE: a statement on LO4 that is true",
+      "id": "q-profile-02",
+      "type": "single",
+      "prompt": "In a customer survey, income is missing for 7% of respondents overall: 3% of those under 40 and 19% of those over 60. An analyst reports mean income from the rows that have a value. What is the main risk?",
       "options": [
-        "True",
-        "False"
+        "The mean rests on 7% fewer rows, so its standard error is slightly larger",
+        "The 7% is too small a share to affect any summary",
+        "The mean cannot be computed while any value is missing",
+        "The mean describes younger respondents more than all respondents"
       ],
       "correct": [
-        0
+        3
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "The missing values sit with one group, so the rows that remain over-represent the other.",
       "misconceptions": [
-        "",
-        "REPLACE: the misconception behind this option"
+        "Sees only the loss of rows, not who is lost",
+        "Judges by the overall share and ignores where the missing values are",
+        "Confuses a software default with a statistical problem",
+        ""
       ],
       "lo": [
-        "LO4"
+        "LO3"
       ],
       "day": "day1",
-      "session": 1,
-      "level": "understand",
+      "session": 2,
+      "slide": "where-missing-sits",
+      "level": "analyse",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "timer": 90
     },
     {
-      "id": "q-example-5",
+      "id": "q-profile-03",
       "type": "single",
-      "prompt": "REPLACE: a practice question on LO5, as a short scenario",
+      "prompt": "A column \"age\" in a membership table has a minimum of 0, a maximum of 120 and a spike of 412 rows at exactly 0. The form allows the field to be skipped. What is the most likely reading, and the first step?",
       "options": [
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: the right answer",
-        "REPLACE: a wrong option that a common misconception makes tempting",
-        "REPLACE: a wrong option that a common misconception makes tempting"
+        "412 members are infants; keep the values",
+        "The spike is random noise; smooth it with a wider bin",
+        "0 stands for \"not given\"; set those values to missing and record 412 rows",
+        "0 is a data-entry error for 10; add ten years to those rows"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "A spike at a default value in an optional field is a code for missing, not a measurement.",
+      "misconceptions": [
+        "Takes a default value for a real age",
+        "Treats a structural spike as sampling noise",
+        "",
+        "Replaces one invented value with another"
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": "day1",
+      "session": 2,
+      "slide": "impossible-values",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1,
+      "timer": 75
+    },
+    {
+      "id": "q-dist-01",
+      "type": "single",
+      "prompt": "Delivery times at a courier have a median of 2 days for city A and for city B, and the same quartiles. In city A nearly all parcels take 1 to 3 days. In city B half take 1 day and half take 3 to 4 days. Which chart shows the difference?",
+      "options": [
+        "A box plot of delivery days for each city",
+        "A histogram of delivery days for each city, one bin per day",
+        "A bar chart of the median delivery days for each city",
+        "A pie chart of the share of parcels delivered in each city"
       ],
       "correct": [
         1
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "Two humps and one hump can share the same five numbers; only the histogram shows the shape.",
       "misconceptions": [
-        "REPLACE: the misconception behind this option",
+        "A box draws the five numbers, which are equal here",
         "",
-        "REPLACE: the misconception behind this option",
-        "REPLACE: the misconception behind this option"
+        "A single number per city, and the numbers are equal",
+        "Shows the size of each city, not the delivery times"
       ],
       "lo": [
-        "LO5"
+        "LO3"
       ],
       "day": "day1",
-      "session": 1,
-      "level": "apply",
+      "session": 3,
+      "slide": "what-the-box-hides",
+      "level": "analyse",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "timer": 90
     },
     {
-      "id": "q-example-6",
-      "type": "tf",
-      "prompt": "REPLACE: a statement on LO6 that is true",
+      "id": "q-dist-02",
+      "type": "single",
+      "prompt": "A gym chain compares the visit lengths of 9,000 standard members and 600 premium members with two histograms on the same count axis. The premium histogram is a flat strip along the bottom. What is the repair?",
       "options": [
-        "True",
-        "False"
+        "Draw each group as shares of its own total, on a common share axis",
+        "Remove the standard members so that the premium members can be seen",
+        "Give each histogram its own count axis and place them side by side",
+        "Replace both histograms with the two group means"
       ],
       "correct": [
         0
       ],
-      "explanation": "REPLACE: why the right answer is right, in one sentence",
+      "explanation": "Shares put groups of unequal size on the same footing, so the shapes can be compared.",
       "misconceptions": [
         "",
-        "REPLACE: the misconception behind this option"
+        "Removes the comparison the chart was drawn for",
+        "Makes the shapes visible but invites comparing bar heights across different scales",
+        "Throws away the shapes that the question is about"
       ],
       "lo": [
-        "LO6"
+        "LO3"
       ],
       "day": "day1",
-      "session": 1,
-      "level": "understand",
+      "session": 3,
+      "slide": "shares-not-counts",
+      "level": "apply",
       "pool": "practice",
-      "weight": 1
+      "weight": 1,
+      "timer": 75
+    },
+    {
+      "id": "q-summary-01",
+      "type": "single",
+      "prompt": "House prices in a district have a mean of 1.9 million riyals and a median of 1.2 million. A report says \"the typical house costs 1.9 million\". What should it say?",
+      "options": [
+        "No typical price can be given for a skewed variable",
+        "The typical house costs 1.55 million, the midpoint of mean and median",
+        "The typical house costs 1.9 million; the mean uses every house and is more accurate",
+        "The typical house costs 1.2 million; a few very expensive houses pull the mean up"
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "Half of the houses cost less than the median; with a long right tail most houses cost less than the mean.",
+      "misconceptions": [
+        "Gives up where the median does the job",
+        "Averages two summaries that answer different questions",
+        "Takes \"uses every value\" for \"describes a typical value\"",
+        ""
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": "day1",
+      "session": 4,
+      "slide": "mean-follows-tail",
+      "level": "apply",
+      "pool": "practice",
+      "weight": 1,
+      "timer": 60
+    },
+    {
+      "id": "q-summary-02",
+      "type": "single",
+      "prompt": "Two branches both have a mean rating of 3.5 on a 1 to 5 scale. In branch A nearly everyone gives 3 or 4. In branch B half give 5 and half give 2. Which report lets a manager see the difference?",
+      "options": [
+        "The mean rating of each branch with two decimals",
+        "The median rating of each branch",
+        "The share of customers at each score, for each branch",
+        "The total number of ratings of each branch"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "Shares by score show that branch B has a large dissatisfied group that an average conceals.",
+      "misconceptions": [
+        "More decimals of the same number show nothing new",
+        "One number per branch again; it cannot show a split",
+        "",
+        "Shows how many answered, not what they answered"
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": "day1",
+      "session": 4,
+      "slide": "scores-need-shares",
+      "level": "analyse",
+      "pool": "practice",
+      "weight": 1,
+      "timer": 75
+    },
+    {
+      "id": "q-summary-03",
+      "type": "single",
+      "prompt": "A caption reads: \"Median spend per visitor: 310 riyals.\" The table behind it has 8,000 visitors, of whom 2,100 gave no spend; most of those were visitors on free school trips. What is missing from the caption?",
+      "options": [
+        "The mean spend, to show both summaries",
+        "The number of visitors the median rests on and who was left out",
+        "The standard deviation of spend",
+        "The date on which the table was exported"
+      ],
+      "correct": [
+        1
+      ],
+      "explanation": "A summary carries its number of values and what was excluded; here a quarter of the visitors, of one kind, are not in it.",
+      "misconceptions": [
+        "A second summary of the same rows does not reveal the excluded rows",
+        "",
+        "Describes spread among the included rows only",
+        "Useful for the record, and it does not tell the reader who is missing"
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": "day1",
+      "session": 4,
+      "slide": "summary-carries-n",
+      "level": "evaluate",
+      "pool": "practice",
+      "weight": 1,
+      "timer": 75
     }
   ]
 }

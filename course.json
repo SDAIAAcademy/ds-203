@@ -9,7 +9,7 @@
     "en": "Exploratory Analysis and Visualisation",
     "ar": "التحليل الاستكشافي وتصور البيانات"
   },
-  "tagline": "REPLACE: one line under the title: what participants can do after the course",
+  "tagline": "Answer a director's questions from her own data: written questions first, charts that do not mislead, patterns checked against chance, and a report that reruns from raw data",
   "description": "Participants answer a fictional regional tourism board's questions by exploring its data, starting every analysis from written questions. They profile tables, examine distributions, relationships and change over time, build charts with a grammar of graphics and scales that do not mislead, and test by resampling whether a pattern could be chance. They repair misleading charts and write findings that state what is and is not shown, in a notebook that reruns from raw data.",
   "track": "data-science",
   "level": 200,
@@ -67,8 +67,8 @@
     }
   ],
   "case_study": {
-    "name": "REPLACE: the name of the fictional organisation every lab works on",
-    "summary": "REPLACE: two sentences on the case study and its synthetic data"
+    "name": "Tilal Regional Tourism Board",
+    "summary": "Tilal Regional Tourism Board (مجلس تِلال الإقليمي للسياحة) is a fictional board of a highland region with nine visitor sites. Its director's brief is answered from three years of seeded synthetic data, 2023 to 2025: monthly arrivals by five origin markets, 150,000 ticket sales, 40,000 visitor stays, the daily occupancy of 40 hotels, 6,000 survey responses in Arabic and English and 2,418 complaints. The data holds what the sessions teach: entry errors in the stay register, a summer season, two festivals, a busiest site that is not the worst, satisfaction that falls overall while it rises in every origin market, and patterns that are only chance. Participants work as Leen Al-Suwayigh, the board's analyst; stays and hotels appear under pseudonymised keys and small groups are not published."
   },
   "format": "intensive",
   "format_note": "Intensive: 4 teaching days of four sessions and a capstone day, with guided pre-work and a tracked follow-up task",
@@ -90,68 +90,174 @@
         {
           "title": "Write the questions first",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Rewrite a vague request as a question with a unit, variables and a comparison",
+            "Name the unit of observation of each table before joining or counting",
+            "Distinguish an exploratory question from a confirmatory one"
           ],
           "lo": [
+            "LO1",
             "LO2"
           ],
           "lab": {
             "id": "1.1",
-            "title": "Turn the director's brief into five questions with unit and comparison",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Five questions from the brief",
             "minutes": 25,
-            "href": "D1_1_turn_director_s.ipynb"
-          }
+            "summary": "Turn the director's brief into five questions, each with its table, unit of observation, variables and comparison, and pass the plan checklist before any chart is drawn.",
+            "href": "D1_1_brief_questions.ipynb",
+            "steps": [
+              {
+                "text": "Read the brief; name the table and the unit behind each ask",
+                "minutes": 5
+              },
+              {
+                "text": "Write five questions with variables and comparison",
+                "minutes": 12
+              },
+              {
+                "text": "Run the plan checklist and fix what fails",
+                "minutes": 5
+              },
+              {
+                "text": "Write what the plan leaves out",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Add the question the brief did not ask and should have"
+          },
+          "summary": "From a brief to questions that name a unit of observation, variables and a comparison, and what exploring can and cannot establish"
         },
         {
           "title": "Profiling a table",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Test whether a table has the grain and the key its dictionary claims",
+            "Locate missing values and impossible values, and say whom they affect",
+            "Record each data issue with its evidence and a decision"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "1.2",
-            "title": "Profile the visitor table and log three data issues",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Profile the stay register",
             "minutes": 25,
-            "href": "D1_2_profile_visitor_table.ipynb"
-          }
+            "summary": "Profile the visitor table, find rows entered twice, a code that poses as a number, one market under three spellings and spend that is missing for day visitors, and log three issues with evidence and a decision.",
+            "href": "D1_2_profile_stays.ipynb",
+            "steps": [
+              {
+                "text": "Shape, grain and key: is one row one stay?",
+                "minutes": 5
+              },
+              {
+                "text": "Types and missing values: where spend is missing",
+                "minutes": 6
+              },
+              {
+                "text": "Ranges and categories: values that cannot be true",
+                "minutes": 6
+              },
+              {
+                "text": "Log three issues with evidence and a decision",
+                "minutes": 6
+              },
+              {
+                "text": "Write the reading",
+                "minutes": 2
+              }
+            ],
+            "stretch": "Find the fifth issue, in the dates"
+          },
+          "summary": "What to find out about a table before trusting a single number from it: grain, key, types, missing values, ranges and categories"
         },
         {
           "title": "Distributions",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Draw a histogram with a bin width that suits the variable",
+            "Compare groups of unequal size by shares on a common scale",
+            "Recognise a distribution with two humps that a box plot hides"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "1.3",
-            "title": "Compare length of stay by visitor origin with histograms and box plots",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Length of stay by origin",
             "minutes": 25,
-            "href": "D1_3_compare_length_stay.ipynb"
-          }
+            "summary": "Compare length of stay by visitor origin with histograms and box plots, and find the market whose box plot hides two kinds of trip.",
+            "href": "D1_3_length_of_stay.ipynb",
+            "steps": [
+              {
+                "text": "One histogram of nights for all parties",
+                "minutes": 5
+              },
+              {
+                "text": "Shares by origin, one panel each",
+                "minutes": 7
+              },
+              {
+                "text": "Box plots by origin",
+                "minutes": 5
+              },
+              {
+                "text": "Find the market with two kinds of trip",
+                "minutes": 5
+              },
+              {
+                "text": "Write the reading",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Change the bin width to 7 nights and say what disappears"
+          },
+          "summary": "Histograms, density and box plots: what each shows of a distribution and what each hides"
         },
         {
           "title": "Summaries that fit the shape",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Predict from mean and median which way a variable is skewed",
+            "Choose a centre and a spread that the tail does not move",
+            "Summarise a zero-heavy variable and a score without a single mean"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "1.4",
-            "title": "Choose centre and spread measures for four skewed variables",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Centre and spread for four variables",
             "minutes": 25,
-            "href": "D1_4_choose_centre_spread.ipynb"
-          }
+            "summary": "Choose centre and spread measures for four skewed variables (spend, nights, booking lead time, satisfaction) and say what each summary leaves out.",
+            "href": "D1_4_centre_spread.ipynb",
+            "steps": [
+              {
+                "text": "Mean and median of the four variables, and the gap between them",
+                "minutes": 5
+              },
+              {
+                "text": "Spread: standard deviation against quartiles",
+                "minutes": 5
+              },
+              {
+                "text": "Spend on a log scale: the geometric mean",
+                "minutes": 5
+              },
+              {
+                "text": "A zero-heavy variable needs two numbers",
+                "minutes": 4
+              },
+              {
+                "text": "A score from 1 to 5 needs shares",
+                "minutes": 3
+              },
+              {
+                "text": "Choose and write the reading",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Remove the top 1% of spend and see which summaries move"
+          },
+          "summary": "Choosing a centre and a spread by the shape of the variable: long tails, counts, zero-heavy variables and scores"
         }
-      ]
+      ],
+      "subtitle": "Before any chart: what is asked, what one row is, what the values look like and which summary describes them"
     },
     {
       "id": "day2",
@@ -162,68 +268,185 @@
         {
           "title": "Two variables at once",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Bring two tables to one unit of observation before relating them",
+            "Reveal a relation in an overplotted scatter with transparency and binning",
+            "Explain why a correlation changes with the unit it is computed on"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "2.1",
-            "title": "Plot occupancy against ticket sales with transparency and binning",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Occupancy against ticket sales",
             "minutes": 25,
-            "href": "D2_1_plot_occupancy_against.ipynb"
-          }
+            "summary": "Plot hotel occupancy against ticket sales for 43,840 hotel-days, first as a solid block, then with transparency, a binned heatmap and binned medians.",
+            "href": "D2_1_occupancy_tickets.ipynb",
+            "steps": [
+              {
+                "text": "Join hotel-days to daily ticket sales",
+                "minutes": 4
+              },
+              {
+                "text": "A scatter with transparency",
+                "minutes": 5
+              },
+              {
+                "text": "Bin both axes: a heatmap of counts",
+                "minutes": 6
+              },
+              {
+                "text": "Median occupancy by level of ticket sales",
+                "minutes": 5
+              },
+              {
+                "text": "One number at two units: hotel-days and weeks",
+                "minutes": 3
+              },
+              {
+                "text": "Write the reading",
+                "minutes": 2
+              }
+            ],
+            "stretch": "Colour the binned medians by weekend and weekday"
+          },
+          "summary": "Scatter plots when there are tens of thousands of points: transparency, binning, and one number that depends on the unit"
         },
         {
           "title": "Counts, rates and denominators",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Convert counts to rates with a denominator that fits the question",
+            "Compare a ranking by count with a ranking by rate",
+            "Mark the cells of a table that a publication rule holds back"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "2.2",
-            "title": "Convert complaints to rates per thousand visitors; mark cells too small to publish",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Complaint rates and small cells",
             "minutes": 25,
-            "href": "D2_2_convert_complaints_rates.ipynb"
-          }
+            "summary": "Convert complaints to rates per thousand visitors by site and by origin, compare the two rankings and mark the cells too small to publish.",
+            "href": "D2_2_complaint_rates.ipynb",
+            "steps": [
+              {
+                "text": "Count complaints by site and rank the sites",
+                "minutes": 3
+              },
+              {
+                "text": "Visitors by site, and complaints per thousand visitors",
+                "minutes": 6
+              },
+              {
+                "text": "Set the two rankings side by side",
+                "minutes": 3
+              },
+              {
+                "text": "Rates by site and origin",
+                "minutes": 5
+              },
+              {
+                "text": "Apply the publication rule",
+                "minutes": 5
+              },
+              {
+                "text": "Write the reading",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Show that one withheld cell can be recovered from the row total"
+          },
+          "summary": "Why a count ranks by size, how to choose a denominator, and which cells are too small to publish"
         },
         {
           "title": "Change over time",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Draw a time series so that season and trend can be told apart",
+            "Compare a month with the same month a year earlier and with a seasonal baseline",
+            "Mark the months that exceed the baseline and say by how much"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "2.3",
-            "title": "Plot monthly arrivals and mark seasonality and two festival effects",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Monthly arrivals, season and festivals",
             "minutes": 25,
-            "href": "D2_3_plot_monthly_arrivals.ipynb"
-          }
+            "summary": "Plot monthly arrivals, separate the summer season from the trend and mark the two festival effects against a seasonal baseline.",
+            "href": "D2_3_monthly_arrivals.ipynb",
+            "steps": [
+              {
+                "text": "A line chart of monthly arrivals",
+                "minutes": 4
+              },
+              {
+                "text": "The seasonal profile of a festival-free year",
+                "minutes": 5
+              },
+              {
+                "text": "Change on the same month a year earlier",
+                "minutes": 5
+              },
+              {
+                "text": "A baseline from season and trend; the months above it",
+                "minutes": 7
+              },
+              {
+                "text": "Mark the festival months and write the reading",
+                "minutes": 4
+              }
+            ],
+            "stretch": "Repeat the baseline for one origin market"
+          },
+          "summary": "Reading a time series as trend, season and events, and choosing what to compare a month with"
         },
         {
           "title": "When the total reverses",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Split a total into what each group does and how large each group is",
+            "Detect a reversal between a total and its groups",
+            "Report a comparison at a fixed mix"
           ],
           "lo": [
             "LO3"
           ],
           "lab": {
             "id": "2.4",
-            "title": "Find the satisfaction reversal once visitor origin is taken into account",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "The satisfaction reversal",
             "minutes": 25,
-            "href": "D2_4_find_satisfaction_reversal.ipynb"
-          }
+            "summary": "Find the satisfaction reversal once visitor origin is taken into account: down overall from 2024 to 2025, up in every origin market.",
+            "href": "D2_4_satisfaction_reversal.ipynb",
+            "steps": [
+              {
+                "text": "Mean satisfaction by year",
+                "minutes": 3
+              },
+              {
+                "text": "Mean satisfaction by origin and year",
+                "minutes": 5
+              },
+              {
+                "text": "The mix of respondents by year",
+                "minutes": 4
+              },
+              {
+                "text": "2025 at the 2024 mix",
+                "minutes": 6
+              },
+              {
+                "text": "One chart of the reversal",
+                "minutes": 4
+              },
+              {
+                "text": "Write the sentence the board may print",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Find a second variable that could move the total the same way"
+          },
+          "summary": "Totals are weighted averages: how a change of mix reverses a comparison, and which answer serves which question"
         }
-      ]
+      ],
+      "subtitle": "Two variables together, counts against rates, change over time, and a total that says the opposite of its parts"
     },
     {
       "id": "day3",
@@ -234,68 +457,177 @@
         {
           "title": "Marks, encodings and scales",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Describe any chart as data, marks, encodings and scales",
+            "Rank position, length, area and colour by how precisely they are read",
+            "Build a layered chart from a written specification"
           ],
           "lo": [
             "LO4"
           ],
           "lab": {
             "id": "3.1",
-            "title": "Rebuild one chart from a written specification",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "A chart from a written specification",
             "minutes": 25,
-            "href": "D3_1_rebuild_one_chart.ipynb"
-          }
+            "summary": "Rebuild one chart from a written specification: complaint rates by site as marks, encodings, scales and a text layer.",
+            "href": "D3_1_chart_from_spec.ipynb",
+            "steps": [
+              {
+                "text": "Read the specification: data, marks, encodings",
+                "minutes": 3
+              },
+              {
+                "text": "The base chart: position for the rate",
+                "minutes": 6
+              },
+              {
+                "text": "Sort, start the scale at zero, write the titles",
+                "minutes": 5
+              },
+              {
+                "text": "A second encoding and a text layer",
+                "minutes": 6
+              },
+              {
+                "text": "Change one mark and say what the reader loses",
+                "minutes": 3
+              },
+              {
+                "text": "Write the reading",
+                "minutes": 2
+              }
+            ],
+            "stretch": "Write the specification of a chart from lab 1.3 in the same form"
+          },
+          "summary": "A chart is data, marks, encodings and scales; choosing the channel for the comparison that matters"
         },
         {
           "title": "Small multiples",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Replace a crowded chart with small multiples",
+            "Choose shared scales to compare levels and free scales to compare shapes",
+            "State the scale choice on the chart"
           ],
           "lo": [
             "LO4"
           ],
           "lab": {
             "id": "3.2",
-            "title": "Facet arrivals by origin market; choose shared or free scales",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Arrivals in small multiples",
             "minutes": 25,
-            "href": "D3_2_facet_arrivals_origin.ipynb"
-          }
+            "summary": "Facet arrivals by origin market, draw the panels with shared and with free scales and choose the one that answers each question.",
+            "href": "D3_2_facet_arrivals.ipynb",
+            "steps": [
+              {
+                "text": "Five lines in one panel: what can be read",
+                "minutes": 4
+              },
+              {
+                "text": "One panel per market, shared scale",
+                "minutes": 5
+              },
+              {
+                "text": "The same panels with free scales",
+                "minutes": 5
+              },
+              {
+                "text": "What each version answers: peak month and peak-to-trough ratio",
+                "minutes": 5
+              },
+              {
+                "text": "Choose, order the panels and say the scale on the chart",
+                "minutes": 4
+              },
+              {
+                "text": "Write the reading",
+                "minutes": 2
+              }
+            ],
+            "stretch": "Index each market to 2023 = 100 and compare with the free-scale version"
+          },
+          "summary": "Small multiples: when panels beat one crowded chart, and what shared and free scales each let a reader compare"
         },
         {
           "title": "Charts that mislead",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Name the fault of a misleading chart",
+            "Repair a chart by changing its scale, window, measure or encoding",
+            "Say what a reader concludes before and after the repair"
           ],
           "lo": [
             "LO4"
           ],
           "lab": {
             "id": "3.3",
-            "title": "Repair six misleading charts and name each fault",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Repair six misleading charts",
             "minutes": 25,
-            "href": "D3_3_repair_six_misleading.ipynb"
-          }
+            "summary": "Repair six misleading charts from the board's earlier report and name each fault: a cut baseline, a picked window, counts for rates, two axes, a running total and uneven time steps.",
+            "href": "D3_3_repair_six_charts.ipynb",
+            "steps": [
+              {
+                "text": "Name the fault of each of the six charts",
+                "minutes": 5
+              },
+              {
+                "text": "Repair charts 1 to 3: baseline, window, rate",
+                "minutes": 9
+              },
+              {
+                "text": "Repair charts 4 to 6: two axes, running total, time steps",
+                "minutes": 9
+              },
+              {
+                "text": "Write what a reader now concludes",
+                "minutes": 2
+              }
+            ],
+            "stretch": "Find a seventh chart in your own work and name its fault"
+          },
+          "summary": "Six ways a correct number becomes a wrong impression, and the repair for each"
         },
         {
           "title": "Colour, labels and Arabic text",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Choose a palette by the type of variable and test it for colour-vision deficiency",
+            "Add a second channel so that colour is never the only carrier",
+            "Produce one chart in Arabic and in English from the same code"
           ],
           "lo": [
             "LO4"
           ],
           "lab": {
             "id": "3.4",
-            "title": "Make one chart readable in Arabic and English and colour-blind safe",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "One chart, two languages, safe colours",
             "minutes": 25,
-            "href": "D3_4_make_one_chart.ipynb"
-          }
+            "summary": "Make one chart readable in Arabic and English and colour-blind safe: test the palette, add a second channel and draw both language versions from one function.",
+            "href": "D3_4_bilingual_chart.ipynb",
+            "steps": [
+              {
+                "text": "Test the supplied palette for colour-vision deficiency",
+                "minutes": 4
+              },
+              {
+                "text": "A safe palette and a second channel",
+                "minutes": 6
+              },
+              {
+                "text": "One function, two languages: titles and names from a label file",
+                "minutes": 7
+              },
+              {
+                "text": "Arabic details: axis side, alignment, digits",
+                "minutes": 5
+              },
+              {
+                "text": "Write the reading",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Replace the legend with a label at the end of each line"
+          },
+          "summary": "Colour that survives colour-vision deficiency and print, labels that carry the finding, and charts that read in Arabic and English"
         }
-      ]
+      ],
+      "subtitle": "A chart as a specification: marks, encodings and scales chosen so that the picture and the numbers agree"
     },
     {
       "id": "day4",
@@ -306,80 +638,193 @@
         {
           "title": "Could it be chance",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Choose shuffling for a gap between groups and resampling for an interval",
+            "Resample the unit that was sampled, here the week",
+            "Decide to report, qualify or drop a pattern and give the reason"
           ],
           "lo": [
             "LO5"
           ],
           "lab": {
             "id": "4.1",
-            "title": "Permutation-test the claimed weekend effect; bootstrap one correlation",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Chance checks on two patterns",
             "minutes": 25,
-            "href": "D4_1_permutation_test_claimed.ipynb"
-          }
+            "summary": "Permutation-test the claimed weekend effect on satisfaction and bootstrap the correlation between weekly ticket sales and hotel occupancy; decide for each whether to report, qualify or drop it.",
+            "href": "D4_1_chance_checks.ipynb",
+            "steps": [
+              {
+                "text": "The weekend gap in satisfaction, as claimed",
+                "minutes": 3
+              },
+              {
+                "text": "Shuffle the weekend labels: the p-value",
+                "minutes": 7
+              },
+              {
+                "text": "Decide: report, qualify or drop",
+                "minutes": 2
+              },
+              {
+                "text": "The correlation of weekly tickets and occupancy",
+                "minutes": 3
+              },
+              {
+                "text": "Bootstrap the weeks: an interval",
+                "minutes": 7
+              },
+              {
+                "text": "Decide, and write the reading",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Remove the season from both series and bootstrap again"
+          },
+          "summary": "Applying the resampling of DS-201 to patterns found by exploring: which rule for which pattern, and what to do with the result"
         },
         {
           "title": "Showing uncertainty",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Add an interval to every estimate on a chart",
+            "Read overlapping and separate intervals without overclaiming",
+            "Write a caption that names the interval, the sample size and the limit"
           ],
           "lo": [
             "LO5"
           ],
           "lab": {
             "id": "4.2",
-            "title": "Add intervals to a satisfaction bar chart and rewrite its caption",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Intervals on the satisfaction chart",
             "minutes": 25,
-            "href": "D4_2_add_intervals_satisfaction.ipynb"
-          }
+            "summary": "Add intervals to the satisfaction bar chart of the earlier report, find which sites can be told apart and rewrite its caption.",
+            "href": "D4_2_intervals_caption.ipynb",
+            "steps": [
+              {
+                "text": "The chart as published, and the responses behind each bar",
+                "minutes": 3
+              },
+              {
+                "text": "A bootstrap interval for each site",
+                "minutes": 7
+              },
+              {
+                "text": "Points with intervals, sorted, with the sample size",
+                "minutes": 7
+              },
+              {
+                "text": "The interval of a difference: guided against unguided visits",
+                "minutes": 4
+              },
+              {
+                "text": "Rewrite the caption",
+                "minutes": 4
+              }
+            ],
+            "stretch": "Draw the 2025 intervals by origin market inside one site"
+          },
+          "summary": "Drawing uncertainty: interval marks, what a bar hides, and captions that say what the interval is"
         },
         {
           "title": "The traps of exploring",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Count the comparisons behind a reported pattern",
+            "Simulate the largest gap that chance alone produces among that many comparisons",
+            "Mark a finding exploratory or confirmed and name the check it needs"
           ],
           "lo": [
             "LO1"
           ],
           "lab": {
             "id": "4.3",
-            "title": "Count the comparisons behind a headline pattern and rewrite the finding",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "Count the comparisons",
             "minutes": 25,
-            "href": "D4_3_count_comparisons_behind.ipynb"
-          }
+            "summary": "Count the comparisons behind a headline pattern, simulate the largest of 27 chance gaps, mark five past findings exploratory or confirmed and rewrite the finding.",
+            "href": "D4_3_count_comparisons.ipynb",
+            "steps": [
+              {
+                "text": "The headline gap and its p-value, taken alone",
+                "minutes": 4
+              },
+              {
+                "text": "All 27 site-year gaps",
+                "minutes": 5
+              },
+              {
+                "text": "The chance of at least one small p-value among 27",
+                "minutes": 2
+              },
+              {
+                "text": "Simulate the largest of 27 gaps under no effect",
+                "minutes": 6
+              },
+              {
+                "text": "Mark five past findings exploratory or confirmed",
+                "minutes": 5
+              },
+              {
+                "text": "Rewrite the finding",
+                "minutes": 3
+              }
+            ],
+            "stretch": "Count again with origin added to site and year"
+          },
+          "summary": "Why the best of many comparisons looks real, how to count the comparisons made, and what turns an exploratory finding into a confirmed one"
         },
         {
           "title": "A report that reruns",
           "outcomes": [
-            "REPLACE: what a participant can do after this session"
+            "Render a report from raw data with one command and prove that two runs agree",
+            "Find what makes a report change between runs",
+            "Write findings with their check, their limit and an open question"
           ],
           "lo": [
             "LO6"
           ],
           "lab": {
             "id": "4.4",
-            "title": "Render a notebook to a report from raw data; choose the capstone dataset",
-            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "title": "A report that reruns",
             "minutes": 25,
-            "href": "D4_4_render_notebook_report.ipynb"
-          }
+            "summary": "Render a notebook to a report from raw data, find why two runs disagree and why the cached numbers are stale, then choose the capstone dataset.",
+            "href": "D4_4_report_reruns.ipynb",
+            "steps": [
+              {
+                "text": "Render the draft twice and compare",
+                "minutes": 5
+              },
+              {
+                "text": "Fix the seed",
+                "minutes": 4
+              },
+              {
+                "text": "Read raw data, not the cache",
+                "minutes": 5
+              },
+              {
+                "text": "Check the findings table: status, check and limit",
+                "minutes": 4
+              },
+              {
+                "text": "Choose the capstone dataset and write two questions",
+                "minutes": 7
+              }
+            ],
+            "stretch": "Render the report in Arabic by passing one more parameter"
+          },
+          "summary": "What makes a report rerun: raw data read-only, one path from raw data to the page, fixed seeds, and findings written with their limits"
         }
-      ]
+      ],
+      "subtitle": "Which patterns survive a chance check, how to draw what is not known, and a report that anyone can run again"
     },
     {
       "id": "capstone",
       "kind": "capstone",
-      "title": "Capstone project presentations",
+      "title": "Capstone: the exploratory report and its defence",
       "deck": "slides/capstone.html",
-      "subtitle": "REPLACE: the catalog gives 8 minutes for each presentation and nothing about questions; decide whether the questions are inside those minutes, set capstone.talk_minutes and capstone.qa_minutes in course.json and the timers of the now-presenting slide, and remove this line"
+      "subtitle": "Each participant defends an exploratory report on an unseen dataset in eight minutes, and redraws one chart on request"
     }
   ],
   "capstone": {
     "summary": "An exploratory report on an unseen synthetic or approved public dataset, in a public repository whose README links the report and lists each finding with its check; eight-minute defence with one chart redrawn on request",
-    "submission": "REPLACE: what participants submit and how: a public repository link, or a shared folder for a course without code",
+    "submission": "A link to a public GitHub repository with a notebook that reruns from the raw data with a fixed seed, the rendered report for a named non-specialist reader, and a README that links the report and lists each finding with its check, its status (exploratory or confirmed) and its limit; charts and sentences written with an assistant are marked in the notebook. The commit history and a report rendered from a clean run are part of the evidence. Then an eight-minute live defence, in which the assessor asks for one chart to be redrawn with a different encoding and the participant says what a reader would now conclude.",
     "talk_minutes": 8,
     "rubric": [
       {
@@ -437,6 +882,140 @@
       "examples": [
         "NumPy and SciPy",
         "R with the infer package"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "group": "National references",
+      "items": [
+        {
+          "title": "Open Data Policy (National Data Management Office, SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/OpenDataPolicy.pdf"
+        },
+        {
+          "title": "Data Classification Policy (National Data Management Office, SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf"
+        },
+        {
+          "title": "Personal Data Protection Law (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf"
+        },
+        {
+          "title": "Implementing Regulation of the Personal Data Protection Law (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf"
+        },
+        {
+          "title": "Principles of AI Ethics (SDAIA)",
+          "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf"
+        },
+        {
+          "title": "Open Data Platform (the follow-up task takes one of its datasets)",
+          "url": "https://open.data.gov.sa/en/home"
+        }
+      ]
+    },
+    {
+      "group": "Libraries used in the labs",
+      "items": [
+        {
+          "title": "Vega-Altair: encodings, marks and data types",
+          "url": "https://altair-viz.github.io/user_guide/encodings/index.html"
+        },
+        {
+          "title": "Vega-Altair: layered, faceted and concatenated charts",
+          "url": "https://altair-viz.github.io/user_guide/compound_charts.html"
+        },
+        {
+          "title": "Vega-Altair: scale and guide resolution (shared and independent scales)",
+          "url": "https://altair-viz.github.io/user_guide/scale_resolve.html"
+        },
+        {
+          "title": "Vega-Altair: large datasets",
+          "url": "https://altair-viz.github.io/user_guide/large_datasets.html"
+        },
+        {
+          "title": "Vega-Lite: scales",
+          "url": "https://vega.github.io/vega-lite/docs/scale.html"
+        },
+        {
+          "title": "DuckDB: the SUMMARIZE statement",
+          "url": "https://duckdb.org/docs/stable/guides/meta/summarize"
+        },
+        {
+          "title": "SciPy: scipy.stats.bootstrap",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html"
+        },
+        {
+          "title": "SciPy: scipy.stats.permutation_test",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.permutation_test.html"
+        },
+        {
+          "title": "nbconvert: executing notebooks",
+          "url": "https://nbconvert.readthedocs.io/en/latest/execute_api.html"
+        },
+        {
+          "title": "plotnine, a grammar of graphics for Python (an interchangeable example)",
+          "url": "https://plotnine.org/"
+        },
+        {
+          "title": "Quarto: computations in Python (an interchangeable example for reports)",
+          "url": "https://quarto.org/docs/computations/python.html"
+        }
+      ]
+    },
+    {
+      "group": "Charts, colour and text direction",
+      "items": [
+        {
+          "title": "Wilkinson: The Grammar of Graphics, second edition (Springer, 2005)",
+          "url": "https://link.springer.com/book/10.1007/0-387-28695-0"
+        },
+        {
+          "title": "Wickham (2010): A layered grammar of graphics",
+          "url": "https://vita.had.co.nz/papers/layered-grammar.html"
+        },
+        {
+          "title": "Cleveland and McGill (1984): Graphical perception: theory, experimentation, and application to the development of graphical methods",
+          "url": "https://www.jstor.org/stable/2288400"
+        },
+        {
+          "title": "Wilke: Fundamentals of Data Visualization",
+          "url": "https://clauswilke.com/dataviz/"
+        },
+        {
+          "title": "Healy: Data Visualization, a practical introduction",
+          "url": "https://socviz.co/"
+        },
+        {
+          "title": "Okabe and Ito: Color Universal Design, how to make figures that are friendly to colour-blind people",
+          "url": "https://jfly.uni-koeln.de/color/"
+        },
+        {
+          "title": "Machado, Oliveira and Fernandes (2009): A physiologically-based model for simulation of color vision deficiency",
+          "url": "https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html"
+        },
+        {
+          "title": "W3C Internationalization: structural markup and right-to-left text",
+          "url": "https://www.w3.org/International/questions/qa-html-dir"
+        }
+      ]
+    },
+    {
+      "group": "Exploring and checking",
+      "items": [
+        {
+          "title": "Wickham, Çetinkaya-Rundel and Grolemund: R for Data Science, second edition, exploratory data analysis",
+          "url": "https://r4ds.hadley.nz/EDA.html"
+        },
+        {
+          "title": "Gelman and Loken (2013): The garden of forking paths",
+          "url": "https://sites.stat.columbia.edu/gelman/research/unpublished/p_hacking.pdf"
+        },
+        {
+          "title": "Ismay, Kim and Valdivia: Statistical Inference via Data Science (ModernDive)",
+          "url": "https://moderndive.com/"
+        }
       ]
     }
   ]

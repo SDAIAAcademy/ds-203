@@ -5,7 +5,7 @@
 
 Data Science Track · SDAIA Academy · DS-203 · Level 200
 
-REPLACE: one line under the title: what participants can do after the course
+Answer a director's questions from her own data: written questions first, charts that do not mislead, patterns checked against chance, and a report that reruns from raw data
 
 Participants answer a fictional regional tourism board's questions by exploring its data, starting every analysis from written questions. They profile tables, examine distributions, relationships and change over time, build charts with a grammar of graphics and scales that do not mislead, and test by resampling whether a pattern could be chance. They repair misleading charts and write findings that state what is and is not shown, in a notebook that reruns from raw data.
 
@@ -34,12 +34,14 @@ Participants answer a fictional regional tourism board's questions by exploring 
 | Day 2 | Relationships and time | Two variables at once; Counts, rates and denominators; Change over time; When the total reverses | [`slides/day2.html`](slides/day2.html) |
 | Day 3 | Building honest charts | Marks, encodings and scales; Small multiples; Charts that mislead; Colour, labels and Arabic text | [`slides/day3.html`](slides/day3.html) |
 | Day 4 | Check and report | Could it be chance; Showing uncertainty; The traps of exploring; A report that reruns | [`slides/day4.html`](slides/day4.html) |
-| Capstone | Capstone project presentations |  | [`slides/capstone.html`](slides/capstone.html) |
+| Capstone | Capstone: the exploratory report and its defence |  | [`slides/capstone.html`](slides/capstone.html) |
 <!-- /academy:units -->
 
 ## Case study
 
-**REPLACE: the name of the fictional organisation every lab works on.** REPLACE: two sentences on the case study and its synthetic data
+**Tilal Regional Tourism Board.** Tilal Regional Tourism Board (مجلس تِلال الإقليمي للسياحة) is a fictional board of a highland region with nine visitor sites. Its director's brief is answered from three years of seeded synthetic data, 2023 to 2025: monthly arrivals by five origin markets, 150,000 ticket sales, 40,000 visitor stays, the daily occupancy of 40 hotels, 6,000 survey responses in Arabic and English and 2,418 complaints. The data holds what the sessions teach: entry errors in the stay register, a summer season, two festivals, a busiest site that is not the worst, satisfaction that falls overall while it rises in every origin market, and patterns that are only chance. Participants work as Leen Al-Suwayigh, the board's analyst; stays and hotels appear under pseudonymised keys and small groups are not published.
+
+The hint-only tutor instruction of the course (`labs/tutor_instruction.md`) is for plotting and dataframe syntax. No lab calls a model, and the first draft of every chart reading is written with the assistant off.
 
 <!-- academy:labs -->
 ## Labs
@@ -48,29 +50,33 @@ Every lab is a notebook in `labs/`. Open it in Google Colab from the course page
 
 | | Session | Lab | File |
 |---|---|---|---|
-| 1.1 | Day 1 · Session 1 | Turn the director's brief into five questions with unit and comparison | [`D1_1_turn_director_s.ipynb`](labs/D1_1_turn_director_s.ipynb) |
-| 1.2 | Day 1 · Session 2 | Profile the visitor table and log three data issues | [`D1_2_profile_visitor_table.ipynb`](labs/D1_2_profile_visitor_table.ipynb) |
-| 1.3 | Day 1 · Session 3 | Compare length of stay by visitor origin with histograms and box plots | [`D1_3_compare_length_stay.ipynb`](labs/D1_3_compare_length_stay.ipynb) |
-| 1.4 | Day 1 · Session 4 | Choose centre and spread measures for four skewed variables | [`D1_4_choose_centre_spread.ipynb`](labs/D1_4_choose_centre_spread.ipynb) |
-| 2.1 | Day 2 · Session 1 | Plot occupancy against ticket sales with transparency and binning | [`D2_1_plot_occupancy_against.ipynb`](labs/D2_1_plot_occupancy_against.ipynb) |
-| 2.2 | Day 2 · Session 2 | Convert complaints to rates per thousand visitors; mark cells too small to publish | [`D2_2_convert_complaints_rates.ipynb`](labs/D2_2_convert_complaints_rates.ipynb) |
-| 2.3 | Day 2 · Session 3 | Plot monthly arrivals and mark seasonality and two festival effects | [`D2_3_plot_monthly_arrivals.ipynb`](labs/D2_3_plot_monthly_arrivals.ipynb) |
-| 2.4 | Day 2 · Session 4 | Find the satisfaction reversal once visitor origin is taken into account | [`D2_4_find_satisfaction_reversal.ipynb`](labs/D2_4_find_satisfaction_reversal.ipynb) |
-| 3.1 | Day 3 · Session 1 | Rebuild one chart from a written specification | [`D3_1_rebuild_one_chart.ipynb`](labs/D3_1_rebuild_one_chart.ipynb) |
-| 3.2 | Day 3 · Session 2 | Facet arrivals by origin market; choose shared or free scales | [`D3_2_facet_arrivals_origin.ipynb`](labs/D3_2_facet_arrivals_origin.ipynb) |
-| 3.3 | Day 3 · Session 3 | Repair six misleading charts and name each fault | [`D3_3_repair_six_misleading.ipynb`](labs/D3_3_repair_six_misleading.ipynb) |
-| 3.4 | Day 3 · Session 4 | Make one chart readable in Arabic and English and colour-blind safe | [`D3_4_make_one_chart.ipynb`](labs/D3_4_make_one_chart.ipynb) |
-| 4.1 | Day 4 · Session 1 | Permutation-test the claimed weekend effect; bootstrap one correlation | [`D4_1_permutation_test_claimed.ipynb`](labs/D4_1_permutation_test_claimed.ipynb) |
-| 4.2 | Day 4 · Session 2 | Add intervals to a satisfaction bar chart and rewrite its caption | [`D4_2_add_intervals_satisfaction.ipynb`](labs/D4_2_add_intervals_satisfaction.ipynb) |
-| 4.3 | Day 4 · Session 3 | Count the comparisons behind a headline pattern and rewrite the finding | [`D4_3_count_comparisons_behind.ipynb`](labs/D4_3_count_comparisons_behind.ipynb) |
-| 4.4 | Day 4 · Session 4 | Render a notebook to a report from raw data; choose the capstone dataset | [`D4_4_render_notebook_report.ipynb`](labs/D4_4_render_notebook_report.ipynb) |
+| 1.1 | Day 1 · Session 1 | Five questions from the brief | [`D1_1_brief_questions.ipynb`](labs/D1_1_brief_questions.ipynb) |
+| 1.2 | Day 1 · Session 2 | Profile the stay register | [`D1_2_profile_stays.ipynb`](labs/D1_2_profile_stays.ipynb) |
+| 1.3 | Day 1 · Session 3 | Length of stay by origin | [`D1_3_length_of_stay.ipynb`](labs/D1_3_length_of_stay.ipynb) |
+| 1.4 | Day 1 · Session 4 | Centre and spread for four variables | [`D1_4_centre_spread.ipynb`](labs/D1_4_centre_spread.ipynb) |
+| 2.1 | Day 2 · Session 1 | Occupancy against ticket sales | [`D2_1_occupancy_tickets.ipynb`](labs/D2_1_occupancy_tickets.ipynb) |
+| 2.2 | Day 2 · Session 2 | Complaint rates and small cells | [`D2_2_complaint_rates.ipynb`](labs/D2_2_complaint_rates.ipynb) |
+| 2.3 | Day 2 · Session 3 | Monthly arrivals, season and festivals | [`D2_3_monthly_arrivals.ipynb`](labs/D2_3_monthly_arrivals.ipynb) |
+| 2.4 | Day 2 · Session 4 | The satisfaction reversal | [`D2_4_satisfaction_reversal.ipynb`](labs/D2_4_satisfaction_reversal.ipynb) |
+| 3.1 | Day 3 · Session 1 | A chart from a written specification | [`D3_1_chart_from_spec.ipynb`](labs/D3_1_chart_from_spec.ipynb) |
+| 3.2 | Day 3 · Session 2 | Arrivals in small multiples | [`D3_2_facet_arrivals.ipynb`](labs/D3_2_facet_arrivals.ipynb) |
+| 3.3 | Day 3 · Session 3 | Repair six misleading charts | [`D3_3_repair_six_charts.ipynb`](labs/D3_3_repair_six_charts.ipynb) |
+| 3.4 | Day 3 · Session 4 | One chart, two languages, safe colours | [`D3_4_bilingual_chart.ipynb`](labs/D3_4_bilingual_chart.ipynb) |
+| 4.1 | Day 4 · Session 1 | Chance checks on two patterns | [`D4_1_chance_checks.ipynb`](labs/D4_1_chance_checks.ipynb) |
+| 4.2 | Day 4 · Session 2 | Intervals on the satisfaction chart | [`D4_2_intervals_caption.ipynb`](labs/D4_2_intervals_caption.ipynb) |
+| 4.3 | Day 4 · Session 3 | Count the comparisons | [`D4_3_count_comparisons.ipynb`](labs/D4_3_count_comparisons.ipynb) |
+| 4.4 | Day 4 · Session 4 | A report that reruns | [`D4_4_report_reruns.ipynb`](labs/D4_4_report_reruns.ipynb) |
 <!-- /academy:labs -->
 
 ## Capstone
 
 An exploratory report on an unseen synthetic or approved public dataset, in a public repository whose README links the report and lists each finding with its check; eight-minute defence with one chart redrawn on request
 
-**Submission:** REPLACE: what participants submit and how: a public repository link, or a shared folder for a course without code
+**Submission:** A link to a public GitHub repository with a notebook that reruns from the raw data with a fixed seed, the rendered report for a named non-specialist reader, and a README that links the report and lists each finding with its check, its status (exploratory or confirmed) and its limit; charts and sentences written with an assistant are marked in the notebook. The commit history and a report rendered from a clean run are part of the evidence. Then an eight-minute live defence, in which the assessor asks for one chart to be redrawn with a different encoding and the participant says what a reader would now conclude.
+
+**Assessment.** A supervised entry quiz and exit check without an assistant (20%), the capstone repository on the rubric (60%: plan and questions 15, analysis and charts 30, honesty and uncertainty 20, chance checks 15, reproducibility and writing 20) and the live defence with one chart redrawn on request (20%). Passing is 70% overall and at least 60% on both the capstone rubric and the supervised check. The supervised items are not in this repository.
+
+**Pre-work and follow-up.** `labs/P0_prework_dataframes_plotting.ipynb` is two hours of dataframe and plotting practice before Day 1. The follow-up task, in `labs/followup/README.md`, is an exploratory note on a dataset of the national Open Data Platform within two weeks of the course.
 
 ## Prerequisites
 
@@ -93,12 +99,50 @@ Each line is a capability; the examples are interchangeable.
 <!-- academy:sources -->
 ## Sources
 
-- REPLACE: every source the course cites, with its address, in course.json under "sources"; this list is written from there
+### National references
+
+- [Open Data Policy (National Data Management Office, SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/OpenDataPolicy.pdf)
+- [Data Classification Policy (National Data Management Office, SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf)
+- [Personal Data Protection Law (SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf)
+- [Implementing Regulation of the Personal Data Protection Law (SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf)
+- [Principles of AI Ethics (SDAIA)](https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf)
+- [Open Data Platform (the follow-up task takes one of its datasets)](https://open.data.gov.sa/en/home)
+
+### Libraries used in the labs
+
+- [Vega-Altair: encodings, marks and data types](https://altair-viz.github.io/user_guide/encodings/index.html)
+- [Vega-Altair: layered, faceted and concatenated charts](https://altair-viz.github.io/user_guide/compound_charts.html)
+- [Vega-Altair: scale and guide resolution (shared and independent scales)](https://altair-viz.github.io/user_guide/scale_resolve.html)
+- [Vega-Altair: large datasets](https://altair-viz.github.io/user_guide/large_datasets.html)
+- [Vega-Lite: scales](https://vega.github.io/vega-lite/docs/scale.html)
+- [DuckDB: the SUMMARIZE statement](https://duckdb.org/docs/stable/guides/meta/summarize)
+- [SciPy: scipy.stats.bootstrap](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html)
+- [SciPy: scipy.stats.permutation_test](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.permutation_test.html)
+- [nbconvert: executing notebooks](https://nbconvert.readthedocs.io/en/latest/execute_api.html)
+- [plotnine, a grammar of graphics for Python (an interchangeable example)](https://plotnine.org/)
+- [Quarto: computations in Python (an interchangeable example for reports)](https://quarto.org/docs/computations/python.html)
+
+### Charts, colour and text direction
+
+- [Wilkinson: The Grammar of Graphics, second edition (Springer, 2005)](https://link.springer.com/book/10.1007/0-387-28695-0)
+- [Wickham (2010): A layered grammar of graphics](https://vita.had.co.nz/papers/layered-grammar.html)
+- [Cleveland and McGill (1984): Graphical perception: theory, experimentation, and application to the development of graphical methods](https://www.jstor.org/stable/2288400)
+- [Wilke: Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+- [Healy: Data Visualization, a practical introduction](https://socviz.co/)
+- [Okabe and Ito: Color Universal Design, how to make figures that are friendly to colour-blind people](https://jfly.uni-koeln.de/color/)
+- [Machado, Oliveira and Fernandes (2009): A physiologically-based model for simulation of color vision deficiency](https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/CVD_Simulation.html)
+- [W3C Internationalization: structural markup and right-to-left text](https://www.w3.org/International/questions/qa-html-dir)
+
+### Exploring and checking
+
+- [Wickham, Çetinkaya-Rundel and Grolemund: R for Data Science, second edition, exploratory data analysis](https://r4ds.hadley.nz/EDA.html)
+- [Gelman and Loken (2013): The garden of forking paths](https://sites.stat.columbia.edu/gelman/research/unpublished/p_hacking.pdf)
+- [Ismay, Kim and Valdivia: Statistical Inference via Data Science (ModernDive)](https://moderndive.com/)
 <!-- /academy:sources -->
 
 ### National references
 
-- NDMO Open Data Policy: REPLACE: the address of the official text
-- NDMO Data Classification Policy: REPLACE: the address of the official text
-- Personal Data Protection Law and its implementing regulations: REPLACE: the address of the official text
-- SDAIA AI Ethics Principles: REPLACE: the address of the official text
+- NDMO Open Data Policy: https://sdaia.gov.sa/en/SDAIA/about/Documents/OpenDataPolicy.pdf
+- NDMO Data Classification Policy: https://sdaia.gov.sa/en/SDAIA/about/Documents/DataClassificationPolicy.pdf
+- Personal Data Protection Law and its implementing regulations: https://sdaia.gov.sa/en/SDAIA/about/Documents/PersonalDataProtectionLaw.pdf and https://sdaia.gov.sa/en/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLaw.pdf
+- SDAIA AI Ethics Principles: https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf

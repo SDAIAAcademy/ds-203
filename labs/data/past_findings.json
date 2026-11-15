@@ -1,0 +1,27 @@
+[
+ {
+  "id": "F1",
+  "finding": "International visitors stay longer than visitors from other regions of the Kingdom.",
+  "how": "The 2023 plan named this comparison before the stay register was opened; the 2023 register was then used once, for this."
+ },
+ {
+  "id": "F2",
+  "finding": "Visitors who arrive on a Tuesday spend the most.",
+  "how": "The analyst tabulated spend by every day of the week, every origin and every purpose, and reported the largest cell."
+ },
+ {
+  "id": "F3",
+  "finding": "Guided visits are rated higher than unguided ones.",
+  "how": "First noticed in the 2023 survey. The board then wrote the question down and tested it on the 2024 survey, which had not been looked at."
+ },
+ {
+  "id": "F4",
+  "finding": "Hotels in the Ridge zone fill up before the Honey Festival.",
+  "how": "Seen in a chart of 2024 occupancy while looking for something else. Not checked on another year."
+ },
+ {
+  "id": "F5",
+  "finding": "Satisfaction at the Wadi Trail drops in months with rain.",
+  "how": "Found after trying weather, school holidays and day of the week against satisfaction at each of nine sites."
+ }
+]

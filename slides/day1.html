@@ -1,158 +1,533 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: welcome; introduce yourself; one question to the room that calibrates the pace; the rhythm of the day</aside>
+  <aside class="notes"><p>Welcome. Ask two things: who has made a chart this month, and who wrote down the question before making it. Expect many hands, then few. That gap is the course. The rhythm of every session: about 25 minutes of ideas, one checkpoint, then a 25-minute lab on the data of one fictional tourism board. Every lab ends with two written sentences about its chart.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>Today has few charts and that is deliberate. Session 1 opens no data at all. Session 2 reads a table before trusting it. Sessions 3 and 4 look at one variable at a time: its shape, then the numbers that describe the shape. Relationships wait for Day 2.</p></aside>
+</section>
 
-<!-- Session 1 -->
+<section class="slide" id="the-board" data-label="The case">
+  <div class="kicker">The case study</div>
+  <h2>Tilal Regional Tourism Board: three years, six tables</h2>
+  <div class="cols cols-4">
+    <div class="stat"><div class="big">9</div><div class="lbl">visitor sites in a highland region</div></div>
+    <div class="stat"><div class="big">150,000</div><div class="lbl">ticket sales, 2023 to 2025</div></div>
+    <div class="stat"><div class="big">40,000</div><div class="lbl">visitor stays in the register</div></div>
+    <div class="stat"><div class="big">6,000</div><div class="lbl">survey responses, Arabic and English</div></div>
+  </div>
+  <p class="small mt">You work as <b>Leen Al-Suwayigh</b>, the board's analyst. <b>Nawal Al-Rashoud</b>, the director, wrote the brief. Aws Al-Hudaif runs sites and ticketing, Rashed Al-Shalan collects the hotels' occupancy returns, Atheer Al-Muhaya owns the survey and the complaints log, Nayef Al-Jumaah drew the charts of last year's report, Hanouf Al-Rumaihi is the data protection officer. The board, its people and every record are fictional and generated with a fixed seed.</p>
+  <aside class="notes"><p>Say it once: no real board, no real visitors, no real hotels. The data is synthetic so that what is in it is known: the season, two festivals, a reversal and several patterns that are only chance. You will be able to mark every reading right or wrong, which real data never allows. The other two tables are monthly arrivals by origin market and the complaints log.</p></aside>
+</section>
 
+<section class="slide" id="how-the-course-works" data-label="How the course works">
+  <div class="kicker">The method of this course</div>
+  <h2>Question, chart, reading: in that order, every time</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · Ask</b>a question with a unit and a comparison</div>
+    <div class="arrow">→</div>
+    <div class="step c-cyan"><b>2 · Look</b>with a chart and a summary that fit the variable</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>3 · Write</b>two sentences: what it shows, what it does not</div>
+    <div class="arrow">→</div>
+    <div class="step c-purple"><b>4 · Check</b>could it be chance, and does it rerun</div>
+  </div>
+  <table class="t small mt">
+    <tr><th>Part of the course</th><th>Assistant</th></tr>
+    <tr><td>Supervised quizzes, and the first draft of every chart reading</td><td>Off</td></tr>
+    <tr><td>Plotting and dataframe syntax in the labs</td><td>A tutor that hints one step at a time and writes no chart for you</td></tr>
+    <tr><td>The capstone</td><td>Free; assisted charts and sentences are marked and defended live</td></tr>
+  </table>
+  <aside class="notes"><p>This slide is the contract. Steps 1 to 3 are Days 1 to 3, step 4 is Day 4. The tutor instruction is the file tutor_instruction.md in the labs folder (its name in this course is Bawsala); participants paste it into an assistant the Academy has approved. No lab calls a model. The reading is written without an assistant because reading a chart is the skill being assessed; syntax is not.</p></aside>
+</section>
+
+<section class="slide" id="setup-and-data-rules" data-label="Setup and data handling">
+  <div class="kicker">Before the first lab</div>
+  <h2>One notebook proves the setup; three rules govern the data</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Setup check</h4><p class="small">Open <code>00_setup_check.ipynb</code> in Colab or locally and run all cells. It imports the libraries, reads the six tables and draws one chart.</p><pre class="code s"><code class="language-text">uv sync
+uv run jupyter lab</code></pre></div>
+    <div class="card c-coral"><h4>Handled as personal data</h4><p class="small mb0">The data is synthetic and is still handled as the board would handle the real thing:</p><ul class="bullets tight small"><li>stays and hotels appear only under pseudonymised keys</li><li>no chart singles out one visitor or one hotel</li><li>small groups are not published, and a rate travels with its denominator</li></ul></div>
+  </div>
+  <aside class="notes"><p>Give five minutes for the setup check if the pre-work did not settle it. Nothing calls or downloads a model, so the usual failures are a missing uv or a blocked Colab. The three rules come from the course's responsible-use statement and apply the transparency principle of the SDAIA AI Ethics Principles to analytical output; Hanouf Al-Rumaihi is the persona who would ask about them. Lab 2.2 applies the small-group rule to a real table.</p></aside>
+</section>
+
+<!-- ======================= SESSION 1 ======================= -->
 <section class="slide section" id="s1" data-auto="section" data-session="1"></section>
 
-<section class="slide" id="s1-idea" data-lo="LO2">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+<section class="slide" id="the-brief" data-lo="LO2" data-label="The brief">
+  <div class="kicker">What the director sent</div>
+  <h2>Five asks, none of them answerable as written</h2>
+  <div class="chat">
+    <div class="msg user"><span class="who">Nawal Al-Rashoud</span>Who is actually coming, and do they stay? I keep hearing that our visitors "pop in and leave".</div>
+    <div class="msg user"><span class="who">Nawal Al-Rashoud</span>Atheer's team logged a lot of complaints about the Cable Car. Is that our problem site?</div>
+    <div class="msg user"><span class="who">Nawal Al-Rashoud</span>Satisfaction went down last year. Why, and whose fault is it?</div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <div class="callout warn mt"><b>The trap.</b> Open the data now and you will chart whatever is easiest to chart, then call it the answer.</div>
+  <aside class="notes"><p>Three of the five asks; the full brief is data/brief.md and opens lab 1.1. Ask the room what "actually", "problem" and "whose fault" would be measured by. Nobody can say, and that is the point: these are a director's words and they are honest ones. The analyst's first job is translation, not plotting.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps" data-lo="LO2">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="anatomy-of-a-question" data-lo="LO2" data-label="Anatomy of a question">
+  <div class="kicker">The tool of this session</div>
+  <h2>An answerable question names four things</h2>
+  <table class="t">
+    <tr><th>Part</th><th>It says</th><th>Ask 3, rewritten</th></tr>
+    <tr><td><b>Unit of observation</b></td><td>what one row is</td><td>one complaint; one ticket sale</td></tr>
+    <tr><td><b>Variables</b></td><td>which columns are used</td><td>site; tickets in the sale</td></tr>
+    <tr><td><b>Comparison</b></td><td>what is set against what</td><td>complaints per thousand visitors, by site</td></tr>
+    <tr><td><b>Kind</b></td><td>exploring, or testing a claim fixed in advance</td><td>exploratory</td></tr>
+  </table>
+  <div class="callout tip mt"><b>The test.</b> Could a colleague answer it without phoning you? "How many complaints per thousand visitors does each site receive?" passes. "Is it our problem site?" does not.</div>
+  <aside class="notes"><p>Walk the table row by row with ask 3. The comparison row is where most plans are thin: "look at complaints" is not a comparison, "per thousand visitors, by site" is. Note that the rewritten question quietly added a second table, ticket sales, because a rate needs a denominator. Session 2.2 returns to this.</p></aside>
+</section>
+
+<section class="slide" id="unit-of-observation" data-lo="LO2" data-label="Unit of observation">
+  <div class="kicker">What one row is</div>
+  <h2>"Visitors" is a different thing in every table</h2>
+  <table class="t small">
+    <tr><th>Table</th><th>One row is</th><th class="num">Rows</th></tr>
+    <tr><td>arrivals</td><td>one origin market in one month</td><td class="num">180</td></tr>
+    <tr><td>tickets</td><td>one ticket sale at one site</td><td class="num">150,000</td></tr>
+    <tr><td>stays</td><td>one visiting party's stay in the region</td><td class="num">40,000</td></tr>
+    <tr><td>occupancy</td><td>one hotel on one day</td><td class="num">43,840</td></tr>
+    <tr><td>survey</td><td>one visitor's response after a site visit</td><td class="num">6,000</td></tr>
+    <tr><td>complaints</td><td>one complaint</td><td class="num">2,418</td></tr>
+  </table>
+  <ul class="bullets tight mt">
+    <li>Counting rows counts units: 40,000 stays are parties, not people.</li>
+    <li>Two tables meet only after both are brought to one unit, such as the week.</li>
+  </ul>
+  <aside class="notes"><p>This is the data dictionary, shortened. Ask: how many visitors came in 2024? The room will find three different honest answers (arrivals estimates, tickets sold, parties times party size) and they will not agree. A plan that names the unit says which one it means. Ask 2 of the brief, sites against hotels, joins a table of sales to a table of hotel-days: the plan says "per week".</p></aside>
+</section>
+
+<section class="slide" id="exploratory-or-confirmatory" data-lo="LO1" data-label="Exploratory or confirmatory">
+  <div class="kicker">Two kinds of work</div>
+  <h2>Exploring finds questions; confirming answers one fixed in advance</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>Exploratory</h4><ul class="bullets tight small"><li>You look at the data to see what is there</li><li>Many cuts, many charts, the choice made after looking</li><li>Output: patterns worth a question</li><li>Honest wording: "we saw", "in this data"</li></ul></div>
+    <div class="card c-coral"><h4>Confirmatory</h4><ul class="bullets tight small"><li>The comparison was written down before the data was seen</li><li>One planned analysis on data not used to find the pattern</li><li>Output: evidence for or against a claim</li><li>Honest wording: "the test planned in advance showed"</li></ul></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <div class="callout note mt"><b>Why a found pattern needs a fresh test.</b> The data that suggested a pattern cannot also confirm it: you chose the pattern because it stood out there.</div>
+  <aside class="notes"><p>Outcome 1 of the course. An example from the board's past report: "Visitors who arrive on a Tuesday spend the most" came from tabulating every day, origin and purpose and keeping the largest cell. That is exploration reported as a finding. Day 4, session 3 counts such comparisons. For now the rule is only this: everything in this course's plan is exploratory, because the three years of data existed before the questions did.</p></aside>
+</section>
+
+<section class="slide" id="the-plan" data-lo="LO2" data-label="The plan">
+  <div class="kicker">One page before any chart</div>
+  <h2>The plan is a table, and it passes a checklist</h2>
+  <pre class="code s" data-file="one entry of the plan"><code class="language-python">{"question": "How many complaints per thousand visitors does each site receive over the three years?",
+ "table": "complaints", "also": ["tickets"],
+ "unit": "one complaint logged by the visitor experience team",
+ "variables": ["site", "tickets"],
+ "comparison": "complaints per thousand visitors by site, with the count and the visitors beside it",
+ "kind": "exploratory"}</code></pre>
+  <ul class="bullets tight">
+    <li>The checklist rejects a question with a word nobody can measure, a unit that is not the table's, fewer than two variables, or no comparison.</li>
+    <li>It does not judge whether the question is interesting. That stays with you and the director.</li>
+  </ul>
+  <aside class="notes"><p>This is the form lab 1.1 uses and the function U.plan_check reads. Outcome 2's evidence is exactly this: a one-page plan checked against a checklist before any chart is drawn. Tell them the checklist is strict about the words why, problem, fault, good and bad on purpose.</p></aside>
+</section>
+
+<section class="slide" id="what-the-plan-cannot-do" data-lo="LO1 LO2" data-label="Limits of the plan">
+  <div class="kicker">A narrower promise</div>
+  <h2>The plan answers "what happened", not "why"</h2>
+  <div class="cols cols-2">
+    <div>
+      <p><b>Ask 5:</b> "Satisfaction went down last year. Why, and whose fault is it?"</p>
+      <p><b>Plan:</b> "Did mean satisfaction change from 2024 to 2025 inside each origin market, and did the mix of markets among respondents change?"</p>
+    </div>
+    <ul class="bullets">
+      <li>The data can show where the fall sits.</li>
+      <li>It cannot assign a cause: nothing was varied on purpose.</li>
+      <li>Say so in the plan, before the director expects more.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Lab 1.1, step 4 asks for two sentences on what the plan leaves out. A good answer: this plan describes 2023 to 2025; a cause needs a comparison planned in advance and checked on data not yet looked at, such as next season's survey. Randomised experiments are the subject of DS-205; this course stops at saying what a fresh test would be.</p></aside>
+</section>
+
+<section class="slide" id="check-question" data-lo="LO2">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which rewrite can be answered?</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">The director asks: "Did the festivals bring people, or would they have come anyway?" Which rewrite belongs in the plan?</p>
+    <div class="opts">
+      <div class="opt" data-why="Keeps a word nobody can measure: 'successful' has no unit and no comparison">Were the festivals successful for the region?</div>
+      <div class="opt" data-why="Names a variable and no comparison: a count of arrivals in October says nothing about what October would have been">How many arrivals were recorded in the festival months?</div>
+      <div class="opt" data-ok>By how much did arrivals in each festival month exceed the baseline for that month of the year?</div>
+      <div class="opt" data-why="Promises a cause from data in which nothing was varied on purpose">Did the festivals cause visitors to choose Tilal over other regions?</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> It names the unit (a month), the variable (arrivals) and the comparison (the festival month against what season and trend lead us to expect).</div>
+  </div>
+  <aside class="notes"><p>Answer: the third. If the room picks the second, ask "compared with what?" and wait. If it picks the fourth, ask what data would show a visitor's choice between regions; the board has none. The baseline is built in lab 2.3.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-1" data-auto="lab" data-lab="1.1">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Assistant off for this lab: the plan is their own first draft. No data table is opened. Common failure: the unit copied from memory instead of from the dictionary, which the checklist rejects. Those who finish early take the stretch, the question the brief did not ask (who is missing from the data).</p></aside>
 </section>
 
-<!-- Session 2 -->
-
+<!-- ======================= SESSION 2 ======================= -->
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea" data-lo="LO3">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+<section class="slide" id="profile-before-plot" data-lo="LO3" data-label="Profile first">
+  <div class="kicker">Before the first chart of a table</div>
+  <h2>A profile asks six things of a table</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>1 · Grain and key</h4><p class="small mb0">Is one row what the dictionary says? Is the key unique?</p></div>
+    <div class="card c-cyan"><h4>2 · Types</h4><p class="small mb0">Are dates dates and numbers numbers, or text that looks like them?</p></div>
+    <div class="card c-coral"><h4>3 · Missing values</h4><p class="small mb0">How many, and above all where?</p></div>
+    <div class="card c-purple"><h4>4 · Ranges</h4><p class="small mb0">Smallest and largest: can they be true?</p></div>
+    <div class="card c-amber"><h4>5 · Categories</h4><p class="small mb0">How many distinct values, and how spelled?</p></div>
+    <div class="card c-green"><h4>6 · Coverage</h4><p class="small mb0">Which period and which groups does the table hold?</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>These six are the session. Each has a planted example in the stay register, which lab 1.2 finds. Profiling is not cleaning: the output is a log of what was found and what was decided, not a silently repaired table. Assembling data from several sources, matching records and writing quality rules are the subject of DS-202; here it is one table.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps" data-lo="LO3">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="summarize-statement" data-lo="LO3" data-label="One statement">
+  <div class="kicker">Lab 1.2, opening cell</div>
+  <h2>One statement profiles every column</h2>
+  <pre class="code s"><code class="language-text">      column_name column_type        min         max  approx_unique  null_percentage
+          stay_id     VARCHAR  T0002344e   Tfffb8d8e          39407             0.00
+     arrival_date     VARCHAR 2023-01-01  2032-10-25           1137             0.00
+           origin     VARCHAR       Asia       gulf               7             0.00
+           nights      BIGINT          0         999             28             0.00
+        spend_sar      DOUBLE       14.0     76181.0           8565             6.45</code></pre>
+  <ul class="bullets tight">
+    <li>Four of the planted issues are visible in these five lines. Find them before the next slide.</li>
+    <li><code>SUMMARIZE</code> is DuckDB's; <code>df.describe(include="all")</code> gives a similar table in pandas.</li>
+  </ul>
+  <aside class="notes"><p>Real output of lab 1.2 (five of ten columns). Give the room one minute. The four: arrival dates in 2032; seven origin values where the dictionary says five, and the largest is a lower-case "gulf"; nights up to 999; spend missing in 6.45% of rows. The fifth issue, the rows entered twice, does not show here: 40,600 rows against about 40,000 distinct keys only hints at it, and approx_unique is an estimate.</p></aside>
+</section>
+
+<section class="slide" id="grain-and-key" data-lo="LO3" data-label="Grain and key">
+  <div class="kicker">Lab 1.2, step 1</div>
+  <h2>40,600 rows hold 40,000 stays</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">40,600</div><div class="lbl">rows in the export</div></div>
+    <div class="stat"><div class="big">40,000</div><div class="lbl">distinct stay keys</div></div>
+    <div class="stat"><div class="big">600</div><div class="lbl">rows that repeat an earlier row in every column</div></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <ul class="bullets mt">
+    <li>Every repeated key is an exact copy: a double entry, safe to drop.</li>
+    <li>Had the copies differed in any column, the repair would be the owner's decision, not yours.</li>
+    <li>Left in, the copies make every count 1.5% too high and nothing looks wrong.</li>
+  </ul>
+  <aside class="notes"><p>From the solution run of lab 1.2. The distinction on the second bullet matters in practice: a repeated key with different values is a conflict, and the analyst who silently keeps "the first" has invented a rule. Aws Al-Hudaif owns the register.</p></aside>
+</section>
+
+<section class="slide" id="where-missing-sits" data-lo="LO3" data-label="Where missing sits">
+  <div class="kicker">Lab 1.2, step 2</div>
+  <h2>The share of missing values matters less than where they sit</h2>
+  <div class="bars">
+    <div class="row"><span>Day visits</span><div class="bar c-coral" style="--w:100%"></div><span class="val">21.7% without spend</span></div>
+    <div class="row"><span>Overnight stays</span><div class="bar c-teal" style="--w:10%"></div><span class="val">2.1% without spend</span></div>
+  </div>
+  <ul class="bullets mt">
+    <li>Overall, spend is missing in 2,577 of 40,000 stays: 6.4%, which sounds harmless.</li>
+    <li>Day visitors spend least and answer least. An average over the rows that remain leans toward overnight visitors.</li>
+    <li>The decision: keep the rows, report the share missing by group, never fill in a typical value.</li>
+  </ul>
+  <aside class="notes"><p>Numbers from lab 1.2. Ask what happens to "average spend per party" if the missing rows are simply dropped: it is too high for the region as a whole, and the board would overstate what a visitor brings. Missing values that depend on the thing you are measuring are the dangerous kind.</p></aside>
+</section>
+
+<section class="slide" id="impossible-values" data-lo="LO3" data-label="Impossible values">
+  <div class="kicker">Lab 1.2, step 3</div>
+  <h2>A code that poses as a number moves every summary</h2>
+  <div class="cols cols-2">
+    <div>
+      <div class="stat"><div class="big">11.26</div><div class="lbl">mean nights with the 320 rows of 999 left in</div></div>
+      <div class="stat mt"><div class="big">3.30</div><div class="lbl">mean nights without them</div></div>
+    </div>
+    <ul class="bullets">
+      <li>999 means "not recorded". It is in 0.8% of the rows and more than triples the mean.</li>
+      <li>One market is stored as <code>Gulf</code>, <code>GCC</code> and <code>gulf </code> with a trailing space: 586 stays would fall out of any group-by.</li>
+      <li>14 stays arrive in 2032.</li>
+    </ul>
+  </div>
+  <div class="callout tip mt"><b>Look at the smallest and the largest value of every column</b>, and at every distinct value of a category with few of them.</div>
+  <aside class="notes"><p>Numbers from lab 1.2. The trailing space cannot be seen in any printed table, which is why the profile counts distinct values instead of reading them. Set 999 to missing, not to the median: nobody knows those stays' length, and a filled-in value hides 320 unknowns inside the commonest answer.</p></aside>
+</section>
+
+<section class="slide" id="issue-log" data-lo="LO3" data-label="The issue log">
+  <div class="kicker">The output of a profile</div>
+  <h2>An issue log holds evidence and a decision someone can dispute</h2>
+  <table class="t small">
+    <tr><th>Issue</th><th class="num">Rows</th><th>Decision</th></tr>
+    <tr><td>Rows that repeat an earlier row in every column</td><td class="num">600</td><td>drop the copies</td></tr>
+    <tr><td>Nights is 999 where the length was not recorded</td><td class="num">320</td><td>set to missing</td></tr>
+    <tr><td>The Gulf market under three spellings</td><td class="num">586</td><td>recode to one spelling</td></tr>
+    <tr><td>Spend missing, mostly for day visits</td><td class="num">2,577</td><td>keep and report the share</td></tr>
+    <tr><td>Arrival dates in 2032</td><td class="num">14</td><td>set to missing; ask the owner</td></tr>
+  </table>
+  <p class="small mt">The log travels with every chart made from the table. The supplied clean register, <code>U.stays()</code>, applies exactly these decisions, and every later lab starts from it.</p>
+  <aside class="notes"><p>This is the answer key of lab 1.2 and the reference state of labs 1.3 and 1.4. Stress the third column: each decision is a choice a reader could disagree with, so it is written down. "Cleaned the data" in a methods note is not a decision anyone can check.</p></aside>
+</section>
+
+<section class="slide" id="check-profile" data-lo="LO3">
+  <div class="kicker">Checkpoint</div>
+  <h2>What do you do with the 999s?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">320 stays have 999 in the column nights. The data dictionary does not mention the value. What goes into the issue log?</p>
+    <div class="opts">
+      <div class="opt" data-ok>Set them to missing, record the 320 rows, and ask the register's owner what 999 stands for</div>
+      <div class="opt" data-why="Hides 320 unknown values inside the most common answer and shrinks the spread">Replace them with the median length of stay so that no row is lost</div>
+      <div class="opt" data-why="Treats a code as a measurement: the mean of nights would more than triple">Keep them: a few very long stays are plausible in a tourism region</div>
+      <div class="opt" data-why="Throws away the other nine columns of 320 stays, which are sound">Delete the 320 rows from the register before any analysis</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The length of those stays is unknown. Missing says so; any other value claims knowledge nobody has. The rows keep their other columns.</div>
+  </div>
+  <aside class="notes"><p>Answer: the first. The tempting one is the median. Ask what the histogram of nights would look like with 320 extra stays at the median: a spike that is not in the world.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-2" data-auto="lab" data-lab="1.2">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>The tutor may hint at dataframe syntax; the log and the reading are written without an assistant. The lab starts from the raw export, U.stays_raw(), and needs nothing from lab 1.1. Common failure: counting repeated keys but not testing whether the copies are exact. The stretch finds the dates in 2032.</p></aside>
 </section>
 
-<!-- Session 3 -->
-
+<!-- ======================= SESSION 3 ======================= -->
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea" data-lo="LO3">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
+<section class="slide" id="what-a-distribution-is" data-lo="LO3" data-label="Distributions">
+  <div class="kicker">One variable at a time</div>
+  <h2>A distribution answers "which values, how often"</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d1_3_hist_all.svg" alt="Histogram of nights for 39,680 stays: the tallest bar at 0 nights, a second rise at 2 nights, a lower one near 7, and a thin tail to 31">
+      <figcaption>Lab 1.3, step 1: nights in the region, all parties, one bin per night.</figcaption>
+    </figure>
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li>Read four things: where the bulk is, how wide, how many humps, how long the tail.</li>
+      <li>Here: a spike at 0, a hump at 2, a low hump near 7, a tail to 31.</li>
+      <li>Three humps in one histogram usually mean three kinds of unit mixed together.</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>Recap from DS-201, Day 1: a histogram counts values in bins. New here is the reading order on the first bullet, and the habit of asking what a second hump is made of. Question 1 of the plan is on the table: do visitors "pop in and leave"? The spike at 0 says some do. The rest of the session finds out who.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps" data-lo="LO3">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="bin-width" data-lo="LO3" data-label="Bin width">
+  <div class="kicker">The one choice a histogram has</div>
+  <h2>The bin width decides what a histogram can show</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>Too wide</h4><p class="small mb0">Bins of 7 nights put 13,205 of the 17,367 stays from other regions into the first bar. Two humps become one.</p></div>
+    <div class="card c-teal"><h4>Fitted to the variable</h4><p class="small mb0">Nights is a count: one bin per night. Spend spans three orders of magnitude: equal steps on a log scale.</p></div>
+    <div class="card c-amber"><h4>Too narrow</h4><p class="small mb0">Bins of 10 riyals of spend leave a handful of stays in each bar: the shape drowns in noise.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <div class="callout tip mt"><b>Try two or three widths</b> and keep the one where the shape stops changing. Say the width in the axis title or the caption.</div>
+  <aside class="notes"><p>The first card is the stretch of lab 1.3 (13,205 stays of 0 to 6 nights, 4,159 of 7 to 13, 3 beyond). There is no correct bin width; there are widths that hide the feature you are looking for. For a count with few distinct values the natural width is one.</p></aside>
+</section>
+
+<section class="slide" id="shares-not-counts" data-lo="LO3" data-label="Shares by group">
+  <div class="kicker">Lab 1.3, step 2</div>
+  <h2>To compare groups of unequal size, compare shares</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d1_3_hist_by_origin.svg" alt="Five histograms of nights, one per origin market, as shares on a common scale: Tilal region 80% at zero nights; Other regions with a hump at 2 nights and another at 6 to 7; Gulf and Asia with one hump at 3 to 4; Europe spread from 2 to more than 20 nights">
+      <figcaption>Share of each market's stays by nights. Same scales in every panel.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>The largest market has eight times the stays of the smallest. Counts would show size, not shape.</li>
+      <li>80% of parties from the Tilal region are day visits. No party from Europe is.</li>
+      <li>"Other regions" has two humps with nothing at 4 nights.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The answer to question 1 is on this slide: visitors do not all pop in and leave; it depends on where they come from. Panels on shared scales are small multiples, which Day 3 treats properly. Point at the valley in "Other regions" and ask what two kinds of trip it suggests: a weekend and a week.</p></aside>
+</section>
+
+<section class="slide" id="box-plot" data-lo="LO3" data-label="Box plots">
+  <div class="kicker">Lab 1.3, step 3</div>
+  <h2>A box plot draws five numbers and takes one line per group</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d1_3_box.svg" alt="Box plots of nights for five origin markets: Tilal region collapsed at zero, Other regions with a box from 2 to 6 and median 3, Gulf 3 to 7 with median 4, Asia 2 to 5 with median 4, Europe 5 to 9 with median 7 and points out to 31">
+      <figcaption>The same stays as the five histograms.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Box: first quartile, median, third quartile. Whiskers: the rest, short of far points.</li>
+      <li>Good for many groups and for comparing middles and spreads.</li>
+      <li>"Other regions" and "Asia" look alike here: medians 3 and 4, boxes 2 to 6 and 2 to 5.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Recap of the five-number summary from DS-201 in one line; the new content is the comparison with the previous slide. Leave the third bullet hanging: the room has just seen that those two markets are not alike at all.</p></aside>
+</section>
+
+<section class="slide" id="what-the-box-hides" data-lo="LO3" data-label="What the box hides">
+  <div class="kicker">Lab 1.3, step 4</div>
+  <h2>The box cannot show two humps</h2>
+  <table class="t">
+    <tr><th>Nights, "Other regions"</th><th class="num">1</th><th class="num">2</th><th class="num">3</th><th class="num">4</th><th class="num">5</th><th class="num">6</th><th class="num">7</th><th class="num">8</th><th class="num">9</th></tr>
+    <tr><td>Share of stays</td><td class="num">15%</td><td class="num">31%</td><td class="num">16%</td><td class="num">0%</td><td class="num">4%</td><td class="num">10%</td><td class="num">10%</td><td class="num">7%</td><td class="num">4%</td></tr>
+  </table>
+  <ul class="bullets mt">
+    <li>63% of these stays last 1 to 3 nights and 37% last 5 or more. None lasts 4.</li>
+    <li>The median, 3 nights, belongs to the short trips only. The box, 2 to 6, runs straight across the valley.</li>
+    <li>The box plot is not wrong. It was asked "what kinds of trip are there" and answers "where is the middle half".</li>
+  </ul>
+  <aside class="notes"><p>Numbers from lab 1.3. This is the planted two-hump distribution. The practical rule: draw the histogram at least once for every variable you intend to summarise with a box, and again for any group whose box looks unremarkable.</p></aside>
+</section>
+
+<section class="slide" id="density-and-small-groups" data-lo="LO3" data-label="Density and small groups">
+  <div class="kicker">Two cautions</div>
+  <h2>Smooth curves and small groups both invent detail</h2>
+  <div class="cols cols-2">
+    <div class="card c-purple"><h4>Density curves</h4><p class="small mb0">A density plot is a smoothed histogram with a bandwidth in place of a bin width. It overlays well, and it draws mass where no value can be: below zero nights, between whole nights, across a valley. For counts and for bounded scores, prefer bars.</p></div>
+    <div class="card c-coral"><h4>Small groups</h4><p class="small mb0">A histogram of 40 values has bumps that mean nothing. Before reading the shape of a group, read its size. Europe has 2,166 stays here; a single site and month may have a dozen. Put the number of values on the chart.</p></div>
+  </div>
+  <div class="callout note mt"><b>Responsible use.</b> A point drawn for one extreme party can single out an identifiable visitor. Show far points only where a group is large, or summarise them.</div>
+  <aside class="notes"><p>The entry's topic list names density plots, so they are taught, with their main trap. The responsible-use note connects to the box plot two slides back: its far points are individual stays. With pseudonymised keys and thousands of stays that is acceptable; a box plot of spend for one small hotel would not be.</p></aside>
+</section>
+
+<section class="slide" id="check-distribution" data-lo="LO3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which chart for which question?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">Aws Al-Hudaif asks whether visitors from other regions come for one kind of trip or several. You have their 17,367 stays with the nights of each. What do you draw first?</p>
+    <div class="opts">
+      <div class="opt" data-why="Draws five numbers: two humps and one hump with the same quartiles give the same box">A box plot of nights for that market</div>
+      <div class="opt" data-why="One number for a variable whose shape is the question">A bar with the mean number of nights and an error bar</div>
+      <div class="opt" data-why="Bins of a week merge a weekend trip and a five-night stay into one bar">A histogram of nights with bins seven nights wide</div>
+      <div class="opt" data-ok>A histogram of nights with one bin for each night</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> "One kind or several" is a question about humps. Only a histogram with bins fine enough to separate them can show two.</div>
+  </div>
+  <aside class="notes"><p>Answer: the last. If the room chooses the box plot, return to the table of shares: the box runs from 2 to 6 across a length nobody stays.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-3" data-auto="lab" data-lab="1.3">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>The tutor may hint at Altair syntax (the bin and the row facet are the usual sticking points). The reading is written without an assistant. The lab starts from U.stays(), the register after the issue log, so it does not depend on lab 1.2. Each chart exercise is checked by reading the chart's specification: mark, fields, scale.</p></aside>
 </section>
 
-<!-- Session 4 -->
-
+<!-- ======================= SESSION 4 ======================= -->
 <section class="slide section" id="s4" data-auto="section" data-session="4"></section>
 
-<section class="slide" id="s4-idea" data-lo="LO3">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
-  </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+<section class="slide" id="mean-follows-tail" data-lo="LO3" data-label="Mean and median">
+  <div class="kicker">Lab 1.4, step 1</div>
+  <h2>The gap between mean and median is a first reading of the shape</h2>
+  <table class="t">
+    <tr><th>Variable</th><th class="num">Mean</th><th class="num">Median</th><th class="num">Mean / median</th></tr>
+    <tr><td>Spend per party, riyals</td><td class="num">2,736</td><td class="num">1,498</td><td class="num">1.83</td></tr>
+    <tr><td>Nights</td><td class="num">3.30</td><td class="num">2</td><td class="num">1.65</td></tr>
+    <tr><td>Booking lead, days</td><td class="num">16.2</td><td class="num">6</td><td class="num">2.70</td></tr>
+    <tr><td>Satisfaction, 1 to 5</td><td class="num">4.12</td><td class="num">4</td><td class="num">1.03</td></tr>
+  </table>
+  <ul class="bullets tight mt">
+    <li>A mean far above the median says "long right tail" before any chart is drawn.</li>
+    <li>Mean and median that agree do not prove symmetry: satisfaction is piled against the top of its scale.</li>
+  </ul>
+  <aside class="notes"><p>Numbers from lab 1.4. Recap from DS-201, Day 1: the mean follows the tail, the median does not. New here: four different shapes and the point that one rule does not serve them all. About seven parties in ten spend less than the "average" spend.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps" data-lo="LO3">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="spread-that-describes" data-lo="LO3" data-label="Spread">
+  <div class="kicker">Lab 1.4, step 2</div>
+  <h2>"Mean plus or minus one standard deviation" can describe nobody</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>Spend, as often reported</h4><p class="mb0">2,736 ± 3,788 riyals.</p><p class="small mb0">The lower end is 1,051 riyals below zero. No party spent that.</p></div>
+    <div class="card c-teal"><h4>Spend, by quartiles</h4><p class="mb0">Median 1,498; half of the parties between 571 and 3,392.</p><p class="small mb0">Three amounts that real parties spent.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <ul class="bullets mt">
+    <li>The standard deviation squares distances, so a few large bills dominate it.</li>
+    <li>Removing the top 1% of spend cuts the standard deviation by 24% and the median by 1.5%.</li>
+  </ul>
+  <aside class="notes"><p>Numbers from lab 1.4 and its stretch. The standard deviation is a fine measure for a symmetric variable and a necessary one for standard errors; it is a poor description of a skewed one. The quartiles answer the question a reader has: what do typical parties spend?</p></aside>
+</section>
+
+<section class="slide" id="log-scale" data-lo="LO3" data-label="Log scale">
+  <div class="kicker">Lab 1.4, step 3</div>
+  <h2>Variables that multiply are close to symmetric on a log scale</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d1_4_hist_log.svg" alt="Histogram of spend per party on a logarithmic axis from 10 to 100,000 riyals: one symmetric hump centred near 1,500 riyals">
+      <figcaption>Spend per party, equal steps on a log scale.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Spend is nights times party size times a daily rate: factors multiply.</li>
+      <li>On a log scale, equal distances are equal ratios.</li>
+      <li>Geometric mean 1,344 riyals: near the median 1,498, half the mean 2,736.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>From lab 1.4. The geometric mean is the mean of the logs turned back into riyals. It is a fair centre for a multiplicative variable and useful when a later method needs a mean. For a report to a board the median is simpler to explain. A log axis has no zero: say "log scale" in the axis title, as the chart does.</p></aside>
+</section>
+
+<section class="slide" id="zero-heavy" data-lo="LO3" data-label="Zero-heavy variables">
+  <div class="kicker">Lab 1.4, step 4</div>
+  <h2>A zero-heavy variable needs two numbers</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">36%</div><div class="lbl">of parties did not book at all: lead time 0</div></div>
+    <div class="stat"><div class="big">14 days</div><div class="lbl">median lead of those who booked</div></div>
+    <div class="stat"><div class="big">6 days</div><div class="lbl">median of everyone, which describes neither group</div></div>
+  </div>
+  <ul class="bullets mt">
+    <li>Two populations share one column: walk-ins and bookers.</li>
+    <li>First the share at zero, then a summary of the rest.</li>
+    <li>The same shape: spend on tickets among all residents, complaints per visitor, days absent.</li>
+  </ul>
+  <aside class="notes"><p>Numbers from lab 1.4. The mean of all, 16.2 days, is worse still. The question behind the variable is usually two questions (do they book, and how far ahead), so the summary should be two answers.</p></aside>
+</section>
+
+<section class="slide" id="scores-need-shares" data-lo="LO3" data-label="Scores">
+  <div class="kicker">Lab 1.4, step 5</div>
+  <h2>A score from 1 to 5 is summarised by shares</h2>
+  <div class="bars">
+    <div class="row"><span>5</span><div class="bar c-teal" style="--w:100%"></div><span class="val">39.2%</span></div>
+    <div class="row"><span>4</span><div class="bar c-teal" style="--w:98%"></div><span class="val">38.3%</span></div>
+    <div class="row"><span>3</span><div class="bar c-amber" style="--w:46%"></div><span class="val">18.1%</span></div>
+    <div class="row"><span>2</span><div class="bar c-coral" style="--w:10%"></div><span class="val">4.1%</span></div>
+    <div class="row"><span>1</span><div class="bar c-coral" style="--w:1%"></div><span class="val">0.4%</span></div>
+  </div>
+  <ul class="bullets tight mt">
+    <li>"77% score 4 or 5" is a sentence a board can repeat. "Mean 4.12" hides whether the rest are at 3 or at 1.</li>
+    <li>A mean of scores assumes the step from 4 to 5 equals the step from 1 to 2. It is still used to compare groups, as Day 2 will; show the shares beside it.</li>
+  </ul>
+  <aside class="notes"><p>Shares from lab 1.4, all 6,000 responses. Be honest about practice: the board's reports use mean satisfaction, the survey literature does too, and labs 2.4, 4.1 and 4.2 work with it. The rule is not "never a mean of scores" but "never a mean alone".</p></aside>
+</section>
+
+<section class="slide" id="summary-carries-n" data-lo="LO3" data-label="What a summary carries">
+  <div class="kicker">The evidence for outcome 3</div>
+  <h2>Every question gets a chart, a summary and two sentences</h2>
+  <table class="t small">
+    <tr><th>Shape</th><th>Centre</th><th>Spread</th><th>Chart</th></tr>
+    <tr><td>Long right tail (spend)</td><td>median, or geometric mean</td><td>quartiles</td><td>histogram on a log scale</td></tr>
+    <tr><td>Count with humps (nights)</td><td>median, with the share in each hump</td><td>shares by range</td><td>bars, one per value</td></tr>
+    <tr><td>Zero-heavy (booking lead)</td><td>share of zeros, median of the rest</td><td>quartiles of the rest</td><td>two parts</td></tr>
+    <tr><td>Score (satisfaction)</td><td>share scoring 4 or 5</td><td>all five shares</td><td>bars of shares</td></tr>
+  </table>
+  <div class="callout tip mt"><b>A summary always carries</b> the number of values it rests on and what was left out: here the 2,577 stays with no stated spend, most of them day visits.</div>
+  <aside class="notes"><p>This table is the solution of lab 1.4, step 6, and the day's summary. The two sentences of a reading: what the chart shows, with numbers; and what it does not show or leaves out. Example from the lab: "A typical party spends about 1,500 riyals (median; half between 570 and 3,390), not the mean of 2,740. These summaries leave out the 2,577 stays with no stated spend, most of them day visits."</p></aside>
+</section>
+
+<section class="slide" id="check-summary" data-lo="LO3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which sentence goes into the report?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">A museum records minutes spent inside by each visitor. 45% of the records show 0 minutes because those visitors used only the cafe. The others stay a median of 70 minutes. Which summary is honest?</p>
+    <div class="opts">
+      <div class="opt" data-why="Averages cafe users with museum visitors: nobody stays the average time">Visitors spend a mean of 41 minutes in the museum</div>
+      <div class="opt" data-ok>45% of visitors use only the cafe; the others stay a median of 70 minutes</div>
+      <div class="opt" data-why="The median of all records lands between two groups and describes neither of them">The median visitor spends 25 minutes in the museum</div>
+      <div class="opt" data-why="Drops nearly half of the visitors without saying so, which a reader cannot see">Museum visitors stay a median of 70 minutes inside</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A zero-heavy variable holds two groups. Give the share at zero, then a summary of the rest, and the reader can see both.</div>
+  </div>
+  <aside class="notes"><p>Answer: the second. The last option is the instructive one: its number is right and it is still misleading, because it leaves out 45% of the records silently. A summary carries what was left out.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-4" data-auto="lab" data-lab="1.4">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>The tutor may hint at syntax; the choices and the reading are their own. The lab starts from U.stays() and U.survey(). Six short steps: keep the pace, about four minutes each. Common failure: computing the geometric mean of a column that still holds missing values.</p></aside>
 </section>
 
-<section class="slide" id="wrap-up">
-  <div class="kicker">Day 1 · wrap-up</div>
+<section class="slide" id="wrap-up" data-label="Wrap-up">
+  <div class="kicker">Day 1</div>
   <h2>Three things to keep</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-coral"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-purple"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
+    <div class="card c-teal"><h4>The question comes first</h4><p class="small mb0">Unit of observation, variables, comparison, and whether you are exploring or confirming. A plan that passes a checklist before any chart.</p></div>
+    <div class="card c-cyan"><h4>Profile, then log</h4><p class="small mb0">Grain, types, missing values, ranges, categories, coverage. Each issue with its rows and a decision someone can dispute.</p></div>
+    <div class="card c-coral"><h4>Shape before summary</h4><p class="small mb0">Look at the distribution, then choose the centre and the spread that describe it. Always with the number of values and what was left out.</p></div>
   </div>
+  <aside class="notes"><p>Ask each table for the one number from today they would tell the director. Good candidates: 80% of local parties are day visits; visitors from other regions come for a weekend or a week; spend is missing for one day visit in five.</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="Next">
-  <div class="kicker">Next</div>
-  <h2>Day 2: Relationships and time</h2>
-  <p class="lead">REPLACE: what participants prepare before then; unfinished labs can be finished at home</p>
-  <aside class="notes">REPLACE: accounts, installs or reading participants need before the next unit</aside>
+  <div class="kicker">Day 2</div>
+  <h1>Relationships and time</h1>
+  <p class="lead">Two variables at once, counts against rates, three years of monthly arrivals, and a total that says the opposite of its parts.</p>
+  <ul class="bullets">
+    <li>Keep your plan from lab 1.1 at hand: Day 2 answers questions 2 to 5.</li>
+    <li>Every lab starts from the supplied tables. Nothing from today's notebooks is needed.</li>
+  </ul>
+  <aside class="notes"><p>If the setup check failed for anyone today, settle it before tomorrow: lab 2.1 draws 43,840 points.</p></aside>
 </section>
