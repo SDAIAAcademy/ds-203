@@ -1,0 +1,443 @@
+{
+  "$schema": "https://sdaiaacademy.github.io/engine/schemas/course.schema.json",
+  "engine": "1",
+  "id": "ds-203",
+  "code": "DS-203",
+  "version": "2027.1.0",
+  "lang": "en",
+  "title": {
+    "en": "Exploratory Analysis and Visualisation",
+    "ar": "التحليل الاستكشافي وتصور البيانات"
+  },
+  "tagline": "REPLACE: one line under the title: what participants can do after the course",
+  "description": "Participants answer a fictional regional tourism board's questions by exploring its data, starting every analysis from written questions. They profile tables, examine distributions, relationships and change over time, build charts with a grammar of graphics and scales that do not mislead, and test by resampling whether a pattern could be chance. They repair misleading charts and write findings that state what is and is not shown, in a notebook that reruns from raw data.",
+  "track": "data-science",
+  "level": 200,
+  "badge": {
+    "name": "Data Science",
+    "level": "Assistant"
+  },
+  "audience": "Practitioners. Graduates and early-career analysts who have completed the FN courses or passed the placement test, and analysts moving into data science.",
+  "prerequisites": [
+    "FN-101 Python for Data and AI Work",
+    "FN-104 SQL and Data Wrangling",
+    "DS-201 Statistical Inference by Simulation",
+    "Makes a basic chart in any plotting library"
+  ],
+  "site": {
+    "url": "https://sdaiaacademy.github.io/ds-203/",
+    "repo": "SDAIAAcademy/ds-203"
+  },
+  "outcomes": [
+    {
+      "id": "LO1",
+      "text": "Distinguish exploratory from confirmatory analysis and explain why a pattern found by exploring needs a fresh test, given five findings from a past board report",
+      "level": "Awareness",
+      "evidence": "each finding marked exploratory or confirmed, with the check it would need"
+    },
+    {
+      "id": "LO2",
+      "text": "Prepare an analysis plan listing questions, units of observation, variables and the comparison that answers each, given the director's brief and the data dictionary",
+      "level": "Applied",
+      "evidence": "a one-page plan checked against a checklist before any chart is drawn"
+    },
+    {
+      "id": "LO3",
+      "text": "Analyse distributions, relationships and change over time with summaries and charts suited to each variable type, given three years of visitor, occupancy and survey tables",
+      "level": "Applied",
+      "evidence": "a chart, a summary statistic and a two-sentence reading per question"
+    },
+    {
+      "id": "LO4",
+      "text": "Use a grammar of graphics to map variables to position, colour and facets with honest scales, baselines and labels, given six misleading charts from earlier reports",
+      "level": "Applied",
+      "evidence": "six repaired charts, each with the fault and the fix named"
+    },
+    {
+      "id": "LO5",
+      "text": "Test whether an apparent difference or correlation could arise by chance, using permutation or bootstrap resampling, given three patterns the board wants to announce",
+      "level": "Applied",
+      "evidence": "each pattern's resampling result and a decision to report, qualify or drop it"
+    },
+    {
+      "id": "LO6",
+      "text": "Deliver a reproducible exploratory report that states findings, uncertainty, open questions and limits for a non-specialist reader, given an unseen dataset and a named audience",
+      "level": "Performance",
+      "evidence": "a rendered report and notebook that rerun from raw data, defended live"
+    }
+  ],
+  "case_study": {
+    "name": "REPLACE: the name of the fictional organisation every lab works on",
+    "summary": "REPLACE: two sentences on the case study and its synthetic data"
+  },
+  "format": "intensive",
+  "format_note": "Intensive: 4 teaching days of four sessions and a capstone day, with guided pre-work and a tracked follow-up task",
+  "hours": {
+    "instruction": 6,
+    "lab": 7,
+    "guided_self_study": 6,
+    "assessment": 1,
+    "capstone": 6
+  },
+  "unit": "day",
+  "days": [
+    {
+      "id": "day1",
+      "kind": "day",
+      "title": "Questions and first looks",
+      "deck": "slides/day1.html",
+      "sessions": [
+        {
+          "title": "Write the questions first",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO2"
+          ],
+          "lab": {
+            "id": "1.1",
+            "title": "Turn the director's brief into five questions with unit and comparison",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_1_turn_director_s.ipynb"
+          }
+        },
+        {
+          "title": "Profiling a table",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "1.2",
+            "title": "Profile the visitor table and log three data issues",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_2_profile_visitor_table.ipynb"
+          }
+        },
+        {
+          "title": "Distributions",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "1.3",
+            "title": "Compare length of stay by visitor origin with histograms and box plots",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_3_compare_length_stay.ipynb"
+          }
+        },
+        {
+          "title": "Summaries that fit the shape",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "1.4",
+            "title": "Choose centre and spread measures for four skewed variables",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D1_4_choose_centre_spread.ipynb"
+          }
+        }
+      ]
+    },
+    {
+      "id": "day2",
+      "kind": "day",
+      "title": "Relationships and time",
+      "deck": "slides/day2.html",
+      "sessions": [
+        {
+          "title": "Two variables at once",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "2.1",
+            "title": "Plot occupancy against ticket sales with transparency and binning",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_1_plot_occupancy_against.ipynb"
+          }
+        },
+        {
+          "title": "Counts, rates and denominators",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "2.2",
+            "title": "Convert complaints to rates per thousand visitors; mark cells too small to publish",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_2_convert_complaints_rates.ipynb"
+          }
+        },
+        {
+          "title": "Change over time",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "2.3",
+            "title": "Plot monthly arrivals and mark seasonality and two festival effects",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_3_plot_monthly_arrivals.ipynb"
+          }
+        },
+        {
+          "title": "When the total reverses",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO3"
+          ],
+          "lab": {
+            "id": "2.4",
+            "title": "Find the satisfaction reversal once visitor origin is taken into account",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D2_4_find_satisfaction_reversal.ipynb"
+          }
+        }
+      ]
+    },
+    {
+      "id": "day3",
+      "kind": "day",
+      "title": "Building honest charts",
+      "deck": "slides/day3.html",
+      "sessions": [
+        {
+          "title": "Marks, encodings and scales",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO4"
+          ],
+          "lab": {
+            "id": "3.1",
+            "title": "Rebuild one chart from a written specification",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_1_rebuild_one_chart.ipynb"
+          }
+        },
+        {
+          "title": "Small multiples",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO4"
+          ],
+          "lab": {
+            "id": "3.2",
+            "title": "Facet arrivals by origin market; choose shared or free scales",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_2_facet_arrivals_origin.ipynb"
+          }
+        },
+        {
+          "title": "Charts that mislead",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO4"
+          ],
+          "lab": {
+            "id": "3.3",
+            "title": "Repair six misleading charts and name each fault",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_3_repair_six_misleading.ipynb"
+          }
+        },
+        {
+          "title": "Colour, labels and Arabic text",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO4"
+          ],
+          "lab": {
+            "id": "3.4",
+            "title": "Make one chart readable in Arabic and English and colour-blind safe",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D3_4_make_one_chart.ipynb"
+          }
+        }
+      ]
+    },
+    {
+      "id": "day4",
+      "kind": "day",
+      "title": "Check and report",
+      "deck": "slides/day4.html",
+      "sessions": [
+        {
+          "title": "Could it be chance",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO5"
+          ],
+          "lab": {
+            "id": "4.1",
+            "title": "Permutation-test the claimed weekend effect; bootstrap one correlation",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D4_1_permutation_test_claimed.ipynb"
+          }
+        },
+        {
+          "title": "Showing uncertainty",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO5"
+          ],
+          "lab": {
+            "id": "4.2",
+            "title": "Add intervals to a satisfaction bar chart and rewrite its caption",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D4_2_add_intervals_satisfaction.ipynb"
+          }
+        },
+        {
+          "title": "The traps of exploring",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO1"
+          ],
+          "lab": {
+            "id": "4.3",
+            "title": "Count the comparisons behind a headline pattern and rewrite the finding",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D4_3_count_comparisons_behind.ipynb"
+          }
+        },
+        {
+          "title": "A report that reruns",
+          "outcomes": [
+            "REPLACE: what a participant can do after this session"
+          ],
+          "lo": [
+            "LO6"
+          ],
+          "lab": {
+            "id": "4.4",
+            "title": "Render a notebook to a report from raw data; choose the capstone dataset",
+            "summary": "REPLACE: one line on what participants build and take away; then list the steps of the lab in course.json, their minutes adding up to 25",
+            "minutes": 25,
+            "href": "D4_4_render_notebook_report.ipynb"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capstone",
+      "kind": "capstone",
+      "title": "Capstone project presentations",
+      "deck": "slides/capstone.html",
+      "subtitle": "REPLACE: the catalog gives 8 minutes for each presentation and nothing about questions; decide whether the questions are inside those minutes, set capstone.talk_minutes and capstone.qa_minutes in course.json and the timers of the now-presenting slide, and remove this line"
+    }
+  ],
+  "capstone": {
+    "summary": "An exploratory report on an unseen synthetic or approved public dataset, in a public repository whose README links the report and lists each finding with its check; eight-minute defence with one chart redrawn on request",
+    "submission": "REPLACE: what participants submit and how: a public repository link, or a shared folder for a course without code",
+    "talk_minutes": 8,
+    "rubric": [
+      {
+        "criterion": "Plan and questions",
+        "weight": 15
+      },
+      {
+        "criterion": "Analysis and charts",
+        "weight": 30
+      },
+      {
+        "criterion": "Honesty and uncertainty",
+        "weight": 20
+      },
+      {
+        "criterion": "Chance checks",
+        "weight": 15
+      },
+      {
+        "criterion": "Reproducibility and writing",
+        "weight": 20
+      }
+    ]
+  },
+  "labs": {
+    "kind": "notebooks",
+    "base": "labs/"
+  },
+  "tools": [
+    {
+      "slot": "Analysis environment and notebooks",
+      "examples": [
+        "Python with uv and JupyterLab or marimo",
+        "R with Quarto"
+      ]
+    },
+    {
+      "slot": "Dataframes and analytical SQL engine",
+      "examples": [
+        "DuckDB",
+        "Polars",
+        "pandas"
+      ]
+    },
+    {
+      "slot": "Plotting with a grammar of graphics",
+      "examples": [
+        "Vega-Altair",
+        "plotnine",
+        "ggplot2"
+      ]
+    },
+    {
+      "slot": "Resampling",
+      "examples": [
+        "NumPy and SciPy",
+        "R with the infer package"
+      ]
+    }
+  ]
+}
