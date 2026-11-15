@@ -58,14 +58,14 @@
 
 <section class="slide" id="weekend-gap" data-lo="LO5" data-label="The weekend gap">
   <div class="kicker">Lab 4.1, steps 1 to 3</div>
-  <h2>A gap of 0.02 is what shuffled labels produce one time in three</h2>
+  <h2>Shuffled labels give this gap one time in three</h2>
   <div class="cols cols-32">
     <figure class="figure">
       <img src="../assets/figs/d4_1_null.svg" alt="Histogram of 5,000 gaps between weekend and weekday satisfaction under shuffled labels, centred on zero and running from about minus 0.08 to plus 0.08, with two vertical lines at minus 0.021 and plus 0.021 well inside the bulk of the distribution">
       <figcaption>Gaps under shuffled labels; the lines mark the observed gap.</figcaption>
     </figure>
     <ul class="bullets">
-      <li>Weekend 4.13, weekday 4.11: a gap of <b>+0.02</b> on 6,000 responses.</li>
+      <li>Weekend 4.13, weekday 4.11: a gap of <b>+0.02</b>.</li>
       <li>p-value about <b>0.35</b>.</li>
       <li>Decision: <b>drop</b> the claim.</li>
     </ul>
@@ -190,7 +190,7 @@ r[i] = np.corrcoef(x[k], y[k])[0, 1]</code></pre>
 
 <section class="slide" id="points-with-intervals" data-lo="LO5" data-label="Points with intervals">
   <div class="kicker">Lab 4.2, step 3</div>
-  <h2>A point for the estimate, a line for the interval, n beside the name</h2>
+  <h2>A point, a line for the interval, and n beside the name</h2>
   <figure class="figure">
     <img src="../assets/figs/d4_2_intervals.svg" alt="Nine sites sorted by mean satisfaction in 2025, each a point with a horizontal line for its 95% interval and its number of responses in the label, on an axis from 3.6 to 4.6. Terrace Farms, n 59, has the highest point and by far the longest line; most lines overlap; only Cable Car and Wadi Trail lie clearly below Souq Walk. Title: Most sites cannot be told apart">
     <figcaption>Mean satisfaction in 2025 with 95% bootstrap intervals.</figcaption>
@@ -198,7 +198,6 @@ r[i] = np.corrcoef(x[k], y[k])[0, 1]</code></pre>
   <ul class="bullets tight">
     <li>A point is read by position, so the axis may run from 3.6 to 4.6.</li>
     <li>Seven of the other eight intervals overlap that of Terrace Farms.</li>
-    <li>The title now states what the chart can support.</li>
   </ul>
   <aside class="notes"><p>Three decisions of yesterday's grammar: the mark changed from bar to point and rule, the scale became honest for that mark, and the sample size joined the label. In Altair it is two layers: mark_rule with x and x2, and mark_circle. What can be said: the Souq Walk rates above the Cable Car and the Wadi Trail. What cannot: which site is best.</p></aside>
 </section>
@@ -289,12 +288,10 @@ r[i] = np.corrcoef(x[k], y[k])[0, 1]</code></pre>
   <div class="cols cols-32">
     <figure class="figure">
       <img src="../assets/figs/d4_3_all_gaps.svg" alt="Twenty-seven points, one per site and year, showing the weekend minus weekday gap in satisfaction in standard errors, sorted: they scatter from about minus 1.5 to plus 2.2 around zero, with the Honey Museum 2025 highlighted at the top as the only one beyond 2">
-      <figcaption>Weekend gap at each site in each year, in standard errors.</figcaption>
     </figure>
     <ul class="bullets">
       <li>Nine sites, three years: 27 gaps were looked at. One was kept.</li>
-      <li>16 are above zero, 11 below. They scatter around nothing.</li>
-      <li>The headline is the only one beyond 2 standard errors.</li>
+      <li>16 are above zero, 11 below.</li>
     </ul>
   </div>
   <aside class="notes"><p>The file claims.json records how the headline was found: every site in every year was compared and the gap with the smallest p-value was kept. The gaps are drawn in standard errors so that a cell of 60 responses and a cell of 500 can be compared. Seen among its 26 siblings the headline looks like the end of a scatter, which is what it is.</p></aside>

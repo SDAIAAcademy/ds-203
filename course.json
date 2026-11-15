@@ -1020,5 +1020,10 @@
         }
       ]
     }
-  ]
+  ],
+  "extensions": {
+    "css": [
+      "assets/course.css"
+    ]
+  }
 }

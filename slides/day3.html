@@ -150,7 +150,7 @@
 
 <section class="slide" id="shared-scales" data-lo="LO4" data-label="Shared scales">
   <div class="kicker">Lab 3.2, step 2</div>
-  <h2>Small multiples: one panel per group, the same chart in each</h2>
+  <h2>Small multiples: the same chart, one panel per group</h2>
   <figure class="figure">
     <img src="../assets/figs/d3_2_shared.svg" alt="Five small panels side by side, one per origin market, all on the same y scale up to 50,000: Tilal region and Other regions show clear summer peaks, Gulf a sharper peak, Asia and Europe appear almost flat near the bottom">
     <figcaption>One y scale for all panels.</figcaption>
@@ -160,8 +160,7 @@
     <li>A <b>shared scale</b> compares levels across panels: who is big.</li>
     <li>Asia and Europe are still flat lines.</li>
   </ul>
-  <pre class="code s"><code class="language-python">chart.encode(column=alt.Column("origin:N", sort=U.ORIGINS))</code></pre>
-  <aside class="notes"><p>The term is Tufte's. A facet is one more encoding: the origin goes to "which panel" in place of "which colour". Panels are ordered on purpose, here from the nearest market to the farthest, never alphabetically by accident. Yesterday's five histograms by origin were small multiples too.</p></aside>
+  <aside class="notes"><p>The term is Tufte's. In Altair it is one line, chart.encode(column="origin:N"). A facet is one more encoding: the origin goes to "which panel" in place of "which colour". Panels are ordered on purpose, here from the nearest market to the farthest, never alphabetically by accident. Yesterday's five histograms by origin were small multiples too.</p></aside>
 </section>
 
 <section class="slide" id="free-scales" data-lo="LO4" data-label="Free scales">
@@ -246,11 +245,11 @@
   <div class="kicker">Fault 1 · Cut baseline</div>
   <h2>"Satisfaction collapsed in 2025"</h2>
   <div class="cols cols-2">
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_orig_1.svg" alt="Bar chart of mean satisfaction for 2023, 2024 and 2025 with the y axis running from 4.0 to 4.2: the 2025 bar is less than half the height of the 2024 bar">
       <figcaption>As published: the axis runs from 4.0 to 4.2.</figcaption>
     </figure>
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_fix_1.svg" alt="The same three means as bars on an axis from 0 to 5: three bars of almost equal height, titled Mean satisfaction 4.14, 4.15, 4.07">
       <figcaption>Repaired: bars from zero.</figcaption>
     </figure>
@@ -266,11 +265,11 @@
   <div class="kicker">Fault 2 · Picked window</div>
   <h2>"Arrivals up 37% in a year"</h2>
   <div class="cols cols-2">
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_orig_2.svg" alt="Two bars: arrivals in October 2023 and in October 2024, the second 37% taller">
       <figcaption>As published: two months of thirty-six.</figcaption>
     </figure>
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_fix_2.svg" alt="Line of all 36 months of arrivals from zero, with summer peaks rising slowly and October 2024 standing out as a spike">
       <figcaption>Repaired: every month.</figcaption>
     </figure>
@@ -286,11 +285,11 @@
   <div class="kicker">Fault 3 · Count for rate</div>
   <h2>"The Cable Car is our problem site"</h2>
   <div class="cols cols-2">
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_orig_3.svg" alt="Bar chart of complaints by site: Cable Car far ahead with 599, then Souq Walk 394 and Tilal Fort 296, down to Honey Museum 139">
       <figcaption>As published: complaints.</figcaption>
     </figure>
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_fix_3.svg" alt="Bar chart of complaints per thousand visitors by site: Terrace Farms 13.8 and Wadi Trail 11.4 lead, Cable Car is fifth at 5.9">
       <figcaption>Repaired: per thousand visitors.</figcaption>
     </figure>
@@ -306,11 +305,11 @@
   <div class="kicker">Fault 4 · Two axes</div>
   <h2>"Hotels follow the sites exactly"</h2>
   <div class="cols cols-2">
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_orig_4.svg" alt="Two lines over three years on one chart, tickets per week on the left axis and hotel occupancy on the right axis, each axis fitted so that the two lines lie almost on top of each other">
       <figcaption>As published: two y axes, each fitted to its line.</figcaption>
     </figure>
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_fix_4.svg" alt="Scatter plot of 156 weeks, tickets sold per week against share of hotel rooms sold: a loose rising cloud from about 40% at 1,800 tickets to about 68% at 3,600">
       <figcaption>Repaired: one variable against the other.</figcaption>
     </figure>
@@ -326,11 +325,11 @@
   <div class="kicker">Fault 5 · Running total</div>
   <h2>"Local visits keep climbing"</h2>
   <div class="cols cols-2">
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_orig_5.svg" alt="A line of cumulative arrivals from the Tilal region since January 2023, rising steadily to about 750,000">
       <figcaption>As published: arrivals since January 2023.</figcaption>
     </figure>
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_fix_5.svg" alt="Line of monthly arrivals from the Tilal region from zero: summer peaks that get lower each year, titled Local arrivals are drifting down">
       <figcaption>Repaired: arrivals per month.</figcaption>
     </figure>
@@ -346,11 +345,11 @@
   <div class="kicker">Fault 6 · Uneven steps</div>
   <h2>"Arrivals fell off a cliff in 2025"</h2>
   <div class="cols cols-2">
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_orig_6.svg" alt="Line with five points labelled 2023, 2024, January to June 2025, July 2025 and August 2025: two high points for the full years, then a steep fall to the half year and to the single months">
       <figcaption>As published: years, a half year and two months.</figcaption>
     </figure>
-    <figure class="figure">
+    <figure class="figure fig-s">
       <img src="../assets/figs/d3_3_fix_6.svg" alt="Bar chart of arrivals in the three full years, each bar higher than the last, titled Arrivals rose in both years">
       <figcaption>Repaired: three periods of equal length.</figcaption>
     </figure>
@@ -415,16 +414,15 @@
 
 <section class="slide" id="colour-vision" data-lo="LO4" data-label="Colour-vision deficiency">
   <div class="kicker">Lab 3.4, step 1</div>
-  <h2>Some of your readers cannot tell this red from this green</h2>
+  <h2>Test the palette for colour-vision deficiency</h2>
   <div class="cols cols-32">
     <figure class="figure">
       <img src="../assets/figs/d3_4_draft.svg" alt="The draft chart: five lines of yearly arrivals indexed to 100 in 2023, in red, green, orange, brown and blue, with axis titles year and index and the title Arrivals">
-      <figcaption>The draft: default colours, one language.</figcaption>
     </figure>
     <ul class="bullets">
-      <li>Simulated for red-green deficiency, the draft's closest two colours are <b>7 units</b> apart: hard to tell.</li>
+      <li>Under red-green deficiency the draft's red and green are <b>7 units</b> apart: hard to tell.</li>
       <li>The Okabe-Ito palette keeps every pair above <b>18</b>.</li>
-      <li>Test the palette; do not trust the look on your own screen.</li>
+      <li>Do not trust the look on your own screen.</li>
     </ul>
   </div>
   <aside class="notes"><p>Red-green deficiency affects roughly 8% of men and 0.5% of women of Northern European descent, with somewhat lower figures reported elsewhere; in a board of twelve, expect one reader. The lab simulates deuteranopia and protanopia with published matrices (Machado and colleagues, 2009) and measures the distance between colours in a perceptual space: below about 10 two colours are easily confused. Okabe and Ito's palette is the common safe default.</p></aside>
