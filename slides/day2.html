@@ -75,7 +75,7 @@
     </ul>
   </div>
   <pre class="code s"><code class="language-python">alt.Chart(hd).mark_circle(size=8, opacity=0.04).encode(x="tickets_day:Q", y="rate:Q")</code></pre>
-  <aside class="notes"><p>Opacity 0.04 means 25 points on one spot make full ink. Try 0.3 live and show that it is still a block. Ask what the stripes are before revealing the second bullet; somebody usually proposes a booking policy. It is arithmetic: small denominators allow few values. The same idea returns in session 2 as small cells.</p></aside>
+  <aside class="notes"><p>At opacity 0.04 a single point is nearly invisible: about 17 points on one spot reach half ink and about 75 reach 95%, so only the crowded places turn dark. Try 0.3 live and show that it is still a block. Ask what the stripes are before revealing the second bullet; somebody usually proposes a booking policy. It is arithmetic: small denominators allow few values. The same idea returns in session 2 as small cells.</p></aside>
 </section>
 
 <section class="slide" id="binned-heatmap" data-lo="LO3" data-label="Binned heatmap">
@@ -125,7 +125,7 @@
     <li>Hotel-days answer: can one hotel's night be told from the day's ticket sales?</li>
   </ul>
   <div class="callout warn mt"><b>There is no "the correlation".</b> Report the coefficient with its unit and its number of units.</div>
-  <aside class="notes"><p>Recap from DS-201: the coefficient runs from minus one to one and measures how closely points follow a line. New here: it is a property of the table you built, not of tourism. A report that says "correlation 0.7" without "by week" invites the reader to believe one hotel can be predicted. Aggregation almost always raises a correlation.</p></aside>
+  <aside class="notes"><p>A recap: the coefficient runs from minus one to one and measures how closely points follow a straight line. New here: it is a property of the table you built, not of tourism. A report that says "correlation 0.7" without "by week" invites the reader to believe one hotel can be predicted. Summing over units often raises a correlation, as here, because it averages away the noise of each unit; it is not a rule, and the opposite can happen.</p></aside>
 </section>
 
 <section class="slide" id="what-a-relation-does-not-say" data-lo="LO3" data-label="What a relation does not say">
@@ -229,7 +229,7 @@ ORDER BY per_thousand DESC</code></pre>
     <ul class="bullets">
       <li>Cable Car: first by count, <b>fifth</b> by rate (5.9).</li>
       <li>Terrace Farms: seventh by count, <b>first</b> by rate (13.8), on 167 complaints.</li>
-      <li>Wadi Trail is second on both readings of "problem": 243 complaints, 11.4 per thousand.</li>
+      <li>Wadi Trail is high on both readings of "problem": fourth by count (243), second by rate (11.4).</li>
     </ul>
   </div>
   <aside class="notes"><p>The answer to ask 3: the Cable Car is not the problem site; it is the busy site. Two outdoor sites with few visitors have rates twice the others. Show both rankings in the report, side by side: a reader who sees only the rate will not know that Terrace Farms rests on 167 complaints in three years. That thought leads to the next slide.</p></aside>

@@ -1,7 +1,7 @@
 <!-- academy:title -->
 # Exploratory Analysis and Visualisation
 
-التحليل الاستكشافي وتصور البيانات
+التحليل الاستكشافي والتمثيل المرئي للبيانات
 
 Data Science Track · SDAIA Academy · DS-203 · Level 200
 

@@ -7,7 +7,7 @@
   "lang": "en",
   "title": {
     "en": "Exploratory Analysis and Visualisation",
-    "ar": "التحليل الاستكشافي وتصور البيانات"
+    "ar": "التحليل الاستكشافي والتمثيل المرئي للبيانات"
   },
   "tagline": "Answer a director's questions from her own data: written questions first, charts that do not mislead, patterns checked against chance, and a report that reruns from raw data",
   "description": "Participants answer a fictional regional tourism board's questions by exploring its data, starting every analysis from written questions. They profile tables, examine distributions, relationships and change over time, build charts with a grammar of graphics and scales that do not mislead, and test by resampling whether a pattern could be chance. They repair misleading charts and write findings that state what is and is not shown, in a notebook that reruns from raw data.",

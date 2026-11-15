@@ -8,19 +8,19 @@
       "prompt": "A hospital manager writes: \"Are our clinics doing well on waiting?\" The appointments table has one row per appointment, with clinic, booking date, visit date and minutes waited. Which rewrite is ready for an analysis plan?",
       "options": [
         "Which of our clinics are performing badly on waiting, and which well?",
-        "What is the median wait per appointment, by clinic, in 2025?",
+        "Why do some clinics make their patients wait longer than others?",
         "How long do patients wait at our clinics before they are seen?",
-        "Why do some clinics make their patients wait longer than others?"
+        "What is the median wait per appointment, by clinic, in 2025?"
       ],
       "correct": [
-        1
+        3
       ],
       "explanation": "It names the unit (an appointment), the variable (minutes waited), the comparison (by clinic) and the period.",
       "misconceptions": [
         "Keeps a judgement word, \"badly\", that has no measure",
-        "",
+        "Asks for a cause, which a table of appointments cannot give",
         "Names a variable and no comparison or unit",
-        "Asks for a cause, which a table of appointments cannot give"
+        ""
       ],
       "lo": [
         "LO2"
@@ -38,19 +38,19 @@
       "type": "single",
       "prompt": "A library has a loans table (one row per loan) and a members table (one row per member). An analyst counts the rows of the loans table for 2025 and reports \"18,400 people borrowed a book\". What is wrong?",
       "options": [
-        "The count is of loans, so a member with ten loans is counted ten times",
-        "The loans table should have been joined to the members table before counting",
         "A count cannot be reported without a percentage beside it",
+        "The loans table should have been joined to the members table before counting",
+        "The count is of loans, so a member with ten loans is counted ten times",
         "The year 2025 is too short a period for a count of members"
       ],
       "correct": [
-        0
+        2
       ],
       "explanation": "One row is one loan. Counting rows counts loans; people need a count of distinct members.",
       "misconceptions": [
-        "",
-        "Believes a join fixes the unit; a join alone still leaves one row per loan",
         "Confuses a presentation habit with the error, which is the unit",
+        "Believes a join fixes the unit; a join alone still leaves one row per loan",
+        "",
         "Looks for the fault in the period, not in what a row is"
       ],
       "lo": [
@@ -70,19 +70,19 @@
       "prompt": "A plan entry reads: question \"How do complaints differ across branches?\", table \"complaints\", unit \"one complaint\", variables [\"branch\"], comparison \"look at complaints by branch\". Which part fails a plan checklist first?",
       "options": [
         "The unit, because a single complaint is too small a unit to analyse on its own",
-        "The table, because complaints need a second table before they can be counted",
+        "The comparison, because it does not say what is set against what",
         "The question, because it does not end with the name of the branch concerned",
-        "The comparison, because it does not say what is set against what"
+        "The table, because complaints need a second table before they can be counted"
       ],
       "correct": [
-        3
+        1
       ],
       "explanation": "A comparison names the two things compared and the measure; \"look at\" names neither, and a rate needs its denominator.",
       "misconceptions": [
         "Mistakes a fine-grained unit for a fault; the unit is correct for this table",
-        "Counting complaints needs one table; it is the rate that needs a second",
+        "",
         "Invents a rule about the wording of the question",
-        ""
+        "Counting complaints needs one table; it is the rate that needs a second"
       ],
       "lo": [
         "LO2"
@@ -102,18 +102,18 @@
       "options": [
         "Confirmed, because it was computed from the complete sales table of the year",
         "Confirmed, because a difference this large between groups cannot be chance",
-        "Exploratory, because the comparison was chosen after looking at many cuts",
-        "Exploratory, because sales data can never be used to confirm any pattern"
+        "Exploratory, because sales data can never be used to confirm any pattern",
+        "Exploratory, because the comparison was chosen after looking at many cuts"
       ],
       "correct": [
-        2
+        3
       ],
       "explanation": "The pattern was picked because it stood out among many comparisons; the data that suggested it cannot also confirm it.",
       "misconceptions": [
         "Believes complete data makes a searched pattern confirmed",
         "Takes the size of a gap as proof that it was not selected",
-        "",
-        "Thinks the kind of data decides; it is the order of question and look that decides"
+        "Thinks the kind of data decides; it is the order of question and look that decides",
+        ""
       ],
       "lo": [
         "LO1"
@@ -131,18 +131,18 @@
       "type": "single",
       "prompt": "A pattern was found by exploring the 2024 survey: members rate evening classes higher. What would make it a confirmed finding?",
       "options": [
-        "Recomputing it on the 2024 survey with a different software package and seed",
         "Writing it down now and testing it on the 2025 survey, not yet looked at",
+        "Recomputing it on the 2024 survey with a different software package and seed",
         "Finding a second pattern in the 2024 survey that points the same way as this",
         "Showing the 2024 chart to three colleagues who all agree with the reading"
       ],
       "correct": [
-        1
+        0
       ],
       "explanation": "A fresh test fixes the comparison first and uses data that played no part in finding the pattern.",
       "misconceptions": [
-        "Confuses reproducing a number with testing a claim",
         "",
+        "Confuses reproducing a number with testing a claim",
         "More searching in the same data adds comparisons, not evidence",
         "Agreement about a chart is not a test of what the chart suggests"
       ],
@@ -224,19 +224,19 @@
       "type": "single",
       "prompt": "A column \"age\" in a membership table has a minimum of 0, a maximum of 120 and a spike of 412 rows at exactly 0. The form allows the field to be skipped. What is the most likely reading, and the first step?",
       "options": [
-        "412 members are infants enrolled by their parents; keep the values as they are",
-        "The spike is random noise in a large table; smooth it away with a wider bin",
         "0 stands for \"not given\"; set those values to missing and record 412 rows",
+        "The spike is random noise in a large table; smooth it away with a wider bin",
+        "412 members are infants enrolled by their parents; keep the values as they are",
         "0 is a data-entry error for 10; add ten years to those rows and record it"
       ],
       "correct": [
-        2
+        0
       ],
       "explanation": "A spike at a default value in an optional field is a code for missing, not a measurement.",
       "misconceptions": [
-        "Takes a default value for a real age",
-        "Treats a structural spike as sampling noise",
         "",
+        "Treats a structural spike as sampling noise",
+        "Takes a default value for a real age",
         "Replaces one invented value with another"
       ],
       "lo": [
@@ -256,19 +256,19 @@
       "prompt": "Delivery times at a courier have a median of 2 days for city A and for city B, and the same quartiles. In city A nearly all parcels take 1 to 3 days. In city B half take 1 day and half take 3 to 4 days. Which chart shows the difference?",
       "options": [
         "A box plot of delivery days for each city",
-        "A histogram of delivery days for each city, one bin per day",
+        "A pie chart of the share of parcels delivered in each city",
         "A bar chart of the median number of delivery days for each city",
-        "A pie chart of the share of parcels delivered in each city"
+        "A histogram of delivery days for each city, one bin per day"
       ],
       "correct": [
-        1
+        3
       ],
       "explanation": "Two humps and one hump can share the same five numbers; only the histogram shows the shape.",
       "misconceptions": [
         "A box draws the five numbers, which are equal here",
-        "",
+        "Shows the size of each city, not the delivery times",
         "A single number per city, and the numbers are equal",
-        "Shows the size of each city, not the delivery times"
+        ""
       ],
       "lo": [
         "LO3"
@@ -286,20 +286,20 @@
       "type": "single",
       "prompt": "A gym chain compares the visit lengths of 9,000 standard members and 600 premium members with two histograms on the same count axis. The premium histogram is a flat strip along the bottom. What is the repair?",
       "options": [
-        "Draw each group as shares of its own total, on a common share axis",
+        "Replace both histograms with the two group means",
         "Remove the standard members so that the premium members can be seen",
         "Give each histogram its own count axis and place them side by side",
-        "Replace both histograms with the two group means"
+        "Draw each group as shares of its own total, on a common share axis"
       ],
       "correct": [
-        0
+        3
       ],
       "explanation": "Shares put groups of unequal size on the same footing, so the shapes can be compared.",
       "misconceptions": [
-        "",
+        "Throws away the shapes that the question is about",
         "Removes the comparison the chart was drawn for",
         "Makes the shapes visible but invites comparing bar heights across different scales",
-        "Throws away the shapes that the question is about"
+        ""
       ],
       "lo": [
         "LO3"
@@ -318,19 +318,19 @@
       "prompt": "House prices in a district have a mean of 1.9 million riyals and a median of 1.2 million. A report says \"the typical house costs 1.9 million\". What should it say?",
       "options": [
         "No typical price can be given for a skewed variable",
-        "The typical house costs 1.55 million, the midpoint of mean and median",
+        "The typical house costs 1.2 million; a few very expensive houses pull the mean up",
         "The typical house costs 1.9 million; the mean uses every house and is more accurate",
-        "The typical house costs 1.2 million; a few very expensive houses pull the mean up"
+        "The typical house costs 1.55 million, the midpoint of mean and median"
       ],
       "correct": [
-        3
+        1
       ],
       "explanation": "Half of the houses cost less than the median; with a long right tail most houses cost less than the mean.",
       "misconceptions": [
         "Gives up where the median does the job",
-        "Averages two summaries that answer different questions",
+        "",
         "Takes \"uses every value\" for \"describes a typical value\"",
-        ""
+        "Averages two summaries that answer different questions"
       ],
       "lo": [
         "LO3"
@@ -350,18 +350,18 @@
       "options": [
         "The mean rating of each branch, given with two decimals",
         "The median rating of each branch",
-        "The share of customers at each score, for each branch",
-        "The total number of ratings of each branch"
+        "The total number of ratings of each branch",
+        "The share of customers at each score, for each branch"
       ],
       "correct": [
-        2
+        3
       ],
       "explanation": "Shares by score show that branch B has a large dissatisfied group that an average conceals.",
       "misconceptions": [
         "More decimals of the same number show nothing new",
         "One number per branch again; it cannot show a split",
-        "",
-        "Shows how many answered, not what they answered"
+        "Shows how many answered, not what they answered",
+        ""
       ],
       "lo": [
         "LO3"
@@ -379,18 +379,18 @@
       "type": "single",
       "prompt": "A caption reads: \"Median spend per visitor: 310 riyals.\" The table behind it has 8,000 visitors, of whom 2,100 gave no spend; most of those were visitors on free school trips. What is missing from the caption?",
       "options": [
-        "The mean spend as well, so that the reader has both summaries at hand",
         "The number of visitors the median rests on and who was left out",
+        "The mean spend as well, so that the reader has both summaries at hand",
         "The standard deviation of spend",
         "The date on which the table was exported"
       ],
       "correct": [
-        1
+        0
       ],
       "explanation": "A summary carries its number of values and what was excluded; here a quarter of the visitors, of one kind, are not in it.",
       "misconceptions": [
-        "A second summary of the same rows does not reveal the excluded rows",
         "",
+        "A second summary of the same rows does not reveal the excluded rows",
         "Describes spread among the included rows only",
         "Useful for the record, and it does not tell the reader who is missing"
       ],
@@ -410,19 +410,19 @@
       "type": "single",
       "prompt": "An analyst joins a table of 9,000 orders to a table of 30 warehouses to add each warehouse's region. The result has 9,640 rows. What should the analyst conclude first?",
       "options": [
-        "Some warehouse appears more than once in the warehouse table",
-        "Some orders were placed twice and the join has revealed them",
         "The join added the 640 orders that had been missing before",
+        "Some orders were placed twice and the join has revealed them",
+        "Some warehouse appears more than once in the warehouse table",
         "A join always adds a few rows, so the result can be used as it is"
       ],
       "correct": [
-        0
+        2
       ],
       "explanation": "A join to a table with one row per warehouse cannot add rows. More rows than before means a key is repeated on the other side.",
       "misconceptions": [
-        "",
-        "Looks for the fault in the orders, which the join did not change",
         "Reads extra rows as recovered data; a join cannot create orders",
+        "Looks for the fault in the orders, which the join did not change",
+        "",
         "Treats a changed row count as normal and skips the cheapest check there is"
       ],
       "lo": [
@@ -443,18 +443,18 @@
       "options": [
         "The weekly figure is the true correlation and the daily one is wrong",
         "The daily figure is the true correlation, since it uses more rows",
-        "The two figures disagree, so one of the two tables has an error",
-        "Both are correct, each for its own unit, and a report names the unit"
+        "Both are correct, each for its own unit, and a report names the unit",
+        "The two figures disagree, so one of the two tables has an error"
       ],
       "correct": [
-        3
+        2
       ],
       "explanation": "Adding up shops and days averages away what is particular to one shop on one day. A correlation belongs to the table it was computed on.",
       "misconceptions": [
         "Believes aggregation reveals a truer value; it answers a different question",
         "Believes more rows make a coefficient more correct",
-        "Expects one coefficient per pair of variables whatever the unit",
-        ""
+        "",
+        "Expects one coefficient per pair of variables whatever the unit"
       ],
       "lo": [
         "LO3"
@@ -474,18 +474,18 @@
       "options": [
         "The same scatter plot drawn with smaller and fainter points",
         "A heatmap of the number of deliveries by distance and time",
-        "The median delivery time inside bands of distance",
-        "The correlation coefficient of distance and delivery time"
+        "The correlation coefficient of distance and delivery time",
+        "The median delivery time inside bands of distance"
       ],
       "correct": [
-        2
+        3
       ],
       "explanation": "A \"how much\" question about y at given x is answered by a summary of y inside bins of x.",
       "misconceptions": [
         "Transparency shows where points are dense, not a value of y at a given x",
         "A heatmap shows where deliveries are, and leaves the reader to guess the middle",
-        "",
-        "One coefficient says how closely points follow a line, not how many minutes"
+        "One coefficient says how closely points follow a line, not how many minutes",
+        ""
       ],
       "lo": [
         "LO3"
@@ -503,18 +503,18 @@
       "type": "single",
       "prompt": "A ministry lists the five schools with the most pupils absent last week. All five are among the largest schools in the country. What does the list show?",
       "options": [
-        "Which schools have an absence problem",
         "Which schools have the most pupils",
+        "Which schools have an absence problem",
         "That large schools cause more absence",
         "That absence was recorded wrongly"
       ],
       "correct": [
-        1
+        0
       ],
       "explanation": "A count of absent pupils follows the number of pupils. Without a rate the list ranks schools by size.",
       "misconceptions": [
-        "Reads a count as a rate",
         "",
+        "Reads a count as a rate",
         "Reads a pattern produced by size as an effect of size",
         "Suspects the recording when the measure is the issue"
       ],
@@ -534,18 +534,18 @@
       "type": "single",
       "prompt": "A bank wants to know at which branch a customer visit most often ends in a complaint. It has complaints per branch, customer visits per branch, staff per branch and accounts per branch. Which rate answers the question?",
       "options": [
-        "Complaints per thousand customer visits to the branch",
         "Complaints per thousand accounts held at the branch",
+        "Complaints per thousand customer visits to the branch",
         "Complaints per member of staff at the branch",
         "Complaints at the branch as a share of all complaints"
       ],
       "correct": [
-        0
+        1
       ],
       "explanation": "The denominator is whoever could have produced the event: here, a customer visit.",
       "misconceptions": [
-        "",
         "Counts accounts, many of which never visit a branch",
+        "",
         "Measures workload per employee, which is a different question",
         "A share of all complaints is the count again, divided by a constant"
       ],
@@ -565,20 +565,20 @@
       "type": "single",
       "prompt": "A table of complaint rates by clinic and age group shows the highest rate, 40 per thousand, for one clinic's patients over 80: 2 complaints from 50 visits. The publication rule asks for at least 10 complaints and 1,000 visits. What does the analyst do?",
       "options": [
-        "Publish it with a note that the rate is the highest",
+        "Withhold the cell and mark it as withheld in the table",
         "Publish the 2 complaints but not the 50 visits",
         "Replace the cell with the clinic's rate for all ages",
-        "Withhold the cell and mark it as withheld in the table"
+        "Publish it with a note that the rate is the highest"
       ],
       "correct": [
-        3
+        0
       ],
       "explanation": "Two complaints give a rate that one more complaint would move by half, and they may identify the two patients. The cell is held back and marked.",
       "misconceptions": [
-        "Highlights exactly the number that rests on the fewest cases",
+        "",
         "Publishes the part that could identify people and hides the denominator",
         "Puts a different number in the cell without saying so",
-        ""
+        "Highlights exactly the number that rests on the fewest cases"
       ],
       "lo": [
         "LO3"
@@ -597,18 +597,18 @@
       "prompt": "A shop ran a sale in June 2024 and again in June 2025. June 2025 sales were 3% above June 2024, in line with the usual yearly growth. A manager says the 2025 sale had no effect. What is wrong with that?",
       "options": [
         "Nothing: growth of 3% is what a month without a sale shows",
-        "June should have been compared with May of the same year",
         "The comparison month also had a sale, so the effect cancels",
+        "June should have been compared with May of the same year",
         "A single month is too short to compute any growth figure"
       ],
       "correct": [
-        2
+        1
       ],
       "explanation": "A change on a year earlier measures the difference between two years. An event present in both disappears from it.",
       "misconceptions": [
         "Forgets that the reference month was itself a sale month",
-        "Compares with the month before, which mixes the sale with the season",
         "",
+        "Compares with the month before, which mixes the sale with the season",
         "Rejects the comparison for its length when its reference is the issue"
       ],
       "lo": [
@@ -627,20 +627,20 @@
       "type": "single",
       "prompt": "Visits to a park were 20,000 in April 2024, a month without events. Visits usually grow 5% a year. A festival took place in April 2025 and visits were 26,250. By how much did April 2025 exceed its baseline?",
       "options": [
-        "By 31%, since 26,250 is 31% more than 20,000",
-        "By 25%, since the baseline for April 2025 is 21,000",
         "By 5%, the usual growth from one year to the next",
-        "By 20%, since 5,250 extra visits is a fifth of 26,250"
+        "By 20%, since 5,250 extra visits is a fifth of 26,250",
+        "By 25%, since the baseline for April 2025 is 21,000",
+        "By 31%, since 26,250 is 31% more than 20,000"
       ],
       "correct": [
-        1
+        2
       ],
       "explanation": "The baseline is the same month a year earlier grown by the usual 5%: 21,000. And 26,250 divided by 21,000 is 1.25.",
       "misconceptions": [
-        "Credits the festival with the usual yearly growth as well",
-        "",
         "Gives the trend, not the excess over it",
-        "Divides the excess by the actual value, not by the baseline"
+        "Divides the excess by the actual value, not by the baseline",
+        "",
+        "Credits the festival with the usual yearly growth as well"
       ],
       "lo": [
         "LO3"
@@ -658,19 +658,19 @@
       "type": "single",
       "prompt": "A monthly series of electricity use shows a peak every August, each a little higher than the last, and one tall spike in a February. Which reading names the three parts correctly?",
       "options": [
-        "The August peaks are the season, the rise is the trend, the spike is an event",
-        "The August peaks are the trend, the rise is an event, the spike is the season",
         "The August peaks are events, the rise is the season, the spike is the trend",
+        "The August peaks are the trend, the rise is an event, the spike is the season",
+        "The August peaks are the season, the rise is the trend, the spike is an event",
         "All three are the season, since each one recurs or could recur"
       ],
       "correct": [
-        0
+        2
       ],
       "explanation": "What repeats at the same time each year is the season, the slow change of level is the trend, and what stands outside both is an event.",
       "misconceptions": [
-        "",
-        "Calls a yearly repeat a trend",
         "Calls a yearly repeat an event",
+        "Calls a yearly repeat a trend",
+        "",
         "Folds everything into the season and loses the question"
       ],
       "lo": [
@@ -689,20 +689,20 @@
       "type": "single",
       "prompt": "A hospital's average length of stay rose from 4.0 to 4.6 days in a year. In both of its wards, surgical and medical, the average stay fell. How can both be true?",
       "options": [
-        "One of the two ward averages must have been miscalculated",
+        "A larger share of patients was in the ward with longer stays",
         "Average stays cannot be compared between two different years",
         "The hospital average is the plain mean of the two ward averages",
-        "A larger share of patients was in the ward with longer stays"
+        "One of the two ward averages must have been miscalculated"
       ],
       "correct": [
-        3
+        0
       ],
       "explanation": "The hospital average is a weighted average of the wards. It can rise while both ward averages fall if the mix moves to the ward with longer stays.",
       "misconceptions": [
-        "Assumes an arithmetic error where there is a change of weights",
+        "",
         "Gives up the comparison; it only needs the mix to be stated",
         "Forgets the weights: a plain mean of two falling numbers would fall",
-        ""
+        "Assumes an arithmetic error where there is a change of weights"
       ],
       "lo": [
         "LO3"
@@ -752,19 +752,19 @@
       "prompt": "A regional director sees that the overall pass rate fell while it rose in every course type, because more people now take the harder courses. She asks which number to put in the annual report. What is the best advice?",
       "options": [
         "Only the overall rate, since it is the official figure",
-        "The overall rate, the rates by type and the change of mix, together",
+        "Neither, since the two results contradict each other",
         "Only the rates by course type, since the overall rate misleads",
-        "Neither, since the two results contradict each other"
+        "The overall rate, the rates by type and the change of mix, together"
       ],
       "correct": [
-        1
+        3
       ],
       "explanation": "Each figure answers a different question. Printed together with the change of mix, they explain each other.",
       "misconceptions": [
         "Leaves the reader to conclude that teaching got worse",
-        "",
+        "Treats two correct tables as an error",
         "Hides a true and relevant fact about the average learner",
-        "Treats two correct tables as an error"
+        ""
       ],
       "lo": [
         "LO3"
@@ -782,18 +782,18 @@
       "type": "single",
       "prompt": "A chart shows one circle per city: population on x, average rent on y, and the circle's colour gives the region. In the terms of a grammar of graphics, what is \"region to colour\"?",
       "options": [
-        "An encoding",
         "The colour scale",
+        "An encoding",
         "The mark used",
         "A facet variable"
       ],
       "correct": [
-        0
+        1
       ],
       "explanation": "An encoding maps a column to a visual channel. The mark is the circle; the scale decides which colour each region gets.",
       "misconceptions": [
-        "",
         "The scale turns values into colours once the mapping exists",
+        "",
         "The mark is the shape drawn for each row, here a circle",
         "A facet would split the regions into separate panels"
       ],
@@ -815,18 +815,18 @@
       "options": [
         "The area of a circle for each department",
         "The depth of colour of a tile for each department",
-        "The angle of a slice in a pie chart of all departments",
-        "The position of a point or the end of a bar on one axis"
+        "The position of a point or the end of a bar on one axis",
+        "The angle of a slice in a pie chart of all departments"
       ],
       "correct": [
-        3
+        2
       ],
       "explanation": "Position on a common scale is read most precisely. Area, angle and colour intensity are read with much larger errors.",
       "misconceptions": [
         "Area is read imprecisely; a reader underestimates large circles",
         "Colour intensity is the least precise channel for a quantity",
-        "Fifteen angles cannot be ranked by eye",
-        ""
+        "",
+        "Fifteen angles cannot be ranked by eye"
       ],
       "lo": [
         "LO4"
@@ -906,19 +906,19 @@
       "type": "single",
       "prompt": "A chart with a separate y scale for each of its panels carries no note about the scales. What is the most likely misreading?",
       "options": [
-        "Readers will compare heights across panels as if on one scale",
-        "Readers will be unable to see the shape of each series",
         "Readers will think the panels show different variables",
+        "Readers will be unable to see the shape of each series",
+        "Readers will compare heights across panels as if on one scale",
         "Readers will assume that the time axes differ between panels"
       ],
       "correct": [
-        0
+        2
       ],
       "explanation": "People compare heights across panels by default. With free scales that comparison is false, so the chart has to say that scales differ.",
       "misconceptions": [
-        "",
-        "Free scales are what makes each shape visible",
         "The panels are labelled; the variable is not in doubt",
+        "Free scales are what makes each shape visible",
+        "",
         "Nothing suggests different time axes; the y scale is what changed"
       ],
       "lo": [
@@ -939,18 +939,18 @@
       "options": [
         "A picked window; show more years on the same axis",
         "A count for a rate; divide by the number of customers",
-        "Two axes; plot each year in a panel of its own",
-        "A cut baseline; start the bars at zero or use points"
+        "A cut baseline; start the bars at zero or use points",
+        "Two axes; plot each year in a panel of its own"
       ],
       "correct": [
-        3
+        2
       ],
       "explanation": "A bar is read by its length. On an axis from 85 the lengths show 3 and 6, not 88 and 91.",
       "misconceptions": [
         "More years would help context and leave the bars as misleading as before",
         "The value is already a rate",
-        "There is one axis and one series",
-        ""
+        "",
+        "There is one axis and one series"
       ],
       "lo": [
         "LO4"
@@ -968,19 +968,19 @@
       "type": "single",
       "prompt": "A slide plots advertising spend on the left axis and sales on the right axis over 24 months. The two lines overlap almost perfectly, and the title says \"Sales follow advertising\". Why is this weak evidence?",
       "options": [
-        "Two variables may never be shown on the same chart",
-        "Lines are the wrong mark for monthly data of this kind",
         "The author chose both axis ranges, and so chose the overlap",
+        "Lines are the wrong mark for monthly data of this kind",
+        "Two variables may never be shown on the same chart",
         "Sales and spend are in different currencies or units"
       ],
       "correct": [
-        2
+        0
       ],
       "explanation": "With two free axes, any two series can be made to overlap. A scatter of one against the other shows the relation at its true strength.",
       "misconceptions": [
-        "Too strong: a scatter plot shows two variables on one chart, honestly",
-        "A line suits a monthly series; the mark is not the issue",
         "",
+        "A line suits a monthly series; the mark is not the issue",
+        "Too strong: a scatter plot shows two variables on one chart, honestly",
         "Different units are the reason for two axes, not the reason the overlap misleads"
       ],
       "lo": [
@@ -999,18 +999,18 @@
       "type": "single",
       "prompt": "A headline reads \"Road accidents down 30%\". The chart beside it compares last August with this August. Five years of monthly data exist, and last August included a week of floods. Which fault is this?",
       "options": [
-        "A running total",
         "A picked window",
+        "A running total",
         "Uneven steps",
         "A cut baseline"
       ],
       "correct": [
-        1
+        0
       ],
       "explanation": "Two months were chosen out of sixty, one of them unusual. The repair is the whole series with the flood month named.",
       "misconceptions": [
-        "Nothing is cumulated here",
         "",
+        "Nothing is cumulated here",
         "Both periods are one month long",
         "Nothing is said about where the axis starts"
       ],
@@ -1030,20 +1030,20 @@
       "type": "single",
       "prompt": "After repairing a misleading chart, an analyst wants to know whether the repair mattered. Which test tells her?",
       "options": [
-        "Whether a reader would conclude something different from the two charts",
+        "Whether the numbers in the two charts are exactly the same",
         "Whether the repaired chart looks more professional than the original",
         "Whether the repaired chart uses fewer colours and less ink",
-        "Whether the numbers in the two charts are exactly the same"
+        "Whether a reader would conclude something different from the two charts"
       ],
       "correct": [
-        0
+        3
       ],
       "explanation": "A fault matters when the published chart makes a reader believe something the data does not say. Write both conclusions and compare them.",
       "misconceptions": [
-        "",
+        "The numbers are usually the same; the impression is what changed",
         "Polish is not the measure of honesty",
         "Economy of ink is a style rule, not a test of what is concluded",
-        "The numbers are usually the same; the impression is what changed"
+        ""
       ],
       "lo": [
         "LO4"
@@ -1124,18 +1124,18 @@
       "prompt": "A team produces every chart in Arabic and in English by copying the English notebook and translating the labels by hand. Three months later the two versions of one chart show different numbers. What would have prevented it?",
       "options": [
         "A second analyst who checks each translated chart before it is released",
-        "One function that draws the chart, with the texts read from a label file",
         "Arabic labels written directly into the data in place of the English ones",
+        "One function that draws the chart, with the texts read from a label file",
         "An image editor used to replace the texts on the exported English chart"
       ],
       "correct": [
-        1
+        2
       ],
       "explanation": "With one function and one data path, the two versions can differ only in their words.",
       "misconceptions": [
         "Review finds some differences after the fact; it does not remove their cause",
-        "",
         "Translating the data breaks every join and filter that uses the original values",
+        "",
         "Editing an image cuts the chart off from its data altogether"
       ],
       "lo": [
@@ -1154,20 +1154,20 @@
       "type": "single",
       "prompt": "An analyst has delivery times for two courier firms and wants to know whether the difference of 0.4 day between their means could arise if the firm made no difference. Which procedure fits?",
       "options": [
-        "Shuffle the firm labels and recompute the difference",
+        "Repeat the calculation with a different random seed",
         "Resample the deliveries of each firm with replacement",
         "Sort the deliveries and compare the two medians",
-        "Repeat the calculation with a different random seed"
+        "Shuffle the firm labels and recompute the difference"
       ],
       "correct": [
-        0
+        3
       ],
       "explanation": "Shuffling the labels creates the situation in which the firm makes no difference; the p-value is the share of shuffles with a gap as large as the observed one.",
       "misconceptions": [
-        "",
+        "A seed changes the draws of a procedure; it is not a procedure",
         "Gives an interval for each mean, not a test of \"no difference\"",
         "Changes the summary and gives no measure of chance",
-        "A seed changes the draws of a procedure; it is not a procedure"
+        ""
       ],
       "lo": [
         "LO5"
@@ -1185,20 +1185,20 @@
       "type": "single",
       "prompt": "A permutation test of a training programme's effect on sales gives p = 0.40 with 30 salespeople in each group. Which sentence may go in the report?",
       "options": [
-        "The training has no effect on sales",
+        "This data shows no clear effect of the training",
         "The training has a 40% chance of working",
         "The training has a 60% chance of working",
-        "This data shows no clear effect of the training"
+        "The training has no effect on sales"
       ],
       "correct": [
-        3
+        0
       ],
       "explanation": "A large p-value is an absence of evidence for an effect in this data. With 30 per group, a useful effect could easily go unseen.",
       "misconceptions": [
-        "Reads absence of evidence as evidence of absence",
+        "",
         "Reads the p-value as the probability of the hypothesis",
         "Reads one minus the p-value as the probability of the hypothesis",
-        ""
+        "Reads absence of evidence as evidence of absence"
       ],
       "lo": [
         "LO5"
@@ -1218,18 +1218,18 @@
       "options": [
         "A week of readings is too short a period for any bootstrap to work",
         "The bootstrap is valid only for normally distributed readings",
-        "Readings of one machine are alike; the 12 machines are the units",
-        "An interval can never be computed for a mean of sensor readings"
+        "An interval can never be computed for a mean of sensor readings",
+        "Readings of one machine are alike; the 12 machines are the units"
       ],
       "correct": [
-        2
+        3
       ],
       "explanation": "There are 12 independent units, not 120,000. Resampling readings as if independent makes the interval far too narrow.",
       "misconceptions": [
         "The length of the period is not what breaks the independence",
         "The bootstrap does not assume a normal distribution",
-        "",
-        "Too strong: the interval is fine once the right unit is resampled"
+        "Too strong: the interval is fine once the right unit is resampled",
+        ""
       ],
       "lo": [
         "LO5"
@@ -1310,19 +1310,19 @@
       "prompt": "A chart shows mean satisfaction by service channel with 95% bootstrap intervals. Which sentence belongs in its caption?",
       "options": [
         "The intervals show that the survey is free of any bias",
-        "The intervals contain 95% of all the customers' ratings",
+        "The intervals cover sampling variation, not who chose to answer",
         "The intervals prove which channel customers really prefer",
-        "The intervals cover sampling variation, not who chose to answer"
+        "The intervals contain 95% of all the customers' ratings"
       ],
       "correct": [
-        3
+        1
       ],
       "explanation": "An interval covers the variation from drawing another sample. It says nothing about non-response or the wording of the question.",
       "misconceptions": [
         "An interval cannot detect or remove bias",
-        "Confuses an interval for a mean with the spread of the ratings",
+        "",
         "An interval supports a comparison; it does not prove a preference",
-        ""
+        "Confuses an interval for a mean with the spread of the ratings"
       ],
       "lo": [
         "LO5"
@@ -1372,19 +1372,19 @@
       "prompt": "Which of these findings is confirmed, in the sense used in this course?",
       "options": [
         "The strongest of 30 correlations found in last year's sales data",
-        "A difference stated in the March plan and tested once on April's data",
+        "A result that three analysts each found plausible on inspection",
         "A pattern seen in January and seen again by rereading January's data",
-        "A result that three analysts each found plausible on inspection"
+        "A difference stated in the March plan and tested once on April's data"
       ],
       "correct": [
-        1
+        3
       ],
       "explanation": "What confirms a finding is the order of events: the question is written down before the data that answers it is looked at.",
       "misconceptions": [
         "Chosen after looking, from many comparisons",
-        "",
+        "Agreement among readers is not a test",
         "The same data cannot suggest a pattern and confirm it",
-        "Agreement among readers is not a test"
+        ""
       ],
       "lo": [
         "LO1"
@@ -1402,18 +1402,18 @@
       "type": "single",
       "prompt": "While exploring, an analyst notices that customers who call on Mondays cancel more often. The pattern was one of many she looked at. What should her report say?",
       "options": [
-        "\"Exploratory: one of many cuts; to be tested on next quarter's calls\"",
         "\"Monday callers cancel more often (p = 0.03)\", as a finding",
+        "\"Exploratory: one of many cuts; to be tested on next quarter's calls\"",
         "Nothing: exploratory patterns do not belong in a report",
         "\"Monday calls cause cancellations; move staff to Mondays\""
       ],
       "correct": [
-        0
+        1
       ],
       "explanation": "An exploratory pattern is reported with its label, the search it came from and the test that would confirm it.",
       "misconceptions": [
-        "",
         "Reports a p-value that ignores the search",
+        "",
         "Exploration is where questions come from; hiding it loses the question",
         "Adds a causal claim and a decision to an untested pattern"
       ],
@@ -1434,19 +1434,19 @@
       "prompt": "An analyst tries the mean, then the median, then the share above a threshold, and reports the one summary for which two groups differ \"significantly\". Why is the reported p-value too optimistic?",
       "options": [
         "The median is never a valid summary for a test",
+        "Three summaries were tried and the best one kept",
         "The groups should have been merged before testing",
-        "A threshold always makes a difference look larger",
-        "Three summaries were tried and the best one kept"
+        "A threshold always makes a difference look larger"
       ],
       "correct": [
-        3
+        1
       ],
       "explanation": "Each choice made after seeing the result is another comparison. The p-value of the one that was kept ignores the others.",
       "misconceptions": [
         "The median is a legitimate summary; the choosing is the issue",
+        "",
         "Merging the groups would remove the comparison altogether",
-        "Not always, and it misses the point about choosing",
-        ""
+        "Not always, and it misses the point about choosing"
       ],
       "lo": [
         "LO1"
@@ -1464,19 +1464,19 @@
       "type": "single",
       "prompt": "A report is rendered twice from the same data and code, and one interval reads 0.41 to 0.58 in the first run and 0.40 to 0.59 in the second. What is the most likely cause and its fix?",
       "options": [
-        "The data changed between runs; lock the file",
-        "Rounding differs between runs; print more decimals",
         "Resampling without a fixed seed; set the seed as a parameter",
+        "Rounding differs between runs; print more decimals",
+        "The data changed between runs; lock the file",
         "The two runs used different computers; use one computer"
       ],
       "correct": [
-        2
+        0
       ],
       "explanation": "A bootstrap draws random resamples. Without a fixed seed, each run draws others, and the ends of the interval move.",
       "misconceptions": [
-        "The question states that the data was the same",
-        "Rounding is deterministic and gives the same digits each time",
         "",
+        "Rounding is deterministic and gives the same digits each time",
+        "The question states that the data was the same",
         "The same seed and versions give the same result on any computer"
       ],
       "lo": [
@@ -1526,19 +1526,19 @@
       "type": "single",
       "prompt": "A findings table has the columns finding, status, check and limit. Which row is complete and honest?",
       "options": [
+        "\"Discounts cause loyalty\" · confirmed · correlation 0.6 · none needed",
         "\"Weekend orders are larger\" · exploratory · best of 14 cuts · test next quarter",
         "\"Sales rose in the north\" · confirmed · looked at the chart · none",
-        "\"Discounts cause loyalty\" · confirmed · correlation 0.6 · none needed",
         "\"Returns fell\" · exploratory · no check was run · the data may be wrong"
       ],
       "correct": [
-        0
+        1
       ],
       "explanation": "It names the status truthfully, gives the check with the search behind it, and states what has to happen next.",
       "misconceptions": [
+        "A causal claim resting on a correlation, with the limit refused",
         "",
         "\"Confirmed\" with no plan, no real check and no limit",
-        "A causal claim resting on a correlation, with the limit refused",
         "No check at all, and a limit too vague to act on"
       ],
       "lo": [
@@ -1558,19 +1558,19 @@
       "prompt": "An exploratory report for a director who is not an analyst is being edited. Which sentence should stay as it is?",
       "options": [
         "\"The data proves that evening visitors are more satisfied than others.\"",
-        "\"The difference between evening and daytime visitors is significant.\"",
+        "\"In this data, evening visitors rated 0.3 point higher (0.1 to 0.5).\"",
         "\"Satisfaction is driven by the time of day at which people visit.\"",
-        "\"In this data, evening visitors rated 0.3 point higher (0.1 to 0.5).\""
+        "\"The difference between evening and daytime visitors is significant.\""
       ],
       "correct": [
-        3
+        1
       ],
       "explanation": "It says what was seen, in which data and how sure, in words the reader understands, and claims no proof and no cause.",
       "misconceptions": [
         "Exploration does not prove",
-        "\"Significant\" with no number means \"important\" to this reader",
+        "",
         "\"Driven by\" claims a cause that nothing in the data supports",
-        ""
+        "\"Significant\" with no number means \"important\" to this reader"
       ],
       "lo": [
         "LO6"
@@ -1588,19 +1588,19 @@
       "type": "single",
       "prompt": "What does it mean for a report to \"rerun\"?",
       "options": [
-        "Its charts can be edited by hand after export",
-        "It can be opened again without any software",
         "One command rebuilds every number from the raw data",
+        "It can be opened again without any software",
+        "Its charts can be edited by hand after export",
         "It was reviewed twice before being sent out"
       ],
       "correct": [
-        2
+        0
       ],
       "explanation": "One path leads from the read-only raw data to the page, and anyone can run it and get the same page.",
       "misconceptions": [
-        "Hand edits break the path from data to page",
-        "Being readable is not being reproducible",
         "",
+        "Being readable is not being reproducible",
+        "Hand edits break the path from data to page",
         "Review is useful and is a different thing"
       ],
       "lo": [
