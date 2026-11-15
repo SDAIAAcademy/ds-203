@@ -1,0 +1,301 @@
+{
+ "chart": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "datasets": {
+    "data-4eb5a5fb5164bd1ba3bf6a01a42b4c7e": [
+     {
+      "group": "Tilal region",
+      "kind": "origin market",
+      "mean": 4.5979020979020975,
+      "year": "2025"
+     },
+     {
+      "group": "Other regions",
+      "kind": "origin market",
+      "mean": 4.303030303030303,
+      "year": "2025"
+     },
+     {
+      "group": "Gulf",
+      "kind": "origin market",
+      "mean": 3.7966507177033493,
+      "year": "2025"
+     },
+     {
+      "group": "Asia",
+      "kind": "origin market",
+      "mean": 3.493006993006993,
+      "year": "2025"
+     },
+     {
+      "group": "Europe",
+      "kind": "origin market",
+      "mean": 3.409090909090909,
+      "year": "2025"
+     },
+     {
+      "group": "All respondents",
+      "kind": "all respondents",
+      "mean": 4.070909090909091,
+      "year": "2025"
+     }
+    ],
+    "data-870be10ddd5dfa23c7411d3cc466df61": [
+     {
+      "group": "Tilal region",
+      "kind": "origin market",
+      "mean": 4.5,
+      "year": "2024"
+     },
+     {
+      "group": "Tilal region",
+      "kind": "origin market",
+      "mean": 4.5979020979020975,
+      "year": "2025"
+     },
+     {
+      "group": "Other regions",
+      "kind": "origin market",
+      "mean": 4.201428571428571,
+      "year": "2024"
+     },
+     {
+      "group": "Other regions",
+      "kind": "origin market",
+      "mean": 4.303030303030303,
+      "year": "2025"
+     },
+     {
+      "group": "Gulf",
+      "kind": "origin market",
+      "mean": 3.6958333333333333,
+      "year": "2024"
+     },
+     {
+      "group": "Gulf",
+      "kind": "origin market",
+      "mean": 3.7966507177033493,
+      "year": "2025"
+     },
+     {
+      "group": "Asia",
+      "kind": "origin market",
+      "mean": 3.407142857142857,
+      "year": "2024"
+     },
+     {
+      "group": "Asia",
+      "kind": "origin market",
+      "mean": 3.493006993006993,
+      "year": "2025"
+     },
+     {
+      "group": "Europe",
+      "kind": "origin market",
+      "mean": 3.3,
+      "year": "2024"
+     },
+     {
+      "group": "Europe",
+      "kind": "origin market",
+      "mean": 3.409090909090909,
+      "year": "2025"
+     },
+     {
+      "group": "All respondents",
+      "kind": "all respondents",
+      "mean": 4.1505,
+      "year": "2024"
+     },
+     {
+      "group": "All respondents",
+      "kind": "all respondents",
+      "mean": 4.070909090909091,
+      "year": "2025"
+     }
+    ]
+   },
+   "height": 320,
+   "layer": [
+    {
+     "data": {
+      "name": "data-870be10ddd5dfa23c7411d3cc466df61"
+     },
+     "encoding": {
+      "color": {
+       "field": "kind",
+       "scale": {
+        "domain": [
+         "origin market",
+         "all respondents"
+        ],
+        "range": [
+         "#0072B2",
+         "#D55E00"
+        ]
+       },
+       "title": null,
+       "type": "nominal"
+      },
+      "detail": {
+       "field": "group",
+       "type": "nominal"
+      },
+      "strokeDash": {
+       "field": "kind",
+       "legend": null,
+       "type": "nominal"
+      },
+      "x": {
+       "axis": {
+        "labelAngle": 0
+       },
+       "field": "year",
+       "title": null,
+       "type": "nominal"
+      },
+      "y": {
+       "field": "mean",
+       "scale": {
+        "domain": [
+         3.0,
+         4.8
+        ]
+       },
+       "title": "Mean satisfaction, 1 to 5",
+       "type": "quantitative"
+      }
+     },
+     "mark": {
+      "point": true,
+      "type": "line"
+     }
+    },
+    {
+     "data": {
+      "name": "data-4eb5a5fb5164bd1ba3bf6a01a42b4c7e"
+     },
+     "encoding": {
+      "text": {
+       "field": "group",
+       "type": "nominal"
+      },
+      "x": {
+       "field": "year",
+       "type": "nominal"
+      },
+      "y": {
+       "field": "mean",
+       "type": "quantitative"
+      }
+     },
+     "mark": {
+      "align": "left",
+      "dx": 8,
+      "fontSize": 13,
+      "type": "text"
+     }
+    }
+   ],
+   "title": "Every market up, the total down",
+   "width": 380
+  }
+ },
+ "guided_shift": -0.009409090909090922,
+ "mix": {
+  "__frame__": {
+   "columns": [
+    2024,
+    2025
+   ],
+   "data": [
+    [
+     0.4,
+     0.26
+    ],
+    [
+     0.35,
+     0.3
+    ],
+    [
+     0.12,
+     0.19
+    ],
+    [
+     0.07,
+     0.13
+    ],
+    [
+     0.06,
+     0.12
+    ]
+   ],
+   "index": [
+    "Tilal region",
+    "Other regions",
+    "Gulf",
+    "Asia",
+    "Europe"
+   ]
+  }
+ },
+ "parts": {
+  "__frame__": {
+   "columns": [
+    2024,
+    2025,
+    "change"
+   ],
+   "data": [
+    [
+     4.5,
+     4.5979020979,
+     0.0979020979
+    ],
+    [
+     4.2014285714,
+     4.303030303,
+     0.1016017316
+    ],
+    [
+     3.6958333333,
+     3.7966507177,
+     0.1008173844
+    ],
+    [
+     3.4071428571,
+     3.493006993,
+     0.0858641359
+    ],
+    [
+     3.3,
+     3.4090909091,
+     0.1090909091
+    ]
+   ],
+   "index": [
+    "Tilal region",
+    "Other regions",
+    "Gulf",
+    "Asia",
+    "Europe"
+   ]
+  }
+ },
+ "reading": "Mean satisfaction fell from 4.15 in 2024 to 4.07 in 2025 although it rose by about 0.1 point in every origin market: visitors from the Gulf, Asia and Europe, who score lower, grew from 25% to 44% of respondents, and with the 2024 mix the 2025 score would have been 4.25. This does not show that any site got worse or whose fault the fall is; it shows that the board is now surveying a different mix of visitors, and it rests on who answered the survey, not on all visitors.",
+ "std": 4.249875475401791,
+ "total": {
+  "__series__": {
+   "data": [
+    4.1505,
+    4.0709090909
+   ],
+   "index": [
+    2024,
+    2025
+   ],
+   "name": "satisfaction"
+  }
+ }
+}

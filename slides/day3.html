@@ -1,158 +1,544 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: welcome; introduce yourself; one question to the room that calibrates the pace; the rhythm of the day</aside>
+  <aside class="notes"><p>Two days of finding things out; today is about showing them. Ask who looked at a chart from work last night and where its y axis started. Take two answers. Today's claim: a chart is a small set of decisions, each of which can be written down, checked and defended, and a misleading chart is one where a decision was made for the conclusion and not for the reader.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>Session 1 gives the vocabulary, session 2 one powerful layout, session 3 the faults, session 4 the finish: colour, words and two languages. All four labs redraw things you already computed on Days 1 and 2, so the numbers are familiar and the attention goes to the chart.</p></aside>
+</section>
 
-<!-- Session 1 -->
+<section class="slide" id="review-day-2" data-lo="LO3" data-label="Review of Day 2">
+  <div class="kicker">Review · Day 2</div>
+  <h2>What does the director need beside this number?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">A report says: "Branch C has the most late deliveries: 310 this quarter." Before the sentence is printed, what has to stand beside 310?</p>
+    <div class="opts">
+      <div class="opt" data-why="An average of late deliveries over branches is still a count; it does not allow for the size of Branch C">The average number of late deliveries per branch</div>
+      <div class="opt" data-why="Last quarter's count shows change in Branch C, not whether it is worse than other branches">The number of late deliveries in the quarter before</div>
+      <div class="opt" data-why="A chance check comes after the comparison is right; it cannot repair a count used as a rate">A p-value for the difference between the branches</div>
+      <div class="opt" data-ok>The deliveries Branch C made, so 310 becomes a rate</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A count ranks by size. "Most late deliveries" needs its denominator before it can mean "worst".</div>
+  </div>
+  <aside class="notes"><p>Answer: the fourth. Three minutes. It recalls yesterday's thread, a number depends on what it is set against, and it sets up chart 3 of this afternoon's lab, where the same fault appears as a picture.</p></aside>
+</section>
 
+<!-- ======================= SESSION 1 ======================= -->
 <section class="slide section" id="s1" data-auto="section" data-session="1"></section>
 
-<section class="slide" id="s1-idea" data-lo="LO4">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
-  </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+<section class="slide" id="chart-as-specification" data-lo="LO4" data-label="A chart is a specification">
+  <div class="kicker">The grammar of graphics</div>
+  <h2>Every chart is four decisions</h2>
+  <table class="t">
+    <tr><th>Part</th><th>The decision</th><th>In lab 3.1</th></tr>
+    <tr><td><b>Data</b></td><td>what one row is</td><td>one site: complaints, visitors, rate</td></tr>
+    <tr><td><b>Marks</b></td><td>the shape drawn for each row</td><td>a circle, a rule, a text</td></tr>
+    <tr><td><b>Encodings</b></td><td>which column drives which visual channel</td><td>rate → x, site → y, visitors → size</td></tr>
+    <tr><td><b>Scales</b></td><td>how values become positions, sizes and colours</td><td>x from zero; sites sorted by rate</td></tr>
+  </table>
+  <div class="callout tip mt"><b>Why think this way.</b> "Bar chart" and "scatter plot" are names for a few common combinations. The four parts describe all of them, and tell you what to change.</div>
+  <aside class="notes"><p>The idea comes from Wilkinson's Grammar of Graphics; ggplot2, Vega-Lite and Altair are built on it. This course uses Vega-Altair, where the four parts are four pieces of code. Day 1's unit of observation is back as the first row: a chart draws one mark per row, so the table decides the chart before any plotting call.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps" data-lo="LO4">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="channels-ranked" data-lo="LO4" data-label="Channels, ranked">
+  <div class="kicker">Not all channels are read equally well</div>
+  <h2>Give the most precise channel to the comparison that matters</h2>
+  <div class="bars">
+    <div class="row"><span>Position on a common scale</span><div class="bar c-teal" style="--w:100%"></div><span class="val">most precise</span></div>
+    <div class="row"><span>Length</span><div class="bar c-teal" style="--w:82%"></div><span class="val"></span></div>
+    <div class="row"><span>Angle and slope</span><div class="bar c-cyan" style="--w:62%"></div><span class="val"></span></div>
+    <div class="row"><span>Area</span><div class="bar c-amber" style="--w:44%"></div><span class="val"></span></div>
+    <div class="row"><span>Colour intensity</span><div class="bar c-coral" style="--w:28%"></div><span class="val">least precise</span></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <ul class="bullets tight mt">
+    <li>Colour hue tells categories apart; it does not order them.</li>
+    <li>A small difference shows in position long before it shows in area or shade.</li>
+  </ul>
+  <aside class="notes"><p>The ordering is from Cleveland and McGill's experiments of 1984, repeated many times since; the bar lengths here only show the order, not measured values. The practical rule: decide which comparison the reader must make, and give it position. Everything else gets a weaker channel or leaves the chart. A pie chart encodes its one variable as angle, which is why a sorted bar chart nearly always reads better.</p></aside>
+</section>
+
+<section class="slide" id="specification-to-code" data-lo="LO4" data-label="From specification to code">
+  <div class="kicker">Lab 3.1, steps 2 and 3</div>
+  <h2>The written specification and the code have the same four parts</h2>
+  <pre class="code s"><code class="language-python">alt.Chart(rates).mark_circle().encode(                       # data, mark
+    x=alt.X("per_thousand:Q",                                # encoding: a quantity
+            scale=alt.Scale(zero=True),                      # scale: from zero
+            title="Complaints per thousand visitors, 2023 to 2025"),
+    y=alt.Y("site:N", sort="-x", title=None),                # a name, sorted by x
+).properties(title="Complaints per thousand visitors by site")</code></pre>
+  <ul class="bullets tight">
+    <li><code>:Q</code> a quantity, <code>:N</code> a name, <code>:O</code> an order, <code>:T</code> a time. The type picks the default scale.</li>
+    <li>Sorting and titles are part of the specification, not decoration.</li>
+  </ul>
+  <aside class="notes"><p>Read the code aloud against the previous table. The unsorted version with column names as titles is "correct" and hard to use: the eye has to sort nine dots. Sorting by the value is the cheapest improvement in charting. The checks of the lab read the chart's specification, so two different-looking pieces of code that give the same specification both pass.</p></aside>
+</section>
+
+<section class="slide" id="layers" data-lo="LO4" data-label="Layers">
+  <div class="kicker">Lab 3.1, step 4</div>
+  <h2>Layers share the data and the scales, and add one mark each</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d3_1_full.svg" alt="Nine sites sorted by complaints per thousand visitors: a thin line from zero to a circle at each rate, the rate written beside it, circle size showing visitors. Terrace Farms 13.8 and Wadi Trail 11.4 with small circles at the top; the largest circle, Cable Car, is fifth at 5.9">
+      <figcaption>Rule, circle and text: three layers.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>The rate has position; the visitors have area.</li>
+      <li>The largest circle is fifth from the top.</li>
+      <li>One chart now says what lab 2.2 needed a paragraph for.</li>
+    </ul>
+  </div>
+  <pre class="code s"><code class="language-python">alt.layer(rule, dot, label)</code></pre>
+  <aside class="notes"><p>The precise channel carries the comparison that matters, the rate; the weak channel carries the context, the size of the site, where "large or small" is all the reader needs. The text layer gives exact values so that nobody has to read them off the axis. Ask what the chart would say if rate and visitors swapped channels: yesterday's misleading count chart.</p></aside>
+</section>
+
+<section class="slide" id="change-one-mark" data-lo="LO4" data-label="Changing the mark">
+  <div class="kicker">Lab 3.1, step 5</div>
+  <h2>Change one part and you can say what was gained and lost</h2>
+  <div class="cols cols-2">
+    <figure class="figure">
+      <img src="../assets/figs/d3_1_bars.svg" alt="The same nine rates as horizontal bars from zero, sorted from Terrace Farms to Juniper Park, with no indication of the number of visitors">
+      <figcaption>The same data, x and y, as bars.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>A bar's length already carries the rate, so size is taken: <b>the visitors drop off the chart</b>.</li>
+      <li>Bars are familiar and read fast.</li>
+      <li>A bar is measured from its base. A point is read by its place.</li>
+    </ul>
+  </div>
+  <div class="callout note mt"><b>The rule that follows.</b> Bars and areas need an axis from zero. Points and lines may use an axis that starts elsewhere, if the chart says so.</div>
+  <aside class="notes"><p>This is the working method for the rest of the day: describe a chart by its parts, change one, and name the consequence. The callout is the most useful single rule of the course and returns twice this afternoon, as fault 1 and as the reason the slope chart of lab 2.4 was fair.</p></aside>
+</section>
+
+<section class="slide" id="check-grammar" data-lo="LO4">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which channel for which variable?</h2>
+  <div class="quiz" data-type="single" data-lo="LO4">
+    <p class="lead">A chart must let a manager compare average waiting time across 12 clinics, and also show roughly how many patients each clinic sees. Which specification serves that?</p>
+    <div class="opts">
+      <div class="opt" data-why="Area is read far less precisely than position, so the comparison that matters gets the weak channel">Clinic on y, patients on x, waiting time as circle size</div>
+      <div class="opt" data-ok>Clinic on y sorted by wait, waiting time on x, patients as circle size</div>
+      <div class="opt" data-why="Colour intensity is the least precise channel, and twelve shades cannot be ranked by eye">Clinic on y, patients on x, waiting time as colour intensity</div>
+      <div class="opt" data-why="Twelve slices compare by angle, and the chart has nowhere to put the patients">A pie chart with one slice per clinic, sized by waiting time</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The comparison the reader must make gets position on a common scale; the context gets a weaker channel.</div>
+  </div>
+  <aside class="notes"><p>Answer: the second. The first is the same chart with the channels swapped and is a legitimate chart for a different question: which clinics are busiest. That is the point: the specification follows the question.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-1" data-auto="lab" data-lab="3.1">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Starts from U.site_rates(), nine rows. The tutor may hint at Altair syntax, one step at a time. Common failures: sorting the data frame, which does not sort the axis (use sort="-x"); and putting size on the whole layered chart, which also sizes the text. Step 5 asks which channel was lost: the answer is one word.</p></aside>
 </section>
 
-<!-- Session 2 -->
-
+<!-- ======================= SESSION 2 ======================= -->
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea" data-lo="LO4">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
+<section class="slide" id="crowded-chart" data-lo="LO4" data-label="The crowded chart">
+  <div class="kicker">Lab 3.2, step 1</div>
+  <h2>Five lines on one panel answer one question and hide four</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d3_2_one_panel.svg" alt="Monthly arrivals for five origin markets as five coloured lines on one panel: Other regions and Tilal region on top with summer peaks, Gulf below them, and Asia and Europe squeezed together near the bottom of the chart">
+      <figcaption>Monthly arrivals by origin market.</figcaption>
+    </figure>
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li>You can read which market is largest.</li>
+      <li>When does Europe peak? Does Asia have a season? The bottom tenth of the chart holds three lines.</li>
+      <li>The legend has to be decoded for every line.</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>The largest market averages about 33,700 arrivals a month and the smallest about 4,300: a factor of eight on one linear scale. Ask the two questions on the second bullet and let the room fail to answer them. The usual reflex is a log scale; it works, and a general audience misreads it. There is a simpler repair.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps" data-lo="LO4">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="shared-scales" data-lo="LO4" data-label="Shared scales">
+  <div class="kicker">Lab 3.2, step 2</div>
+  <h2>Small multiples: one panel per group, the same chart in each</h2>
+  <figure class="figure">
+    <img src="../assets/figs/d3_2_shared.svg" alt="Five small panels side by side, one per origin market, all on the same y scale up to 50,000: Tilal region and Other regions show clear summer peaks, Gulf a sharper peak, Asia and Europe appear almost flat near the bottom">
+    <figcaption>One y scale for all panels.</figcaption>
+  </figure>
+  <ul class="bullets tight">
+    <li>No legend: each panel is labelled. Once one panel is understood, all are.</li>
+    <li>A <b>shared scale</b> compares levels across panels: who is big.</li>
+    <li>Asia and Europe are still flat lines.</li>
+  </ul>
+  <pre class="code s"><code class="language-python">chart.encode(column=alt.Column("origin:N", sort=U.ORIGINS))</code></pre>
+  <aside class="notes"><p>The term is Tufte's. A facet is one more encoding: the origin goes to "which panel" in place of "which colour". Panels are ordered on purpose, here from the nearest market to the farthest, never alphabetically by accident. Yesterday's five histograms by origin were small multiples too.</p></aside>
+</section>
+
+<section class="slide" id="free-scales" data-lo="LO4" data-label="Free scales">
+  <div class="kicker">Lab 3.2, step 3</div>
+  <h2>A scale per panel shows each group's shape</h2>
+  <figure class="figure">
+    <img src="../assets/figs/d3_2_final.svg" alt="The same five panels, each with its own y scale from zero: Tilal region nearly level, Other regions and Gulf with summer peaks, Asia rising steadily with little season, Europe peaking in December and lowest in summer. Title: Europe comes in winter, everyone else in summer">
+    <figcaption>Each panel has its own scale from zero.</figcaption>
+  </figure>
+  <ul class="bullets tight">
+    <li>Europe peaks in <b>December</b>, when every other market is at its lowest.</li>
+    <li>Asia has almost no season and the steepest growth.</li>
+    <li>Heights can no longer be compared across panels, and the chart says so.</li>
+  </ul>
+  <aside class="notes"><p>Peak months from the lab: Europe 12, Gulf 7, Tilal and other regions 7, Asia 8. Peak to trough: Gulf 4.1 times, Europe 2.4, Asia 1.4. The winter market was on the first chart too, three pixels high. Each free scale still starts at zero, so heights inside a panel stay in proportion. The subtitle on the chart is the price of free scales: without it a reader assumes Europe is as large as the Gulf.</p></aside>
+</section>
+
+<section class="slide" id="which-scale-for-which-question" data-lo="LO4" data-label="Which scale for which question">
+  <div class="kicker">Lab 3.2, steps 4 and 5</div>
+  <h2>The question chooses the scale</h2>
+  <table class="t">
+    <tr><th>The reader should compare</th><th>Scales</th><th>Because</th></tr>
+    <tr><td>levels: which market is largest</td><td>shared</td><td>heights mean the same in every panel</td></tr>
+    <tr><td>shapes: who has a season, and when</td><td>free, from zero</td><td>each shape fills its panel</td></tr>
+    <tr><td>growth: who grew fastest</td><td>shared, on an index</td><td>every line starts at 100</td></tr>
+  </table>
+  <div class="callout warn mt"><b>What goes wrong.</b> Free scales with no note. The reader compares heights across panels anyway and concludes that all markets are the same size.</div>
+  <aside class="notes"><p>The third row is the stretch of the lab and the chart of lab 3.4: divide each series by its own 2023 mean and all markets share one scale honestly. An index answers "how much has it changed"; it throws away "how big is it", so say the base on the axis: 2023 = 100. Lab 3.2, step 5 asks for a choice per question and checks that the chart states its scale.</p></aside>
+</section>
+
+<section class="slide" id="limits-of-small-multiples" data-lo="LO4" data-label="Limits of small multiples">
+  <div class="kicker">When panels stop helping</div>
+  <h2>Small multiples trade exact comparison for clarity</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>They suit</h4><p class="small mb0">Three to about twenty groups; one simple chart repeated; a reader who compares patterns.</p></div>
+    <div class="card c-coral"><h4>They strain</h4><p class="small mb0">Two lines whose gap is the message: put those on one panel, where the gap has position.</p></div>
+    <div class="card c-amber"><h4>They need</h4><p class="small mb0">A deliberate order of panels, identical axes in type, and few tick labels on each.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <div class="callout tip mt"><b>A useful middle way.</b> Draw every group in grey in every panel and highlight one. The reader gets the shape and the place among the others.</div>
+  <aside class="notes"><p>Comparing two panels means carrying a shape in memory from one to the other, which is less precise than two lines on a common scale. So the choice follows the comparison once more. For the capstone: if your chart has more than four colours, try facets before trying a better palette.</p></aside>
+</section>
+
+<section class="slide" id="check-facets" data-lo="LO4">
+  <div class="kicker">Checkpoint</div>
+  <h2>Shared or free?</h2>
+  <div class="quiz" data-type="single" data-lo="LO4">
+    <p class="lead">Weekly sales of 8 product lines are drawn as small multiples. The largest line sells fifty times the smallest. The manager asks: "Which lines have a December peak?" Which design answers that?</p>
+    <div class="opts">
+      <div class="opt" data-why="On a shared scale the small lines are flat, so their December peak cannot be seen">A shared y scale, so that all eight panels can be compared</div>
+      <div class="opt" data-why="One panel with eight colours puts the small lines in the bottom pixels and needs a legend">A single panel with eight lines, one colour for each line</div>
+      <div class="opt" data-ok>A y scale per panel from zero, with a note that scales differ</div>
+      <div class="opt" data-why="A scale that does not start at zero exaggerates each peak by a different amount in each panel">A y scale per panel, fitted tightly to each line's range</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The question is about shape, so each panel gets its own scale; from zero, so that a peak keeps its true proportion; with a note, so that heights are not compared across panels.</div>
+  </div>
+  <aside class="notes"><p>Answer: the third. The fourth is the subtle one: tightly fitted axes turn a ripple of 3% into a mountain in one panel and leave a real peak of 40% looking the same. If the manager's question were "which line sells most", the first option would be right.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-2" data-auto="lab" data-lab="3.2">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Starts from U.arrivals(). The tutor may hint at syntax. Common failure: resolve_scale applied before the facet, which has no effect; and forgetting the subtitle, which the last check reads. The profile table of step 4 gives the numbers for the reading: peak month and peak-to-trough ratio per market.</p></aside>
 </section>
 
-<!-- Session 3 -->
-
+<!-- ======================= SESSION 3 ======================= -->
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea" data-lo="LO4">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
-  </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+<section class="slide" id="six-faults" data-lo="LO4" data-label="Six faults">
+  <div class="kicker">The board's earlier report</div>
+  <h2>Six charts, every number correct, every impression wrong</h2>
+  <table class="t small">
+    <tr><th>Fault</th><th>What it does</th><th>Repair</th></tr>
+    <tr><td><b>Cut baseline</b></td><td>a bar's axis does not start at zero</td><td>start at zero, or change the mark</td></tr>
+    <tr><td><b>Picked window</b></td><td>a few periods chosen out of many</td><td>show the whole series</td></tr>
+    <tr><td><b>Count for rate</b></td><td>counts compared across unequal groups</td><td>divide by the denominator</td></tr>
+    <tr><td><b>Two axes</b></td><td>two scales stretched until shapes agree</td><td>one variable against the other</td></tr>
+    <tr><td><b>Running total</b></td><td>a cumulative line, which can only rise</td><td>plot the amount per period</td></tr>
+    <tr><td><b>Uneven steps</b></td><td>unequal periods drawn as equal steps</td><td>equal periods on a time axis</td></tr>
+  </table>
+  <aside class="notes"><p>None of these charts contains a false number, and that is why they pass review. Most were drawn in good faith by Nayef Al-Jumaah, the communications officer, with the defaults of a spreadsheet and a headline in mind. Tell the room: you will find these in your own past work; everybody does. The next six slides take one each, before and after.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps" data-lo="LO4">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="fault-cut-baseline" data-lo="LO4" data-label="1 · Cut baseline">
+  <div class="kicker">Fault 1 · Cut baseline</div>
+  <h2>"Satisfaction collapsed in 2025"</h2>
+  <div class="cols cols-2">
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_orig_1.svg" alt="Bar chart of mean satisfaction for 2023, 2024 and 2025 with the y axis running from 4.0 to 4.2: the 2025 bar is less than half the height of the 2024 bar">
+      <figcaption>As published: the axis runs from 4.0 to 4.2.</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_fix_1.svg" alt="The same three means as bars on an axis from 0 to 5: three bars of almost equal height, titled Mean satisfaction 4.14, 4.15, 4.07">
+      <figcaption>Repaired: bars from zero.</figcaption>
+    </figure>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <ul class="bullets tight">
+    <li>A bar says "this much". Cut the base and the 2025 bar is half the 2024 bar for a fall of 2%.</li>
+    <li>If 0.08 matters, use points on a stated axis, with intervals.</li>
+  </ul>
+  <aside class="notes"><p>The means are 4.14, 4.15 and 4.07. The repaired chart looks dull because the difference is small; that is the honest picture of a small difference. Whether it is also a real difference is tomorrow's subject, and yesterday showed it is a change of mix. A reader of the original would have called a meeting.</p></aside>
+</section>
+
+<section class="slide" id="fault-picked-window" data-lo="LO4" data-label="2 · Picked window">
+  <div class="kicker">Fault 2 · Picked window</div>
+  <h2>"Arrivals up 37% in a year"</h2>
+  <div class="cols cols-2">
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_orig_2.svg" alt="Two bars: arrivals in October 2023 and in October 2024, the second 37% taller">
+      <figcaption>As published: two months of thirty-six.</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_fix_2.svg" alt="Line of all 36 months of arrivals from zero, with summer peaks rising slowly and October 2024 standing out as a spike">
+      <figcaption>Repaired: every month.</figcaption>
+    </figure>
+  </div>
+  <ul class="bullets tight">
+    <li>October 2024 was the first Honey Festival. The typical yearly growth is about 7%.</li>
+    <li>Ask of any two-point comparison: why these two points?</li>
+  </ul>
+  <aside class="notes"><p>The number is right: October 2024 against October 2023 is plus 37%. The choice of months is the fault. With 36 months there are 630 pairs to choose from, and some pair will support any headline. The repair is not a better pair; it is the series, with the event named in the title.</p></aside>
+</section>
+
+<section class="slide" id="fault-count-for-rate" data-lo="LO4" data-label="3 · Count for rate">
+  <div class="kicker">Fault 3 · Count for rate</div>
+  <h2>"The Cable Car is our problem site"</h2>
+  <div class="cols cols-2">
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_orig_3.svg" alt="Bar chart of complaints by site: Cable Car far ahead with 599, then Souq Walk 394 and Tilal Fort 296, down to Honey Museum 139">
+      <figcaption>As published: complaints.</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_fix_3.svg" alt="Bar chart of complaints per thousand visitors by site: Terrace Farms 13.8 and Wadi Trail 11.4 lead, Cable Car is fifth at 5.9">
+      <figcaption>Repaired: per thousand visitors.</figcaption>
+    </figure>
+  </div>
+  <ul class="bullets tight">
+    <li>The picture of yesterday's lab 2.2: the busiest site leads any count.</li>
+    <li>The repair changes the <b>measure</b>, not the drawing.</li>
+  </ul>
+  <aside class="notes"><p>Move fast here; the room did this yesterday in numbers. The point for today: the chart on the left is well drawn. Sorted, from zero, clearly labelled. A fault can sit in the data decision, the first of the four parts, and no styling will show it.</p></aside>
+</section>
+
+<section class="slide" id="fault-two-axes" data-lo="LO4" data-label="4 · Two axes">
+  <div class="kicker">Fault 4 · Two axes</div>
+  <h2>"Hotels follow the sites exactly"</h2>
+  <div class="cols cols-2">
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_orig_4.svg" alt="Two lines over three years on one chart, tickets per week on the left axis and hotel occupancy on the right axis, each axis fitted so that the two lines lie almost on top of each other">
+      <figcaption>As published: two y axes, each fitted to its line.</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_fix_4.svg" alt="Scatter plot of 156 weeks, tickets sold per week against share of hotel rooms sold: a loose rising cloud from about 40% at 1,800 tickets to about 68% at 3,600">
+      <figcaption>Repaired: one variable against the other.</figcaption>
+    </figure>
+  </div>
+  <ul class="bullets tight">
+    <li>With two free axes, any two series can be made to overlap. Where they cross means nothing.</li>
+    <li>The scatter shows the relation at its true strength: 0.70, loosely.</li>
+  </ul>
+  <aside class="notes"><p>The dual-axis chart is the most requested misleading chart in business reporting. The designer picks both ranges, so the designer picks how well the lines agree. If the audience insists on time on the x axis, use two panels stacked on a shared time axis, or index both series to 100. The scatter loses time and gains honesty about strength.</p></aside>
+</section>
+
+<section class="slide" id="fault-running-total" data-lo="LO4" data-label="5 · Running total">
+  <div class="kicker">Fault 5 · Running total</div>
+  <h2>"Local visits keep climbing"</h2>
+  <div class="cols cols-2">
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_orig_5.svg" alt="A line of cumulative arrivals from the Tilal region since January 2023, rising steadily to about 750,000">
+      <figcaption>As published: arrivals since January 2023.</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_fix_5.svg" alt="Line of monthly arrivals from the Tilal region from zero: summer peaks that get lower each year, titled Local arrivals are drifting down">
+      <figcaption>Repaired: arrivals per month.</figcaption>
+    </figure>
+  </div>
+  <ul class="bullets tight">
+    <li>A running total rises whenever anything arrives at all. It cannot show a fall.</li>
+    <li>Local arrivals fell 6% over two years: 258,000 in 2023, 242,000 in 2025.</li>
+  </ul>
+  <aside class="notes"><p>Cumulative charts belong to progress against a target, where the total is the message. For "is it growing", the eye would have to read the slope's change, a second derivative, and nobody can. Here the chart hid the only market that is shrinking: 258,197, then 252,114, then 241,911.</p></aside>
+</section>
+
+<section class="slide" id="fault-uneven-steps" data-lo="LO4" data-label="6 · Uneven steps">
+  <div class="kicker">Fault 6 · Uneven steps</div>
+  <h2>"Arrivals fell off a cliff in 2025"</h2>
+  <div class="cols cols-2">
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_orig_6.svg" alt="Line with five points labelled 2023, 2024, January to June 2025, July 2025 and August 2025: two high points for the full years, then a steep fall to the half year and to the single months">
+      <figcaption>As published: years, a half year and two months.</figcaption>
+    </figure>
+    <figure class="figure">
+      <img src="../assets/figs/d3_3_fix_6.svg" alt="Bar chart of arrivals in the three full years, each bar higher than the last, titled Arrivals rose in both years">
+      <figcaption>Repaired: three periods of equal length.</figcaption>
+    </figure>
+  </div>
+  <ul class="bullets tight">
+    <li>A year, half a year and a month were drawn as equal steps.</li>
+    <li>Yearly arrivals: 842,000, 914,000, 998,000.</li>
+  </ul>
+  <aside class="notes"><p>This one is usually an accident: a table that grew by appending the latest months, charted with the periods as labels. A time axis of type temporal would have exposed it, because the points would not be evenly spaced. The same fault appears on axes with gaps: 2010, 2015, 2020, 2021, 2022.</p></aside>
+</section>
+
+<section class="slide" id="before-you-publish" data-lo="LO4" data-label="Before a chart goes out">
+  <div class="kicker">Lab 3.3, step 4</div>
+  <h2>Five questions before a chart goes out</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Does a bar or an area start at zero?</li>
+      <li>Is the whole period shown, in equal steps?</li>
+      <li>Is it the right measure: rate, per period, per unit?</li>
+      <li>Is there one y axis?</li>
+      <li>Does the title say what the chart shows, and no more?</li>
+    </ul>
+    <div class="card c-coral"><h4>The test of a repair</h4><p class="small mb0">Write what a reader concludes from the chart before and after. If the two sentences agree, the fault was cosmetic. In all six cases here they disagree.</p></div>
+  </div>
+  <aside class="notes"><p>The lab asks for exactly this pair of sentences. A repaired chart is often less exciting, and the analyst will be asked to "make it pop". The answer is the pair of sentences: the published chart made readers believe something the data does not say. The transparency principle of the national AI ethics principles applies to a chart as much as to a model.</p></aside>
+</section>
+
+<section class="slide" id="check-misleading" data-lo="LO4">
+  <div class="kicker">Checkpoint</div>
+  <h2>Name the fault</h2>
+  <div class="quiz" data-type="single" data-lo="LO4">
+    <p class="lead">A slide shows app downloads "since launch" as a line that rises every month, under the title "Growth is accelerating". Monthly downloads have in fact been falling for half a year. Which fault is this, and which repair?</p>
+    <div class="opts">
+      <div class="opt" data-why="The axis may well start at zero; a cumulative line misleads whatever its baseline is">Cut baseline: restart the y axis of the line at zero</div>
+      <div class="opt" data-why="The whole period is shown; the trouble is the measure, which cannot go down">Picked window: add the months before the launch</div>
+      <div class="opt" data-why="There is one axis and one series; nothing is being stretched to match another line">Two axes: move downloads to a second panel</div>
+      <div class="opt" data-ok>Running total: plot the downloads of each month</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A cumulative line can only rise. "Is it growing" is a question about the amount per period, so plot that.</div>
+  </div>
+  <aside class="notes"><p>Answer: the fourth. Ask the room what the cumulative chart would be right for: progress towards a target of total downloads, with the target drawn on it.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-3" data-auto="lab" data-lab="3.3">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>The longest lab of the day in thinking, short in code: U.misleading(k) hands over each chart as published with the data its repair needs. Naming the six faults is done without the assistant; the tutor may hint at syntax for the repairs. Any honest repair passes: the checks read the specification, for example "bars from zero, or no bars". Pairs work well here.</p></aside>
 </section>
 
-<!-- Session 4 -->
-
+<!-- ======================= SESSION 4 ======================= -->
 <section class="slide section" id="s4" data-auto="section" data-session="4"></section>
 
-<section class="slide" id="s4-idea" data-lo="LO4">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+<section class="slide" id="palette-by-variable" data-lo="LO4" data-label="Palette by type of variable">
+  <div class="kicker">Colour is an encoding</div>
+  <h2>The type of the variable chooses the kind of palette</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>Categorical</h4><p class="small mb0">Names with no order: origin market, site. Distinct hues of similar weight. Five to seven at most.</p></div>
+    <div class="card c-cyan"><h4>Sequential</h4><p class="small mb0">Low to high: a count, a rate. One hue from light to dark, as in the heatmap of lab 2.1.</p></div>
+    <div class="card c-coral"><h4>Diverging</h4><p class="small mb0">Two directions from a midpoint: above and below a baseline. Two hues meeting in a neutral colour.</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <div class="callout warn mt"><b>What goes wrong.</b> A rainbow for a quantity: the eye sees bands where the data has none. Or a light-to-dark ramp for names: the reader sees an order that does not exist.</div>
+  <aside class="notes"><p>Colour was the weakest channel for precise reading this morning, so it gets the job it does well: telling a few groups apart, or showing low against high. More than seven categories: group the small ones, or use facets. Emphasis is a fourth use: everything grey, one thing coloured, as in lab 4.3 tomorrow.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps" data-lo="LO4">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="colour-vision" data-lo="LO4" data-label="Colour-vision deficiency">
+  <div class="kicker">Lab 3.4, step 1</div>
+  <h2>Some of your readers cannot tell this red from this green</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d3_4_draft.svg" alt="The draft chart: five lines of yearly arrivals indexed to 100 in 2023, in red, green, orange, brown and blue, with axis titles year and index and the title Arrivals">
+      <figcaption>The draft: default colours, one language.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Simulated for red-green deficiency, the draft's closest two colours are <b>7 units</b> apart: hard to tell.</li>
+      <li>The Okabe-Ito palette keeps every pair above <b>18</b>.</li>
+      <li>Test the palette; do not trust the look on your own screen.</li>
+    </ul>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>Red-green deficiency affects roughly 8% of men and 0.5% of women of Northern European descent, with somewhat lower figures reported elsewhere; in a board of twelve, expect one reader. The lab simulates deuteranopia and protanopia with published matrices (Machado and colleagues, 2009) and measures the distance between colours in a perceptual space: below about 10 two colours are easily confused. Okabe and Ito's palette is the common safe default.</p></aside>
+</section>
+
+<section class="slide" id="second-channel" data-lo="LO4" data-label="A second channel">
+  <div class="kicker">Lab 3.4, step 2</div>
+  <h2>Colour is never the only carrier</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d3_4_safe.svg" alt="The same five index lines in the Okabe-Ito colours, each also with its own dash pattern, with a single legend showing colour and dash together">
+      <figcaption>Safe palette, and a dash pattern per market.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>A second channel repeats the first: dash for lines, shape for points.</li>
+      <li>Better still, <b>label the lines directly</b> at their ends and drop the legend.</li>
+      <li>The test: print the chart in grey. Can each line still be named?</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Redundant encoding serves the colour-blind reader, the reader of a photocopy and the reader in a bright meeting room. Direct labels are the stretch of the lab and were used on the slope chart of lab 2.4. In Altair the colour and the dash legends merge into one when both scales are given the same domain; if two legends appear, that is the cause.</p></aside>
+</section>
+
+<section class="slide" id="labels-carry-the-finding" data-lo="LO4" data-label="Labels carry the finding">
+  <div class="kicker">The words on a chart</div>
+  <h2>The title states the finding; the rest says how to read it</h2>
+  <table class="t small">
+    <tr><th>Text</th><th>Draft</th><th>Finished</th></tr>
+    <tr><td>Title</td><td>Arrivals</td><td>Arrivals grew fastest from the smallest markets</td></tr>
+    <tr><td>Subtitle</td><td>none</td><td>Yearly arrivals by origin market, 2023 = 100</td></tr>
+    <tr><td>y axis</td><td>index</td><td>Arrivals, 2023 = 100</td></tr>
+    <tr><td>Legend</td><td>origin</td><td>Origin market</td></tr>
+  </table>
+  <ul class="bullets tight mt">
+    <li>A title that names the finding can be checked against the chart. "Arrivals" cannot be wrong, or useful.</li>
+    <li>Units, the base of an index, the period and the source belong on the chart, since charts get copied without their page.</li>
+  </ul>
+  <aside class="notes"><p>The finding: with 2023 as 100, arrivals in 2025 stand at 167 for Asia, 157 for Europe, 142 for the Gulf, 117 for other regions and 94 for the Tilal region. A title sentence is a claim, so it must be one the chart supports; "smallest markets grew fastest" is, "international marketing works" is not. Column names such as per_thousand never reach a reader.</p></aside>
+</section>
+
+<section class="slide" id="one-function-two-languages" data-lo="LO4" data-label="One function, two languages">
+  <div class="kicker">Lab 3.4, step 3</div>
+  <h2>The words live in a file; the chart is drawn by one function</h2>
+  <pre class="code s"><code class="language-python">L = U.js("labels.json")                       # every text, in Arabic and English
+
+def chart(data, lang):
+    T = L["text"][lang]                       # title, subtitle, x, y, legend
+    d = data.assign(origin_label=data["origin"].map(L["origins"]) if lang == "ar" else data["origin"])
+    return alt.Chart(d).mark_line().encode(
+        x=alt.X("year:O", title=T["x"]), y=alt.Y("index:Q", title=T["y"]),
+        color=alt.Color("origin_label:N", title=T["legend"]),
+    ).properties(title=alt.Title(T["title"], subtitle=T["subtitle"]))</code></pre>
+  <ul class="bullets tight">
+    <li>The data keeps its own column; the labels are mapped at drawing time.</li>
+    <li>Two charts copied and edited by hand drift apart at the first correction.</li>
+  </ul>
+  <aside class="notes"><p>Shortened from the lab's solution. The principle is the one behind the whole of Day 4's last session: one path from data to output, with what varies passed as a parameter. A translator can correct labels.json without opening the code. The lab checks that every text on each chart comes from the file.</p></aside>
+</section>
+
+<section class="slide" id="arabic-details" data-lo="LO4" data-label="Arabic details">
+  <div class="kicker">Lab 3.4, step 4</div>
+  <h2>In Arabic the words move; the data does not</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d3_4_chart_ar.svg" alt="The Arabic version of the index chart: title and subtitle in Arabic aligned to the right, y axis on the right side, legend on the left with Arabic market names, years 2023 to 2025 running left to right with Western digits">
+      <figcaption>The Arabic version, from the same function.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Title anchored at the right; y axis on the right.</li>
+      <li>House style of this course: Western digits, and time from left to right, in both versions.</li>
+      <li>Let the text engine shape and order Arabic. <b>Never reverse or reshape strings by hand.</b></li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Two choices here are the course's house style and not a universal rule: digits and the direction of time. Organisations differ; what matters is that the choice is written down and applied by the function, not chart by chart. Check the exported image, not only the notebook: some image exporters do not shape Arabic, and letters appear disconnected. The lab exports through the same renderer as the notebook.</p></aside>
+</section>
+
+<section class="slide" id="check-colour" data-lo="LO4">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which change comes first?</h2>
+  <div class="quiz" data-type="single" data-lo="LO4">
+    <p class="lead">A line chart of four regions uses red, green, blue and orange lines and a legend. It will be printed in a bilingual annual report. Which single change helps the most readers?</p>
+    <div class="opts">
+      <div class="opt" data-ok>Label each line at its end, and give each its own dash pattern</div>
+      <div class="opt" data-why="Thicker lines are easier to see and exactly as hard to tell apart by colour">Make the four lines thicker so that the colours show better</div>
+      <div class="opt" data-why="A light-to-dark ramp suggests an order among regions that the data does not have">Use four shades of one blue, from light to dark</div>
+      <div class="opt" data-why="A longer legend is still decoded by colour, which fails in grey print and for red-green deficiency">Add the region names to the legend in both languages</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> Direct labels and a second channel work in grey print and for readers with a colour-vision deficiency. A legend that depends on colour alone does not.</div>
+  </div>
+  <aside class="notes"><p>Answer: the first. A safe palette would be the natural second change. The third option is the most common "tasteful" redesign and it is wrong for categories.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-3-4" data-auto="lab" data-lab="3.4">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Starts from U.arrivals() and data/labels.json. Nothing is installed for Arabic: the browser shapes the text. On Windows, a notebook run outside Colab should be started with PYTHONUTF8=1, as the labs README says. Common failure: translating the origin column in the data itself, which breaks the join to every other table; the lab checks that the data keeps its own column.</p></aside>
 </section>
 
-<section class="slide" id="wrap-up">
-  <div class="kicker">Day 3 · wrap-up</div>
-  <h2>Three things to keep</h2>
-  <div class="cols cols-3">
-    <div class="card c-teal"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-coral"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-purple"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
+<section class="slide" id="wrap-up" data-label="Wrap-up">
+  <div class="kicker">Day 3</div>
+  <h2>A chart is decisions you can defend</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>Four parts</h4><p class="small mb0">Data, marks, encodings, scales. Position goes to the comparison that matters.</p></div>
+    <div class="card c-cyan"><h4>Panels</h4><p class="small mb0">Shared scales for levels, free scales for shapes, and the choice written on the chart.</p></div>
+    <div class="card c-coral"><h4>Six faults</h4><p class="small mb0">Baseline, window, measure, axes, running totals, steps. Test a repair by what a reader concludes.</p></div>
+    <div class="card c-purple"><h4>The finish</h4><p class="small mb0">A tested palette, a second channel, a title that states the finding, one function for two languages.</p></div>
   </div>
+  <aside class="notes"><p>Ask: which of the six faults have you published? Then the bridge to tomorrow: every chart today showed a number as if it were exact. Terrace Farms tops a ranking on 59 survey responses. Tomorrow asks how sure we are, and how to draw that.</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="Next">
-  <div class="kicker">Next</div>
-  <h2>Day 4: Check and report</h2>
-  <p class="lead">REPLACE: what participants prepare before then; unfinished labs can be finished at home</p>
-  <aside class="notes">REPLACE: accounts, installs or reading participants need before the next unit</aside>
+  <div class="kicker">Day 4</div>
+  <h1>Check and report</h1>
+  <p class="lead">Could it be chance, how to draw what is not known, why the best of many comparisons looks real, and a report that anyone can run again.</p>
+  <ul class="bullets">
+    <li>Tomorrow uses the bootstrap and the permutation test of DS-201. Reread your notes on both.</li>
+    <li>In lab 4.4 you choose your capstone dataset.</li>
+  </ul>
+  <aside class="notes"><p>Day 4 does not re-teach resampling; it applies it to patterns found by exploring. Anyone unsure of the two procedures should look at their DS-201 material tonight.</p></aside>
 </section>

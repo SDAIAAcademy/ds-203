@@ -1,0 +1,3849 @@
+{
+ "choices": {
+  "In which month does each market peak?": "free",
+  "Which market brings the most visitors?": "shared",
+  "Which market has the strongest season?": "free"
+ },
+ "final": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-1f32a237101f7a2254d24b31803154a3"
+   },
+   "datasets": {
+    "data-1f32a237101f7a2254d24b31803154a3": [
+     {
+      "arrivals": 19538,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19543,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21210,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22607,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21119,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25022,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 26322,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25086,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 20802,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 20061,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18710,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18177,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17848,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19066,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19179,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21438,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21637,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22229,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25312,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 23990,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21202,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25309,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17223,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17681,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17734,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21500,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19378,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18655,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19474,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22958,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22940,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22688,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19213,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22800,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17447,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17124,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 23036,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 24187,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28646,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28648,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29317,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 36607,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 47588,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 45267,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29986,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 27957,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25156,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 26649,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 23756,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25000,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28687,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 30570,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 31433,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 40079,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 48475,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 46809,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 31116,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 41816,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 26277,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 27294,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25798,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 33754,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 30184,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 33248,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 32508,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 43565,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 50282,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 50038,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 35222,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 45093,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28346,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29375,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 4573,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5120,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6742,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7973,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8440,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 15950,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18990,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18433,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8869,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7722,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6470,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6625,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5350,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5938,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7739,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9583,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10373,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18215,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 22984,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 22835,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 11304,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10673,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7468,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7944,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6578,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8107,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9722,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10967,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 12650,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 20693,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 26240,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 25222,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 12945,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 13217,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9077,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9109,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 3706,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 3878,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4351,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4602,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4388,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4456,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5115,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5141,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4881,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4986,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4857,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4517,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4810,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5252,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5295,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5701,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5659,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5876,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6506,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6855,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6007,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6141,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6045,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6045,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6502,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6499,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7200,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7628,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7343,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7416,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8550,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8550,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8062,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8055,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7908,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7725,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4159,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4333,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4068,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3164,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2312,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 1916,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2077,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 1972,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2867,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4030,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4505,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4846,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5365,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5474,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5094,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4007,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2895,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2493,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2516,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2583,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3502,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5049,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5322,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5899,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6690,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 7275,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6190,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4969,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3589,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3171,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3063,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3165,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4360,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6132,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6870,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 7533,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Europe"
+     }
+    ]
+   },
+   "encoding": {
+    "column": {
+     "field": "origin",
+     "sort": [
+      "Tilal region",
+      "Other regions",
+      "Gulf",
+      "Asia",
+      "Europe"
+     ],
+     "title": null,
+     "type": "nominal"
+    },
+    "x": {
+     "axis": {
+      "format": "%y",
+      "tickCount": 3
+     },
+     "field": "month",
+     "title": null,
+     "type": "temporal"
+    },
+    "y": {
+     "field": "arrivals",
+     "scale": {
+      "zero": true
+     },
+     "title": "Arrivals per month",
+     "type": "quantitative"
+    }
+   },
+   "height": 220,
+   "mark": {
+    "type": "line"
+   },
+   "resolve": {
+    "scale": {
+     "y": "independent"
+    }
+   },
+   "title": {
+    "subtitle": "Monthly arrivals by origin market. Each panel has its own scale from zero: compare shapes, not heights",
+    "text": "Europe comes in winter, everyone else in summer"
+   },
+   "width": 120
+  }
+ },
+ "free": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-1f32a237101f7a2254d24b31803154a3"
+   },
+   "datasets": {
+    "data-1f32a237101f7a2254d24b31803154a3": [
+     {
+      "arrivals": 19538,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19543,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21210,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22607,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21119,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25022,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 26322,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25086,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 20802,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 20061,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18710,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18177,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17848,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19066,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19179,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21438,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21637,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22229,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25312,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 23990,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21202,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25309,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17223,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17681,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17734,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21500,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19378,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18655,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19474,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22958,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22940,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22688,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19213,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22800,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17447,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17124,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 23036,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 24187,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28646,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28648,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29317,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 36607,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 47588,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 45267,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29986,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 27957,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25156,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 26649,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 23756,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25000,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28687,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 30570,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 31433,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 40079,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 48475,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 46809,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 31116,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 41816,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 26277,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 27294,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25798,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 33754,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 30184,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 33248,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 32508,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 43565,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 50282,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 50038,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 35222,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 45093,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28346,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29375,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 4573,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5120,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6742,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7973,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8440,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 15950,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18990,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18433,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8869,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7722,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6470,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6625,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5350,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5938,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7739,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9583,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10373,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18215,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 22984,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 22835,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 11304,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10673,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7468,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7944,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6578,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8107,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9722,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10967,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 12650,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 20693,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 26240,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 25222,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 12945,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 13217,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9077,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9109,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 3706,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 3878,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4351,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4602,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4388,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4456,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5115,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5141,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4881,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4986,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4857,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4517,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4810,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5252,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5295,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5701,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5659,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5876,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6506,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6855,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6007,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6141,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6045,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6045,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6502,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6499,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7200,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7628,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7343,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7416,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8550,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8550,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8062,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8055,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7908,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7725,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4159,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4333,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4068,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3164,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2312,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 1916,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2077,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 1972,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2867,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4030,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4505,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4846,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5365,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5474,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5094,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4007,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2895,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2493,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2516,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2583,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3502,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5049,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5322,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5899,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6690,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 7275,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6190,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4969,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3589,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3171,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3063,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3165,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4360,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6132,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6870,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 7533,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Europe"
+     }
+    ]
+   },
+   "encoding": {
+    "column": {
+     "field": "origin",
+     "sort": [
+      "Tilal region",
+      "Other regions",
+      "Gulf",
+      "Asia",
+      "Europe"
+     ],
+     "title": null,
+     "type": "nominal"
+    },
+    "x": {
+     "axis": {
+      "format": "%y",
+      "tickCount": 3
+     },
+     "field": "month",
+     "title": null,
+     "type": "temporal"
+    },
+    "y": {
+     "field": "arrivals",
+     "scale": {
+      "zero": true
+     },
+     "title": "Arrivals per month",
+     "type": "quantitative"
+    }
+   },
+   "height": 220,
+   "mark": {
+    "type": "line"
+   },
+   "resolve": {
+    "scale": {
+     "y": "independent"
+    }
+   },
+   "title": "Monthly arrivals by origin market, each panel on its own scale",
+   "width": 120
+  }
+ },
+ "one": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-1f32a237101f7a2254d24b31803154a3"
+   },
+   "datasets": {
+    "data-1f32a237101f7a2254d24b31803154a3": [
+     {
+      "arrivals": 19538,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19543,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21210,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22607,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21119,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25022,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 26322,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25086,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 20802,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 20061,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18710,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18177,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17848,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19066,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19179,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21438,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21637,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22229,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25312,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 23990,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21202,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25309,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17223,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17681,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17734,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21500,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19378,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18655,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19474,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22958,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22940,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22688,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19213,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22800,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17447,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17124,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 23036,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 24187,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28646,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28648,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29317,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 36607,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 47588,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 45267,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29986,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 27957,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25156,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 26649,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 23756,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25000,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28687,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 30570,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 31433,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 40079,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 48475,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 46809,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 31116,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 41816,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 26277,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 27294,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25798,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 33754,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 30184,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 33248,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 32508,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 43565,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 50282,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 50038,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 35222,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 45093,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28346,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29375,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 4573,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5120,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6742,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7973,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8440,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 15950,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18990,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18433,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8869,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7722,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6470,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6625,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5350,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5938,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7739,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9583,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10373,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18215,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 22984,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 22835,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 11304,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10673,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7468,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7944,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6578,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8107,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9722,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10967,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 12650,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 20693,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 26240,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 25222,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 12945,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 13217,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9077,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9109,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 3706,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 3878,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4351,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4602,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4388,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4456,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5115,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5141,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4881,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4986,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4857,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4517,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4810,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5252,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5295,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5701,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5659,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5876,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6506,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6855,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6007,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6141,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6045,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6045,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6502,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6499,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7200,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7628,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7343,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7416,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8550,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8550,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8062,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8055,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7908,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7725,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4159,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4333,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4068,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3164,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2312,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 1916,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2077,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 1972,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2867,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4030,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4505,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4846,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5365,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5474,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5094,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4007,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2895,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2493,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2516,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2583,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3502,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5049,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5322,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5899,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6690,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 7275,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6190,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4969,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3589,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3171,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3063,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3165,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4360,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6132,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6870,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 7533,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Europe"
+     }
+    ]
+   },
+   "encoding": {
+    "color": {
+     "field": "origin",
+     "sort": [
+      "Tilal region",
+      "Other regions",
+      "Gulf",
+      "Asia",
+      "Europe"
+     ],
+     "title": "Origin market",
+     "type": "nominal"
+    },
+    "x": {
+     "field": "month",
+     "title": null,
+     "type": "temporal"
+    },
+    "y": {
+     "field": "arrivals",
+     "title": "Arrivals per month",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "type": "line"
+   },
+   "title": "Monthly arrivals by origin market",
+   "width": 560
+  }
+ },
+ "profile": {
+  "__frame__": {
+   "columns": [
+    "mean",
+    "peak_month",
+    "peak_to_trough"
+   ],
+   "data": [
+    [
+     20895.0555555556,
+     7,
+     1.4075346344
+    ],
+    [
+     33660.25,
+     7,
+     2.0160490426
+    ],
+    [
+     11690.0,
+     7,
+     4.1339312769
+    ],
+    [
+     6014.1111111111,
+     8,
+     1.3680916234
+    ],
+    [
+     4262.6388888889,
+     12,
+     2.4113456464
+    ]
+   ],
+   "index": [
+    "Tilal region",
+    "Other regions",
+    "Gulf",
+    "Asia",
+    "Europe"
+   ]
+  }
+ },
+ "reading": "Four of the five markets peak in July or August and Europe peaks in December, and the season is strongest for the Gulf, whose best month has about four times the arrivals of its weakest. Each panel has its own scale, so the chart does not show that the markets are of similar size: visitors from other regions outnumber visitors from Europe by about eight to one.",
+ "shared": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-1f32a237101f7a2254d24b31803154a3"
+   },
+   "datasets": {
+    "data-1f32a237101f7a2254d24b31803154a3": [
+     {
+      "arrivals": 19538,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19543,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21210,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22607,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21119,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25022,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 26322,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25086,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 20802,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 20061,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18710,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18177,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17848,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19066,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19179,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21438,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21637,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22229,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25312,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 23990,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21202,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 25309,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17223,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17681,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17734,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 21500,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19378,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 18655,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19474,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22958,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22940,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22688,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 19213,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 22800,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17447,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 17124,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Tilal region"
+     },
+     {
+      "arrivals": 23036,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 24187,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28646,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28648,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29317,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 36607,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 47588,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 45267,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29986,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 27957,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25156,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 26649,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 23756,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25000,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28687,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 30570,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 31433,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 40079,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 48475,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 46809,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 31116,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 41816,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 26277,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 27294,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 25798,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 33754,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 30184,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 33248,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 32508,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 43565,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 50282,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 50038,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 35222,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 45093,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 28346,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 29375,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Other regions"
+     },
+     {
+      "arrivals": 4573,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5120,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6742,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7973,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8440,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 15950,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18990,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18433,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8869,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7722,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6470,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6625,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5350,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 5938,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7739,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9583,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10373,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 18215,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 22984,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 22835,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 11304,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10673,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7468,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 7944,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 6578,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 8107,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9722,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 10967,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 12650,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 20693,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 26240,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 25222,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 12945,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 13217,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9077,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 9109,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Gulf"
+     },
+     {
+      "arrivals": 3706,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 3878,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4351,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4602,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4388,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4456,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5115,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5141,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4881,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4986,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4857,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4517,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4810,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5252,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5295,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5701,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5659,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 5876,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6506,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6855,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6007,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6141,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6045,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6045,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6502,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 6499,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7200,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7628,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7343,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7416,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8550,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8550,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8062,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 8055,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7908,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 7725,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Asia"
+     },
+     {
+      "arrivals": 4159,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4333,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4068,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3164,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2312,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 1916,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2077,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 1972,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2867,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4030,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4505,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4846,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5365,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5474,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5094,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4007,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2895,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2493,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2516,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 2583,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3502,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5049,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5322,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 5899,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6690,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 7275,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6190,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4969,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3589,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3171,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3063,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 3165,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 4360,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6132,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 6870,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Europe"
+     },
+     {
+      "arrivals": 7533,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Europe"
+     }
+    ]
+   },
+   "encoding": {
+    "column": {
+     "field": "origin",
+     "sort": [
+      "Tilal region",
+      "Other regions",
+      "Gulf",
+      "Asia",
+      "Europe"
+     ],
+     "title": null,
+     "type": "nominal"
+    },
+    "x": {
+     "axis": {
+      "format": "%y",
+      "tickCount": 3
+     },
+     "field": "month",
+     "title": null,
+     "type": "temporal"
+    },
+    "y": {
+     "field": "arrivals",
+     "title": "Arrivals per month",
+     "type": "quantitative"
+    }
+   },
+   "height": 220,
+   "mark": {
+    "type": "line"
+   },
+   "title": "Monthly arrivals by origin market, one scale for all panels",
+   "width": 120
+  }
+ }
+}

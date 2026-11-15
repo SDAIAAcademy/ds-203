@@ -1,0 +1,1744 @@
+{
+ "faults": {
+  "1": "cut baseline",
+  "2": "picked window",
+  "3": "count for rate",
+  "4": "two axes",
+  "5": "running total",
+  "6": "uneven steps"
+ },
+ "fix1": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-9f651cc02ed5ed6cf3827233ddbea8da"
+   },
+   "datasets": {
+    "data-9f651cc02ed5ed6cf3827233ddbea8da": [
+     {
+      "satisfaction": 4.14,
+      "year": 2023
+     },
+     {
+      "satisfaction": 4.1505,
+      "year": 2024
+     },
+     {
+      "satisfaction": 4.070909090909091,
+      "year": 2025
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "axis": {
+      "labelAngle": 0
+     },
+     "field": "year",
+     "title": "Year",
+     "type": "ordinal"
+    },
+    "y": {
+     "field": "satisfaction",
+     "scale": {
+      "domain": [
+       0,
+       5
+      ]
+     },
+     "title": "Mean satisfaction, 1 to 5",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "type": "bar"
+   },
+   "title": "Mean satisfaction: 4.14, 4.15, 4.07",
+   "width": 300
+  }
+ },
+ "fix2": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-61b977055da65ee6d081844ee1e4d4bc"
+   },
+   "datasets": {
+    "data-61b977055da65ee6d081844ee1e4d4bc": [
+     {
+      "arrivals": 55012,
+      "month": "2023-01-01T00:00:00"
+     },
+     {
+      "arrivals": 57061,
+      "month": "2023-02-01T00:00:00"
+     },
+     {
+      "arrivals": 65017,
+      "month": "2023-03-01T00:00:00"
+     },
+     {
+      "arrivals": 66994,
+      "month": "2023-04-01T00:00:00"
+     },
+     {
+      "arrivals": 65576,
+      "month": "2023-05-01T00:00:00"
+     },
+     {
+      "arrivals": 83951,
+      "month": "2023-06-01T00:00:00"
+     },
+     {
+      "arrivals": 100092,
+      "month": "2023-07-01T00:00:00"
+     },
+     {
+      "arrivals": 95899,
+      "month": "2023-08-01T00:00:00"
+     },
+     {
+      "arrivals": 67405,
+      "month": "2023-09-01T00:00:00"
+     },
+     {
+      "arrivals": 64756,
+      "month": "2023-10-01T00:00:00"
+     },
+     {
+      "arrivals": 59698,
+      "month": "2023-11-01T00:00:00"
+     },
+     {
+      "arrivals": 60814,
+      "month": "2023-12-01T00:00:00"
+     },
+     {
+      "arrivals": 57129,
+      "month": "2024-01-01T00:00:00"
+     },
+     {
+      "arrivals": 60730,
+      "month": "2024-02-01T00:00:00"
+     },
+     {
+      "arrivals": 65994,
+      "month": "2024-03-01T00:00:00"
+     },
+     {
+      "arrivals": 71299,
+      "month": "2024-04-01T00:00:00"
+     },
+     {
+      "arrivals": 71997,
+      "month": "2024-05-01T00:00:00"
+     },
+     {
+      "arrivals": 88892,
+      "month": "2024-06-01T00:00:00"
+     },
+     {
+      "arrivals": 105793,
+      "month": "2024-07-01T00:00:00"
+     },
+     {
+      "arrivals": 103072,
+      "month": "2024-08-01T00:00:00"
+     },
+     {
+      "arrivals": 73131,
+      "month": "2024-09-01T00:00:00"
+     },
+     {
+      "arrivals": 88988,
+      "month": "2024-10-01T00:00:00"
+     },
+     {
+      "arrivals": 62335,
+      "month": "2024-11-01T00:00:00"
+     },
+     {
+      "arrivals": 64863,
+      "month": "2024-12-01T00:00:00"
+     },
+     {
+      "arrivals": 63302,
+      "month": "2025-01-01T00:00:00"
+     },
+     {
+      "arrivals": 77135,
+      "month": "2025-02-01T00:00:00"
+     },
+     {
+      "arrivals": 72674,
+      "month": "2025-03-01T00:00:00"
+     },
+     {
+      "arrivals": 75467,
+      "month": "2025-04-01T00:00:00"
+     },
+     {
+      "arrivals": 75564,
+      "month": "2025-05-01T00:00:00"
+     },
+     {
+      "arrivals": 97803,
+      "month": "2025-06-01T00:00:00"
+     },
+     {
+      "arrivals": 111075,
+      "month": "2025-07-01T00:00:00"
+     },
+     {
+      "arrivals": 109663,
+      "month": "2025-08-01T00:00:00"
+     },
+     {
+      "arrivals": 79802,
+      "month": "2025-09-01T00:00:00"
+     },
+     {
+      "arrivals": 95297,
+      "month": "2025-10-01T00:00:00"
+     },
+     {
+      "arrivals": 69648,
+      "month": "2025-11-01T00:00:00"
+     },
+     {
+      "arrivals": 70866,
+      "month": "2025-12-01T00:00:00"
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "field": "month",
+     "title": null,
+     "type": "temporal"
+    },
+    "y": {
+     "field": "arrivals",
+     "scale": {
+      "zero": true
+     },
+     "title": "Arrivals per month",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "point": true,
+    "type": "line"
+   },
+   "title": "October 2024 was a festival month; the trend is about 7% a year",
+   "width": 600
+  }
+ },
+ "fix3": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-f88d45548ac8c253cb1126af9e2382a7"
+   },
+   "datasets": {
+    "data-f88d45548ac8c253cb1126af9e2382a7": [
+     {
+      "complaints": 599,
+      "per_thousand": 5.94116363492095,
+      "site": "Cable Car",
+      "visitors": 100822
+     },
+     {
+      "complaints": 154,
+      "per_thousand": 6.708485798919673,
+      "site": "Cloud Lookout",
+      "visitors": 22956
+     },
+     {
+      "complaints": 139,
+      "per_thousand": 4.9982020855807265,
+      "site": "Honey Museum",
+      "visitors": 27810
+     },
+     {
+      "complaints": 196,
+      "per_thousand": 4.209983675573503,
+      "site": "Juniper Park",
+      "visitors": 46556
+     },
+     {
+      "complaints": 394,
+      "per_thousand": 5.077385017848169,
+      "site": "Souq Walk",
+      "visitors": 77599
+     },
+     {
+      "complaints": 230,
+      "per_thousand": 6.288448393711551,
+      "site": "Stone Village",
+      "visitors": 36575
+     },
+     {
+      "complaints": 167,
+      "per_thousand": 13.821070926094514,
+      "site": "Terrace Farms",
+      "visitors": 12083
+     },
+     {
+      "complaints": 296,
+      "per_thousand": 5.526718697486836,
+      "site": "Tilal Fort",
+      "visitors": 53558
+     },
+     {
+      "complaints": 243,
+      "per_thousand": 11.350896860986547,
+      "site": "Wadi Trail",
+      "visitors": 21408
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "field": "per_thousand",
+     "title": "Complaints per thousand visitors, 2023 to 2025",
+     "type": "quantitative"
+    },
+    "y": {
+     "field": "site",
+     "sort": "-x",
+     "title": null,
+     "type": "nominal"
+    }
+   },
+   "mark": {
+    "type": "bar"
+   },
+   "title": "By rate, Terrace Farms and the Wadi Trail lead"
+  }
+ },
+ "fix4": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-29cf6e99f1b22e25028ffbf25788ea03"
+   },
+   "datasets": {
+    "data-29cf6e99f1b22e25028ffbf25788ea03": [
+     {
+      "occupancy": 0.4601809954751131,
+      "rooms": 15470,
+      "rooms_sold": 7119,
+      "tickets": 1744,
+      "week_start": "2023-01-01T00:00:00"
+     },
+     {
+      "occupancy": 0.36994182288299937,
+      "rooms": 15470,
+      "rooms_sold": 5723,
+      "tickets": 1684,
+      "week_start": "2023-01-08T00:00:00"
+     },
+     {
+      "occupancy": 0.5460245636716224,
+      "rooms": 15470,
+      "rooms_sold": 8447,
+      "tickets": 1806,
+      "week_start": "2023-01-15T00:00:00"
+     },
+     {
+      "occupancy": 0.3511958629605688,
+      "rooms": 15470,
+      "rooms_sold": 5433,
+      "tickets": 1642,
+      "week_start": "2023-01-22T00:00:00"
+     },
+     {
+      "occupancy": 0.4323206205559147,
+      "rooms": 15470,
+      "rooms_sold": 6688,
+      "tickets": 1892,
+      "week_start": "2023-01-29T00:00:00"
+     },
+     {
+      "occupancy": 0.481060116354234,
+      "rooms": 15470,
+      "rooms_sold": 7442,
+      "tickets": 2079,
+      "week_start": "2023-02-05T00:00:00"
+     },
+     {
+      "occupancy": 0.4937944408532644,
+      "rooms": 15470,
+      "rooms_sold": 7639,
+      "tickets": 2171,
+      "week_start": "2023-02-12T00:00:00"
+     },
+     {
+      "occupancy": 0.5105365223012281,
+      "rooms": 15470,
+      "rooms_sold": 7898,
+      "tickets": 2126,
+      "week_start": "2023-02-19T00:00:00"
+     },
+     {
+      "occupancy": 0.3990950226244344,
+      "rooms": 15470,
+      "rooms_sold": 6174,
+      "tickets": 1907,
+      "week_start": "2023-02-26T00:00:00"
+     },
+     {
+      "occupancy": 0.44486102133160954,
+      "rooms": 15470,
+      "rooms_sold": 6882,
+      "tickets": 2069,
+      "week_start": "2023-03-05T00:00:00"
+     },
+     {
+      "occupancy": 0.48978668390433094,
+      "rooms": 15470,
+      "rooms_sold": 7577,
+      "tickets": 2122,
+      "week_start": "2023-03-12T00:00:00"
+     },
+     {
+      "occupancy": 0.5360051712992889,
+      "rooms": 15470,
+      "rooms_sold": 8292,
+      "tickets": 2150,
+      "week_start": "2023-03-19T00:00:00"
+     },
+     {
+      "occupancy": 0.5375565610859728,
+      "rooms": 15470,
+      "rooms_sold": 8316,
+      "tickets": 2232,
+      "week_start": "2023-03-26T00:00:00"
+     },
+     {
+      "occupancy": 0.4162249515190692,
+      "rooms": 15470,
+      "rooms_sold": 6439,
+      "tickets": 2325,
+      "week_start": "2023-04-02T00:00:00"
+     },
+     {
+      "occupancy": 0.5431157078215901,
+      "rooms": 15470,
+      "rooms_sold": 8402,
+      "tickets": 2227,
+      "week_start": "2023-04-09T00:00:00"
+     },
+     {
+      "occupancy": 0.5152553329023917,
+      "rooms": 15470,
+      "rooms_sold": 7971,
+      "tickets": 2113,
+      "week_start": "2023-04-16T00:00:00"
+     },
+     {
+      "occupancy": 0.5591467356173239,
+      "rooms": 15470,
+      "rooms_sold": 8650,
+      "tickets": 2142,
+      "week_start": "2023-04-23T00:00:00"
+     },
+     {
+      "occupancy": 0.46664511958629606,
+      "rooms": 15470,
+      "rooms_sold": 7219,
+      "tickets": 2149,
+      "week_start": "2023-04-30T00:00:00"
+     },
+     {
+      "occupancy": 0.5791208791208792,
+      "rooms": 15470,
+      "rooms_sold": 8959,
+      "tickets": 2282,
+      "week_start": "2023-05-07T00:00:00"
+     },
+     {
+      "occupancy": 0.4933419521654816,
+      "rooms": 15470,
+      "rooms_sold": 7632,
+      "tickets": 2081,
+      "week_start": "2023-05-14T00:00:00"
+     },
+     {
+      "occupancy": 0.5011635423400129,
+      "rooms": 15470,
+      "rooms_sold": 7753,
+      "tickets": 2125,
+      "week_start": "2023-05-21T00:00:00"
+     },
+     {
+      "occupancy": 0.6135746606334842,
+      "rooms": 15470,
+      "rooms_sold": 9492,
+      "tickets": 2473,
+      "week_start": "2023-05-28T00:00:00"
+     },
+     {
+      "occupancy": 0.5287007110536522,
+      "rooms": 15470,
+      "rooms_sold": 8179,
+      "tickets": 2642,
+      "week_start": "2023-06-04T00:00:00"
+     },
+     {
+      "occupancy": 0.6186166774402069,
+      "rooms": 15470,
+      "rooms_sold": 9570,
+      "tickets": 2851,
+      "week_start": "2023-06-11T00:00:00"
+     },
+     {
+      "occupancy": 0.49204912734324496,
+      "rooms": 15470,
+      "rooms_sold": 7612,
+      "tickets": 2669,
+      "week_start": "2023-06-18T00:00:00"
+     },
+     {
+      "occupancy": 0.5319974143503555,
+      "rooms": 15470,
+      "rooms_sold": 8230,
+      "tickets": 2903,
+      "week_start": "2023-06-25T00:00:00"
+     },
+     {
+      "occupancy": 0.6574014221073045,
+      "rooms": 15470,
+      "rooms_sold": 10170,
+      "tickets": 3390,
+      "week_start": "2023-07-02T00:00:00"
+     },
+     {
+      "occupancy": 0.5411118293471234,
+      "rooms": 15470,
+      "rooms_sold": 8371,
+      "tickets": 3228,
+      "week_start": "2023-07-09T00:00:00"
+     },
+     {
+      "occupancy": 0.5994182288299935,
+      "rooms": 15470,
+      "rooms_sold": 9273,
+      "tickets": 3229,
+      "week_start": "2023-07-16T00:00:00"
+     },
+     {
+      "occupancy": 0.6601163542340013,
+      "rooms": 15470,
+      "rooms_sold": 10212,
+      "tickets": 3209,
+      "week_start": "2023-07-23T00:00:00"
+     },
+     {
+      "occupancy": 0.587136393018746,
+      "rooms": 15470,
+      "rooms_sold": 9083,
+      "tickets": 3080,
+      "week_start": "2023-07-30T00:00:00"
+     },
+     {
+      "occupancy": 0.5088558500323206,
+      "rooms": 15470,
+      "rooms_sold": 7872,
+      "tickets": 3231,
+      "week_start": "2023-08-06T00:00:00"
+     },
+     {
+      "occupancy": 0.5584356819650937,
+      "rooms": 15470,
+      "rooms_sold": 8639,
+      "tickets": 3341,
+      "week_start": "2023-08-13T00:00:00"
+     },
+     {
+      "occupancy": 0.6530058177117001,
+      "rooms": 15470,
+      "rooms_sold": 10102,
+      "tickets": 3174,
+      "week_start": "2023-08-20T00:00:00"
+     },
+     {
+      "occupancy": 0.5903684550743374,
+      "rooms": 15470,
+      "rooms_sold": 9133,
+      "tickets": 2684,
+      "week_start": "2023-08-27T00:00:00"
+     },
+     {
+      "occupancy": 0.5451195862960568,
+      "rooms": 15470,
+      "rooms_sold": 8433,
+      "tickets": 2267,
+      "week_start": "2023-09-03T00:00:00"
+     },
+     {
+      "occupancy": 0.559469941822883,
+      "rooms": 15470,
+      "rooms_sold": 8655,
+      "tickets": 2239,
+      "week_start": "2023-09-10T00:00:00"
+     },
+     {
+      "occupancy": 0.5758888170652876,
+      "rooms": 15470,
+      "rooms_sold": 8909,
+      "tickets": 2430,
+      "week_start": "2023-09-17T00:00:00"
+     },
+     {
+      "occupancy": 0.5255979314802844,
+      "rooms": 15470,
+      "rooms_sold": 8131,
+      "tickets": 2363,
+      "week_start": "2023-09-24T00:00:00"
+     },
+     {
+      "occupancy": 0.47976729153199743,
+      "rooms": 15470,
+      "rooms_sold": 7422,
+      "tickets": 2169,
+      "week_start": "2023-10-01T00:00:00"
+     },
+     {
+      "occupancy": 0.4955397543632838,
+      "rooms": 15470,
+      "rooms_sold": 7666,
+      "tickets": 1981,
+      "week_start": "2023-10-08T00:00:00"
+     },
+     {
+      "occupancy": 0.4451842275371687,
+      "rooms": 15470,
+      "rooms_sold": 6887,
+      "tickets": 2039,
+      "week_start": "2023-10-15T00:00:00"
+     },
+     {
+      "occupancy": 0.49993535875888817,
+      "rooms": 15470,
+      "rooms_sold": 7734,
+      "tickets": 2096,
+      "week_start": "2023-10-22T00:00:00"
+     },
+     {
+      "occupancy": 0.4602456367162249,
+      "rooms": 15470,
+      "rooms_sold": 7120,
+      "tickets": 2004,
+      "week_start": "2023-10-29T00:00:00"
+     },
+     {
+      "occupancy": 0.47530704589528117,
+      "rooms": 15470,
+      "rooms_sold": 7353,
+      "tickets": 1808,
+      "week_start": "2023-11-05T00:00:00"
+     },
+     {
+      "occupancy": 0.49987071751777634,
+      "rooms": 15470,
+      "rooms_sold": 7733,
+      "tickets": 2020,
+      "week_start": "2023-11-12T00:00:00"
+     },
+     {
+      "occupancy": 0.4036845507433743,
+      "rooms": 15470,
+      "rooms_sold": 6245,
+      "tickets": 2074,
+      "week_start": "2023-11-19T00:00:00"
+     },
+     {
+      "occupancy": 0.3986425339366516,
+      "rooms": 15470,
+      "rooms_sold": 6167,
+      "tickets": 1854,
+      "week_start": "2023-11-26T00:00:00"
+     },
+     {
+      "occupancy": 0.49095022624434387,
+      "rooms": 15470,
+      "rooms_sold": 7595,
+      "tickets": 2020,
+      "week_start": "2023-12-03T00:00:00"
+     },
+     {
+      "occupancy": 0.4188752424046542,
+      "rooms": 15470,
+      "rooms_sold": 6480,
+      "tickets": 2085,
+      "week_start": "2023-12-10T00:00:00"
+     },
+     {
+      "occupancy": 0.4781512605042017,
+      "rooms": 15470,
+      "rooms_sold": 7397,
+      "tickets": 1902,
+      "week_start": "2023-12-17T00:00:00"
+     },
+     {
+      "occupancy": 0.45714285714285713,
+      "rooms": 15470,
+      "rooms_sold": 7072,
+      "tickets": 1923,
+      "week_start": "2023-12-24T00:00:00"
+     },
+     {
+      "occupancy": 0.4984486102133161,
+      "rooms": 15470,
+      "rooms_sold": 7711,
+      "tickets": 1828,
+      "week_start": "2023-12-31T00:00:00"
+     },
+     {
+      "occupancy": 0.3909502262443439,
+      "rooms": 15470,
+      "rooms_sold": 6048,
+      "tickets": 1857,
+      "week_start": "2024-01-07T00:00:00"
+     },
+     {
+      "occupancy": 0.3842921784098255,
+      "rooms": 15470,
+      "rooms_sold": 5945,
+      "tickets": 2047,
+      "week_start": "2024-01-14T00:00:00"
+     },
+     {
+      "occupancy": 0.4255332902391726,
+      "rooms": 15470,
+      "rooms_sold": 6583,
+      "tickets": 1938,
+      "week_start": "2024-01-21T00:00:00"
+     },
+     {
+      "occupancy": 0.5233354880413704,
+      "rooms": 15470,
+      "rooms_sold": 8096,
+      "tickets": 1965,
+      "week_start": "2024-01-28T00:00:00"
+     },
+     {
+      "occupancy": 0.4922430510665805,
+      "rooms": 15470,
+      "rooms_sold": 7615,
+      "tickets": 2216,
+      "week_start": "2024-02-04T00:00:00"
+     },
+     {
+      "occupancy": 0.6272139625080801,
+      "rooms": 15470,
+      "rooms_sold": 9703,
+      "tickets": 2069,
+      "week_start": "2024-02-11T00:00:00"
+     },
+     {
+      "occupancy": 0.42521008403361343,
+      "rooms": 15470,
+      "rooms_sold": 6578,
+      "tickets": 1983,
+      "week_start": "2024-02-18T00:00:00"
+     },
+     {
+      "occupancy": 0.5535875888817066,
+      "rooms": 15470,
+      "rooms_sold": 8564,
+      "tickets": 2206,
+      "week_start": "2024-02-25T00:00:00"
+     },
+     {
+      "occupancy": 0.5019392372333549,
+      "rooms": 15470,
+      "rooms_sold": 7765,
+      "tickets": 2187,
+      "week_start": "2024-03-03T00:00:00"
+     },
+     {
+      "occupancy": 0.525016160310278,
+      "rooms": 15470,
+      "rooms_sold": 8122,
+      "tickets": 2225,
+      "week_start": "2024-03-10T00:00:00"
+     },
+     {
+      "occupancy": 0.5557207498383969,
+      "rooms": 15470,
+      "rooms_sold": 8597,
+      "tickets": 2199,
+      "week_start": "2024-03-17T00:00:00"
+     },
+     {
+      "occupancy": 0.5535875888817066,
+      "rooms": 15470,
+      "rooms_sold": 8564,
+      "tickets": 2237,
+      "week_start": "2024-03-24T00:00:00"
+     },
+     {
+      "occupancy": 0.6202973497091144,
+      "rooms": 15470,
+      "rooms_sold": 9596,
+      "tickets": 2575,
+      "week_start": "2024-03-31T00:00:00"
+     },
+     {
+      "occupancy": 0.3862960568842922,
+      "rooms": 15470,
+      "rooms_sold": 5976,
+      "tickets": 2541,
+      "week_start": "2024-04-07T00:00:00"
+     },
+     {
+      "occupancy": 0.5521654815772463,
+      "rooms": 15470,
+      "rooms_sold": 8542,
+      "tickets": 2576,
+      "week_start": "2024-04-14T00:00:00"
+     },
+     {
+      "occupancy": 0.4613445378151261,
+      "rooms": 15470,
+      "rooms_sold": 7137,
+      "tickets": 2428,
+      "week_start": "2024-04-21T00:00:00"
+     },
+     {
+      "occupancy": 0.5191338073691015,
+      "rooms": 15470,
+      "rooms_sold": 8031,
+      "tickets": 2262,
+      "week_start": "2024-04-28T00:00:00"
+     },
+     {
+      "occupancy": 0.534453781512605,
+      "rooms": 15470,
+      "rooms_sold": 8268,
+      "tickets": 2326,
+      "week_start": "2024-05-05T00:00:00"
+     },
+     {
+      "occupancy": 0.5080801551389786,
+      "rooms": 15470,
+      "rooms_sold": 7860,
+      "tickets": 2249,
+      "week_start": "2024-05-12T00:00:00"
+     },
+     {
+      "occupancy": 0.5029088558500323,
+      "rooms": 15470,
+      "rooms_sold": 7780,
+      "tickets": 2380,
+      "week_start": "2024-05-19T00:00:00"
+     },
+     {
+      "occupancy": 0.5577892695539755,
+      "rooms": 15470,
+      "rooms_sold": 8629,
+      "tickets": 2444,
+      "week_start": "2024-05-26T00:00:00"
+     },
+     {
+      "occupancy": 0.5654815772462831,
+      "rooms": 15470,
+      "rooms_sold": 8748,
+      "tickets": 3144,
+      "week_start": "2024-06-02T00:00:00"
+     },
+     {
+      "occupancy": 0.607950872656755,
+      "rooms": 15470,
+      "rooms_sold": 9405,
+      "tickets": 3022,
+      "week_start": "2024-06-09T00:00:00"
+     },
+     {
+      "occupancy": 0.5908855850032321,
+      "rooms": 15470,
+      "rooms_sold": 9141,
+      "tickets": 3018,
+      "week_start": "2024-06-16T00:00:00"
+     },
+     {
+      "occupancy": 0.5866839043309632,
+      "rooms": 15470,
+      "rooms_sold": 9076,
+      "tickets": 3113,
+      "week_start": "2024-06-23T00:00:00"
+     },
+     {
+      "occupancy": 0.5172592113768585,
+      "rooms": 15470,
+      "rooms_sold": 8002,
+      "tickets": 3505,
+      "week_start": "2024-06-30T00:00:00"
+     },
+     {
+      "occupancy": 0.659469941822883,
+      "rooms": 15470,
+      "rooms_sold": 10202,
+      "tickets": 3519,
+      "week_start": "2024-07-07T00:00:00"
+     },
+     {
+      "occupancy": 0.7003232062055591,
+      "rooms": 15470,
+      "rooms_sold": 10834,
+      "tickets": 3497,
+      "week_start": "2024-07-14T00:00:00"
+     },
+     {
+      "occupancy": 0.5745313510019392,
+      "rooms": 15470,
+      "rooms_sold": 8888,
+      "tickets": 3439,
+      "week_start": "2024-07-21T00:00:00"
+     },
+     {
+      "occupancy": 0.6489980607627667,
+      "rooms": 15470,
+      "rooms_sold": 10040,
+      "tickets": 3338,
+      "week_start": "2024-07-28T00:00:00"
+     },
+     {
+      "occupancy": 0.5808015513897867,
+      "rooms": 15470,
+      "rooms_sold": 8985,
+      "tickets": 3263,
+      "week_start": "2024-08-04T00:00:00"
+     },
+     {
+      "occupancy": 0.6699418228829993,
+      "rooms": 15470,
+      "rooms_sold": 10364,
+      "tickets": 3302,
+      "week_start": "2024-08-11T00:00:00"
+     },
+     {
+      "occupancy": 0.664770523594053,
+      "rooms": 15470,
+      "rooms_sold": 10284,
+      "tickets": 3531,
+      "week_start": "2024-08-18T00:00:00"
+     },
+     {
+      "occupancy": 0.6753070458952812,
+      "rooms": 15470,
+      "rooms_sold": 10447,
+      "tickets": 3463,
+      "week_start": "2024-08-25T00:00:00"
+     },
+     {
+      "occupancy": 0.5970911441499677,
+      "rooms": 15470,
+      "rooms_sold": 9237,
+      "tickets": 2295,
+      "week_start": "2024-09-01T00:00:00"
+     },
+     {
+      "occupancy": 0.5451195862960568,
+      "rooms": 15470,
+      "rooms_sold": 8433,
+      "tickets": 2375,
+      "week_start": "2024-09-08T00:00:00"
+     },
+     {
+      "occupancy": 0.5945054945054945,
+      "rooms": 15470,
+      "rooms_sold": 9197,
+      "tickets": 2378,
+      "week_start": "2024-09-15T00:00:00"
+     },
+     {
+      "occupancy": 0.5078862314156432,
+      "rooms": 15470,
+      "rooms_sold": 7857,
+      "tickets": 2393,
+      "week_start": "2024-09-22T00:00:00"
+     },
+     {
+      "occupancy": 0.571945701357466,
+      "rooms": 15470,
+      "rooms_sold": 8848,
+      "tickets": 2714,
+      "week_start": "2024-09-29T00:00:00"
+     },
+     {
+      "occupancy": 0.48797672915319973,
+      "rooms": 15470,
+      "rooms_sold": 7549,
+      "tickets": 2873,
+      "week_start": "2024-10-06T00:00:00"
+     },
+     {
+      "occupancy": 0.5905623787976729,
+      "rooms": 15470,
+      "rooms_sold": 9136,
+      "tickets": 2786,
+      "week_start": "2024-10-13T00:00:00"
+     },
+     {
+      "occupancy": 0.48739495798319327,
+      "rooms": 15470,
+      "rooms_sold": 7540,
+      "tickets": 3022,
+      "week_start": "2024-10-20T00:00:00"
+     },
+     {
+      "occupancy": 0.611764705882353,
+      "rooms": 15470,
+      "rooms_sold": 9464,
+      "tickets": 2553,
+      "week_start": "2024-10-27T00:00:00"
+     },
+     {
+      "occupancy": 0.5404654169360051,
+      "rooms": 15470,
+      "rooms_sold": 8361,
+      "tickets": 2159,
+      "week_start": "2024-11-03T00:00:00"
+     },
+     {
+      "occupancy": 0.5494505494505495,
+      "rooms": 15470,
+      "rooms_sold": 8500,
+      "tickets": 2166,
+      "week_start": "2024-11-10T00:00:00"
+     },
+     {
+      "occupancy": 0.49967679379444085,
+      "rooms": 15470,
+      "rooms_sold": 7730,
+      "tickets": 2087,
+      "week_start": "2024-11-17T00:00:00"
+     },
+     {
+      "occupancy": 0.5019392372333549,
+      "rooms": 15470,
+      "rooms_sold": 7765,
+      "tickets": 2176,
+      "week_start": "2024-11-24T00:00:00"
+     },
+     {
+      "occupancy": 0.6317388493859082,
+      "rooms": 15470,
+      "rooms_sold": 9773,
+      "tickets": 2184,
+      "week_start": "2024-12-01T00:00:00"
+     },
+     {
+      "occupancy": 0.426890756302521,
+      "rooms": 15470,
+      "rooms_sold": 6604,
+      "tickets": 2132,
+      "week_start": "2024-12-08T00:00:00"
+     },
+     {
+      "occupancy": 0.5091144149967679,
+      "rooms": 15470,
+      "rooms_sold": 7876,
+      "tickets": 2184,
+      "week_start": "2024-12-15T00:00:00"
+     },
+     {
+      "occupancy": 0.6531997414350356,
+      "rooms": 15470,
+      "rooms_sold": 10105,
+      "tickets": 2169,
+      "week_start": "2024-12-22T00:00:00"
+     },
+     {
+      "occupancy": 0.4751131221719457,
+      "rooms": 15470,
+      "rooms_sold": 7350,
+      "tickets": 2158,
+      "week_start": "2024-12-29T00:00:00"
+     },
+     {
+      "occupancy": 0.46703296703296704,
+      "rooms": 15470,
+      "rooms_sold": 7225,
+      "tickets": 2044,
+      "week_start": "2025-01-05T00:00:00"
+     },
+     {
+      "occupancy": 0.5206205559146736,
+      "rooms": 15470,
+      "rooms_sold": 8054,
+      "tickets": 2070,
+      "week_start": "2025-01-12T00:00:00"
+     },
+     {
+      "occupancy": 0.5212023270846801,
+      "rooms": 15470,
+      "rooms_sold": 8063,
+      "tickets": 2012,
+      "week_start": "2025-01-19T00:00:00"
+     },
+     {
+      "occupancy": 0.4667097608274079,
+      "rooms": 15470,
+      "rooms_sold": 7220,
+      "tickets": 2233,
+      "week_start": "2025-01-26T00:00:00"
+     },
+     {
+      "occupancy": 0.6188752424046542,
+      "rooms": 15470,
+      "rooms_sold": 9574,
+      "tickets": 2882,
+      "week_start": "2025-02-02T00:00:00"
+     },
+     {
+      "occupancy": 0.5336134453781513,
+      "rooms": 15470,
+      "rooms_sold": 8255,
+      "tickets": 2823,
+      "week_start": "2025-02-09T00:00:00"
+     },
+     {
+      "occupancy": 0.4941822882999354,
+      "rooms": 15470,
+      "rooms_sold": 7645,
+      "tickets": 2948,
+      "week_start": "2025-02-16T00:00:00"
+     },
+     {
+      "occupancy": 0.5237233354880414,
+      "rooms": 15470,
+      "rooms_sold": 8102,
+      "tickets": 2748,
+      "week_start": "2025-02-23T00:00:00"
+     },
+     {
+      "occupancy": 0.6452488687782806,
+      "rooms": 15470,
+      "rooms_sold": 9982,
+      "tickets": 2361,
+      "week_start": "2025-03-02T00:00:00"
+     },
+     {
+      "occupancy": 0.49276018099547514,
+      "rooms": 15470,
+      "rooms_sold": 7623,
+      "tickets": 2324,
+      "week_start": "2025-03-09T00:00:00"
+     },
+     {
+      "occupancy": 0.5705882352941176,
+      "rooms": 15470,
+      "rooms_sold": 8827,
+      "tickets": 2402,
+      "week_start": "2025-03-16T00:00:00"
+     },
+     {
+      "occupancy": 0.48558500323206205,
+      "rooms": 15470,
+      "rooms_sold": 7512,
+      "tickets": 2423,
+      "week_start": "2025-03-23T00:00:00"
+     },
+     {
+      "occupancy": 0.529928894634777,
+      "rooms": 15470,
+      "rooms_sold": 8198,
+      "tickets": 2598,
+      "week_start": "2025-03-30T00:00:00"
+     },
+     {
+      "occupancy": 0.517453135100194,
+      "rooms": 15470,
+      "rooms_sold": 8005,
+      "tickets": 2438,
+      "week_start": "2025-04-06T00:00:00"
+     },
+     {
+      "occupancy": 0.5321266968325792,
+      "rooms": 15470,
+      "rooms_sold": 8232,
+      "tickets": 2713,
+      "week_start": "2025-04-13T00:00:00"
+     },
+     {
+      "occupancy": 0.5215255332902392,
+      "rooms": 15470,
+      "rooms_sold": 8068,
+      "tickets": 2569,
+      "week_start": "2025-04-20T00:00:00"
+     },
+     {
+      "occupancy": 0.5921137685843568,
+      "rooms": 15470,
+      "rooms_sold": 9160,
+      "tickets": 2304,
+      "week_start": "2025-04-27T00:00:00"
+     },
+     {
+      "occupancy": 0.4715578539107951,
+      "rooms": 15470,
+      "rooms_sold": 7295,
+      "tickets": 2519,
+      "week_start": "2025-05-04T00:00:00"
+     },
+     {
+      "occupancy": 0.5847446670976083,
+      "rooms": 15470,
+      "rooms_sold": 9046,
+      "tickets": 2340,
+      "week_start": "2025-05-11T00:00:00"
+     },
+     {
+      "occupancy": 0.5611506140917906,
+      "rooms": 15470,
+      "rooms_sold": 8681,
+      "tickets": 2536,
+      "week_start": "2025-05-18T00:00:00"
+     },
+     {
+      "occupancy": 0.5412411118293471,
+      "rooms": 15470,
+      "rooms_sold": 8373,
+      "tickets": 2481,
+      "week_start": "2025-05-25T00:00:00"
+     },
+     {
+      "occupancy": 0.6577892695539754,
+      "rooms": 15470,
+      "rooms_sold": 10176,
+      "tickets": 3466,
+      "week_start": "2025-06-01T00:00:00"
+     },
+     {
+      "occupancy": 0.5524240465416936,
+      "rooms": 15470,
+      "rooms_sold": 8546,
+      "tickets": 3179,
+      "week_start": "2025-06-08T00:00:00"
+     },
+     {
+      "occupancy": 0.6404007756948933,
+      "rooms": 15470,
+      "rooms_sold": 9907,
+      "tickets": 3330,
+      "week_start": "2025-06-15T00:00:00"
+     },
+     {
+      "occupancy": 0.6440206851971558,
+      "rooms": 15470,
+      "rooms_sold": 9963,
+      "tickets": 3448,
+      "week_start": "2025-06-22T00:00:00"
+     },
+     {
+      "occupancy": 0.6523594053005818,
+      "rooms": 15470,
+      "rooms_sold": 10092,
+      "tickets": 3528,
+      "week_start": "2025-06-29T00:00:00"
+     },
+     {
+      "occupancy": 0.6659987071751777,
+      "rooms": 15470,
+      "rooms_sold": 10303,
+      "tickets": 3724,
+      "week_start": "2025-07-06T00:00:00"
+     },
+     {
+      "occupancy": 0.6025856496444731,
+      "rooms": 15470,
+      "rooms_sold": 9322,
+      "tickets": 3676,
+      "week_start": "2025-07-13T00:00:00"
+     },
+     {
+      "occupancy": 0.7351001939237234,
+      "rooms": 15470,
+      "rooms_sold": 11372,
+      "tickets": 3589,
+      "week_start": "2025-07-20T00:00:00"
+     },
+     {
+      "occupancy": 0.599612152553329,
+      "rooms": 15470,
+      "rooms_sold": 9276,
+      "tickets": 3572,
+      "week_start": "2025-07-27T00:00:00"
+     },
+     {
+      "occupancy": 0.7015513897866839,
+      "rooms": 15470,
+      "rooms_sold": 10853,
+      "tickets": 3692,
+      "week_start": "2025-08-03T00:00:00"
+     },
+     {
+      "occupancy": 0.6515837104072398,
+      "rooms": 15470,
+      "rooms_sold": 10080,
+      "tickets": 3469,
+      "week_start": "2025-08-10T00:00:00"
+     },
+     {
+      "occupancy": 0.6680025856496444,
+      "rooms": 15470,
+      "rooms_sold": 10334,
+      "tickets": 3600,
+      "week_start": "2025-08-17T00:00:00"
+     },
+     {
+      "occupancy": 0.7069166127989658,
+      "rooms": 15470,
+      "rooms_sold": 10936,
+      "tickets": 3834,
+      "week_start": "2025-08-24T00:00:00"
+     },
+     {
+      "occupancy": 0.5674854557207498,
+      "rooms": 15470,
+      "rooms_sold": 8779,
+      "tickets": 2780,
+      "week_start": "2025-08-31T00:00:00"
+     },
+     {
+      "occupancy": 0.5888170652876535,
+      "rooms": 15470,
+      "rooms_sold": 9109,
+      "tickets": 2672,
+      "week_start": "2025-09-07T00:00:00"
+     },
+     {
+      "occupancy": 0.43665158371040724,
+      "rooms": 15470,
+      "rooms_sold": 6755,
+      "tickets": 2697,
+      "week_start": "2025-09-14T00:00:00"
+     },
+     {
+      "occupancy": 0.6468002585649645,
+      "rooms": 15470,
+      "rooms_sold": 10006,
+      "tickets": 2807,
+      "week_start": "2025-09-21T00:00:00"
+     },
+     {
+      "occupancy": 0.6047188106011635,
+      "rooms": 15470,
+      "rooms_sold": 9355,
+      "tickets": 3108,
+      "week_start": "2025-09-28T00:00:00"
+     },
+     {
+      "occupancy": 0.6471881060116355,
+      "rooms": 15470,
+      "rooms_sold": 10012,
+      "tickets": 3247,
+      "week_start": "2025-10-05T00:00:00"
+     },
+     {
+      "occupancy": 0.5981254040077569,
+      "rooms": 15470,
+      "rooms_sold": 9253,
+      "tickets": 3220,
+      "week_start": "2025-10-12T00:00:00"
+     },
+     {
+      "occupancy": 0.5917259211376859,
+      "rooms": 15470,
+      "rooms_sold": 9154,
+      "tickets": 2964,
+      "week_start": "2025-10-19T00:00:00"
+     },
+     {
+      "occupancy": 0.5387847446670976,
+      "rooms": 15470,
+      "rooms_sold": 8335,
+      "tickets": 2870,
+      "week_start": "2025-10-26T00:00:00"
+     },
+     {
+      "occupancy": 0.4660633484162896,
+      "rooms": 15470,
+      "rooms_sold": 7210,
+      "tickets": 2240,
+      "week_start": "2025-11-02T00:00:00"
+     },
+     {
+      "occupancy": 0.5363930187459599,
+      "rooms": 15470,
+      "rooms_sold": 8298,
+      "tickets": 2333,
+      "week_start": "2025-11-09T00:00:00"
+     },
+     {
+      "occupancy": 0.48073691014867487,
+      "rooms": 15470,
+      "rooms_sold": 7437,
+      "tickets": 2427,
+      "week_start": "2025-11-16T00:00:00"
+     },
+     {
+      "occupancy": 0.7076276664511959,
+      "rooms": 15470,
+      "rooms_sold": 10947,
+      "tickets": 2444,
+      "week_start": "2025-11-23T00:00:00"
+     },
+     {
+      "occupancy": 0.6797672915319974,
+      "rooms": 15470,
+      "rooms_sold": 10516,
+      "tickets": 2345,
+      "week_start": "2025-11-30T00:00:00"
+     },
+     {
+      "occupancy": 0.4528765352294764,
+      "rooms": 15470,
+      "rooms_sold": 7006,
+      "tickets": 2359,
+      "week_start": "2025-12-07T00:00:00"
+     },
+     {
+      "occupancy": 0.5038138332255979,
+      "rooms": 15470,
+      "rooms_sold": 7794,
+      "tickets": 2309,
+      "week_start": "2025-12-14T00:00:00"
+     },
+     {
+      "occupancy": 0.5592760180995475,
+      "rooms": 15470,
+      "rooms_sold": 8652,
+      "tickets": 2406,
+      "week_start": "2025-12-21T00:00:00"
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "field": "tickets",
+     "scale": {
+      "zero": false
+     },
+     "title": "Tickets sold per week",
+     "type": "quantitative"
+    },
+    "y": {
+     "axis": {
+      "format": "%"
+     },
+     "field": "occupancy",
+     "scale": {
+      "zero": false
+     },
+     "title": "Share of hotel rooms sold in the week",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "opacity": 0.6,
+    "size": 40,
+    "type": "circle"
+   },
+   "title": "Busier weeks at the sites are fuller weeks at the hotels, loosely"
+  }
+ },
+ "fix5": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-436f8dfe9398de65fe628d681eecf6d4"
+   },
+   "datasets": {
+    "data-436f8dfe9398de65fe628d681eecf6d4": [
+     {
+      "arrivals": 19538,
+      "month": "2023-01-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 19538
+     },
+     {
+      "arrivals": 19543,
+      "month": "2023-02-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 39081
+     },
+     {
+      "arrivals": 21210,
+      "month": "2023-03-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 60291
+     },
+     {
+      "arrivals": 22607,
+      "month": "2023-04-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 82898
+     },
+     {
+      "arrivals": 21119,
+      "month": "2023-05-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 104017
+     },
+     {
+      "arrivals": 25022,
+      "month": "2023-06-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 129039
+     },
+     {
+      "arrivals": 26322,
+      "month": "2023-07-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 155361
+     },
+     {
+      "arrivals": 25086,
+      "month": "2023-08-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 180447
+     },
+     {
+      "arrivals": 20802,
+      "month": "2023-09-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 201249
+     },
+     {
+      "arrivals": 20061,
+      "month": "2023-10-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 221310
+     },
+     {
+      "arrivals": 18710,
+      "month": "2023-11-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 240020
+     },
+     {
+      "arrivals": 18177,
+      "month": "2023-12-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 258197
+     },
+     {
+      "arrivals": 17848,
+      "month": "2024-01-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 276045
+     },
+     {
+      "arrivals": 19066,
+      "month": "2024-02-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 295111
+     },
+     {
+      "arrivals": 19179,
+      "month": "2024-03-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 314290
+     },
+     {
+      "arrivals": 21438,
+      "month": "2024-04-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 335728
+     },
+     {
+      "arrivals": 21637,
+      "month": "2024-05-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 357365
+     },
+     {
+      "arrivals": 22229,
+      "month": "2024-06-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 379594
+     },
+     {
+      "arrivals": 25312,
+      "month": "2024-07-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 404906
+     },
+     {
+      "arrivals": 23990,
+      "month": "2024-08-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 428896
+     },
+     {
+      "arrivals": 21202,
+      "month": "2024-09-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 450098
+     },
+     {
+      "arrivals": 25309,
+      "month": "2024-10-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 475407
+     },
+     {
+      "arrivals": 17223,
+      "month": "2024-11-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 492630
+     },
+     {
+      "arrivals": 17681,
+      "month": "2024-12-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 510311
+     },
+     {
+      "arrivals": 17734,
+      "month": "2025-01-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 528045
+     },
+     {
+      "arrivals": 21500,
+      "month": "2025-02-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 549545
+     },
+     {
+      "arrivals": 19378,
+      "month": "2025-03-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 568923
+     },
+     {
+      "arrivals": 18655,
+      "month": "2025-04-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 587578
+     },
+     {
+      "arrivals": 19474,
+      "month": "2025-05-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 607052
+     },
+     {
+      "arrivals": 22958,
+      "month": "2025-06-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 630010
+     },
+     {
+      "arrivals": 22940,
+      "month": "2025-07-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 652950
+     },
+     {
+      "arrivals": 22688,
+      "month": "2025-08-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 675638
+     },
+     {
+      "arrivals": 19213,
+      "month": "2025-09-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 694851
+     },
+     {
+      "arrivals": 22800,
+      "month": "2025-10-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 717651
+     },
+     {
+      "arrivals": 17447,
+      "month": "2025-11-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 735098
+     },
+     {
+      "arrivals": 17124,
+      "month": "2025-12-01T00:00:00",
+      "origin": "Tilal region",
+      "running": 752222
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "field": "month",
+     "title": null,
+     "type": "temporal"
+    },
+    "y": {
+     "field": "arrivals",
+     "scale": {
+      "zero": true
+     },
+     "title": "Arrivals per month from the Tilal region",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "type": "line"
+   },
+   "title": "Local arrivals are drifting down",
+   "width": 600
+  }
+ },
+ "fix6": {
+  "__chart__": {
+   "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json",
+   "data": {
+    "name": "data-71376bbf90718ab143669ed262530da0"
+   },
+   "datasets": {
+    "data-71376bbf90718ab143669ed262530da0": [
+     {
+      "arrivals": 842275,
+      "year": 2023
+     },
+     {
+      "arrivals": 914223,
+      "year": 2024
+     },
+     {
+      "arrivals": 998296,
+      "year": 2025
+     }
+    ]
+   },
+   "encoding": {
+    "x": {
+     "axis": {
+      "labelAngle": 0
+     },
+     "field": "year",
+     "title": "Year",
+     "type": "ordinal"
+    },
+    "y": {
+     "field": "arrivals",
+     "title": "Arrivals in the year",
+     "type": "quantitative"
+    }
+   },
+   "mark": {
+    "type": "bar"
+   },
+   "title": "Arrivals rose in both years",
+   "width": 300
+  }
+ },
+ "reading": "Repaired, the six charts say that satisfaction moved from 4.15 to 4.07 and did not collapse, that arrivals grew by about 7% a year with a festival spike and did not jump 37%, that the highest complaint rates are at two small sites and not at the Cable Car, that hotels and sites move together only loosely, that local arrivals fell by 6% over two years and that total arrivals rose in both years. None of the charts shows uncertainty, so they do not tell a reader which of these differences could be chance."
+}

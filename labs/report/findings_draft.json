@@ -1,0 +1,37 @@
+[
+ {
+  "finding": "Weeks with more ticket sales are weeks with fuller hotels (correlation 0.70).",
+  "status": "exploratory",
+  "planned": false,
+  "check": "Bootstrap of 156 weeks: 95% interval about 0.60 to 0.78.",
+  "limit": "Summer and festivals raise both series; the data does not show that site visits fill hotels."
+ },
+ {
+  "finding": "The three festival months stood 18% to 29% above the seasonal baseline.",
+  "status": "exploratory",
+  "planned": false,
+  "check": "Baseline from the 2023 seasonal shape and the median yearly growth; all other months within 5% of it.",
+  "limit": "Three festival months and one choice of baseline; other events in those months are not ruled out."
+ },
+ {
+  "finding": "Satisfaction rose in every origin market from 2024 to 2025 while the overall mean fell from 4.15 to 4.07.",
+  "status": "exploratory",
+  "planned": false,
+  "check": "Means by origin, and the 2025 mean recomputed at the 2024 mix of visitors (4.25).",
+  "limit": ""
+ },
+ {
+  "finding": "At the Honey Museum, weekend visitors were more satisfied than weekday visitors in 2025 (gap 0.30).",
+  "status": "confirmed",
+  "planned": false,
+  "check": "Largest of 27 site-year gaps; p = 0.03 taken alone; a gap that large appears among 27 in about half of shuffles.",
+  "limit": "Found by searching 27 comparisons; to be tested on the 2026 survey before any announcement."
+ },
+ {
+  "finding": "Guided visits were rated about 0.4 point higher than unguided ones in 2025.",
+  "status": "confirmed",
+  "planned": true,
+  "check": "Question written down before the 2024 survey was opened; 2025 difference +0.39, interval +0.31 to +0.47.",
+  "limit": "Visitors choose a guided visit; the data does not show that guiding causes the higher rating."
+ }
+]

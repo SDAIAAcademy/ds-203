@@ -1,158 +1,536 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: welcome; introduce yourself; one question to the room that calibrates the pace; the rhythm of the day</aside>
+  <aside class="notes"><p>Yesterday was one variable at a time. Today every question has two: sites and hotels, complaints and visitors, arrivals and the calendar, satisfaction and the year. Ask who looked at their plan from lab 1.1 last night: questions 2 to 5 of that plan are today's four labs. The rhythm is unchanged: ideas, a checkpoint, a 25-minute lab, two written sentences.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>One thread runs through the four sessions: a number depends on what it is set against. A correlation depends on its unit, a count on its denominator, a month on its baseline, a total on its mix. Say this now and repeat it at the wrap-up.</p></aside>
+</section>
 
-<!-- Session 1 -->
+<section class="slide" id="review-day-1" data-lo="LO3" data-label="Review of Day 1">
+  <div class="kicker">Review · Day 1</div>
+  <h2>Which summary would you send the director?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">Spend per stay has a mean of 2,736 riyals and a median of 1,498. It is missing for 22% of day visits and 2% of overnight stays. Which sentence is honest?</p>
+    <div class="opts">
+      <div class="opt" data-why="The mean is pulled up by a few very large stays; most parties spend far less than 2,736">A typical party spends about 2,700 riyals in the region</div>
+      <div class="opt" data-ok>Half of the parties that reported spend spent under 1,500 riyals; day visits are under-reported</div>
+      <div class="opt" data-why="Filling the gaps with the median hides that the missing values sit mostly with day visitors">Spend is about 1,500 riyals once missing values are filled in</div>
+      <div class="opt" data-why="A long right tail is the normal shape of spend, not an error to delete">Spend cannot be summarised until the largest stays are removed</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> A long tail calls for the median, and a summary carries what was left out and whom it concerns.</div>
+  </div>
+  <aside class="notes"><p>Answer: the second. Three minutes, no more. It recalls the two habits of Day 1 that today depends on: choose the summary by the shape, and say where the missing values are. If the room is split between the first and the second, draw the tail on the board.</p></aside>
+</section>
 
+<!-- ======================= SESSION 1 ======================= -->
 <section class="slide section" id="s1" data-auto="section" data-session="1"></section>
 
-<section class="slide" id="s1-idea" data-lo="LO3">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+<section class="slide" id="one-unit-first" data-lo="LO3" data-label="One unit first">
+  <div class="kicker">Before two variables can meet</div>
+  <h2>Two tables relate only at one unit of observation</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>tickets</b>150,000 sales, summed to tickets per day</div>
+    <div class="arrow">+</div>
+    <div class="step c-cyan"><b>occupancy</b>43,840 hotel-days, rooms sold over rooms</div>
+    <div class="arrow">→</div>
+    <div class="step c-coral"><b>one table</b>43,840 rows: a hotel, a day, its occupancy, the day's tickets</div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <ul class="bullets tight mt">
+    <li>Bring each table to the unit of the answer, then join.</li>
+    <li><b>Count the rows before and after.</b> More rows: something was repeated. Fewer: something was dropped.</li>
+    <li>The day's ticket total is repeated on 40 hotels. That is intended, and it has a consequence you will see.</li>
+  </ul>
+  <aside class="notes"><p>Question 2 of the plan: do busy sites mean full hotels? Yesterday's rule about the unit becomes an action. Lab 2.1, step 1 is this join. The row count is the cheapest test in data analysis and the one most often skipped. Joining keys, matching records and reconciling sources in general belong to DS-202.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps" data-lo="LO3">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="overplotting" data-lo="LO3" data-label="Overplotting">
+  <div class="kicker">The first attempt</div>
+  <h2>43,840 opaque points draw a block, not a relation</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d2_1_scatter_solid.png" alt="Scatter plot of 43,840 hotel-days, tickets sold against share of rooms sold, drawn with opaque points: a solid block from 150 to 840 tickets and from 0 to 100% with no visible structure">
+      <figcaption>Every point is there. Nothing can be read.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>A scatter plot shows each unit as a point. Past a few thousand, points hide points.</li>
+      <li>The block says only where data exists: 152 to 836 tickets a day, 0 to 100% of rooms.</li>
+      <li><b>Overplotting</b> hides density, and density is the message.</li>
+    </ul>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>Ask the room: does occupancy rise with ticket sales? From this picture nobody can tell, and anyone who answers is guessing. The next three slides are three repairs in rising order of summarising: let the points show through, count them in cells, summarise them in bins.</p></aside>
+</section>
+
+<section class="slide" id="transparency" data-lo="LO3" data-label="Transparency">
+  <div class="kicker">Repair 1 · Lab 2.1, step 2</div>
+  <h2>Transparency turns overlap into darkness</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d2_1_scatter_clear.png" alt="The same scatter with opacity 0.04: a dark band rising from about 40% of rooms at 200 tickets to about 75% at 600, with horizontal stripes across it">
+      <figcaption>The same points at opacity 0.04.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>A dark band now rises from left to right.</li>
+      <li>The horizontal stripes are <b>banding</b>: a hotel of 8 rooms can only be 0, 1/8, 2/8 … full, nine possible values.</li>
+      <li>Banding is a feature of the unit, not of tourism. Name it so that nobody explains it.</li>
+    </ul>
+  </div>
+  <pre class="code s"><code class="language-python">alt.Chart(hd).mark_circle(size=8, opacity=0.04).encode(x="tickets_day:Q", y="rate:Q")</code></pre>
+  <aside class="notes"><p>Opacity 0.04 means 25 points on one spot make full ink. Try 0.3 live and show that it is still a block. Ask what the stripes are before revealing the second bullet; somebody usually proposes a booking policy. It is arithmetic: small denominators allow few values. The same idea returns in session 2 as small cells.</p></aside>
+</section>
+
+<section class="slide" id="binned-heatmap" data-lo="LO3" data-label="Binned heatmap">
+  <div class="kicker">Repair 2 · Lab 2.1, step 3</div>
+  <h2>Bin both axes and colour by count</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d2_1_heat.svg" alt="Heatmap of the same hotel-days in a grid of 30 by 20 cells coloured by the number of hotel-days: the brightest cells run from low tickets and 40% occupancy up to 500 tickets and 70% occupancy">
+      <figcaption>A histogram in two dimensions.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Each cell counts the hotel-days that fall in it. The count goes to colour.</li>
+      <li>It works for a million points as well as for forty thousand.</li>
+      <li>It shows <b>where</b> the points are. It does not yet say <b>how much</b> occupancy rises.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>This is yesterday's histogram with a second axis: the bin width choice is back, twice. Colour for a count is a sequential scale; Day 3, session 4 explains why this palette runs from dark to light. Most hotel-days sit at low ticket sales, which the solid scatter hid completely.</p></aside>
+</section>
+
+<section class="slide" id="binned-medians" data-lo="LO3" data-label="Binned medians">
+  <div class="kicker">Repair 3 · Lab 2.1, step 4</div>
+  <h2>To read "how much", summarise y inside bins of x</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d2_1_binned_median.svg" alt="Line of median hotel occupancy for eight equal groups of days ordered by ticket sales: from 40% at about 200 tickets a day to 77% at about 630 tickets a day, rising at every step">
+      <figcaption>Eight groups of days, equal in size, by tickets sold.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Cut the days into eighths by tickets sold; take the median occupancy of each.</li>
+      <li>Quietest eighth: <b>40%</b> of rooms sold. Busiest eighth: <b>77%</b>.</li>
+      <li>The y axis runs from 0 to 100%, so the rise is drawn at its true size.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Real numbers of the lab: 0.396 and 0.771. Equal-sized groups keep every median resting on the same number of hotel-days; equal-width bins would leave the busiest bin nearly empty. This chart is the one a director can read. It has lost the spread, which is why the lab keeps the heatmap beside it.</p></aside>
+</section>
+
+<section class="slide" id="correlation-and-unit" data-lo="LO3" data-label="Correlation and the unit">
+  <div class="kicker">Lab 2.1, step 5</div>
+  <h2>One relation, two units, two correlations</h2>
+  <div class="cols cols-2">
+    <div class="stat"><div class="big">0.39</div><div class="lbl">across 43,840 hotel-days</div></div>
+    <div class="stat"><div class="big">0.70</div><div class="lbl">across 156 weeks, all hotels together</div></div>
+  </div>
+  <ul class="bullets tight mt">
+    <li>Adding up 40 hotels and 7 days averages away what is particular to one hotel on one night.</li>
+    <li>Weeks answer: does the region's occupancy move with the sites?</li>
+    <li>Hotel-days answer: can one hotel's night be told from the day's ticket sales?</li>
+  </ul>
+  <div class="callout warn mt"><b>There is no "the correlation".</b> Report the coefficient with its unit and its number of units.</div>
+  <aside class="notes"><p>Recap from DS-201: the coefficient runs from minus one to one and measures how closely points follow a line. New here: it is a property of the table you built, not of tourism. A report that says "correlation 0.7" without "by week" invites the reader to believe one hotel can be predicted. Aggregation almost always raises a correlation.</p></aside>
+</section>
+
+<section class="slide" id="what-a-relation-does-not-say" data-lo="LO3" data-label="What a relation does not say">
+  <div class="kicker">The second sentence of the reading</div>
+  <h2>A relation between two series is not yet a reason</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>Summer raises ticket sales. Summer raises hotel bookings.</li>
+      <li>Festivals do the same, in October and February.</li>
+      <li>Two series that share a calendar move together whether or not one feeds the other.</li>
+    </ul>
+    <div class="card c-coral"><h4>What the reading may say</h4><p class="small mb0">"Weeks with more ticket sales are weeks with fuller hotels (0.70 across 156 weeks). Both rise in summer and at festivals, so the data does not show that site visits fill hotels."</p></div>
+  </div>
+  <aside class="notes"><p>This is the form of every reading in the course: what the chart shows, then what it does not. Session 3 today separates season from events; Day 4, session 1 asks whether 0.70 could be chance and puts an interval on it. Whether one thing causes another needs a designed comparison, which is DS-205.</p></aside>
+</section>
+
+<section class="slide" id="check-two-variables" data-lo="LO3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which picture, and which number?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">A transport authority has 2 million trips, each with distance and fare. An analyst wants to show how fare rises with distance. What should the first chart be?</p>
+    <div class="opts">
+      <div class="opt" data-why="Two million opaque points overlap into a solid shape that hides where most trips are">A scatter plot of every trip, so that no trip is left out</div>
+      <div class="opt" data-why="A sample of 200 trips shows a few points and loses the rare long trips entirely">A scatter plot of 200 trips picked at random from the file</div>
+      <div class="opt" data-why="One coefficient gives no picture of the shape, and it changes with the unit chosen">The correlation of fare and distance, printed as one figure</div>
+      <div class="opt" data-ok>A binned heatmap of the trips, then the median fare by distance band</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> With many points, show density by counting in cells, then answer "how much" with a summary inside bins of x.</div>
+  </div>
+  <aside class="notes"><p>Answer: the fourth. The second option deserves a word: sampling is a fair repair for overplotting when the sample is a few thousand and the tail does not matter, and 200 is too few to see either. If someone defends the third, ask "correlation across trips, or across days?".</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-1" data-auto="lab" data-lab="2.1">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>The lab starts from U.tickets() and U.occupancy(); nothing from Day 1 is needed. The solid scatter takes a few seconds to draw in a notebook: that is expected. Common failure: joining the raw tickets table to occupancy on date, which multiplies rows; the row-count check catches it. The reading is written without the assistant.</p></aside>
 </section>
 
-<!-- Session 2 -->
-
+<!-- ======================= SESSION 2 ======================= -->
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea" data-lo="LO3">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
+<section class="slide" id="counts-rank-size" data-lo="LO3" data-label="Counts rank size">
+  <div class="kicker">Ask 3 of the brief</div>
+  <h2>A ranking by count is mostly a ranking by size</h2>
   <div class="cols cols-2">
+    <table class="t small">
+      <tr><th>Site</th><th class="num">Complaints</th><th class="num">Visitors</th></tr>
+      <tr><td>Cable Car</td><td class="num">599</td><td class="num">100,822</td></tr>
+      <tr><td>Souq Walk</td><td class="num">394</td><td class="num">77,599</td></tr>
+      <tr><td>Tilal Fort</td><td class="num">296</td><td class="num">53,558</td></tr>
+      <tr><td>Wadi Trail</td><td class="num">243</td><td class="num">21,408</td></tr>
+      <tr><td>Terrace Farms</td><td class="num">167</td><td class="num">12,083</td></tr>
+    </table>
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li>"A lot of complaints about the Cable Car": 599 of 2,418, a quarter of the log.</li>
+      <li>It also receives a quarter of all visitors.</li>
+      <li>The count answers "where is the workload?". It does not answer "where does a visit go wrong most often?".</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <aside class="notes"><p>Five of the nine sites. The director's sentence is true and the conclusion she fears does not follow. Do not dismiss the count: the complaints team staffs by count. The fault is using it for a question about quality. Ask the room which column they would divide by before showing the next slide.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps" data-lo="LO3">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="choose-a-denominator" data-lo="LO3" data-label="Choosing a denominator">
+  <div class="kicker">The choice that decides the answer</div>
+  <h2>The denominator is whoever could have produced the event</h2>
+  <table class="t small">
+    <tr><th>Question</th><th>Rate</th><th>Denominator</th></tr>
+    <tr><td>Where does a visit go wrong most often?</td><td>complaints per thousand visitors</td><td>tickets sold at the site</td></tr>
+    <tr><td>Which market complains most readily?</td><td>complaints per thousand visitors of that origin</td><td>tickets sold to that origin</td></tr>
+    <tr><td>Is the queue the issue on busy days?</td><td>queue complaints per thousand visitors, by day</td><td>tickets sold that day</td></tr>
+  </table>
+  <ul class="bullets tight mt">
+    <li>Per thousand, so that the reader sees numbers like 5.9, not 0.0059.</li>
+    <li>A rate travels with its two parts: <b>599 of 100,822</b>.</li>
+  </ul>
+  <aside class="notes"><p>The same complaints log gives three rates for three questions. A wrong denominator is the commonest quiet error in reporting: complaints per site-day, per resident, per survey response all produce a tidy number. The test: could each unit in the denominator have complained? A ticket holder could. The third rule of the course's data handling says the denominator is printed, always.</p></aside>
+</section>
+
+<section class="slide" id="aggregate-then-join" data-lo="LO3" data-label="Aggregate, then join">
+  <div class="kicker">Lab 2.2, step 2</div>
+  <h2>Bring each table to the unit of the answer, then join</h2>
+  <pre class="code s" data-file="DuckDB"><code class="language-sql">WITH c AS (SELECT site, count(*)     AS complaints FROM complaints GROUP BY site),
+     v AS (SELECT site, sum(tickets) AS visitors   FROM tickets    GROUP BY site)
+SELECT site, complaints, visitors,
+       1000.0 * complaints / visitors AS per_thousand
+FROM c JOIN v USING (site)
+ORDER BY per_thousand DESC</code></pre>
+  <ul class="bullets tight">
+    <li>Nine rows in, nine rows out. The totals still read 2,418 complaints and all tickets sold.</li>
+    <li>Joining the raw tables on <code>site</code> pairs every complaint with every sale: millions of rows and a rate that means nothing.</li>
+  </ul>
+  <aside class="notes"><p>The pattern of session 1 again, now in SQL: aggregate each side to the unit of the answer first. The lab checks that the two totals survive the join; a rate computed after a join that multiplied rows is wrong in both parts and looks plausible. The same query in pandas is two groupbys and a merge; the tutor may help with either syntax.</p></aside>
+</section>
+
+<section class="slide" id="two-rankings" data-lo="LO3" data-label="Two rankings">
+  <div class="kicker">Lab 2.2, step 3</div>
+  <h2>By rate, the Cable Car is fifth and the smallest site is first</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d2_2_rates.svg" alt="Bar chart of complaints per thousand visitors by site, bars from zero: Terrace Farms 13.8, Wadi Trail 11.4, Cloud Lookout 6.7, Stone Village 6.3, Cable Car 5.9, Tilal Fort 5.5, Souq Walk 5.1, Honey Museum 5.0, Juniper Park 4.2">
+      <figcaption>Complaints per thousand visitors, 2023 to 2025.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Cable Car: first by count, <b>fifth</b> by rate (5.9).</li>
+      <li>Terrace Farms: seventh by count, <b>first</b> by rate (13.8), on 167 complaints.</li>
+      <li>Wadi Trail is second on both readings of "problem": 243 complaints, 11.4 per thousand.</li>
+    </ul>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <aside class="notes"><p>The answer to ask 3: the Cable Car is not the problem site; it is the busy site. Two outdoor sites with few visitors have rates twice the others. Show both rankings in the report, side by side: a reader who sees only the rate will not know that Terrace Farms rests on 167 complaints in three years. That thought leads to the next slide.</p></aside>
+</section>
+
+<section class="slide" id="small-cells" data-lo="LO3" data-label="Small cells">
+  <div class="kicker">Lab 2.2, steps 4 and 5</div>
+  <h2>Cut finer and the highest rates rest on the fewest cases</h2>
+  <table class="t small">
+    <tr><th>Site × origin</th><th class="num">Complaints</th><th class="num">Visitors</th><th>Published</th></tr>
+    <tr><td>Terrace Farms × Asia</td><td class="num">6</td><td class="num">441</td><td>withheld</td></tr>
+    <tr><td>Terrace Farms × Europe</td><td class="num">4</td><td class="num">321</td><td>withheld</td></tr>
+    <tr><td>Cloud Lookout × Asia</td><td class="num">6</td><td class="num">1,769</td><td>withheld</td></tr>
+    <tr><td>Honey Museum × Asia</td><td class="num">8</td><td class="num">2,075</td><td>withheld</td></tr>
+  </table>
+  <ul class="bullets tight mt">
+    <li>The board's rule: publish a cell only with at least <b>10 complaints and 1,000 visitors</b>.</li>
+    <li>Four of 45 cells are held back. Two of them would have shown the highest rates in the table.</li>
+    <li>One more complaint moves a rate built on 4 by a quarter.</li>
+  </ul>
+  <aside class="notes"><p>Two reasons for one rule. Statistical: a rate on four cases is noise, and it is exactly what a headline would pick. Privacy: four complaints from European visitors at one small site in three years may be four identifiable parties. The thresholds are this fictional board's own rule in data/publication_rule.json; a real organisation sets its own with its data protection officer. Hanouf Al-Rumaihi owns it here.</p></aside>
+</section>
+
+<section class="slide" id="withheld-is-not-hidden" data-lo="LO3" data-label="Totals and withheld cells">
+  <div class="kicker">The stretch of lab 2.2</div>
+  <h2>A withheld cell beside a published total can be recovered</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>By subtraction</h4><p class="small mb0">Honey Museum: 139 complaints in total, four origin cells published, one withheld. The fifth is 139 minus the four: 8.</p></div>
+    <div class="card c-teal"><h4>What the analyst does</h4><ul class="bullets tight small"><li>marks every cell that fails the rule</li><li>checks each row and column for a single withheld cell</li><li>hands the table to the person who owns the rule</li></ul></div>
+  </div>
+  <div class="callout note mt"><b>Where this continues.</b> Second-cell suppression, differencing between releases and the classification of outputs are taught in DS-207. Here you learn to see the problem and to mark the cells.</div>
+  <aside class="notes"><p>Keep this to three minutes; it is a pointer, not a method. The habit to leave them with: before a table of small groups goes out, somebody other than the analyst decides. Participants who took the stretch can say how long the recovery took them: under a minute.</p></aside>
+</section>
+
+<section class="slide" id="check-rates" data-lo="LO3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Which sentence can be printed?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">A city logs 420 pothole reports in District A (300 km of road) and 150 in District B (60 km of road). The mayor asks where the roads are worse. What do you report?</p>
+    <div class="opts">
+      <div class="opt" data-ok>District B: 2.5 reports per km of road against 1.4 in District A</div>
+      <div class="opt" data-why="Ranks by count, which follows the length of the road network and not its condition">District A: it has almost three times as many reports as B</div>
+      <div class="opt" data-why="Adds the two districts together, which answers no question about either of them">Both: the city has 570 reports on 360 km, or 1.6 per km</div>
+      <div class="opt" data-why="Residents report, but the question is about roads, so road length is the fitting denominator">Neither: reports per resident are needed before any answer</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The question is about roads, so the count is divided by what could have had a pothole: kilometres of road, with both parts shown.</div>
+  </div>
+  <aside class="notes"><p>Answer: the first. The fourth option is worth discussing: reports per resident answers a different and fair question (who reports?), and a district where few people report may have bad roads and few reports. A rate of reports is never quite a rate of potholes. Say so in the second sentence.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-2" data-auto="lab" data-lab="2.2">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Starts from U.complaints() and U.tickets(). The SQL runs in DuckDB on the dataframes; pandas is accepted wherever the result is the same table. Common failure: dividing by the number of ticket sales (rows) instead of the sum of tickets. The check on total visitors catches it. The reading must carry a rate with its two parts.</p></aside>
 </section>
 
-<!-- Session 3 -->
-
+<!-- ======================= SESSION 3 ======================= -->
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea" data-lo="LO3">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
-  <div class="cols cols-2">
+<section class="slide" id="trend-season-event" data-lo="LO3" data-label="Trend, season, event">
+  <div class="kicker">Reading a time series</div>
+  <h2>A monthly line holds three things at once</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d2_3_line.svg" alt="Line of monthly arrivals from January 2023 to December 2025, y axis from zero: three summer peaks at about 100,000, 106,000 and 111,000 in July, lows near 55,000 to 65,000 in winter, and three spikes outside summer in October 2024, February 2025 and October 2025">
+      <figcaption>Arrivals per month, all origin markets.</figcaption>
+    </figure>
     <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
+      <li><b>Trend:</b> each summer peak is higher than the last.</li>
+      <li><b>Season:</b> the same shape every year, highest in July.</li>
+      <li><b>Events:</b> three spikes that are not in summer.</li>
     </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <div class="callout tip"><b>Draw it this way.</b> Time on x, left to right, evenly spaced; a line for a continuous series; the y axis from zero when sizes are compared.</div>
+  <aside class="notes"><p>Question 4 of the plan: did the festivals bring people? Ask the room to point at the festivals before naming them; they will find October 2024 and usually miss February 2025. Everything else in the session is a way of making the eye's judgement into a number. Forecasting, and models of trend and season, are out of scope here.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps" data-lo="LO3">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="seasonal-profile" data-lo="LO3" data-label="The seasonal profile">
+  <div class="kicker">Lab 2.3, step 2</div>
+  <h2>A seasonal index says how a month compares with an average month</h2>
+  <div class="cols cols-2">
+    <div>
+      <div class="cols cols-2">
+        <div class="stat"><div class="big">1.43</div><div class="lbl">July: 43% above an average month</div></div>
+        <div class="stat"><div class="big">0.78</div><div class="lbl">January: 22% below</div></div>
+      </div>
+    </div>
+    <ul class="bullets">
+      <li>Divide each month of 2023 by the mean of its twelve months.</li>
+      <li>Twelve numbers with a mean of 1.</li>
+      <li>2023 had no festival, so its shape is the season alone.</li>
+    </ul>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <div class="callout warn mt"><b>What goes wrong.</b> "Arrivals rose 30% from May to July" describes the calendar. It happens every year.</div>
+  <aside class="notes"><p>The index is a summary of the season, as the median was a summary of a distribution. One year gives one value per month, which is thin: say so. With more event-free years you would average the index over them. The lab computes the profile and checks that July is the peak and that the twelve values average to one.</p></aside>
+</section>
+
+<section class="slide" id="year-on-year" data-lo="LO3" data-label="Year on year">
+  <div class="kicker">Lab 2.3, step 3</div>
+  <h2>The same month a year earlier removes the season, and hides what repeats</h2>
+  <table class="t">
+    <tr><th>Month</th><th>Festival</th><th class="num">Change on a year earlier</th></tr>
+    <tr><td>October 2024</td><td>Honey Festival, first edition</td><td class="num">+37%</td></tr>
+    <tr><td>February 2025</td><td>Heritage Nights, first edition</td><td class="num">+27%</td></tr>
+    <tr><td>October 2025</td><td>Honey Festival, second edition</td><td class="num">+7%</td></tr>
+  </table>
+  <ul class="bullets tight mt">
+    <li>A typical month grew <b>6.9%</b> on the year before.</li>
+    <li>October 2025 looks ordinary because it is compared with October 2024, which had the same festival.</li>
+  </ul>
+  <aside class="notes"><p>Year on year is the comparison most reports use, and it is a good one: same month, so the season cancels. Its blind spot is on the third row. The second festival did not fail; the measure compares two festival months. Ask: against what should October 2025 be compared? Against an October with no festival, which does not exist in 2025 and has to be constructed.</p></aside>
+</section>
+
+<section class="slide" id="seasonal-baseline" data-lo="LO3" data-label="A seasonal baseline">
+  <div class="kicker">Lab 2.3, step 4</div>
+  <h2>A baseline is what the month would have been: season times trend</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d2_3_baseline.svg" alt="Monthly arrivals as a solid line and the seasonal baseline as a dashed line, y axis from zero: the two lines coincide except in October 2024, February 2025 and October 2025, where the actual line stands well above the baseline and is marked">
+      <figcaption>Actual arrivals and the baseline, dashed.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Baseline: the same month of 2023, grown by the typical yearly growth.</li>
+      <li>October 2024: <b>+29%</b>. February 2025: <b>+18%</b>. October 2025: <b>+29%</b>.</li>
+      <li>Every other month sits within 5% of the baseline.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>The baseline is 2023's month times 1.069 per year elapsed. It finds all three months and only those, and the "within 5%" tells the reader how much the baseline itself wobbles: an excess of 4% would not be a finding. In arrivals the three excesses are about 19,800, 12,000 and 21,300. The second Honey Festival was as strong as the first.</p></aside>
+</section>
+
+<section class="slide" id="what-a-baseline-is" data-lo="LO3" data-label="Limits of a baseline">
+  <div class="kicker">What the reading must carry</div>
+  <h2>A baseline is a choice, and the excess inherits it</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>It rests on one year</h4><p class="small mb0">2023 is the only year without a festival. A wet July in 2023 would sit in every later baseline.</p></div>
+    <div class="card c-cyan"><h4>It assumes steady growth</h4><p class="small mb0">One growth figure for every month and every market. Session 4 shows the markets grew at different speeds.</p></div>
+    <div class="card c-coral"><h4>It does not name a cause</h4><p class="small mb0">"29% above the baseline in the festival month" is what the data shows. A school holiday in the same month would look the same.</p></div>
+  </div>
+  <div class="callout tip mt"><b>In the report.</b> State the baseline in one line under the chart, and give the excess as a percentage and as arrivals.</div>
+  <aside class="notes"><p>The honest sentence: "In the three festival months arrivals stood 18% to 29% above what season and trend lead us to expect, about 12,000 to 21,000 extra arrivals each; other months stayed within 5%." It does not say the festivals caused them, though the reader will, reasonably, think so. The analyst's job is to say what else happened in those months, if anything.</p></aside>
+</section>
+
+<section class="slide" id="check-time" data-lo="LO3">
+  <div class="kicker">Checkpoint</div>
+  <h2>Compared with what?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">A library ran a reading campaign in March 2025. Loans were 9,000 in February 2025, 11,500 in March 2025 and 11,000 in March 2024. Loans grew 3% a year before the campaign. Which statement is supported?</p>
+    <div class="opts">
+      <div class="opt" data-why="Compares March with February, which mixes the campaign with the usual seasonal rise in March">The campaign raised loans by 28%, from 9,000 to 11,500</div>
+      <div class="opt" data-why="Uses the same month but forgets that loans were already growing 3% a year">Loans stood 4.5% above the level expected without a campaign</div>
+      <div class="opt" data-ok>Loans stood about 1.5% above a baseline of 11,330 for March 2025</div>
+      <div class="opt" data-why="A single March cannot show a failure; the excess is small and the baseline has its own error">The campaign failed, since loans rose less than in a normal year</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The baseline is the same month a year earlier, grown by the usual 3%: 11,330. The excess is 170 loans, small enough to be within the baseline's own wobble.</div>
+  </div>
+  <aside class="notes"><p>Answer: the third. The first is the commonest error in monthly reporting. The second is the honest year-on-year figure and is nearly right, which makes it a good distractor: it credits the campaign with the trend. Follow up: how would you know whether 1.5% is noise? Look at how far ordinary months sit from the baseline.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-3" data-auto="lab" data-lab="2.3">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Starts from U.arrivals(), 180 rows. The longest step is the baseline, seven minutes: watch for baselines built from all three years, which absorb half of each festival. The chart of step 5 is supplied, so that the time goes to reading it and writing. Those who finish early repeat the excess for one origin market.</p></aside>
 </section>
 
-<!-- Session 4 -->
-
+<!-- ======================= SESSION 4 ======================= -->
 <section class="slide section" id="s4" data-auto="section" data-session="4"></section>
 
-<section class="slide" id="s4-idea" data-lo="LO3">
-  <div class="kicker">REPLACE: the question this slide answers</div>
-  <h2>REPLACE: one idea, stated as a sentence</h2>
+<section class="slide" id="two-true-tables" data-lo="LO3" data-label="Two true tables">
+  <div class="kicker">Ask 5 of the brief</div>
+  <h2>Satisfaction fell overall and rose in every market</h2>
   <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: at most six bullets, each a complete thought</li>
-      <li>REPLACE: bold the key phrase; numbers come from the lab run, not from memory</li>
-    </ul>
-    <div class="card c-teal"><h4>In the case study</h4><p class="small mb0">REPLACE: tie the idea to the case study and its data</p></div>
+    <table class="t small">
+      <tr><th>All respondents</th><th class="num">2024</th><th class="num">2025</th></tr>
+      <tr><td>Mean satisfaction</td><td class="num">4.15</td><td class="num">4.07</td></tr>
+    </table>
+    <table class="t small">
+      <tr><th>Origin market</th><th class="num">2024</th><th class="num">2025</th></tr>
+      <tr><td>Tilal region</td><td class="num">4.50</td><td class="num">4.60</td></tr>
+      <tr><td>Other regions</td><td class="num">4.20</td><td class="num">4.30</td></tr>
+      <tr><td>Gulf</td><td class="num">3.70</td><td class="num">3.80</td></tr>
+      <tr><td>Asia</td><td class="num">3.41</td><td class="num">3.49</td></tr>
+      <tr><td>Europe</td><td class="num">3.30</td><td class="num">3.41</td></tr>
+    </table>
   </div>
-  <div class="callout warn mt"><b>What goes wrong.</b> REPLACE: the failure participants will hit, and how to recognise it</div>
-  <aside class="notes">REPLACE: what to say, the demo to run, the question to ask the room, the common failure and its fix</aside>
+  <div class="callout warn mt"><b>Both tables are right.</b> They come from the same 4,200 responses, and nobody made an arithmetic error.</div>
+  <aside class="notes"><p>Let the room sit with it for a minute before explaining anything. "Satisfaction went down last year. Why, and whose fault is it?" The left table is what the director saw. The right table says every market is happier. Ask for explanations and write them down; "different people answered" is the one to wait for. This pattern is often called Simpson's paradox; the name matters less than the mechanism.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps" data-lo="LO3">
-  <div class="kicker">Step by step</div>
-  <h2>REPLACE: a process, shown one step per key press</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: name</b>REPLACE: what happens first</div>
-    <div class="arrow frag" data-frag="b">→</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: name</b>REPLACE: the next piece</div>
-    <div class="arrow frag" data-frag="c">→</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: name</b>REPLACE: the result</div>
+<section class="slide" id="weighted-average" data-lo="LO3" data-label="A total is a weighted average">
+  <div class="kicker">The mechanism</div>
+  <h2>A total is a weighted average: the weights are the mix</h2>
+  <pre class="code s" data-file="what the overall mean is"><code class="language-text">overall mean  =  sum over groups of ( share of the group  ×  mean of the group )
+
+2024:  0.40 × 4.50  +  0.35 × 4.20  +  0.12 × 3.70  +  0.07 × 3.41  +  0.06 × 3.30   =  4.15
+2025:  0.26 × 4.60  +  0.30 × 4.30  +  0.19 × 3.80  +  0.13 × 3.49  +  0.12 × 3.41   =  4.07</code></pre>
+  <ul class="bullets tight">
+    <li>The total moves when the group means move, <b>or</b> when the shares move.</li>
+    <li>Here the means all rose by about 0.1 and the shares moved against them.</li>
+  </ul>
+  <aside class="notes"><p>Walk through one line of the arithmetic aloud. Every number on the right of each product went up from 2024 to 2025; the numbers on the left shifted from the first two terms to the last three. A total can fall while each part rises whenever weight moves from high-scoring groups to low-scoring ones. Lab 2.4, steps 2 and 3 compute the two columns separately.</p></aside>
+</section>
+
+<section class="slide" id="the-mix-changed" data-lo="LO3" data-label="The mix changed">
+  <div class="kicker">Lab 2.4, step 3</div>
+  <h2>The markets that score lowest grew from a quarter of the responses to almost half</h2>
+  <div class="bars">
+    <div class="row"><span>Tilal region</span><div class="bar c-teal" style="--w:65%"></div><span class="val">40% → 26%</span></div>
+    <div class="row"><span>Other regions</span><div class="bar c-teal" style="--w:75%"></div><span class="val">35% → 30%</span></div>
+    <div class="row"><span>Gulf</span><div class="bar c-coral" style="--w:48%"></div><span class="val">12% → 19%</span></div>
+    <div class="row"><span>Asia</span><div class="bar c-coral" style="--w:33%"></div><span class="val">7% → 13%</span></div>
+    <div class="row"><span>Europe</span><div class="bar c-coral" style="--w:30%"></div><span class="val">6% → 12%</span></div>
   </div>
-  <div class="callout tip mt frag"><b>Takeaway.</b> REPLACE: the one sentence to remember</div>
-  <aside class="notes">Press once per step and say what each step adds before the next one appears. REPLACE: the example to walk through</aside>
+  <p class="small mt">Bars: share of survey responses in 2025. Values: 2024 → 2025.</p>
+  <ul class="bullets tight">
+    <li>International visitors rate lower in both years, and there are far more of them in 2025.</li>
+    <li>That is the board's own strategy working: Day 3 shows international arrivals up 42% to 67% since 2023.</li>
+  </ul>
+  <aside class="notes"><p>The fall in the total is the footprint of a success: the region attracted the visitors it wanted, and those visitors score lower on this scale for reasons the survey does not reveal (expectations, language, what they compare with). "Whose fault is it?" has no answer in this data, and the honest reply is that the question rests on a number that mixes two changes.</p></aside>
+</section>
+
+<section class="slide" id="reversal-chart" data-lo="LO3" data-label="One chart of the reversal">
+  <div class="kicker">Lab 2.4, step 5</div>
+  <h2>One chart can hold the parts and the total</h2>
+  <div class="cols cols-32">
+    <figure class="figure">
+      <img src="../assets/figs/d2_4_reversal.svg" alt="Slope chart from 2024 to 2025 of mean satisfaction: five dashed lines for the origin markets all rising by about 0.1, from Tilal region at 4.5 down to Europe at 3.3, and one solid line for all respondents falling from 4.15 to 4.07">
+      <figcaption>Mean satisfaction, 1 to 5. Each line is labelled at its end.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>Five lines up, one line down: the reader sees the reversal before reading a word.</li>
+      <li>The total differs from the parts in colour <b>and</b> in line style.</li>
+      <li>The axis starts at 3.0. For positions on a 1 to 5 scale that is fair; for bars it would not be.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>A slope chart: two points in time, one line per group. Labels sit at the line ends, so no legend has to be decoded. The remark on the axis is a promissory note for Day 3, session 3, where the earlier report's bar chart of the same two totals, cut at 4.0, announces "satisfaction collapsed". The chart cannot show the mix; the caption has to.</p></aside>
+</section>
+
+<section class="slide" id="fixed-mix" data-lo="LO3" data-label="A fixed mix">
+  <div class="kicker">Lab 2.4, step 4</div>
+  <h2>Hold the mix fixed, and the comparison answers one question</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">4.15</div><div class="lbl">2024, as surveyed</div></div>
+    <div class="stat"><div class="big">4.07</div><div class="lbl">2025, as surveyed</div></div>
+    <div class="stat"><div class="big">4.25</div><div class="lbl">2025 means at the 2024 mix</div></div>
+  </div>
+  <pre class="code s"><code class="language-python">at_2024_mix = (mean_2025_by_origin * share_2024_by_origin).sum()   # 4.25</code></pre>
+  <ul class="bullets tight">
+    <li>With last year's mix of visitors, this year would have scored <b>up 0.10</b>, not down 0.08.</li>
+    <li>Say which mix was used. Another reference mix gives another figure, with the same direction here.</li>
+  </ul>
+  <aside class="notes"><p>This is direct standardisation, the same idea as an age-standardised rate in health statistics, and one line of code. It is a "what if" number: no visitor population with that mix and those means existed in 2025. Its use is to separate the two changes. The lab checks 4.250 to three decimals.</p></aside>
+</section>
+
+<section class="slide" id="which-answer" data-lo="LO3" data-label="Which answer serves which question">
+  <div class="kicker">Neither number is "the right one"</div>
+  <h2>The total and the fixed-mix figure answer different questions</h2>
+  <table class="t">
+    <tr><th>Question</th><th>Figure</th><th>Answer</th></tr>
+    <tr><td>How satisfied was the average respondent this year?</td><td>the total</td><td>4.07, down 0.08</td></tr>
+    <tr><td>Did the experience of comparable visitors improve?</td><td>by market, or at a fixed mix</td><td>up about 0.10 in every market</td></tr>
+    <tr><td>Why did the total fall?</td><td>the change of mix</td><td>more visitors from markets that rate lower</td></tr>
+  </table>
+  <div class="callout tip mt"><b>When to suspect a reversal.</b> Groups differ in level, and their shares changed between the things you compare. Check the mix before explaining any change in a total.</div>
+  <aside class="notes"><p>Do not let the room conclude that the total is wrong: a hotel owner cares about the average guest who walks in. The board may print all three lines, and should print them together. The check in the callout takes two minutes and belongs before any sentence that begins "satisfaction fell because". Splitting can also mislead: with enough splits one will reverse by chance, which is Day 4, session 3.</p></aside>
+</section>
+
+<section class="slide" id="check-reversal" data-lo="LO3">
+  <div class="kicker">Checkpoint</div>
+  <h2>What do you check first?</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">A centre's pass rate fell from 82% to 76%. Evening courses always pass less often than day courses, and evening enrolment doubled. What comes before writing "teaching quality fell"?</p>
+    <div class="opts">
+      <div class="opt" data-why="A larger sample narrows the uncertainty of 76%; it cannot separate a change of mix from a change of quality">Wait for one more year of results so that the fall is certain</div>
+      <div class="opt" data-ok>Compare pass rates inside day and evening courses, and the shares of each</div>
+      <div class="opt" data-why="Removing the evening courses changes the question and discards the group that grew">Recompute the pass rate for day courses only and report that figure</div>
+      <div class="opt" data-why="The total already is the weighted average; weighting it again by enrolment changes nothing">Weight the pass rate by enrolment so that large courses count for more</div>
+    </div>
+    <div class="callout tip why"><b>Why.</b> The groups differ in level and their shares changed: the total may have fallen with both pass rates steady or rising. Look at the parts and at the mix.</div>
+  </div>
+  <aside class="notes"><p>Answer: the second. If both pass rates turn out to have fallen, then quality may indeed be the story, and the check cost two minutes. The third option is tempting because it gives a clean number; it answers "how are the day courses doing", which nobody asked.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-4" data-auto="lab" data-lab="2.4">
-  <aside class="notes">REPLACE: what to watch for while participants work, the typical problems, and the fallback for anyone who did not finish an earlier lab</aside>
+  <aside class="notes"><p>Starts from U.survey(), the 4,200 responses of 2024 and 2025. Short steps; the sentence for the board at the end is the hard part and is written without the assistant. A good sentence gives the total, the direction inside the markets and the change of mix, and blames nobody. Common failure: computing the fixed-mix figure with the 2025 shares, which returns the 2025 total.</p></aside>
 </section>
 
-<section class="slide" id="wrap-up">
-  <div class="kicker">Day 2 · wrap-up</div>
-  <h2>Three things to keep</h2>
-  <div class="cols cols-3">
-    <div class="card c-teal"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-coral"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
-    <div class="card c-purple"><h4>Remember</h4><p class="small mb0">REPLACE: one idea participants keep</p></div>
+<section class="slide" id="wrap-up" data-label="Wrap-up">
+  <div class="kicker">Day 2</div>
+  <h2>A number depends on what it is set against</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>Its unit</h4><p class="small mb0">0.39 by hotel-day, 0.70 by week. Say which.</p></div>
+    <div class="card c-cyan"><h4>Its denominator</h4><p class="small mb0">First by count, fifth by rate. Print both parts.</p></div>
+    <div class="card c-coral"><h4>Its baseline</h4><p class="small mb0">+7% on last year, +29% on the season. State the baseline.</p></div>
+    <div class="card c-purple"><h4>Its mix</h4><p class="small mb0">Down overall, up in every market. Check the shares.</p></div>
   </div>
+  <aside class="notes"><p>Four answers for the director are now on the table: questions 2 to 5 of the plan. Ask each table which of the four surprised them most. Then point forward: every one of these answers is a chart somebody could draw dishonestly, and the board's earlier report did. That is tomorrow.</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="Next">
-  <div class="kicker">Next</div>
-  <h2>Day 3: Building honest charts</h2>
-  <p class="lead">REPLACE: what participants prepare before then; unfinished labs can be finished at home</p>
-  <aside class="notes">REPLACE: accounts, installs or reading participants need before the next unit</aside>
+  <div class="kicker">Day 3</div>
+  <h1>Building honest charts</h1>
+  <p class="lead">A chart as a specification, small multiples, six misleading charts to repair, and one chart in Arabic and English.</p>
+  <ul class="bullets">
+    <li>Tonight, look at one chart in a report you receive at work and ask where its y axis starts.</li>
+    <li>Every lab of Day 3 starts from the supplied tables.</li>
+  </ul>
+  <aside class="notes"><p>The homework takes two minutes and gives tomorrow's third session its examples. No one should bring a confidential chart into the room; describing it is enough.</p></aside>
 </section>

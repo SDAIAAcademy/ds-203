@@ -506,7 +506,7 @@ def main() -> None:
     write_json({"weekend_claim": "Weekend visitors are more satisfied than weekday visitors.",
                 "headline": f"At the {h['site']}, weekend visitors were far more satisfied than weekday visitors in {h['year']}.",
                 "headline_site": h["site"], "headline_year": h["year"],
-                "how_found": "Nayef Al-Jumaah compared weekend and weekday satisfaction at each of the nine sites in each of the three years and kept the largest gap."},
+                "how_found": "Nayef Al-Jumaah compared weekend and weekday satisfaction at each of the nine sites in each of the three years and kept the gap with the smallest p-value."},
                DATA / "claims.json")
 
     visitors = tickets.groupby("site")["tickets"].sum()

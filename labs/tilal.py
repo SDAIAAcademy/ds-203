@@ -125,7 +125,10 @@ def reference(lab: str, name: str, data: pd.DataFrame | None = None):
     print(f"↪ exercise not done yet: using the reference result for {name}")
     value = json.loads(_store(lab).read_text(encoding="utf-8"))[name]
     if isinstance(value, dict) and "__chart__" in value:
-        chart = alt().Chart.from_dict(value["__chart__"], validate=False)
+        A, s = alt(), value["__chart__"]
+        kind = next((c for k, c in (("layer", A.LayerChart), ("facet", A.FacetChart), ("vconcat", A.VConcatChart), ("hconcat", A.HConcatChart),
+                                    ("concat", A.ConcatChart), ("repeat", A.RepeatChart)) if k in s), A.Chart)
+        chart = kind.from_dict(s, validate=False)
         if "datasets" not in value["__chart__"]:
             chart.data = data
         return chart
@@ -457,6 +460,14 @@ def weekly() -> pd.DataFrame:
     return w
 
 
+def hotel_days() -> pd.DataFrame:
+    """One row per hotel and day with the day's ticket sales at all sites: date, hotel_id, rooms, rate, tickets_day."""
+    daily = tickets().groupby("sale_date")["tickets"].sum().rename("tickets_day")
+    d = occupancy().join(daily, on="date")
+    d["rate"] = d["rooms_sold"] / d["rooms"]
+    return d[["date", "hotel_id", "rooms", "rate", "tickets_day"]]
+
+
 def misleading(k: int):
     """Chart k (1 to 6) of the earlier report, as Nayef Al-Jumaah drew it: (chart, data, caption).
 
@@ -537,7 +548,7 @@ def _lab(hexcode: str) -> np.ndarray:
 
 
 def closest_pair(palette: list[str], kind: str | None = None) -> tuple[float, str, str]:
-    """The two colours of a palette that are hardest to tell apart, and their distance (CIELAB; under 20 is hard)."""
+    """The two colours of a palette that are hardest to tell apart, and their distance in CIELAB units (below about 10 is hard to tell apart)."""
     cols = [simulate(c, kind) if kind else c for c in palette]
     best = (1e9, "", "")
     for i in range(len(cols)):

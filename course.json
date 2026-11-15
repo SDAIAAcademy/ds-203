@@ -807,7 +807,7 @@
                 "minutes": 7
               }
             ],
-            "stretch": "Render the report in Arabic by passing one more parameter"
+            "stretch": "Write the one line of a change log that says which numbers differ between two renders"
           },
           "summary": "What makes a report rerun: raw data read-only, one path from raw data to the page, fixed seeds, and findings written with their limits"
         }

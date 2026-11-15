@@ -1,0 +1,1047 @@
+{
+ "cells": {
+  "__frame__": {
+   "columns": [
+    "site",
+    "origin",
+    "complaints",
+    "visitors",
+    "per_thousand"
+   ],
+   "data": [
+    [
+     "Cable Car",
+     "Asia",
+     58,
+     10702,
+     5.4195477481
+    ],
+    [
+     "Cable Car",
+     "Europe",
+     26,
+     4064,
+     6.3976377953
+    ],
+    [
+     "Cable Car",
+     "Gulf",
+     103,
+     19441,
+     5.2980813744
+    ],
+    [
+     "Cable Car",
+     "Other regions",
+     307,
+     47798,
+     6.4228628813
+    ],
+    [
+     "Cable Car",
+     "Tilal region",
+     105,
+     18817,
+     5.5800605835
+    ],
+    [
+     "Cloud Lookout",
+     "Asia",
+     6,
+     1769,
+     3.3917467496
+    ],
+    [
+     "Cloud Lookout",
+     "Europe",
+     10,
+     1311,
+     7.6277650648
+    ],
+    [
+     "Cloud Lookout",
+     "Gulf",
+     23,
+     3356,
+     6.8533969011
+    ],
+    [
+     "Cloud Lookout",
+     "Other regions",
+     85,
+     11173,
+     7.6076255258
+    ],
+    [
+     "Cloud Lookout",
+     "Tilal region",
+     30,
+     5347,
+     5.6106227791
+    ],
+    [
+     "Honey Museum",
+     "Asia",
+     8,
+     2075,
+     3.8554216867
+    ],
+    [
+     "Honey Museum",
+     "Europe",
+     10,
+     1432,
+     6.9832402235
+    ],
+    [
+     "Honey Museum",
+     "Gulf",
+     31,
+     5376,
+     5.7663690476
+    ],
+    [
+     "Honey Museum",
+     "Other regions",
+     56,
+     12560,
+     4.4585987261
+    ],
+    [
+     "Honey Museum",
+     "Tilal region",
+     34,
+     6367,
+     5.3400345532
+    ],
+    [
+     "Juniper Park",
+     "Asia",
+     10,
+     3743,
+     2.6716537537
+    ],
+    [
+     "Juniper Park",
+     "Europe",
+     13,
+     2510,
+     5.1792828685
+    ],
+    [
+     "Juniper Park",
+     "Gulf",
+     28,
+     7040,
+     3.9772727273
+    ],
+    [
+     "Juniper Park",
+     "Other regions",
+     88,
+     22371,
+     3.9336641187
+    ],
+    [
+     "Juniper Park",
+     "Tilal region",
+     57,
+     10892,
+     5.2331986779
+    ],
+    [
+     "Souq Walk",
+     "Asia",
+     27,
+     5502,
+     4.907306434
+    ],
+    [
+     "Souq Walk",
+     "Europe",
+     15,
+     3816,
+     3.9308176101
+    ],
+    [
+     "Souq Walk",
+     "Gulf",
+     60,
+     10836,
+     5.5370985604
+    ],
+    [
+     "Souq Walk",
+     "Other regions",
+     185,
+     33586,
+     5.5082474841
+    ],
+    [
+     "Souq Walk",
+     "Tilal region",
+     107,
+     23859,
+     4.4846808332
+    ],
+    [
+     "Stone Village",
+     "Asia",
+     21,
+     2866,
+     7.3272854152
+    ],
+    [
+     "Stone Village",
+     "Europe",
+     31,
+     3829,
+     8.0961086446
+    ],
+    [
+     "Stone Village",
+     "Gulf",
+     35,
+     5189,
+     6.7450375795
+    ],
+    [
+     "Stone Village",
+     "Other regions",
+     105,
+     16495,
+     6.3655653228
+    ],
+    [
+     "Stone Village",
+     "Tilal region",
+     38,
+     8196,
+     4.6364080039
+    ],
+    [
+     "Terrace Farms",
+     "Asia",
+     6,
+     441,
+     13.6054421769
+    ],
+    [
+     "Terrace Farms",
+     "Europe",
+     4,
+     321,
+     12.46105919
+    ],
+    [
+     "Terrace Farms",
+     "Gulf",
+     21,
+     1694,
+     12.3966942149
+    ],
+    [
+     "Terrace Farms",
+     "Other regions",
+     91,
+     5736,
+     15.8647140865
+    ],
+    [
+     "Terrace Farms",
+     "Tilal region",
+     45,
+     3891,
+     11.565150347
+    ],
+    [
+     "Tilal Fort",
+     "Asia",
+     24,
+     4547,
+     5.2782054102
+    ],
+    [
+     "Tilal Fort",
+     "Europe",
+     14,
+     2876,
+     4.8678720445
+    ],
+    [
+     "Tilal Fort",
+     "Gulf",
+     42,
+     8186,
+     5.1307109699
+    ],
+    [
+     "Tilal Fort",
+     "Other regions",
+     150,
+     25516,
+     5.8786643675
+    ],
+    [
+     "Tilal Fort",
+     "Tilal region",
+     66,
+     12433,
+     5.3084533097
+    ],
+    [
+     "Wadi Trail",
+     "Asia",
+     19,
+     1673,
+     11.3568439928
+    ],
+    [
+     "Wadi Trail",
+     "Europe",
+     48,
+     3142,
+     15.2768936983
+    ],
+    [
+     "Wadi Trail",
+     "Gulf",
+     30,
+     2778,
+     10.7991360691
+    ],
+    [
+     "Wadi Trail",
+     "Other regions",
+     97,
+     9291,
+     10.4402109568
+    ],
+    [
+     "Wadi Trail",
+     "Tilal region",
+     49,
+     4524,
+     10.8311229001
+    ]
+   ],
+   "index": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+   ]
+  }
+ },
+ "counts": {
+  "__series__": {
+   "data": [
+    599,
+    394,
+    296,
+    243,
+    230,
+    196,
+    167,
+    154,
+    139
+   ],
+   "index": [
+    "Cable Car",
+    "Souq Walk",
+    "Tilal Fort",
+    "Wadi Trail",
+    "Stone Village",
+    "Juniper Park",
+    "Terrace Farms",
+    "Cloud Lookout",
+    "Honey Museum"
+   ],
+   "name": "complaints"
+  }
+ },
+ "pub": {
+  "__frame__": {
+   "columns": [
+    "site",
+    "origin",
+    "complaints",
+    "visitors",
+    "per_thousand",
+    "publish",
+    "shown"
+   ],
+   "data": [
+    [
+     "Cable Car",
+     "Asia",
+     58,
+     10702,
+     5.4195477481,
+     true,
+     "5.4"
+    ],
+    [
+     "Cable Car",
+     "Europe",
+     26,
+     4064,
+     6.3976377953,
+     true,
+     "6.4"
+    ],
+    [
+     "Cable Car",
+     "Gulf",
+     103,
+     19441,
+     5.2980813744,
+     true,
+     "5.3"
+    ],
+    [
+     "Cable Car",
+     "Other regions",
+     307,
+     47798,
+     6.4228628813,
+     true,
+     "6.4"
+    ],
+    [
+     "Cable Car",
+     "Tilal region",
+     105,
+     18817,
+     5.5800605835,
+     true,
+     "5.6"
+    ],
+    [
+     "Cloud Lookout",
+     "Asia",
+     6,
+     1769,
+     3.3917467496,
+     false,
+     "withheld"
+    ],
+    [
+     "Cloud Lookout",
+     "Europe",
+     10,
+     1311,
+     7.6277650648,
+     true,
+     "7.6"
+    ],
+    [
+     "Cloud Lookout",
+     "Gulf",
+     23,
+     3356,
+     6.8533969011,
+     true,
+     "6.9"
+    ],
+    [
+     "Cloud Lookout",
+     "Other regions",
+     85,
+     11173,
+     7.6076255258,
+     true,
+     "7.6"
+    ],
+    [
+     "Cloud Lookout",
+     "Tilal region",
+     30,
+     5347,
+     5.6106227791,
+     true,
+     "5.6"
+    ],
+    [
+     "Honey Museum",
+     "Asia",
+     8,
+     2075,
+     3.8554216867,
+     false,
+     "withheld"
+    ],
+    [
+     "Honey Museum",
+     "Europe",
+     10,
+     1432,
+     6.9832402235,
+     true,
+     "7.0"
+    ],
+    [
+     "Honey Museum",
+     "Gulf",
+     31,
+     5376,
+     5.7663690476,
+     true,
+     "5.8"
+    ],
+    [
+     "Honey Museum",
+     "Other regions",
+     56,
+     12560,
+     4.4585987261,
+     true,
+     "4.5"
+    ],
+    [
+     "Honey Museum",
+     "Tilal region",
+     34,
+     6367,
+     5.3400345532,
+     true,
+     "5.3"
+    ],
+    [
+     "Juniper Park",
+     "Asia",
+     10,
+     3743,
+     2.6716537537,
+     true,
+     "2.7"
+    ],
+    [
+     "Juniper Park",
+     "Europe",
+     13,
+     2510,
+     5.1792828685,
+     true,
+     "5.2"
+    ],
+    [
+     "Juniper Park",
+     "Gulf",
+     28,
+     7040,
+     3.9772727273,
+     true,
+     "4.0"
+    ],
+    [
+     "Juniper Park",
+     "Other regions",
+     88,
+     22371,
+     3.9336641187,
+     true,
+     "3.9"
+    ],
+    [
+     "Juniper Park",
+     "Tilal region",
+     57,
+     10892,
+     5.2331986779,
+     true,
+     "5.2"
+    ],
+    [
+     "Souq Walk",
+     "Asia",
+     27,
+     5502,
+     4.907306434,
+     true,
+     "4.9"
+    ],
+    [
+     "Souq Walk",
+     "Europe",
+     15,
+     3816,
+     3.9308176101,
+     true,
+     "3.9"
+    ],
+    [
+     "Souq Walk",
+     "Gulf",
+     60,
+     10836,
+     5.5370985604,
+     true,
+     "5.5"
+    ],
+    [
+     "Souq Walk",
+     "Other regions",
+     185,
+     33586,
+     5.5082474841,
+     true,
+     "5.5"
+    ],
+    [
+     "Souq Walk",
+     "Tilal region",
+     107,
+     23859,
+     4.4846808332,
+     true,
+     "4.5"
+    ],
+    [
+     "Stone Village",
+     "Asia",
+     21,
+     2866,
+     7.3272854152,
+     true,
+     "7.3"
+    ],
+    [
+     "Stone Village",
+     "Europe",
+     31,
+     3829,
+     8.0961086446,
+     true,
+     "8.1"
+    ],
+    [
+     "Stone Village",
+     "Gulf",
+     35,
+     5189,
+     6.7450375795,
+     true,
+     "6.7"
+    ],
+    [
+     "Stone Village",
+     "Other regions",
+     105,
+     16495,
+     6.3655653228,
+     true,
+     "6.4"
+    ],
+    [
+     "Stone Village",
+     "Tilal region",
+     38,
+     8196,
+     4.6364080039,
+     true,
+     "4.6"
+    ],
+    [
+     "Terrace Farms",
+     "Asia",
+     6,
+     441,
+     13.6054421769,
+     false,
+     "withheld"
+    ],
+    [
+     "Terrace Farms",
+     "Europe",
+     4,
+     321,
+     12.46105919,
+     false,
+     "withheld"
+    ],
+    [
+     "Terrace Farms",
+     "Gulf",
+     21,
+     1694,
+     12.3966942149,
+     true,
+     "12.4"
+    ],
+    [
+     "Terrace Farms",
+     "Other regions",
+     91,
+     5736,
+     15.8647140865,
+     true,
+     "15.9"
+    ],
+    [
+     "Terrace Farms",
+     "Tilal region",
+     45,
+     3891,
+     11.565150347,
+     true,
+     "11.6"
+    ],
+    [
+     "Tilal Fort",
+     "Asia",
+     24,
+     4547,
+     5.2782054102,
+     true,
+     "5.3"
+    ],
+    [
+     "Tilal Fort",
+     "Europe",
+     14,
+     2876,
+     4.8678720445,
+     true,
+     "4.9"
+    ],
+    [
+     "Tilal Fort",
+     "Gulf",
+     42,
+     8186,
+     5.1307109699,
+     true,
+     "5.1"
+    ],
+    [
+     "Tilal Fort",
+     "Other regions",
+     150,
+     25516,
+     5.8786643675,
+     true,
+     "5.9"
+    ],
+    [
+     "Tilal Fort",
+     "Tilal region",
+     66,
+     12433,
+     5.3084533097,
+     true,
+     "5.3"
+    ],
+    [
+     "Wadi Trail",
+     "Asia",
+     19,
+     1673,
+     11.3568439928,
+     true,
+     "11.4"
+    ],
+    [
+     "Wadi Trail",
+     "Europe",
+     48,
+     3142,
+     15.2768936983,
+     true,
+     "15.3"
+    ],
+    [
+     "Wadi Trail",
+     "Gulf",
+     30,
+     2778,
+     10.7991360691,
+     true,
+     "10.8"
+    ],
+    [
+     "Wadi Trail",
+     "Other regions",
+     97,
+     9291,
+     10.4402109568,
+     true,
+     "10.4"
+    ],
+    [
+     "Wadi Trail",
+     "Tilal region",
+     49,
+     4524,
+     10.8311229001,
+     true,
+     "10.8"
+    ]
+   ],
+   "index": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+   ]
+  }
+ },
+ "ranks": {
+  "__frame__": {
+   "columns": [
+    "site",
+    "complaints",
+    "visitors",
+    "per_thousand",
+    "rank_count",
+    "rank_rate"
+   ],
+   "data": [
+    [
+     "Cable Car",
+     599,
+     100822.0,
+     5.9411636349,
+     1,
+     5
+    ],
+    [
+     "Souq Walk",
+     394,
+     77599.0,
+     5.0773850178,
+     2,
+     7
+    ],
+    [
+     "Tilal Fort",
+     296,
+     53558.0,
+     5.5267186975,
+     3,
+     6
+    ],
+    [
+     "Wadi Trail",
+     243,
+     21408.0,
+     11.350896861,
+     4,
+     2
+    ],
+    [
+     "Stone Village",
+     230,
+     36575.0,
+     6.2884483937,
+     5,
+     4
+    ],
+    [
+     "Juniper Park",
+     196,
+     46556.0,
+     4.2099836756,
+     6,
+     9
+    ],
+    [
+     "Terrace Farms",
+     167,
+     12083.0,
+     13.8210709261,
+     7,
+     1
+    ],
+    [
+     "Cloud Lookout",
+     154,
+     22956.0,
+     6.7084857989,
+     8,
+     3
+    ],
+    [
+     "Honey Museum",
+     139,
+     27810.0,
+     4.9982020856,
+     9,
+     8
+    ]
+   ],
+   "index": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ },
+ "rates": {
+  "__frame__": {
+   "columns": [
+    "site",
+    "complaints",
+    "visitors",
+    "per_thousand"
+   ],
+   "data": [
+    [
+     "Terrace Farms",
+     167,
+     12083.0,
+     13.8210709261
+    ],
+    [
+     "Wadi Trail",
+     243,
+     21408.0,
+     11.350896861
+    ],
+    [
+     "Cloud Lookout",
+     154,
+     22956.0,
+     6.7084857989
+    ],
+    [
+     "Stone Village",
+     230,
+     36575.0,
+     6.2884483937
+    ],
+    [
+     "Cable Car",
+     599,
+     100822.0,
+     5.9411636349
+    ],
+    [
+     "Tilal Fort",
+     296,
+     53558.0,
+     5.5267186975
+    ],
+    [
+     "Souq Walk",
+     394,
+     77599.0,
+     5.0773850178
+    ],
+    [
+     "Honey Museum",
+     139,
+     27810.0,
+     4.9982020856
+    ],
+    [
+     "Juniper Park",
+     196,
+     46556.0,
+     4.2099836756
+    ]
+   ],
+   "index": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ },
+ "reading": "The Cable Car has the most complaints (599) because it has the most visitors (100,822): its rate, 5.9 per thousand visitors, is fifth of nine, while Terrace Farms has 13.8 per thousand (167 complaints among 12,083 visitors) and the Wadi Trail 11.4. By origin market, four site-by-origin cells rest on fewer than 10 complaints or 1,000 visitors and are withheld, so the table does not show whether visitors from Asia or Europe complain more at the small sites.",
+ "recovered": 6
+}
