@@ -2,9 +2,9 @@
   "v": 1,
   "engine": "1.0.0",
   "build": {
-    "at": "2026-11-15T14:45:38Z",
-    "version": "2027.1.0",
-    "commit": "c59b820"
+    "at": "2026-11-24T17:04:02Z",
+    "version": "2027.2.0",
+    "commit": "275c4e8"
   },
   "lang": "en",
   "dir": "ltr",
@@ -519,7 +519,7 @@
       "n": 14,
       "session": 2,
       "title": "Counts, rates and denominators",
-      "text": "Session 2 Counts, rates and denominators Convert counts to rates with a denominator that fits the question Compare a ranking by count with a ranking by rate Mark the cells of a table that a publication rule holds back 02",
+      "text": "Session 2 Counts, rates and denominators Convert counts to rates with a denominator that fits the question Compare a ranking by count with a ranking by rate Colour a map by a rate on its exposure, not by a count Mark the cells of a table that a publication rule holds back 02",
       "href": "../slides/day2.html#s2"
     },
     {
@@ -560,17 +560,35 @@
     },
     {
       "deck": "day2",
-      "id": "small-cells",
+      "id": "map-of-counts",
       "n": 19,
       "session": 2,
-      "title": "Cut finer and the highest rates rest on the fewest cases",
-      "text": "Lab 2.2, steps 4 and 5 Cut finer and the highest rates rest on the fewest cases Site × origin Complaints Visitors Published Terrace Farms × Asia 6 441 withheld Terrace Farms × Europe 4 321 withheld Cloud Lookout × Asia 6 1,769 withheld Honey Museum × Asia 8 2,075 withheld The board's rule: publish a cell only with at least 10 complaints and 1,000 visitors. Four of 45 cells are held back. Two of them would have shown the highest rates in the table. One more complaint moves a rate built on 4 by a quarter.",
+      "title": "A map coloured by count shows where the visitors are",
+      "text": "The same fault on a map A map coloured by count shows where the visitors are A neighbouring region, nine districts as equal tiles. Synthetic data. A choropleth colours each area by one number. Central holds 261 of 714 call-outs (37%) and 43% of the visitor-days. Across the nine districts, call-outs and visitor-days correlate at 0.98. The left map repeats the right one.",
+      "href": "../slides/day2.html#map-of-counts"
+    },
+    {
+      "deck": "day2",
+      "id": "map-of-rates",
+      "n": 20,
+      "session": 2,
+      "title": "Colour the rate on the exposure, not the count",
+      "text": "Divide, then colour Colour the rate on the exposure, not the count Call-outs per 100,000 visitor-days, 2025. Synthetic data. The base is whoever could have needed a call-out: visitor-days, not residents or square kilometres. Central: first by count, seventh of eight by rate (32). North-West: sixth by count, first by rate: 63 calls on 45,000 visitor-days, 140. South-East: 6 calls; one more moves its rate by a sixth. Grey, with its count.",
+      "href": "../slides/day2.html#map-of-rates"
+    },
+    {
+      "deck": "day2",
+      "id": "small-cells",
+      "n": 21,
+      "session": 2,
+      "title": "Cut finer and some of the highest rates rest on the fewest cases",
+      "text": "Lab 2.2, steps 4 and 5 Cut finer and some of the highest rates rest on the fewest cases Site × origin Complaints Visitors Published Terrace Farms × Asia 6 441 withheld Terrace Farms × Europe 4 321 withheld Cloud Lookout × Asia 6 1,769 withheld Honey Museum × Asia 8 2,075 withheld The board's rule: publish a cell only with at least 10 complaints and 1,000 visitors. Four of 45 cells are held back. Two of them, above 12 per thousand on 6 and 4 complaints, would have been among the four highest rates in the table. One more complaint moves a rate built on 4 by a quarter.",
       "href": "../slides/day2.html#small-cells"
     },
     {
       "deck": "day2",
       "id": "withheld-is-not-hidden",
-      "n": 20,
+      "n": 22,
       "session": 2,
       "title": "A withheld cell beside a published total can be recovered",
       "text": "The stretch of lab 2.2 A withheld cell beside a published total can be recovered By subtraction Honey Museum: 139 complaints in total, four origin cells published, one withheld. The fifth is 139 minus the four: 8. What the analyst does marks every cell that fails the rule checks each row and column for a single withheld cell hands the table to the person who owns the rule Where this continues. Second-cell suppression, differencing between releases and the classification of outputs are taught in DS-207. Here you learn to see the problem and to mark the cells.",
@@ -579,7 +597,7 @@
     {
       "deck": "day2",
       "id": "check-rates",
-      "n": 21,
+      "n": 23,
       "session": 2,
       "title": "Which sentence can be printed?",
       "text": "Checkpoint Which sentence can be printed? A city logs 420 pothole reports in District A (300 km of road) and 150 in District B (60 km of road). The mayor asks where the roads are worse. What do you report? District B: 2.5 reports per km of road against 1.4 in District A District A: it has almost three times as many reports as B Both: the city has 570 reports on 360 km, or 1.6 per km Neither: reports per resident are needed before any answer",
@@ -588,7 +606,7 @@
     {
       "deck": "day2",
       "id": "lab-2-2",
-      "n": 22,
+      "n": 24,
       "session": 2,
       "title": "Complaint rates and small cells",
       "text": "Lab 2.2 · 25 min Complaint rates and small cells Convert complaints to rates per thousand visitors by site and by origin, compare the two rankings and mark the cells too small to publish. D2_2_complaint_rates.ipynb Count complaints by site and rank the sites 3 min Visitors by site, and complaints per thousand visitors 6 min Set the two rankings side by side 3 min Rates by site and origin 5 min Apply the publication rule 5 min Write the reading 3 min ✱ Stretch: Show that one withheld cell can be recovered from the row total",
@@ -597,7 +615,7 @@
     {
       "deck": "day2",
       "id": "s3",
-      "n": 23,
+      "n": 25,
       "session": 3,
       "title": "Change over time",
       "text": "Session 3 Change over time Draw a time series so that season and trend can be told apart Compare a month with the same month a year earlier and with a seasonal baseline Mark the months that exceed the baseline and say by how much 03",
@@ -606,7 +624,7 @@
     {
       "deck": "day2",
       "id": "trend-season-event",
-      "n": 24,
+      "n": 26,
       "session": 3,
       "title": "A monthly line holds three things at once",
       "text": "Reading a time series A monthly line holds three things at once Arrivals per month, all origin markets. Trend: each summer peak is higher than the last. Season: the same shape every year, highest in July. Events: three spikes that are not in summer. Draw it this way. Time on x, left to right, evenly spaced; a line for a continuous series; the y axis from zero when sizes are compared.",
@@ -615,7 +633,7 @@
     {
       "deck": "day2",
       "id": "seasonal-profile",
-      "n": 25,
+      "n": 27,
       "session": 3,
       "title": "A seasonal index says how a month compares with an average month",
       "text": "Lab 2.3, step 2 A seasonal index says how a month compares with an average month 1.43 July: 43% above an average month 0.78 January: 22% below Divide each month of 2023 by the mean of its twelve months. Twelve numbers with a mean of 1. 2023 had no festival, so its shape is the season alone. What goes wrong. \"Arrivals rose 30% from May to July\" describes the calendar. It happens every year.",
@@ -624,7 +642,7 @@
     {
       "deck": "day2",
       "id": "year-on-year",
-      "n": 26,
+      "n": 28,
       "session": 3,
       "title": "The same month a year earlier removes the season, and hides what repeats",
       "text": "Lab 2.3, step 3 The same month a year earlier removes the season, and hides what repeats Month Festival Change on a year earlier October 2024 Honey Festival, first edition +37% February 2025 Heritage Nights, first edition +27% October 2025 Honey Festival, second edition +7% A typical month grew 6.9% on the year before. October 2025 looks ordinary because it is compared with October 2024, which had the same festival.",
@@ -633,7 +651,7 @@
     {
       "deck": "day2",
       "id": "seasonal-baseline",
-      "n": 27,
+      "n": 29,
       "session": 3,
       "title": "A baseline is what the month would have been: season times trend",
       "text": "Lab 2.3, step 4 A baseline is what the month would have been: season times trend Actual arrivals and the baseline, dashed. Baseline: the same month of 2023, grown by the typical yearly growth. October 2024: +29%. February 2025: +18%. October 2025: +29%. Every other month sits within 5% of the baseline.",
@@ -642,7 +660,7 @@
     {
       "deck": "day2",
       "id": "what-a-baseline-is",
-      "n": 28,
+      "n": 30,
       "session": 3,
       "title": "A baseline is a choice, and the excess inherits it",
       "text": "What the reading must carry A baseline is a choice, and the excess inherits it It rests on one year 2023 is the only year without a festival. A wet July in 2023 would sit in every later baseline. It assumes steady growth One growth figure for every month and every market. Session 4 shows the markets grew at different speeds. It does not name a cause \"29% above the baseline in the festival month\" is what the data shows. A school holiday in the same month would look the same. In the report. State the baseline in one line under the chart, and give the excess as a percentage and as arrivals.",
@@ -651,7 +669,7 @@
     {
       "deck": "day2",
       "id": "check-time",
-      "n": 29,
+      "n": 31,
       "session": 3,
       "title": "Compared with what?",
       "text": "Checkpoint Compared with what? A library ran a reading campaign in March 2025. Loans were 9,000 in February 2025, 11,500 in March 2025 and 11,000 in March 2024. Loans grew 3% a year before the campaign. Which statement is supported? The campaign raised loans by 28%, from 9,000 to 11,500 Loans stood 4.5% above the level expected without a campaign Loans stood about 1.5% above a baseline of 11,330 for March 2025 The campaign failed, since loans rose less than in a normal year",
@@ -660,7 +678,7 @@
     {
       "deck": "day2",
       "id": "lab-2-3",
-      "n": 30,
+      "n": 32,
       "session": 3,
       "title": "Monthly arrivals, season and festivals",
       "text": "Lab 2.3 · 25 min Monthly arrivals, season and festivals Plot monthly arrivals, separate the summer season from the trend and mark the two festival effects against a seasonal baseline. D2_3_monthly_arrivals.ipynb A line chart of monthly arrivals 4 min The seasonal profile of a festival-free year 5 min Change on the same month a year earlier 5 min A baseline from season and trend; the months above it 7 min Mark the festival months and write the reading 4 min ✱ Stretch: Repeat the baseline for one origin market",
@@ -669,7 +687,7 @@
     {
       "deck": "day2",
       "id": "s4",
-      "n": 31,
+      "n": 33,
       "session": 4,
       "title": "When the total reverses",
       "text": "Session 4 When the total reverses Split a total into what each group does and how large each group is Detect a reversal between a total and its groups Report a comparison at a fixed mix 04",
@@ -678,7 +696,7 @@
     {
       "deck": "day2",
       "id": "two-true-tables",
-      "n": 32,
+      "n": 34,
       "session": 4,
       "title": "Satisfaction fell overall and rose in every market",
       "text": "Ask 5 of the brief Satisfaction fell overall and rose in every market All respondents 2024 2025 Mean satisfaction 4.15 4.07 Origin market 2024 2025 Tilal region 4.50 4.60 Other regions 4.20 4.30 Gulf 3.70 3.80 Asia 3.41 3.49 Europe 3.30 3.41 Both tables are right. They come from the same 4,200 responses, and nobody made an arithmetic error.",
@@ -687,7 +705,7 @@
     {
       "deck": "day2",
       "id": "weighted-average",
-      "n": 33,
+      "n": 35,
       "session": 4,
       "title": "A total is a weighted average: the weights are the mix",
       "text": "The mechanism A total is a weighted average: the weights are the mix overall mean = sum over groups of ( share of the group × mean of the group ) 2024: 0.40 × 4.50 + 0.35 × 4.20 + 0.12 × 3.70 + 0.07 × 3.41 + 0.06 × 3.30 = 4.15 2025: 0.26 × 4.60 + 0.30 × 4.30 + 0.19 × 3.80 + 0.13 × 3.49 + 0.12 × 3.41 = 4.07 The total moves when the group means move, or when the shares move. Here the means all rose by about 0.1 and the shares moved against them.",
@@ -696,7 +714,7 @@
     {
       "deck": "day2",
       "id": "the-mix-changed",
-      "n": 34,
+      "n": 36,
       "session": 4,
       "title": "The markets that score lowest grew from a quarter of the responses to almost half",
       "text": "Lab 2.4, step 3 The markets that score lowest grew from a quarter of the responses to almost half Tilal region 40% → 26% Other regions 35% → 30% Gulf 12% → 19% Asia 7% → 13% Europe 6% → 12% Bars: share of survey responses in 2025. Values: 2024 → 2025. International visitors rate lower in both years, and there are far more of them in 2025. That is the board's own strategy working: Day 3 shows international arrivals up 42% to 67% since 2023.",
@@ -705,7 +723,7 @@
     {
       "deck": "day2",
       "id": "reversal-chart",
-      "n": 35,
+      "n": 37,
       "session": 4,
       "title": "One chart can hold the parts and the total",
       "text": "Lab 2.4, step 5 One chart can hold the parts and the total Mean satisfaction, 1 to 5. Each line is labelled at its end. Five lines up, one line down: the reader sees the reversal before reading a word. The total differs from the parts in colour and in line style. The axis starts at 3.0. For positions on a 1 to 5 scale that is fair; for bars it would not be.",
@@ -714,7 +732,7 @@
     {
       "deck": "day2",
       "id": "fixed-mix",
-      "n": 36,
+      "n": 38,
       "session": 4,
       "title": "Hold the mix fixed, and the comparison answers one question",
       "text": "Lab 2.4, step 4 Hold the mix fixed, and the comparison answers one question 4.15 2024, as surveyed 4.07 2025, as surveyed 4.25 2025 means at the 2024 mix at_2024_mix = (mean_2025_by_origin * share_2024_by_origin).sum() # 4.25 With last year's mix of visitors, this year would have scored up 0.10, not down 0.08. Say which mix was used. Another reference mix gives another figure, with the same direction here.",
@@ -723,7 +741,7 @@
     {
       "deck": "day2",
       "id": "which-answer",
-      "n": 37,
+      "n": 39,
       "session": 4,
       "title": "The total and the fixed-mix figure answer different questions",
       "text": "Neither number is \"the right one\" The total and the fixed-mix figure answer different questions Question Figure Answer How satisfied was the average respondent this year? the total 4.07, down 0.08 Did the experience of comparable visitors improve? by market, or at a fixed mix up about 0.10 in every market Why did the total fall? the change of mix more visitors from markets that rate lower When to suspect a reversal. Groups differ in level, and their shares changed between the things you compare. Check the mix before explaining any change in a total.",
@@ -732,7 +750,7 @@
     {
       "deck": "day2",
       "id": "check-reversal",
-      "n": 38,
+      "n": 40,
       "session": 4,
       "title": "What do you check first?",
       "text": "Checkpoint What do you check first? A centre's pass rate fell from 82% to 76%. Evening courses always pass less often than day courses, and evening enrolment doubled. What comes before writing \"teaching quality fell\"? Wait for one more year of results so that the fall is certain Compare pass rates inside day and evening courses, and the shares of each Recompute the pass rate for day courses only and report that figure Weight the pass rate by enrolment so that large courses count for more",
@@ -741,7 +759,7 @@
     {
       "deck": "day2",
       "id": "lab-2-4",
-      "n": 39,
+      "n": 41,
       "session": 4,
       "title": "The satisfaction reversal",
       "text": "Lab 2.4 · 25 min The satisfaction reversal Find the satisfaction reversal once visitor origin is taken into account: down overall from 2024 to 2025, up in every origin market. D2_4_satisfaction_reversal.ipynb Mean satisfaction by year 3 min Mean satisfaction by origin and year 5 min The mix of respondents by year 4 min 2025 at the 2024 mix 6 min One chart of the reversal 4 min Write the sentence the board may print 3 min ✱ Stretch: Find a second variable that could move the total the same way",
@@ -750,7 +768,7 @@
     {
       "deck": "day2",
       "id": "wrap-up",
-      "n": 40,
+      "n": 42,
       "session": 4,
       "title": "A number depends on what it is set against",
       "text": "Day 2 A number depends on what it is set against Its unit 0.39 by hotel-day, 0.70 by week. Say which. Its denominator First by count, fifth by rate. Print both parts. Its baseline +7% on last year, +29% on the season. State the baseline. Its mix Down overall, up in every market. Check the shares.",
@@ -759,7 +777,7 @@
     {
       "deck": "day2",
       "id": "next",
-      "n": 41,
+      "n": 43,
       "session": 4,
       "title": "Building honest charts",
       "text": "Day 3 Building honest charts A chart as a specification, small multiples, six misleading charts to repair, and one chart in Arabic and English. Tonight, look at one chart in a report you receive at work and ask where its y axis starts. Every lab of Day 3 starts from the supplied tables.",
@@ -1185,7 +1203,7 @@
       "n": 6,
       "session": 1,
       "title": "Shuffle to test a difference; resample to put an interval on an estimate",
-      "text": "From DS-201, in one slide Shuffle to test a difference; resample to put an interval on an estimate Permutation test Bootstrap Question could this gap arise if the label meant nothing? how far could this estimate move with another sample? Procedure shuffle the labels, recompute the gap draw the units again with replacement, recompute Result a p-value an interval Here the weekend gap the weekly correlation New today. Not the procedures: choosing between them, choosing the unit to resample, and deciding what to do with the result.",
+      "text": "From DS-201, in one slide Shuffle to test a difference; resample to put an interval on an estimate Permutation test Bootstrap Question could this gap arise if the label meant nothing? how far could this estimate move with another sample? Procedure shuffle the labels, recompute the gap draw the units again with replacement, recompute Result a p-value an interval Here the weekend gap the weekly correlation New today. Not the procedures: applying them to patterns found by exploring, and deciding what to do with the result.",
       "href": "../slides/day4.html#which-rule"
     },
     {

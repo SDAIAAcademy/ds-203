@@ -1,7 +1,7 @@
 ---
 course: "Exploratory Analysis and Visualisation"
 code: "DS-203"
-version: "2027.1.0"
+version: "2027.2.0"
 scope: "course"
 language: "en"
 view: "trainee"
@@ -706,6 +706,7 @@ Plot hotel occupancy against ticket sales for 43,840 hotel-days, first as a soli
 
 - Convert counts to rates with a denominator that fits the question
 - Compare a ranking by count with a ranking by rate
+- Colour a map by a rate on its exposure, not by a count
 - Mark the cells of a table that a publication rule holds back
 
 #### [day2#counts-rank-size] A ranking by count is mostly a ranking by size
@@ -764,7 +765,28 @@ Figure: Complaints per thousand visitors, 2023 to 2025.
 - Terrace Farms: seventh by count, **first** by rate (13.8), on 167 complaints.
 - Wadi Trail is high on both readings of "problem": fourth by count (243), second by rate (11.4).
 
-#### [day2#small-cells] Cut finer and the highest rates rest on the fewest cases
+#### [day2#map-of-counts] A map coloured by count shows where the visitors are
+
+*The same fault on a map*
+
+Figure: A neighbouring region, nine districts as equal tiles. Synthetic data.
+
+- A **choropleth** colours each area by one number.
+- Central holds 261 of 714 call-outs (37%) and 43% of the visitor-days.
+- Across the nine districts, call-outs and visitor-days correlate at **0.98**. The left map repeats the right one.
+
+#### [day2#map-of-rates] Colour the rate on the exposure, not the count
+
+*Divide, then colour*
+
+Figure: Call-outs per 100,000 visitor-days, 2025. Synthetic data.
+
+- The base is whoever could have needed a call-out: visitor-days, not residents or square kilometres.
+- Central: first by count, **seventh of eight** by rate (32).
+- North-West: sixth by count, **first** by rate: 63 calls on 45,000 visitor-days, 140.
+- South-East: 6 calls; one more moves its rate by a sixth. Grey, with its count.
+
+#### [day2#small-cells] Cut finer and some of the highest rates rest on the fewest cases
 
 *Lab 2.2, steps 4 and 5*
 
@@ -776,7 +798,7 @@ Figure: Complaints per thousand visitors, 2023 to 2025.
 | Honey Museum × Asia | 8 | 2,075 | withheld |
 
 - The board's rule: publish a cell only with at least **10 complaints and 1,000 visitors**.
-- Four of 45 cells are held back. Two of them would have shown the highest rates in the table.
+- Four of 45 cells are held back. Two of them, above 12 per thousand on 6 and 4 complaints, would have been among the four highest rates in the table.
 - One more complaint moves a rate built on 4 by a quarter.
 
 #### [day2#withheld-is-not-hidden] A withheld cell beside a published total can be recovered
@@ -1602,7 +1624,7 @@ Data Science Track · 4 teaching days + capstone day · 4 sessions · 4 labs · 
 | **Result** | a p-value | an interval |
 | **Here** | the weekend gap | the weekly correlation |
 
-> **New today.** Not the procedures: choosing between them, choosing the unit to resample, and deciding what to do with the result.
+> **New today.** Not the procedures: applying them to patterns found by exploring, and deciding what to do with the result.
 
 #### [day4#weekend-gap] Shuffled labels give this gap one time in three
 

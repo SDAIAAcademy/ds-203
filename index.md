@@ -1,7 +1,7 @@
 ---
 course: "Exploratory Analysis and Visualisation"
 code: "DS-203"
-version: "2027.1.0"
+version: "2027.2.0"
 language: "en"
 view: "trainee"
 source: "https://sdaiaacademy.github.io/ds-203/index.html"
@@ -64,6 +64,7 @@ Slides: https://sdaiaacademy.github.io/ds-203/slides/day2.md
 - **Session 2: Counts, rates and denominators**
   - Convert counts to rates with a denominator that fits the question
   - Compare a ranking by count with a ranking by rate
+  - Colour a map by a rate on its exposure, not by a count
   - Mark the cells of a table that a publication rule holds back
   - [Lab 2.2: Complaint rates and small cells (25 min)](https://sdaiaacademy.github.io/ds-203/labs/D2_2_complaint_rates.ipynb)
 - **Session 3: Change over time**
@@ -216,4 +217,4 @@ An exploratory report on an unseen synthetic or approved public dataset, in a pu
 
 SDAIA Academy · Data Science Track · Exploratory Analysis and Visualisation
 
-Course version 2027.1.0 · engine 1.0.0 · built 2026-11-15 · commit c59b820
+Course version 2027.2.0 · engine 1.0.0 · built 2026-11-24 · commit 275c4e8

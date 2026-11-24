@@ -6,7 +6,7 @@
     "code": "DS-203",
     "title": "Exploratory Analysis and Visualisation",
     "lang": "en",
-    "version": "2027.1.0"
+    "version": "2027.2.0"
   },
   "questions": [
     {
@@ -473,7 +473,7 @@
       "misconceptions": [
         "Pupils in one school share teachers and intake, so treating them as independent makes the interval too narrow",
         "Shuffling labels tests whether a difference exists; it does not give an interval for its size",
-        "Resampling scores without their pupils or schools destroys the structure being studied",
+        "Keeps the same 40 schools in every resample, so the variation between schools, the main source of uncertainty, never enters the interval",
         ""
       ],
       "lo": [
@@ -1077,7 +1077,7 @@
       "type": "single",
       "prompt": "A ministry lists the five schools with the most pupils absent last week. All five are among the largest schools in the country. What does the list show?",
       "options": [
-        "Which schools have the most pupils",
+        "Mainly which schools are the largest",
         "Which schools have an absence problem",
         "That large schools cause more absence",
         "That absence was recorded wrongly"
@@ -1161,6 +1161,37 @@
       "session": 2,
       "slide": "small-cells",
       "level": "evaluate",
+      "pool": "practice",
+      "weight": 1,
+      "timer": 75
+    },
+    {
+      "id": "q-rate-04",
+      "type": "single",
+      "prompt": "A national map colours each province by the number of bicycle thefts reported last year. The three darkest provinces hold the three largest cities. The minister asks where a parked bicycle is most at risk. What should the analyst do before answering?",
+      "options": [
+        "Keep the counts and switch to a log colour scale so that the small provinces show",
+        "Divide each count by land area and colour the thefts per square kilometre",
+        "Divide each count by the registered bicycles, colour that rate, show the counts",
+        "Keep the counts and use a rainbow palette so that the differences stand out more"
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "A map of counts follows where the bicycles are. The risk to one bicycle is thefts divided by the bicycles that could have been stolen, shown with both parts.",
+      "misconceptions": [
+        "A log scale spreads the colours but still shows how many bicycles each province has",
+        "Per square kilometre measures how crowded a province is, not the risk to one bicycle",
+        "",
+        "A palette changes how the map looks, not what its colour measures"
+      ],
+      "lo": [
+        "LO3"
+      ],
+      "day": 2,
+      "session": 2,
+      "slide": "map-of-rates",
+      "level": "apply",
       "pool": "practice",
       "weight": 1,
       "timer": 75

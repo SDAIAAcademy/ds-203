@@ -2,9 +2,9 @@
   "v": 1,
   "engine": "1.0.0",
   "build": {
-    "at": "2026-11-15T14:45:38Z",
-    "version": "2027.1.0",
-    "commit": "c59b820"
+    "at": "2026-11-24T17:04:02Z",
+    "version": "2027.2.0",
+    "commit": "275c4e8"
   },
   "lang": "en",
   "dir": "ltr",
@@ -15,7 +15,7 @@
   "course": {
     "id": "ds-203",
     "code": "DS-203",
-    "version": "2027.1.0",
+    "version": "2027.2.0",
     "title": "Exploratory Analysis and Visualisation",
     "tagline": "Answer a director's questions from her own data: written questions first, charts that do not mislead, patterns checked against chance, and a report that reruns from raw data",
     "description": "Participants answer a fictional regional tourism board's questions by exploring its data, starting every analysis from written questions. They profile tables, examine distributions, relationships and change over time, build charts with a grammar of graphics and scales that do not mislead, and test by resampling whether a pattern could be chance. They repair misleading charts and write findings that state what is and is not shown, in a notebook that reruns from raw data.",
@@ -359,6 +359,7 @@
             "outcomes": [
               "Convert counts to rates with a denominator that fits the question",
               "Compare a ranking by count with a ranking by rate",
+              "Colour a map by a rate on its exposure, not by a count",
               "Mark the cells of a table that a publication rule holds back"
             ],
             "lo": [

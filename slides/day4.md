@@ -1,7 +1,7 @@
 ---
 course: "Exploratory Analysis and Visualisation"
 code: "DS-203"
-version: "2027.1.0"
+version: "2027.2.0"
 deck: "day4"
 day: 4
 language: "en"
@@ -78,7 +78,7 @@ Data Science Track · 4 teaching days + capstone day · 4 sessions · 4 labs · 
 | **Result** | a p-value | an interval |
 | **Here** | the weekend gap | the weekly correlation |
 
-> **New today.** Not the procedures: choosing between them, choosing the unit to resample, and deciding what to do with the result.
+> **New today.** Not the procedures: applying them to patterns found by exploring, and deciding what to do with the result.
 
 #### [day4#weekend-gap] Shuffled labels give this gap one time in three
 

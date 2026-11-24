@@ -63,8 +63,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 13
     },
     {
@@ -99,8 +99,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 22
     },
     {
@@ -135,8 +135,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 31
     },
     {
@@ -171,8 +171,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 40
     },
     {
@@ -207,8 +207,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 3
     },
     {
@@ -243,8 +243,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 12
     },
     {
@@ -279,9 +279,9 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
-      "slide": 21
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 23
     },
     {
       "id": "check-time-q1",
@@ -315,9 +315,9 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
-      "slide": 29
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 31
     },
     {
       "id": "check-reversal-q1",
@@ -351,9 +351,9 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
-      "slide": 38
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 40
     },
     {
       "id": "review-day-2-q1",
@@ -387,8 +387,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 3
     },
     {
@@ -423,8 +423,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 10
     },
     {
@@ -459,8 +459,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 18
     },
     {
@@ -495,8 +495,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 29
     },
     {
@@ -531,8 +531,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 38
     },
     {
@@ -567,8 +567,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 3
     },
     {
@@ -597,14 +597,14 @@
       "misconceptions": [
         "Pupils in one school share teachers and intake, so treating them as independent makes the interval too narrow",
         "Shuffling labels tests whether a difference exists; it does not give an interval for its size",
-        "Resampling scores without their pupils or schools destroys the structure being studied",
+        "Keeps the same 40 schools in every resample, so the variation between schools, the main source of uncertainty, never enters the interval",
         ""
       ],
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 12
     },
     {
@@ -639,8 +639,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 21
     },
     {
@@ -675,8 +675,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 31
     },
     {
@@ -711,8 +711,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 40
     },
     {
@@ -747,8 +747,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 8
     },
     {
@@ -783,8 +783,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 9
     },
     {
@@ -819,8 +819,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 11
     },
     {
@@ -855,8 +855,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 10
     },
     {
@@ -891,8 +891,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 12
     },
     {
@@ -927,8 +927,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 18
     },
     {
@@ -963,8 +963,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 19
     },
     {
@@ -999,8 +999,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 20
     },
     {
@@ -1035,8 +1035,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 29
     },
     {
@@ -1071,8 +1071,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 27
     },
     {
@@ -1107,8 +1107,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 34
     },
     {
@@ -1143,8 +1143,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 38
     },
     {
@@ -1179,8 +1179,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 39
     },
     {
@@ -1215,8 +1215,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 5
     },
     {
@@ -1251,8 +1251,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 10
     },
     {
@@ -1287,8 +1287,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 9
     },
     {
@@ -1296,7 +1296,7 @@
       "type": "single",
       "prompt": "A ministry lists the five schools with the most pupils absent last week. All five are among the largest schools in the country. What does the list show?",
       "options": [
-        "Which schools have the most pupils",
+        "Mainly which schools are the largest",
         "Which schools have an absence problem",
         "That large schools cause more absence",
         "That absence was recorded wrongly"
@@ -1323,8 +1323,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 15
     },
     {
@@ -1359,8 +1359,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 16
     },
     {
@@ -1395,9 +1395,45 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
-      "slide": 19
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 21
+    },
+    {
+      "id": "q-rate-04",
+      "type": "single",
+      "prompt": "A national map colours each province by the number of bicycle thefts reported last year. The three darkest provinces hold the three largest cities. The minister asks where a parked bicycle is most at risk. What should the analyst do before answering?",
+      "options": [
+        "Keep the counts and switch to a log colour scale so that the small provinces show",
+        "Divide each count by land area and colour the thefts per square kilometre",
+        "Divide each count by the registered bicycles, colour that rate, show the counts",
+        "Keep the counts and use a rainbow palette so that the differences stand out more"
+      ],
+      "key": {
+        "indices": [
+          2
+        ]
+      },
+      "lo": [
+        "LO3"
+      ],
+      "weight": 1,
+      "scored": true,
+      "timer": 75,
+      "displayMode": "full",
+      "explanation": "A map of counts follows where the bicycles are. The risk to one bicycle is thefts divided by the bicycles that could have been stolen, shown with both parts.",
+      "misconceptions": [
+        "A log scale spreads the colours but still shows how many bicycles each province has",
+        "Per square kilometre measures how crowded a province is, not the risk to one bicycle",
+        "",
+        "A palette changes how the map looks, not what its colour measures"
+      ],
+      "liveContext": false,
+      "basis": "best",
+      "confidence": true,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 20
     },
     {
       "id": "q-time-01",
@@ -1431,9 +1467,9 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
-      "slide": 26
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 28
     },
     {
       "id": "q-time-02",
@@ -1467,9 +1503,9 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
-      "slide": 27
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 29
     },
     {
       "id": "q-time-03",
@@ -1503,9 +1539,9 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
-      "slide": 24
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 26
     },
     {
       "id": "q-mix-01",
@@ -1539,9 +1575,9 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
-      "slide": 33
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 35
     },
     {
       "id": "q-mix-02",
@@ -1575,9 +1611,9 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
-      "slide": 36
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 38
     },
     {
       "id": "q-mix-03",
@@ -1611,9 +1647,9 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
-      "slide": 37
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
+      "slide": 39
     },
     {
       "id": "q-grammar-01",
@@ -1647,8 +1683,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 5
     },
     {
@@ -1683,8 +1719,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 6
     },
     {
@@ -1719,8 +1755,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 9
     },
     {
@@ -1755,8 +1791,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 16
     },
     {
@@ -1791,8 +1827,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 15
     },
     {
@@ -1827,8 +1863,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 22
     },
     {
@@ -1863,8 +1899,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 25
     },
     {
@@ -1899,8 +1935,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 23
     },
     {
@@ -1935,8 +1971,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 28
     },
     {
@@ -1971,8 +2007,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 32
     },
     {
@@ -2007,8 +2043,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 34
     },
     {
@@ -2043,8 +2079,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 37
     },
     {
@@ -2079,8 +2115,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 6
     },
     {
@@ -2115,8 +2151,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 8
     },
     {
@@ -2151,8 +2187,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 9
     },
     {
@@ -2187,8 +2223,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 16
     },
     {
@@ -2223,8 +2259,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 18
     },
     {
@@ -2259,8 +2295,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 20
     },
     {
@@ -2295,8 +2331,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 26
     },
     {
@@ -2331,8 +2367,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 29
     },
     {
@@ -2367,8 +2403,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 30
     },
     {
@@ -2403,8 +2439,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 28
     },
     {
@@ -2439,8 +2475,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 35
     },
     {
@@ -2475,8 +2511,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 36
     },
     {
@@ -2511,8 +2547,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 37
     },
     {
@@ -2547,8 +2583,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 38
     },
     {
@@ -2583,8 +2619,8 @@
       "liveContext": false,
       "basis": "best",
       "confidence": true,
-      "createdAt": 1794753938000,
-      "updatedAt": 1794753938000,
+      "createdAt": 1795539842000,
+      "updatedAt": 1795539842000,
       "slide": 34
     }
   ]
