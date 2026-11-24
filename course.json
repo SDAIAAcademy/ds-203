@@ -3,7 +3,7 @@
   "engine": "1",
   "id": "ds-203",
   "code": "DS-203",
-  "version": "2027.1.0",
+  "version": "2027.2.0",
   "lang": "en",
   "title": {
     "en": "Exploratory Analysis and Visualisation",
@@ -318,6 +318,7 @@
           "outcomes": [
             "Convert counts to rates with a denominator that fits the question",
             "Compare a ranking by count with a ranking by rate",
+            "Colour a map by a rate on its exposure, not by a count",
             "Mark the cells of a table that a publication rule holds back"
           ],
           "lo": [

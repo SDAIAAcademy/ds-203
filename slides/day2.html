@@ -199,7 +199,7 @@
     <li>Per thousand, so that the reader sees numbers like 5.9, not 0.0059.</li>
     <li>A rate travels with its two parts: <b>599 of 100,822</b>.</li>
   </ul>
-  <aside class="notes"><p>The same complaints log gives three rates for three questions. A wrong denominator is the commonest quiet error in reporting: complaints per site-day, per resident, per survey response all produce a tidy number. The test: could each unit in the denominator have complained? A ticket holder could. The third rule of the course's data handling says the denominator is printed, always.</p></aside>
+  <aside class="notes"><p>One complaints log, three rates for three questions. A wrong denominator is the commonest quiet error in reporting: per site-day, per resident, per response all give a tidy number. The test: could each unit in the denominator have complained? A ticket holder could. The denominator is printed, always.</p></aside>
 </section>
 
 <section class="slide" id="aggregate-then-join" data-lo="LO3" data-label="Aggregate, then join">
@@ -232,7 +232,42 @@ ORDER BY per_thousand DESC</code></pre>
       <li>Wadi Trail is high on both readings of "problem": fourth by count (243), second by rate (11.4).</li>
     </ul>
   </div>
-  <aside class="notes"><p>The answer to ask 3: the Cable Car is not the problem site; it is the busy site. Two outdoor sites with few visitors have rates twice the others. Show both rankings in the report, side by side: a reader who sees only the rate will not know that Terrace Farms rests on 167 complaints in three years. That thought leads to the next slide.</p></aside>
+  <aside class="notes"><p>The answer to ask 3: the Cable Car is the busy site, not the problem site. Show both rankings side by side: a reader who sees only the rate will not know that Terrace Farms rests on 167 complaints in three years.</p></aside>
+</section>
+
+<section class="slide" id="map-of-counts" data-lo="LO3" data-label="A map of counts">
+  <div class="kicker">The same fault on a map</div>
+  <h2>A map coloured by count shows where the visitors are</h2>
+  <div class="cols cols-32">
+    <figure class="figure fig-s">
+      <img src="../assets/figs/d2_2_map_counts.svg" alt="Two tile maps of nine districts, each shaded in blue from zero to its largest value. Left, first-aid call-outs to visitors in 2025: Central 261, West 92, East 76, North 65, South 65, North-West 63, North-East 44, South-West 42, South-East 6. Right, visitor-days in thousands: Central 820, West 310, East 230, South 180, North 140, South-West 95, North-East 60, North-West 45, South-East 12. The two maps are shaded almost alike.">
+      <figcaption>A neighbouring region, nine districts as equal tiles. Synthetic data.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>A <b>choropleth</b> colours each area by one number.</li>
+      <li>Central holds 261 of 714 call-outs (37%) and 43% of the visitor-days.</li>
+      <li>Across the nine districts, call-outs and visitor-days correlate at <b>0.98</b>. The left map repeats the right one.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>A parallel case, not Tilal's data: a neighbouring region's first-aid call-outs to visitors. Ask the room what the left map says before showing the right one; most will name Central as the place where visitors get hurt. Equal tiles are used on purpose: on a real map a large empty district would dominate the eye whatever its number. A map of counts is a map of exposure, just as a ranking by count was a ranking by size.</p></aside>
+</section>
+
+<section class="slide" id="map-of-rates" data-lo="LO3" data-label="Colour the rate">
+  <div class="kicker">Divide, then colour</div>
+  <h2>Colour the rate on the exposure, not the count</h2>
+  <div class="cols cols-32">
+    <figure class="figure fig-s">
+      <img src="../assets/figs/d2_2_map_rates.svg" alt="Tile map of call-outs per 100,000 visitor-days in 2025: North-West 140 darkest, North-East 73, North 46, South-West 44, South 36, East 33, Central 32, West 30; South-East grey, labelled 6 calls.">
+      <figcaption>Call-outs per 100,000 visitor-days, 2025. Synthetic data.</figcaption>
+    </figure>
+    <ul class="bullets">
+      <li>The base is whoever could have needed a call-out: visitor-days, not residents or square kilometres.</li>
+      <li>Central: first by count, <b>seventh of eight</b> by rate (32).</li>
+      <li>North-West: sixth by count, <b>first</b> by rate: 63 calls on 45,000 visitor-days, 140.</li>
+      <li>South-East: 6 calls; one more moves its rate by a sixth. Grey, with its count.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>Three questions for any map: what was counted, divided by what, and how few cases sit behind the darkest area. The base follows the question: residents for a question about residents, visitor-days for visitors. Per square kilometre measures how crowded an area is, not how risky a visit is. The palette is sequential, one hue light to dark, as Day 3 sets out. Numbers: labs/_tools/d2_2_map_exposure.py.</p></aside>
 </section>
 
 <section class="slide" id="small-cells" data-lo="LO3" data-label="Small cells">
@@ -261,7 +296,7 @@ ORDER BY per_thousand DESC</code></pre>
     <div class="card c-teal"><h4>What the analyst does</h4><ul class="bullets tight small"><li>marks every cell that fails the rule</li><li>checks each row and column for a single withheld cell</li><li>hands the table to the person who owns the rule</li></ul></div>
   </div>
   <div class="callout note mt"><b>Where this continues.</b> Second-cell suppression, differencing between releases and the classification of outputs are taught in DS-207. Here you learn to see the problem and to mark the cells.</div>
-  <aside class="notes"><p>Keep this to three minutes; it is a pointer, not a method. The habit to leave them with: before a table of small groups goes out, somebody other than the analyst decides. Participants who took the stretch can say how long the recovery took them: under a minute.</p></aside>
+  <aside class="notes"><p>Keep this to two minutes; it is a pointer, not a method. The habit to leave them with: before a table of small groups goes out, somebody other than the analyst decides.</p></aside>
 </section>
 
 <section class="slide" id="check-rates" data-lo="LO3">
